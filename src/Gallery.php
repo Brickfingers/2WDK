@@ -23,6 +23,12 @@ h1 {
 	color: #20B2AA;
 }
 
+#demo {
+	margin: auto;
+	width: 80%;
+	height: 80%;
+}
+
 table, th, td {
 	border: 1px solid black;
 	padding: 50px;
@@ -66,11 +72,11 @@ keyframes mymove { 50% {
 </head>
 <body>
 <?php
-// include_once "header.php";
+include_once "header.php";
 ?>
 <div class="container">
-		<div class="card border-0 shadow my-4">
-			<div class="card-body p-4">
+		<div class="card border-0 shadow my-5">
+			<div class="card-body p-5">
 
 				<!-- embed youtube video-->
 				<div id="myDIV">
@@ -79,10 +85,8 @@ keyframes mymove { 50% {
 				</div>
 				<p align="center">
 
-					<iframe width="860" height="615"
-						src="https://www.youtube.com/embed/wOnWIXlXxwI" frameborder="0"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
+					<iframe width="800" height="400"
+						src="https://www.youtube.com/embed/wOnWIXlXxwI?rel=0"> </iframe>
 				</p>
 
 				<br> <br> <br>
@@ -155,7 +159,7 @@ keyframes mymove { 50% {
 	</div>
 
 <?php
-// include_once "footer.php";
+include_once "footer.php";
 ?>
 <script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
