@@ -30,6 +30,7 @@ h1 {
 }
 
 table, th, td {
+margin: auto;
 	border: 1px solid black;
 	padding: 50px;
 }
