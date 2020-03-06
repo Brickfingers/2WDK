@@ -7,137 +7,46 @@
 	<link rel="stylesheet" href="home_style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script>
-
-
-		var scrollController{
-			counter: 0,
+		var scrollController={
+			counter: 1,
 			inc: function(){
-				log("increment");
+			    this.counter = this.counter + 1;
+			    if(this.counter > 3){
+				    this.counter = 1;
+			    }
 			},
 			dec: function(){
-				log("decrement");
+				this.counter = this.counter - 1;
+			    if(this.counter < 1){
+				    this.counter = 3;
+			    }
 			},
 			updateView: function(){
-				log("updateView");
-			}
-		}
-
-
-
-
-
-	
-
-		function wrapinc(){
-			changeScrollIndex.inc();
-			changeScrollIndex.updateView();
-			
-		}
-	
-		function changeScrollIndex(){
-
-			if( typeof changeScrollIndex.counter == 'undefined' ) {
-				changeScrollIndex.counter = 0;
-		    }
-
-			function updateView(){
-				if(changeScrollIndex.counter === 1){
+				if(this.counter === 1){
 				    document.getElementById("index-1").style.backgroundColor = "red";
 				    document.getElementById("index-2").style.backgroundColor = "blue";
 				    document.getElementById("index-3").style.backgroundColor = "blue";
 		    	}
-		    	else if(changeScrollIndex.counter === 2){
+		    	else if(this.counter === 2){
 				    document.getElementById("index-2").style.backgroundColor = "red";
 				    document.getElementById("index-1").style.backgroundColor = "blue";
 				    document.getElementById("index-3").style.backgroundColor = "blue";
 			    }
-			    else if(changeScrollIndex.counter === 3){
+			    else if(this.counter === 3){
 				    document.getElementById("index-3").style.backgroundColor = "red";
 				    document.getElementById("index-2").style.backgroundColor = "blue";
 				    document.getElementById("index-1").style.backgroundColor = "blue";
 			    }
 			}
-			
-			function inc(){
-				if(changeScrollIndex.counter === 0){
-					changeScrollIndex.counter = 1;
-			    }
-				else{
-					changeScrollIndex.counter = changeScrollIndex.counter + 1;
-					if(changeScrollIndex.counter > 3){
-						changeScrollIndex.counter = 1;
-					}
-				}
-				changeScrollIndex.updateView();
-			}
-
-			function dec(){
-				if(changeScrollIndex.counter === 0){
-					changeScrollIndex.counter = 1;
-			    }
-				else{
-					changeScrollIndex.counter = changeScrollIndex.counter + 1;
-					if(changeScrollIndex.counter > 3){
-						changeScrollIndex.counter = 1;
-					}
-				}
-				changeScrollIndex.updateView();
-			}
-
-			
-			/*
-			
-			if( typeof changeScrollIndex.counter == 'undefined' ) {
-				changeScrollIndex.counter = 0;
-		    }
-
-			if(changeScrollIndex.counter === 0){
-				if(dir === 0){
-					changeScrollIndex.counter = 3;
-			    }
-				else{
-			    	changeScrollIndex.counter = 1;
-			    }
-		    	
-		    }
-		    
-
-		    
-		    else{
-		    	if(changeScrollIndex.counter === 0){
-			    	changeScrollIndex.counter = changeScrollIndex.counter + 1;
-			    }
-			    else{
-			    	changeScrollIndex.counter = changeScrollIndex.counter - 1;
-			    }
-			    
-		    	if(changeScrollIndex.counter === 0){
-			    	changeScrollIndex.counter = 3;
-			    }
-		    	if(changeScrollIndex.counter === 4){
-			    	changeScrollIndex.counter = 0;
-			    }
-			    
-		    }
-		    
-		    if(changeScrollIndex.counter === 1){
-				    document.getElementById("index-1").style.backgroundColor = "red";
-				    document.getElementById("index-2").style.backgroundColor = "blue";
-				    document.getElementById("index-3").style.backgroundColor = "blue";
-		    }
-		    else if(changeScrollIndex.counter === 2){
-				    document.getElementById("index-2").style.backgroundColor = "red";
-				    document.getElementById("index-1").style.backgroundColor = "blue";
-				    document.getElementById("index-3").style.backgroundColor = "blue";
-		    }
-		    else if(changeScrollIndex.counter === 3){
-				    document.getElementById("index-3").style.backgroundColor = "red";
-				    document.getElementById("index-2").style.backgroundColor = "blue";
-				    document.getElementById("index-1").style.backgroundColor = "blue";
-		    }
-		    */
-		    
 		}
+		function incwrap(){
+			scrollController.inc();
+			scrollController.updateView();
+		}
+		function decwrap(){
+			scrollController.dec();
+			scrollController.updateView();
+		}	
 	</script>
 </head>
 
@@ -163,12 +72,12 @@
     					<img class="img-responsive" src="bojacksaxman.gif" >
     					<div class="img-overlay" style="width:35%;margin-left: auto;margin-right: auto;">
     						<!-- Scroll left button -->
-	      					<button class="btn btn-md btn-success" onclick="wrapinc" style="float: left; width:20%;"><</button>
+	      					<button class="btn btn-md btn-success" onclick="decwrap()" style="float: left; width:20%;"><</button>
 	      					<!-- Scroll index view -->
 	      					<div style="background-color:orange; height:20px; width:60%; margin-left: auto;margin-right: auto; float:left;">
 	      						<div class="container">
 	      							<div class="row">
-	      								<div class="col-md-1" id="index-1" style="background-color: blue; height: 25px; border-radius:100%; padding-left:10px; margin-left:7.5%">
+	      								<div class="col-md-1" id="index-1" style="background-color: red; height: 25px; border-radius:100%; padding-left:10px; margin-left:7.5%">
 	      								</div>
 	      								<div class="col-md-1" id="index-2" style="background-color: blue; height: 25px; border-radius:100%; padding-left:10px; margin-left:20%">
 	      								</div>
@@ -178,7 +87,7 @@
 	      						</div>
 	      					</div>
 	      					<!-- Scroll right button -->
-	      					<button class="btn btn-md btn-success"  onclick="changeScrollIndex(1)" style="float: right; width:20%;">></button>
+	      					<button class="btn btn-md btn-success"  onclick="incwrap()" style="float: right; width:20%;">></button>
     					</div>
 					</div>
 				</div>
