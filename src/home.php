@@ -51,13 +51,18 @@
 </head>
 
 <body>
+
+	<?php include "header.php"; ?>
+
 	<!-- Header Section -->
-	<div class="mainview container-fluid">
+	<!-- 
+		<div class="mainview container-fluid">
 		<div class="row">
 			<div class="header col-md-12" id="header">SAX 'N SIP
 			</div>
 		</div>
 	</div>
+	-->
 	<!-- End Header Section -->
 
 	<!-- Info Box Section -->
@@ -128,7 +133,7 @@
 				<div class="col-md-7 col-xs-12" style="background-color: olive; height:250px;">
 				</div>
 				<!-- Social Media Section -->
-				<div class="col-md-5 col-xs-12" style="background-color: maroon; height:250px;">
+				<div class="col-md-5 col-xs-0" style="background-color: maroon; height:250px;">
 				</div>
 			</div>
 		</div>
