@@ -19,7 +19,10 @@
 	height: 100%;
 }
 
-h1   {color:#20B2AA;}
+h1 {
+	color: #20B2AA;
+}
+
 table, th, td {
 	border: 1px solid black;
 	padding: 50px;
@@ -36,14 +39,17 @@ body {
 	background-size: cover;
 	-o-background-size: cover;
 }
+
 #myDIV {
-  animation: mymove 5s infinite;
+	animation: mymove 5s infinite;
 }
 
-@keyframes mymove {
-  50% {text-shadow: 10px 20px 30px blue;}
+@
+keyframes mymove { 50% {
+	text-shadow: 10px 20px 30px blue;
 }
 
+}
 .center {
 	position: absolute;
 	left: 0;
@@ -68,10 +74,11 @@ body {
 
 				<!-- embed youtube video-->
 				<div id="myDIV">
-				 <h1 style="text-align:center;">Ben Joseph</h1> <br>
-				 </div>
+					<h1 style="text-align: center;">Ben Joseph</h1>
+					<br>
+				</div>
 				<p align="center">
-				 
+
 					<iframe width="860" height="615"
 						src="https://www.youtube.com/embed/wOnWIXlXxwI" frameborder="0"
 						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -133,7 +140,7 @@ body {
 							<!-- embed Instagram -another way-->
 							<blockquote class="instagram-media" data-instgrm-version="7">
 								<a href="https://www.instagram.com/p/B7ZElq-n4Sm/"></a>
-							<script src="//platform.instagram.com/en_US/embeds.js"></script>
+								<script src="//platform.instagram.com/en_US/embeds.js"></script>
 							</blockquote>
 
 						</td>
@@ -155,7 +162,7 @@ body {
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/instafeed.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
-	
+
 </body>
 </html>
 
