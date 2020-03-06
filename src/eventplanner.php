@@ -15,6 +15,15 @@
      $year = $dateComponents['year'];
 
      echo build_calendar($month,$year,$dateArray);
+     
+     
+     $year = "2020";
+     $i = 1;
+     $month=1; //Numeric Value
+     while($i <= 12){
+    echo build_calendar($month,$year,$dateArray);
+    $month=$month+1;
+    $i++;}
 
 ?>
     </div>
@@ -53,6 +62,7 @@ function build_calendar($month,$year,$dateArray) {
      // Create the calendar headers
 
      foreach($daysOfWeek as $day) {
+         
           $calendar .= "<th>$day</th>";
      } 
 
@@ -114,6 +124,24 @@ function build_calendar($month,$year,$dateArray) {
      $calendar .= "</table>";
 
      return $calendar;
+     
+     function _createNavi(){
+         
+         $nextMonth = currentMonth==12?1:intval($this->currentMonth)+1;
+         
+         $nextYear = $this->currentMonth==12?intval($this->currentYear)+1:$this->currentYear;
+         
+         $preMonth = $this->currentMonth==1?12:intval($this->currentMonth)-1;
+         
+         $preYear = $this->currentMonth==1?intval($this->currentYear)-1:$this->currentYear;
+         
+         return
+         '<div>'.
+         '<a class="prev" href="'.$this->naviHref.'?month='.sprintf('%02d',$preMonth).'&year='.$preYear.'">Prev</a>'.
+         '<span class="title">'.date('Y M',strtotime($this->currentYear.'-'.$this->currentMonth.'-1')).'</span>'.
+         '<a class="next" href="'.$this->naviHref.'?month='.sprintf("%02d", $nextMonth).'&year='.$nextYear.'">Next</a>'.
+         '</div>';
+     }
 
 }
 
