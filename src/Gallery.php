@@ -30,6 +30,7 @@ h1 {
 }
 
 table, th, td {
+margin: auto;
 	border: 1px solid black;
 	padding: 50px;
 }
@@ -159,7 +160,7 @@ include_once "header.php";
 	</div>
 
 <?php
-include_once "footer.php";
+//include_once "footer.php";
 ?>
 <script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
