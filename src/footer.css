@@ -1,0 +1,43 @@
+=======
+
+::after,
+::before {
+    box-sizing: border-box
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent
+}
+
+
+.row {
+    
+    display: flex;
+    
+    flex-wrap: wrap;
+    margin-right: 150px;
+    margin-left: 150px
+}
+.column2 {
+    
+    display: flex;
+   
+    flex-wrap: wrap;
+    margin-right: 100px;
+    margin-left: 100px
+}
+.column3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 100px;
+    margin-left: 0px
+}
+
