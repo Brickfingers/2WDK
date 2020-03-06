@@ -1,4 +1,4 @@
-<?php #include "header.php"; ?>
+
 
 <html>
 <head>
@@ -6,7 +6,7 @@
 <!-- <link rel="stylesheet" type="text/css" href="Booking.css" />*/-->
 </head>
 <body>
-
+<?php include "header.php"; ?>
 <h1 style="text-align: center; white-space; pre-wrap;"> Booking </h1>
 
 <form method="post">
@@ -60,8 +60,7 @@
 </form>
 
 
-
+<?php include "footer.php"; ?>
 </body>
 </html>
 
-<?php #include "footer.php"; ?>
