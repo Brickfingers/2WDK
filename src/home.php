@@ -10,13 +10,13 @@
 
 
 		var scrollController{
-			counter: 0;
+			counter: 0,
 			inc: function(){
 				log("increment");
-			}
+			},
 			dec: function(){
 				log("decrement");
-			}
+			},
 			updateView: function(){
 				log("updateView");
 			}
