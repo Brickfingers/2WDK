@@ -4,6 +4,7 @@
 <title>Sax N Sip</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/Gallery.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <script
@@ -12,64 +13,6 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<style>
-/* Make the image fully responsive */
-.carousel-inner img {
-	width: 100%;
-	height: 100%;
-}
-
-h1 {
-	color: #20B2AA;
-}
-
-#demo {
-	margin: auto;
-	width: 80%;
-	height: 80%;
-}
-
-table, th, td {
-margin: auto;
-	border: 1px solid black;
-	padding: 50px;
-}
-
-table {
-	border-spacing: 200px;
-}
-
-body {
-	background: url("photo/forest.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
-}
-
-#myDIV {
-	animation: mymove 5s infinite;
-}
-
-@
-keyframes mymove { 50% {
-	text-shadow: 10px 20px 30px blue;
-}
-
-}
-.center {
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 100%;
-	text-align: center;
-	font-size: 18px;
-}
-
-.card-body {
-	background-color: black;
-}
-</style>
 </head>
 <body>
 <?php

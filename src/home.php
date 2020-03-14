@@ -4,7 +4,7 @@
 
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
-	<link rel="stylesheet" href="home_style.css">
+	<link rel="stylesheet" href="css/home_style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script>
 		var scrollController={
@@ -74,7 +74,7 @@
 				<div class="row">
 					<!-- Display over info box -->
 					<div class="img-wrapper" style="margin-left: auto;margin-right: auto;">
-    					<img class="img-responsive" src="bojacksaxman.gif" >
+    					<img class="img-responsive" src="photo/bojacksaxman.gif" >
     					<div class="img-overlay" style="width:35%;margin-left: auto;margin-right: auto;">
     						<!-- Scroll left button -->
 	      					<button class="btn btn-md btn-success" onclick="decwrap()" style="float: left; width:20%;"><</button>

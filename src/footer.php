@@ -1,6 +1,6 @@
 <!doctype html>
 
-    <link rel="stylesheet" href="StyleSheet.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <footer class="footer">
         <div class="footer_top">
