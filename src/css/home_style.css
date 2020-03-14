@@ -1,4 +1,6 @@
-
+.carousel-indicators {
+    bottom: -50px;
+}
 p{
 	padding-left: 0px;
 }

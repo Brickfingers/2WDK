@@ -27,13 +27,8 @@ include_once "header.php";
 					<h1 style="text-align: center;">Ben Joseph</h1>
 					<br>
 				</div>
-				<p align="center">
 
-					<iframe width="800" height="400"
-						src="https://www.youtube.com/embed/wOnWIXlXxwI?rel=0"> </iframe>
-				</p>
 
-				<br> <br> <br>
 
 				<div id="demo" class="carousel slide" data-ride="carousel">
 					<ul class="carousel-indicators">
@@ -73,49 +68,48 @@ include_once "header.php";
 				</div>
 
 				<br> <br> <br>
-				<table>
-					<tr>
-
-						<td>
-							<!-- embed Instagram -one post-->
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item"
+						src="https://www.youtube.com/embed/jpv2tMJJuz0?rel=0"></iframe>
+				</div>
+				<br> <br> <br>
+				<div class="row justify-content-center">
+					<div class="col-sx-3  col-centered"
+						style="background-color: black;">
+						<div class="p-2 border">
 							<blockquote class="instagram-media" data-instgrm-version="7">
 								<a href="https://www.instagram.com/p/B81hkBWHcX8/"></a>
-								<script src="//platform.instagram.com/en_US/embeds.js"></script>
-							</blockquote>
 
-						</td>
-						<td>
-							<!-- embed Instagram -another way-->
+							</blockquote>
+						</div>
+						&nbsp;&nbsp;
+					</div>
+					<div class="col-sx-3  col-centered"
+						style="background-color: black;">
+						<div class="p-2 border">
 							<blockquote class="instagram-media" data-instgrm-version="7">
-								<a href="https://www.instagram.com/p/B7ZElq-n4Sm/"></a>
-								<script src="//platform.instagram.com/en_US/embeds.js"></script>
+								<a href="https://www.instagram.com/p/B7ZElq-n4Sm/embed"></a>
+
 							</blockquote>
-
-						</td>
-					</tr>
-
-				</table>
+						</div>
+					</div>
+				</div>
 			</div>
-
-
 		</div>
-
 	</div>
 
-<?php
-include_once "footer.php";
-?>
-<script
+
+	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/instafeed.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
+	<script src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<?php
+include_once "footer.php";
+?>
 
 </body>
 </html>
-
-
-
-
-
 

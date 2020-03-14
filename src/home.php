@@ -1,4 +1,4 @@
-<!-- Author: Daniel Rooke -->
+<!-- Author: Daniel Rooke 3/6/2020 -->
  <!DOCTYPE html>
 <html>
 
@@ -6,48 +6,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
 	<link rel="stylesheet" href="css/home_style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script>
-		var scrollController={
-			counter: 1,
-			inc: function(){
-			    this.counter = this.counter + 1;
-			    if(this.counter > 3){
-				    this.counter = 1;
-			    }
-			},
-			dec: function(){
-				this.counter = this.counter - 1;
-			    if(this.counter < 1){
-				    this.counter = 3;
-			    }
-			},
-			updateView: function(){
-				if(this.counter === 1){
-				    document.getElementById("index-1").style.backgroundColor = "red";
-				    document.getElementById("index-2").style.backgroundColor = "blue";
-				    document.getElementById("index-3").style.backgroundColor = "blue";
-		    	}
-		    	else if(this.counter === 2){
-				    document.getElementById("index-2").style.backgroundColor = "red";
-				    document.getElementById("index-1").style.backgroundColor = "blue";
-				    document.getElementById("index-3").style.backgroundColor = "blue";
-			    }
-			    else if(this.counter === 3){
-				    document.getElementById("index-3").style.backgroundColor = "red";
-				    document.getElementById("index-2").style.backgroundColor = "blue";
-				    document.getElementById("index-1").style.backgroundColor = "blue";
-			    }
-			}
-		}
-		function incwrap(){
-			scrollController.inc();
-			scrollController.updateView();
-		}
-		function decwrap(){
-			scrollController.dec();
-			scrollController.updateView();
-		}	
-	</script>
 </head>
 
 <body>
@@ -64,10 +22,9 @@
 	</div>
 	-->
 	<!-- End Header Section -->
-
-	<!-- Info Box Section -->
-	<div class="container-fluid infobox" id="infobox" style="background-color: purple;">
-		<!-- Info Box Content -->
+	
+	
+	<div class="container-fluid">
 		<div class="row">
 			<!-- Info box background image -->
 			<div class="col-md-12 spacer" style="height: 480px; background-color:black;" >
@@ -94,12 +51,33 @@
 	      					<!-- Scroll right button -->
 	      					<button class="btn btn-md btn-success"  onclick="incwrap()" style="float: right; width:20%;">></button>
     					</div>
+	   					<div class="carousel-item" style="align-content:center; height:640px;">
+							<h1>Example Page Title</h1>
+    						<h4 style="position: absolute; left:60%; top:70%;">Example Sub Title</h4>
+    						<p style="position: absolute; left:60%; top:75%;">Example brief that describes this example page.</p>
+	    				</div>
+    					<div class="carousel-item" style="align-content:center; height:640px;">
+							<h1>Example Page Title</h1>
+    						<h4 style="position: absolute; left:60%; top:70%;">Example Sub Title</h4>
+    						<p style="position: absolute; left:60%; top:75%;">Example brief that describes this example page.</p>
+	    				</div>
 					</div>
-				</div>
-			</div>
-		</div>
+					<a class="carousel-control-prev" href="#thumbnailIndicators" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+  					</a>
+  					<a class="carousel-control-next" href="#thumbnailIndicators" role="button" data-slide="next">
+    					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    					<span class="sr-only">Next</span>
+  					</a>
+  				</div>
+    	</div>				
 	</div>
-	<!-- End Info Box Section -->
+
+	
+	
+	
+	
 	
 	<!-- Booking and Email signup links -->
 	<div class="container-fluid" style="height:125px; background-color: red;">
@@ -138,7 +116,9 @@
 			</div>
 		</div>
 	<!-- End Social Media Section -->
-
+	
+	<?php include "footer.php"; ?>
+	
 </body>
 
 </html>
