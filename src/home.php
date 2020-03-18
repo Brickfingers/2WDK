@@ -71,7 +71,7 @@
 		<div class="row">
 			<!-- Form brief header -->
 			<div class="col-md-12" style="height:50px; background-color:blue;">
-				<h2 style="text-align: center;">wow, look at all the contact infos</h2>
+				<h2 style="text-align: center;">Get In Touch</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -85,24 +85,49 @@
 		</div>
 	</div>
 	<!-- End Booking and Email signup links -->
-
-	<!-- Start Social Media Section -->
-		<div class="container-fluid" style="height:250px; background-color: fuchsia;">
+	
+	
+	<!-- Start Gallery Section -->
+		<div class="container-fluid" style="height:300px; background-color: fuchsia;">
 			<div class="row">
-				<div class="col-md-12">
-					<h2 style="text-align: center;">Showcase stuff</h2>
+				<div class="col-md-12" style="height:50px;">
+					<h2 style="text-align: center;">Gallery</h2>
 				</div>
 			</div>
 			<div class="row">
 				<!-- Gallery Section -->
-				<div class="col-md-7 col-xs-12" style="background-color: olive; height:250px;">
-				</div>
-				<!-- Social Media Section -->
-				<div class="col-md-5 col-xs-0" style="background-color: maroon; height:250px;">
+				<div class="col-md-12 col-xs-12" style="background-color: olive; height:250px;">
 				</div>
 			</div>
 		</div>
 	<!-- End Social Media Section -->
+	
+
+	<!-- Second Carousel -->
+	<div class="container-fluid" style="height:350px; backgorund-color: yellow;">
+		<div class="row">
+			<button class="btn btn-md btn-success col-md-5 col-xs-5" style="z-index: 2;">social media</button>
+			<div class="col-md-2 col-xs-2"></div>
+			<button class="btn btn-md btn-success col-md-5 col-xs-5" style="z-index: 2;">upcoming events</button>
+		</div>
+		<div class="row">
+			<div id="secondCarousel" class="carousel slide" data-ride="carousel" style="width:100%; height:320px;">
+				<ol class="carousel-indicators">
+	    			<li data-target="#thumbnailIndicators" data-slide-to="0" class="active"></li>
+    				<li data-target="#thumbnailIndicators" data-slide-to="1"></li>
+  				</ol>
+  				<div class="carousel-inner">
+   					<div class="carousel-item active" style="align-content:center; height:320px;">
+   						<h1 style="position: absolute; left:40%; top:50%;">Social Media</h1>
+   					</div>
+   					<div class="carousel-item" style="align-content:center; height:320px;">
+						<h1 style="position: absolute; left:40%; top:50%;">Upcoming Events</h1>
+	    			</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	
 	<?php include "footer.php"; ?>
 	
