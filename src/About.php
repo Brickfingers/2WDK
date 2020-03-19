@@ -84,7 +84,7 @@ include_once "header.php";
 						<div class="col-md-7">
 							<h2>Ben Joseph</h2>
 							<hr>
-							<p>Is a Haitian American born and raised in Newark, New Jersey.
+							<p>Ben Joseph is a Haitian American born and raised in Newark, New Jersey.
 								He is the youngest of 4 brothers who are all musically gifted.
 								At the age of 8, Ben found his passion for the saxophone. He
 								studied classical music and played in multiple symphonies and
