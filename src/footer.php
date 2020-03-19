@@ -100,7 +100,7 @@
   <br />
   <div class="footer-copyright text-center py-3">
   
- <h6 class="font-weight-bold text-uppercase ">© 2020 Copyright: Sax n Sip</h6>
+ <h6>&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax n Sip</h6>
 
   </div>
   </div>
