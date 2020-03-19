@@ -25,12 +25,11 @@
 	width: 100%;
 	height: 100%;
 }
+
 .img-fluid {
-  
-  cursor: pointer;
-  
-  }
-  
+	cursor: pointer;
+}
+
 .fa {
 	padding: 20px;
 	font-size: 20px;
@@ -41,7 +40,6 @@
 .fa:hover {
 	opacity: 0.5;
 }
-
 
 .fa-instagram {
 	background: #125688;
@@ -187,14 +185,14 @@ include_once "header.php";
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
 											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/A3PDXmYoF5U"></iframe>
+												src="https://www.youtube.com/embed/Z6quNMT8mMM"></iframe>
 										</div>
 
 									</div>
 
 									<!--Footer-->
 									<div class="modal-footer justify-content-center">
-										<span class="mr-4">See More Video on Instagram!</span> <a
+										<span class="mr-4">See more videos on Instagram!</span> <a
 											href="https://www.instagram.com/saxnsip/?hl=en"
 											class="fa fa-instagram"></a>
 										<button type="button"
@@ -209,114 +207,111 @@ include_once "header.php";
 						</div>
 						<!--Modal: Name-->
 
-						<a>
-								<img class="img-fluid z-depth-1"
-									src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
-									alt="video" data-toggle="modal" data-target="#modal1"></a>
-					
-				</div>
-				<!-- Grid column -->
+						<a> <img class="img-fluid z-depth-1" src="photo/pic12.png"
+							alt="video" data-toggle="modal" data-target="#modal1"></a>
 
-				<!-- Grid column -->
-				<div class="col-lg-4 col-md-6 mb-4">
+					</div>
+					<!-- Grid column -->
 
-					<!--Modal: Name-->
-					<div class="modal fade" id="modal6" tabindex="-1" role="dialog"
-						aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-lg" role="document">
+					<!-- Grid column -->
+					<div class="col-lg-4 col-md-6 mb-4">
 
-							<!--Content-->
-							<div class="modal-content">
+						<!--Modal: Name-->
+						<div class="modal fade" id="modal6" tabindex="-1" role="dialog"
+							aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg" role="document">
 
-								<!--Body-->
-								<div class="modal-body mb-0 p-0">
+								<!--Content-->
+								<div class="modal-content">
 
-									<div
-										class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-										<iframe class="embed-responsive-item"
-											src="https://www.youtube.com/embed/wTcNtgA6gHs"></iframe>
+									<!--Body-->
+									<div class="modal-body mb-0 p-0">
+
+										<div
+											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+											<iframe class="embed-responsive-item"
+												src="https://www.youtube.com/embed/2p2hC--loq4?rel=0"></iframe>
+										</div>
+
+									</div>
+
+									<!--Footer-->
+									<div class="modal-footer justify-content-center">
+										<span class="mr-4">See more videos on Instagram!</span> <a
+											href="https://www.instagram.com/saxnsip/?hl=en"
+											class="fa fa-instagram"></a>
+										<button type="button"
+											class="btn btn-outline-primary btn-rounded btn-md ml-4"
+											data-dismiss="modal">Close</button>
+
 									</div>
 
 								</div>
-
-								<!--Footer-->
-								<div class="modal-footer justify-content-center">
-									<span class="mr-4">See More Video on Instagram!</span> <a
-										href="https://www.instagram.com/saxnsip/?hl=en"
-										class="fa fa-instagram"></a>
-									<button type="button"
-										class="btn btn-outline-primary btn-rounded btn-md ml-4"
-										data-dismiss="modal">Close</button>
-
-								</div>
+								<!--/.Content-->
 
 							</div>
-							<!--/.Content-->
-
 						</div>
+						<!--Modal: Name-->
+
+						<a><img class="img-fluid z-depth-1" src="photo/pic10.png"
+							alt="video" data-toggle="modal" data-target="#modal6"></a>
+
 					</div>
-					<!--Modal: Name-->
+					<!-- Grid column -->
 
-					<a><img class="img-fluid z-depth-1"
-						src="https://mdbootstrap.com/img/screens/yt/screen-video-2.jpg"
-						alt="video" data-toggle="modal" data-target="#modal6"></a>
+					<!-- Grid column -->
+					<div class="col-lg-4 col-md-6 mb-4">
 
-				</div>
-				<!-- Grid column -->
+						<!--Modal: Name-->
+						<div class="modal fade" id="modal4" tabindex="-1" role="dialog"
+							aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg" role="document">
 
-				<!-- Grid column -->
-				<div class="col-lg-4 col-md-6 mb-4">
+								<!--Content-->
+								<div class="modal-content">
 
-					<!--Modal: Name-->
-					<div class="modal fade" id="modal4" tabindex="-1" role="dialog"
-						aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-lg" role="document">
+									<!--Body-->
+									<div class="modal-body mb-0 p-0">
 
-							<!--Content-->
-							<div class="modal-content">
+										<div
+											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+											<iframe class="embed-responsive-item"
+												src="https://www.youtube.com/embed/jpv2tMJJuz0?rel=0"
+												allowfullscreen></iframe>
+										</div>
 
-								<!--Body-->
-								<div class="modal-body mb-0 p-0">
+									</div>
 
-									<div
-										class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-										<iframe class="embed-responsive-item"
-											src="https://www.youtube.com/embed/vlDzYIIOYmM"></iframe>
+									<!--Footer-->
+									<div class="modal-footer justify-content-center">
+										<span class="mr-4">See more videos on Instagram</span> <a
+											href="https://www.instagram.com/saxnsip/?hl=en"
+											class="fa fa-instagram"></a>
+										<button type="button"
+											class="btn btn-outline-primary btn-rounded btn-md ml-4"
+											data-dismiss="modal">Close</button>
+
 									</div>
 
 								</div>
-
-								<!--Footer-->
-								<div class="modal-footer justify-content-center">
-									<span class="mr-4">See More Video on Instagram</span> <a
-										href="https://www.instagram.com/saxnsip/?hl=en"
-										class="fa fa-instagram"></a>
-									<button type="button"
-										class="btn btn-outline-primary btn-rounded btn-md ml-4"
-										data-dismiss="modal">Close</button>
-
-								</div>
+								<!--/.Content-->
 
 							</div>
-							<!--/.Content-->
-
 						</div>
-					</div>
-					<!--Modal: Name-->
+						<!--Modal: Name-->
 
-					<a><img class="img-fluid z-depth-1"
-						src="https://mdbootstrap.com/img/screens/yt/screen-video-3.jpg"
-						alt="video" data-toggle="modal" data-target="#modal4"></a>
+						<a><img class="img-fluid z-depth-1" src="photo/pic11.png"
+							alt="video" data-toggle="modal" data-target="#modal4"></a>
+
+					</div>
+					<!-- Grid column -->
 
 				</div>
-				<!-- Grid column -->
+				<!-- Grid row -->
+				<br> <br>
 
 			</div>
-			<!-- Grid row -->
-			<br> <br>
-
 		</div>
-	</div>
 	</div>
 
 
