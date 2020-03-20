@@ -193,7 +193,7 @@ include_once "header.php";
 
 									<!--Footer-->
 									<div class="modal-footer justify-content-center">
-										<span class="mr-4">See more videos on Instagram!</span> <a
+										<span class="mr-4">Watch more videos on Instagram!</span> <a
 											href="https://www.instagram.com/saxnsip/?hl=en"
 											class="fa fa-instagram"></a>
 										<button type="button"
@@ -239,7 +239,7 @@ include_once "header.php";
 
 									<!--Footer-->
 									<div class="modal-footer justify-content-center">
-										<span class="mr-4">See more videos on Instagram!</span> <a
+										<span class="mr-4">Watch more videos on Instagram!</span> <a
 											href="https://www.instagram.com/saxnsip/?hl=en"
 											class="fa fa-instagram"></a>
 										<button type="button"
@@ -286,7 +286,7 @@ include_once "header.php";
 
 									<!--Footer-->
 									<div class="modal-footer justify-content-center">
-										<span class="mr-4">See more videos on Instagram</span> <a
+										<span class="mr-4">Watch more videos on Instagram</span> <a
 											href="https://www.instagram.com/saxnsip/?hl=en"
 											class="fa fa-instagram"></a>
 										<button type="button"
