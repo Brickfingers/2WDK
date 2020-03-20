@@ -185,7 +185,8 @@ include_once "header.php";
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
 											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/Z6quNMT8mMM"></iframe>
+												src="https://www.youtube.com/embed/Z6quNMT8mMM"
+												allowfullscreen></iframe>
 										</div>
 
 									</div>
@@ -230,7 +231,8 @@ include_once "header.php";
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
 											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/2p2hC--loq4?rel=0"></iframe>
+												src="https://www.youtube.com/embed/2p2hC--loq4?rel=0"
+												allowfullscreen></iframe>
 										</div>
 
 									</div>
