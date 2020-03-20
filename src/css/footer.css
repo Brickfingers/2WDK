@@ -5,10 +5,16 @@
     box-sizing: border-box
 }
 
-footer {
+footer{
 	
-	color: #FFFFFF;
 	
+	
+	color: #E5F3F3;
+}
+
+.policy_text{
+	
+	color: #000000;
 }
 
 a:link{
@@ -18,13 +24,25 @@ a:link{
 
 .copy_right{
    
-   
-    margin-left: 670px;
-   
+   margin-left: 670px;
+}
+
+.copyright{
+	
+	 font-size: 12px;
+}
+
+.copyright{
+	
+	 font-size: 12px;
+}
+
+.menu-text{
+	
+	 font-size: 17px;
 }
 
 .footer-copyright{
-	
 	
 	background-color: #094D4D;
 }
@@ -34,74 +52,87 @@ a:link{
     background: linear-gradient(to bottom, #074444 0%, #1e8e8e 110%);
 }
 
-.social-links {
- color: #8b5555;
+
+
+.label1{
+	
+	color: #000000;
+	
 }
 
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+.popup{
+	
+	background-color: #1C6363;
+}
 
 .open-button {
-  background-color: #2D9999;
+  background-color: #44902E;
   color: white;
-  padding: 16px 20px;
+  padding: 20px 15px;
   border: none;
   cursor: pointer;
-  
+  border-radius: 05px;
   position: fixed;
   bottom: 23px;
-  right: 28px;
-  width: 280px;
+  right: 40px;
+  width: 250px;
 }
 
-.form-popup {
-  display: none;
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  padding: 5px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.overlay {
   position: fixed;
+  top: 0;
   bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
 }
-
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-
-.form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-.form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
-
-.form-container .cancel {
-  background-color: red;
-}
-
-.form-container .btn:hover, .open-button:hover {
+.overlay:target {
+  visibility: visible;
   opacity: 1;
 }
+
+.popup-privacy {
+  margin: 70px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+
 
 
 /*!
