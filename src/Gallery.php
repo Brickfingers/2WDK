@@ -49,8 +49,9 @@
 h1 {
 	color: white;
 }
-.mr-4{
-color:black;
+
+.mr-4 {
+	color: black;
 }
 
 #demo {
@@ -69,28 +70,23 @@ color:black;
 }
 
 body {
-	background: url("photo/forest.jpg") no-repeat center center fixed;
+	background: url("Wallpaper/gold1.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
 }
 
-#myDIV {
-	animation: mymove 5s infinite;
-}
-
-@
-keyframes mymove { 50% {
-	text-shadow: 10px 20px 30px blue;
-}
-
-}
-
-
 iframe {
 	position: relative;
 	text-align: center;
+}
+
+.card {
+	-moz-border-radius: 2%;
+	-webkit-border-radius: 2%;
+	border-radius: 2%;
+	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 </style>
 </head>
@@ -99,12 +95,19 @@ iframe {
 include_once "header.php";
 ?>
 <div class="container">
-<br><br><br><br>
+		<br> <br>
+
 		<div class="card bg-dark text-white">
-		 <div class="card-header"><h1 style="text-align: center; color:white;">GALLERY</h1></div>
+			<div class="card-header">
+				<h1 style="text-align: center; color: white;">GALLARY</h1>
+			</div>
+
+		</div>
+		<br>
+		<br>
+		<div class="card1" style="background: rgba(0, 0, 0, 0.5);">
+
 			<div class="card-body p-5">
-
-
 
 				<div id="demo" class="carousel slide" data-ride="carousel">
 					<ul class="carousel-indicators">
@@ -161,7 +164,7 @@ include_once "header.php";
 					</a>
 				</div>
 
-				<br> <br> <br> 
+				<br> <br> <br>
 				<!-- Grid row -->
 				<div class="row">
 
@@ -307,12 +310,12 @@ include_once "header.php";
 
 				</div>
 				<!-- Grid row -->
-				
+
 
 			</div>
-			
+
 		</div>
-		<br><br>
+		<br> <br>
 	</div>
 
 

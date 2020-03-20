@@ -9,7 +9,7 @@
 
 <style>
 body {
-	background: url("photo/forest.jpg") no-repeat center center fixed;
+	background: url("wallpaper/gold1.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -20,7 +20,7 @@ body {
 	-moz-border-radius: 2%;
 	-webkit-border-radius: 2%;
 	border-radius: 2%;
-	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.08);
+	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
 	
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #585f69;
+	color: black;
 	margin-top: 5px;
 	text-shadow: none;
 	font-weight: normal;
@@ -63,7 +63,7 @@ h2 {
 }
 
 p, li, li a {
-	color: #555;
+	color:black;
 }
 
 
@@ -74,22 +74,24 @@ p, li, li a {
 <?php
 include_once "header.php";
 ?>
-<br>
-	<br>
+
 	<div class="container bootstrap snippet">
-	<!--  <h1 style="text-align: center; color:white;">ABOUT</h1>-->
+	
 	<br><br>
-		<div class="profile card">
-		<div class="card bg-dark text-white">
+			<div class="card bg-dark text-white">
 			 <div class="card-header"><h1 style="text-align: center; color:white;">ABOUT</h1></div>
-			 </div>
+			 
+			</div>
+			<br> <br>
+		<div class="profile card">
+
 			<div class="profile-body">
 				<div class="profile-bio">
 				
 				
 					<div class="row">
 						<div class="col-md-5 text-center">
-							<br> <br> <img class="img-thumbnail md-margin-bottom-10"
+							<br> <img class="img-thumbnail md-margin-bottom-10"
 								src="photo/pic4.jpg" alt="">
 						</div>
 						<div class="col-md-7">
