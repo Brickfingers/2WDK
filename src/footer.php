@@ -1,124 +1,125 @@
 <footer class="page-footer font-small stylish-color-dark pt-4">
 <div class= footer>
-<br />
+
   <div class="container text-center text-md-left">
 	<link rel="stylesheet" href="footer.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <div class="row">
 
       
-      <div class="col-md-3 mx-auto">     
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">ABOUT US</h5>
-        <p>INSERT TEXT HERE.</p>
-      </div>
-     
-      <hr class="clearfix w-100 d-md-none">
-    
-      <div class="col-md-2 mx-auto">
-       <h5 class="font-weight-bold text-uppercase mt-3 mb-4">MENU</h5>
-        <ul class="list-unstyled">
-           <li>
-            <a href="/WebApp/src/Home.php">HOME</a>
-          </li>
-		  <li>
-            <a href="/WebApp/src/About.php">ABOUT</a>
-          </li>
-          <li>
-            <a href="/WebApp/src/Gallery.php">GALLERY</a>
-          </li>
-          <li>
-            <a href="/WebApp/src/eventplanner.php">EVENTS</a>
-          </li>
-		   <li>
-            <a href="/WebApp/src/Booking.php">BOOKING</a>
-          </li>
-          <li>
-            <a href="/WebApp/src/Tickets.php">TICKETS</a>
-          </li>
-        </ul>
-      </div>
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <div class="col-md-2 mx-auto">
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">###</h5>
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!"></a>
-          </li>
-          <li>
-            <a href="#!"></a>
-          </li>
-          <li>
-            <a href="#!"></a>
-          </li>
-          <li>
-            <a href="#!"></a>
-          </li>
-        </ul>
-      </div>
-      <hr class="clearfix w-100 d-md-none">
-      <div class="col-md-2 mx-auto">
-
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">CALENDAR</h5>
-       
-        <br />
-        <br />
-        <ul class="list-unstyled">    
-    </li>
+      
     <li class="list-inline-item">
     
-      <button class="open-button" onclick="openForm()">SIGN UP FOR NOTIFICATIONS</button>
+      <div class="w3-container">
+	  
+  <button onclick="document.getElementById('id01').style.display='block'" class="open-button"><b>SUBSCRIBE</b></button>
 
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Sign Up!</h1>
+  <div id="id01" class="w3-modal">
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Sign up</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:500px">
+		<div class="popup">
+      <div class="w3-center"><br>
+	  <h2><b>SUBSCRIBE</b></h2>
+	  
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Subscribe Popup">&times;</span>
+      </div>
+	
+      <form class="w3-container" action="/action_page.php">
+        <div class="w3-section">
+          <h4>Please enter your email:</h4>
+		  <br />
+		  
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Email" name="email" required>
+		  <hr>
+		  <div class="w3-center">
+		  
+		  <div class="box">
+	<a class="button" href="#popup1">Privacy Policy</a>
 </div>
 
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
+<div id="popup1" class="overlay">
+	<div class="popup-privacy">
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+		<div class="policy_text">
+		 Privacy Policy
+		<hr>
+			Privacy Policies goes here 
+			<br>
+			....................................
+			<br>
+			<br>
+			....................................
+			<br>
+			<br>
+			....................................
+			<br>
+			<br>
+			....................................
+			<br>
+			<br>
+			....................................
+			<br>
+		</div>
+		</div>
+	</div>
+</div>
+		  
+		  
+		  
+		  
+		  </div>
+          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit"><h5>SEND<h5></button>    
+        </div>
+      </form>
+    </div>
+	</div>
+  </div>
+</div>
     </li>
         </ul>
       </div>
     </div>
   </div>
 
-  <hr>
-
+<div class="footer-copyright text-center py-3">
   <ul class="list-unstyled list-inline text-center">
-  <h5 class="mb-1">CONTACT US</h5>
+ 
+  <div class="menu-text">
+   <br />
+            <a href="/WebApp/src/Home.php">HOME &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+          
+            <a href="/WebApp/src/About.php">ABOUT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+          
+            <a href="/WebApp/src/Gallery.php">GALLERY &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+          
+            <a href="/WebApp/src/eventplanner.php">EVENTS &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+          
+            <a href="/WebApp/src/Booking.php">BOOKING &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+               
   <br />
+  <br />
+  <br/>
+  </div>
   <li class="list-inline-item">
       <a class="btn-floating btn-fb mx-1">
-       <a href="mailto:info@domain.com" ><i class="fa fa-envelope mr-md-3 mr-3 fa-3x"></i></a>
+       <a href="http://www.facebook.com" ><i class="fa fa-envelope white mr-md-4 mr-4 fa-3x"></i></a>
       </a>
     </li>
     <li class="list-inline-item">
       <a class="btn-floating btn-fb mx-1">
-        <a href="http://www.facebook.com"><i class="fa fa-facebook mr-md-3 mr-5 fa-3x"> </i></a>
+        <a href="http://www.facebook.com"><i class="fa fa-facebook mr-md-4 mr-5 fa-3x"> </i></a>
       </a>
     </li>
    <li class="list-inline-item">
       <a class="btn-floating btn-fb mx-1">
-        <a href="http://www.instagram.co"><i class="fa fa-instagram mr-md-3 mr-5 fa-3x"> </i></a>
+        <a href="http://www.instagram.co"><i class="fa fa-instagram mr-md-4 mr-5 fa-3x"> </i></a>
+      </a>
+    </li>
+     <li class="list-inline-item">
+      <a class="btn-floating btn-fb mx-1">
+        <a href="http://www.instagram.co"><i class="fa fa-soundcloud mr-md-4 mr-5 fa-3x"> </i></a>
       </a>
     </li>
     <li class="list-inline-item">
@@ -129,10 +130,9 @@ function closeForm() {
     
   </ul>
   <div class="copyright">
-  <br />
-  <div class="footer-copyright text-center py-3">
   
- <h6>&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax n Sip</h6>
+  <br>
+ &copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax n Sip
 
   </div>
   </div>
