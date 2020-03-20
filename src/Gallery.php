@@ -47,7 +47,7 @@
 }
 
 h1 {
-	color: #20B2AA;
+	color: white;
 }
 
 #demo {
@@ -83,9 +83,7 @@ keyframes mymove { 50% {
 }
 
 }
-.card-body {
-	background-color: black;
-}
+
 
 iframe {
 	position: relative;
@@ -98,14 +96,10 @@ iframe {
 include_once "header.php";
 ?>
 <div class="container">
-		<div class="card border-0 shadow my-5">
+<br><br><br><br>
+		<div class="card bg-dark text-white">
+		 <div class="card-header"><h1 style="text-align: center; color:white;">GALLERY</h1></div>
 			<div class="card-body p-5">
-
-				<!-- embed youtube video-->
-				<div id="myDIV">
-					<h1 style="text-align: center;">GALLERY</h1>
-					<br>
-				</div>
 
 
 
@@ -164,7 +158,7 @@ include_once "header.php";
 					</a>
 				</div>
 
-				<br> <br> <br>
+				<br> <br> <br> 
 				<!-- Grid row -->
 				<div class="row">
 
@@ -310,10 +304,12 @@ include_once "header.php";
 
 				</div>
 				<!-- Grid row -->
-				<br> <br>
+				
 
 			</div>
+			
 		</div>
+		<br><br>
 	</div>
 
 

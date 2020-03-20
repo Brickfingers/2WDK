@@ -21,11 +21,13 @@ body {
 	-webkit-border-radius: 2%;
 	border-radius: 2%;
 	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.08);
+	
 }
 
 .profile .profile-body {
 	padding: 20px;
 	background: #f7f7f7;
+	
 }
 
 .profile .profile-bio {
@@ -63,6 +65,8 @@ h2 {
 p, li, li a {
 	color: #555;
 }
+
+
 </style>
 
 </head>
@@ -73,9 +77,16 @@ include_once "header.php";
 <br>
 	<br>
 	<div class="container bootstrap snippet">
+	<!--  <h1 style="text-align: center; color:white;">ABOUT</h1>-->
+	<br><br>
 		<div class="profile card">
+		<div class="card bg-dark text-white">
+			 <div class="card-header"><h1 style="text-align: center; color:white;">ABOUT</h1></div>
+			 </div>
 			<div class="profile-body">
 				<div class="profile-bio">
+				
+				
 					<div class="row">
 						<div class="col-md-5 text-center">
 							<br> <br> <img class="img-thumbnail md-margin-bottom-10"
