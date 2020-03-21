@@ -103,8 +103,7 @@ include_once "header.php";
 			</div>
 
 		</div>
-		<br>
-		<br>
+		<br> <br>
 		<div class="card1" style="background: rgba(0, 0, 0, 0.5);">
 
 			<div class="card-body p-5">
@@ -321,11 +320,20 @@ include_once "header.php";
 
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script
+		src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>	
+		
+		<script
+		src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>
+		
+		
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/instafeed.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script src="//platform.instagram.com/en_US/embeds.js"></script>
-	<script>$('#modal1').on('hidden.bs.modal', function (e) {
+	<script>
+
+	$('#modal1').on('hidden.bs.modal', function (e) {
 		  // do something...
 		  $('#modal1 iframe').attr("src", $("#modal1 iframe").attr("src"));
 		});
@@ -340,7 +348,8 @@ include_once "header.php";
 		  $('#modal4 iframe').attr("src", $("#modal4 iframe").attr("src"));
 		});
 	</script>
-
+	
+	
 <?php
 include_once "footer.php";
 ?>
