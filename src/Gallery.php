@@ -56,8 +56,8 @@ h1 {
 
 #demo {
 	margin: auto;
-	width: 100%;
-	height: 100%;
+	width: 80%;
+	height: 80%;
 }
 
 .row {
@@ -152,7 +152,7 @@ include_once "header.php";
 						</div>
 						<div class="carousel-item">
 
-							<img src="photo/pic7.jpg" alt="Ottawa" width="1100" height="500">
+							<img src="photo/pic6.jpg" alt="Ottawa" width="1100" height="500">
 							<div class="carousel-caption"></div>
 						</div>
 					</div>
