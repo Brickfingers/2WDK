@@ -10,7 +10,7 @@
 							<a class="nav-link text-white" href="home.php"> HOME </a> <a
 								class="nav-link text-white" href="#"> ABOUT </a> <a
 								class="nav-link text-white" href="Gallery.php"> GALLERY </a> <a
-								class="nav-link text-white" href="eventplanner.php"> EVENT </a> <a
+								class="nav-link text-white" href="events.php"> EVENT </a> <a
 								class="nav-link text-white" href="Booking.php"> BOOKING </a> <a
 								class="nav-link text-white" href="#"> TICKETS </a>
 						</div>
