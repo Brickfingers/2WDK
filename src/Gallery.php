@@ -16,7 +16,6 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
@@ -56,8 +55,8 @@ h1 {
 
 #demo {
 	margin: auto;
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	height: 100%;
 }
 
 .row {
@@ -99,7 +98,7 @@ include_once "header.php";
 
 		<div class="card bg-dark text-white">
 			<div class="card-header">
-				<h1 style="text-align: center; color: white;">GALLARY</h1>
+				<h1 style="text-align: center; color: white;">GALLERY</h1>
 			</div>
 
 		</div>
