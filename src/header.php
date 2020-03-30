@@ -8,7 +8,7 @@
 					<div class="col-sm-6">
 						<div class="row ">
 							<a class="nav-link text-white" href="home.php"> HOME </a> <a
-								class="nav-link text-white" href="#"> ABOUT </a> <a
+								class="nav-link text-white" href="About.php"> ABOUT </a> <a
 								class="nav-link text-white" href="Gallery.php"> GALLERY </a> <a
 								class="nav-link text-white" href="eventplanner.php"> EVENT </a> <a
 								class="nav-link text-white" href="Booking.php"> BOOKING </a> <a
