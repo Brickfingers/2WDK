@@ -11,22 +11,10 @@
 <body>
 
 	<?php include "header.php"; ?>
-
-	<!-- Header Section -->
-	<!-- 
-		<div class="mainview container-fluid">
-		<div class="row">
-			<div class="header col-md-12" id="header">SAX 'N SIP
-			</div>
-		</div>
-	</div>
-	-->
-	<!-- End Header Section -->
 	
-	 
 	<div class="container-fluid">
 		<div class="row">
-			<div id="thumbnailIndicators" class="carousel slide" data-ride="carousel" style="width:100%; height:640px; background-image:url(bojacksaxman.gif); background-repeat: no-repeat; background-size: auto 100%; background-position:center; ">
+			<div id="thumbnailIndicators" class="carousel slide" data-ride="carousel" style="width:100%; height:640px; background-image:url(photo/bojacksaxman.gif); background-repeat: no-repeat; background-size: auto 100%; background-position:center; ">
 					<ol class="carousel-indicators">
 	    				<li data-target="#thumbnailIndicators" data-slide-to="0" class="active"></li>
     					<li data-target="#thumbnailIndicators" data-slide-to="1"></li>
@@ -60,10 +48,6 @@
   				</div>
     	</div>				
 	</div>
- 
-	
-	
-	
 	
 	
 	<!-- Booking and Email signup links -->
@@ -127,6 +111,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- End Second Carousel -->
 
 	
 	<?php include "footer.php"; ?>
