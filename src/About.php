@@ -72,7 +72,7 @@ p, li, li a {
 </head>
 <body>
 <?php
-include_once "header.php";
+include_once "Header.php";
 ?>
 
 	<div class="container bootstrap snippet">
@@ -123,7 +123,7 @@ include_once "header.php";
 	<br>
 	<br>
 	<?php
-include_once "footer.php";
+include_once "Footer.php";
 ?>
 </body>
 </html>
