@@ -1,5 +1,5 @@
 body {
-	background: url("../Wallpaper/gold1.jpg") no-repeat center center fixed;
+	background-color: #83677B;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -7,5 +7,5 @@ body {
 }
 
 .form {
-	background-color:white;
+	
 }

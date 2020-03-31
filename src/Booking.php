@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 </head>
 <body>
+	<div style="background-color: #83677B">
     <?php include "Header.php"; ?>
     <?php 
      $formNames = array(
@@ -53,7 +54,7 @@
          'How many people are you expecting to be in attendance at the event? *',
          'Please list any additional information you would like to include about the event: *');
      ?>
-    <div class="form p-3 m-3">
+    <div class="form p-3 m-3 bg-dark text-white">
     <h1 style="text-align: center; white-space; pre-wrap;"> Booking </h1>
     <form method="post" action="acknowledge.php">
     	<?php $formCount = 0; ?>
@@ -132,6 +133,7 @@
         
         <input name="submit" type="submit" value="Submit">
     </form>
+    </div>
     </div>
     <?php include "Footer.php"; ?>
 </body>
