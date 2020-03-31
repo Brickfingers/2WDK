@@ -7,11 +7,15 @@
 
 footer{
 	
-	
-	
+	mid-width: 15px;
 	color: #E5F3F3;
 }
 
+.tab { 
+            display: inline-block; 
+            margin-left: 40px; 
+        }
+        
 .policy_text{
 	
 	color: #000000;
@@ -41,6 +45,7 @@ a:link{
 	
 	 font-size: 17px;
 }
+
 
 .footer-copyright{
 	
@@ -75,9 +80,9 @@ a:link{
   position: fixed;
   bottom: 23px;
   right: 40px;
-  width: 250px;
+  width: 15%;
+  
 }
-
 
 .box {
   width: 40%;
