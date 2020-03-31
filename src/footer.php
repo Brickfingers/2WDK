@@ -30,8 +30,7 @@
 		  
           <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Email" name="email" required>
 		  <hr>
-		  <div class="w3-center">
-		  
+		  <div class="w3-center">	  
 		 
 	<a class="button" href="#popup1">Privacy Policy</a>
 
