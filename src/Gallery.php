@@ -6,8 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<!-- Add icon library -->
-
+<link rel="stylesheet" type="text/css" href="css/Gallery.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script
@@ -16,85 +15,19 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<style>
-/* Make the image fully responsive */
-.carousel-inner img {
-	width: 100%;
-	height: 100%;
-}
-
-.img-fluid {
-	cursor: pointer;
-}
-
-.fa {
-	padding: 20px;
-	font-size: 20px;
-	text-align: center;
-	border-radius: 50%;
-}
-
-.fa:hover {
-	opacity: 0.5;
-}
-
-.fa-instagram {
-	background: #125688;
-	color: white;
-}
-
-h1 {
-	color: white;
-}
-
-.mr-4 {
-	color: black;
-}
-
-#demo {
-	margin: auto;
-	width: 100%;
-	height: 100%;
-}
-
-.row {
-	margin: auto;
-	text-align: center;
-}
-
-.p-2 {
-	background-color: black;
-}
-
-body {
-	background: url("Wallpaper/gold1.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
-}
-
-iframe {
-	position: relative;
-	text-align: center;
-}
-
-.card {
-	-moz-border-radius: 2%;
-	-webkit-border-radius: 2%;
-	border-radius: 2%;
-	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
-}
-</style>
-</head>
-<body>
+	
 <?php
 include_once "Header.php";
 ?>
-<div class="container">
+
+
+
+</head>
+<body style="background-color: #83677B;">
+
+	<div class="container">
 		<br> <br>
 
 		<div class="card bg-dark text-white">
@@ -150,11 +83,7 @@ include_once "Header.php";
 
 							</div>
 						</div>
-						<div class="carousel-item">
 
-							<img src="photo/pic7.jpg" alt="Ottawa" width="1100" height="500">
-							<div class="carousel-caption"></div>
-						</div>
 					</div>
 					<a class="carousel-control-prev" href="#demo" data-slide="prev"> <span
 						class="carousel-control-prev-icon"></span>
@@ -320,13 +249,12 @@ include_once "Header.php";
 
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+
 	<script
-		src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>	
-		
-		<script
 		src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>
-		
-		
+
+
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/instafeed.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
