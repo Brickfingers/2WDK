@@ -4,8 +4,13 @@
 <title>Sax N Sip</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<?php
+include_once "Header.php";
+?>
 
 <style>
 /* body { */
@@ -71,9 +76,6 @@ p, li, li a {
 
 </head>
 <body style="background-color: #83677B;">
-<?php
-include_once "Header.php";
-?>
 
 	<div class="container bootstrap snippet">
 	

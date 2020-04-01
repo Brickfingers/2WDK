@@ -19,6 +19,11 @@
 
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+<?php
+include_once "Header.php";
+?>
+
 <style>
 /* Make the image fully responsive */
 .carousel-inner img {
@@ -92,9 +97,7 @@ iframe {
 </style>
 </head>
 <body style="background-color: #83677B;">
-<?php
-include_once "Header.php";
-?>
+
 <div class="container">
 		<br> <br>
 
