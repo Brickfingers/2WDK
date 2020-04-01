@@ -5,21 +5,10 @@
     box-sizing: border-box
 }
 
-footer{
-	
-	
-	
-	color: #E5F3F3;
-}
 
 .policy_text{
 	
 	color: #000000;
-}
-
-a:link{
-    color: #000000;
-    text-decoration: none;
 }
 
 .copy_right{
@@ -29,44 +18,53 @@ a:link{
 
 .copyright{
 	
-	 font-size: 12px;
-}
-
-.copyright{
-	
-	 font-size: 12px;
-}
-
-.menu-text{
-	
-	 font-size: 17px;
-}
-
-.footer-copyright{
-	
-	background-color: #094D4D;
+	 font-size: 15px;
+	 color: #D4CFD1;
 }
 
 .footer{
 	
-    background: linear-gradient(to bottom, #074444 0%, #1e8e8e 110%);
+    background: linear-gradient(to bottom, #83677b 0%, #2e1114 74%);
 }
 
 
+.fa-envelope {
+  background: none;
+  color: white;
+}
 
-.label1{
-	
-	color: #000000;
-	
+.fa-facebook {
+  background: none;
+  color: white;
+}
+
+.fa-instagram {
+  background: none;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: none;
+  color: white;
+}
+
+.fa-youtube {
+  background: none;
+  color: white;
 }
 
 .popup{
 	
-	background-color: #1C6363;
+	background-color: #CCD1D1;
+}
+
+.footer ::selection {
+    color: none;
+    background: none;
 }
 
 .open-button {
-  background-color: #44902E;
+  background-color: gray;
   color: white;
   padding: 20px 15px;
   border: none;
@@ -74,10 +72,9 @@ a:link{
   border-radius: 05px;
   position: fixed;
   bottom: 23px;
-  right: 40px;
-  width: 250px;
+  right: 15px;
+  width: 210px;
 }
-
 
 .box {
   width: 40%;
@@ -98,6 +95,7 @@ a:link{
   visibility: hidden;
   opacity: 0;
 }
+
 .overlay:target {
   visibility: visible;
   opacity: 1;
@@ -124,15 +122,15 @@ a:link{
   text-decoration: none;
   color: #333;
 }
+
 .popup .close:hover {
   color: #06D85F;
 }
+
 .popup .content {
   max-height: 30%;
   overflow: auto;
 }
-
-
 
 
 /*!
