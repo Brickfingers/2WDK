@@ -36,7 +36,7 @@
                                                 		<div class="policy_text">
                                                 		 Privacy Policy
                                                 		<hr>
-                                                			..................
+                                                			.................
                                                 			<br>
                                                 		</div>
                                             		</div>
