@@ -83,11 +83,11 @@
    <br />
         <a href="/WebApp/src/Home.php">HOME</a><span class="tab">
       
-        <a href="/WebApp/src/Home.php">ABOUT</a><span class="tab">
+        <a href="/WebApp/src/About.php">ABOUT</a><span class="tab">
       
         <a href="/WebApp/src/Gallery.php">GALLERY</a><span class="tab">
       
-        <a href="/WebApp/src/eventplanner.php">EVENTS</a><span class="tab">
+        <a href="/WebApp/src/Events.php">EVENTS</a><span class="tab">
       
         <a href="/WebApp/src/Booking.php">BOOKING</a><span class="tab">
                
