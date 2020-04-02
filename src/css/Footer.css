@@ -61,9 +61,12 @@
   bottom: 23px;
   right: 25px;
   width: 12%;
-  z-index: 10;
+  z-index: 2;
 }
 
+.button1{
+	background-color: red;
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -85,18 +88,20 @@
   right: 20px;
   padding: 20px;
   background: #ffffff;
-  border-radius: 5px;
+  border-radius: 2px;
   width: 30%;
   transition: all 5s ease-in-out;
+  z-index: 10;
 }
 
 .subscribe_box{
 	position: absolute;
 	right: 20px;
 	bottom: 25px;
-	border-radius: 5px;
+	border-radius: 2px;
 	background-color:#fff;
 	width: 30%;
+	z-index: 10;
 	
 }
 .popup .close {
