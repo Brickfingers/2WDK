@@ -13,7 +13,7 @@
           		<button onclick="document.getElementById('id01').style.display='block'" class="open-button"><b>SUBSCRIBE</b></button>
         			<div id="id01" class="w3-modal">
         
-                		<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:500px">
+                		<div class="subscribe_box" style="max-width:500px">
             				<div class="popup">
                           		<div class="w3-center"><br>
                     	  
@@ -34,10 +34,18 @@
                                             		<a class="close" href="#">&times;</a>
                                             		<div class="content">
                                                 		<div class="policy_text">
-                                                		 Privacy Policy
+                                                		 <h2>Privacy Policy</h2>
                                                 		<hr>
-                                                			..................
-                                                			<br>
+                                                			<h3>Subscribe</h3>
+                                                			<br/>
+                                                			If you choose to receive emails notifications from Sax 'n' Sip, 
+                                                			we will collect your email address. 
+                                                			<br/><br/>
+                                                			<h3>Booking an event</h3> 
+                                                			<br/>
+                                                			You are given the opportunity to book an event with Ben Joseph on our Website. Booking an event requires you to enter your email address, first and last name, 
+                                                			telephone number.
+                                                			<br/><br/>
                                                 		</div>
                                             		</div>
                                             	</div>
@@ -53,7 +61,7 @@
             </li>
         </div>
         
-        
+    <div class= footer_no_selected>    
     <div class="footer-copyright text-center py-3">
   		<ul class="list-unstyled list-inline text-center">
            	
@@ -83,6 +91,7 @@
      		<br/>&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax n Sip
       	</div>
       	
+  	</div>
   	</div>
 </div>
 </div>

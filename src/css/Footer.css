@@ -5,28 +5,18 @@
     box-sizing: border-box
 }
 
-
 .policy_text{
-	
 	color: #000000;
 }
 
-.copy_right{
-   
-   margin-left: 670px;
-}
-
 .copyright{
-	
 	 font-size: 15px;
 	 color: #D4CFD1;
 }
 
 .footer{
-	
     background: linear-gradient(to bottom, #83677b 0%, #2e1114 74%);
 }
-
 
 .fa-envelope {
   background: none;
@@ -53,19 +43,15 @@
   color: white;
 }
 
-.popup{
-	
-	background-color: #CCD1D1;
-}
-
-
-.footer ::selection {
+.footer_no_selected ::selection {
     color: none;
     background: none;
 }
 
 .open-button {
-  background-color: gray;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  background-color: #3b3b3b	;
   color: white;
   padding: 20px 15px;
   border: none;
@@ -73,18 +59,8 @@
   border-radius: 05px;
   position: fixed;
   bottom: 23px;
-  right: 15px;
-  width: 210px;
-}
-
-.box {
-  width: 40%;
-  margin: 0 auto;
-  padding: 5px;
-  border: 2px solid #fff;
-  border-radius: 20px/50px;
-  background-clip: padding-box;
-  text-align: center;
+  right: 25px;
+  width: 12%;
 }
 
 .overlay {
@@ -103,16 +79,25 @@
 }
 
 .popup-privacy {
-  margin: 70px auto;
+  position: absolute;
+  bottom: 25px;	
+  right: 20px;
   padding: 20px;
   background: #ffffff;
   border-radius: 5px;
   width: 30%;
-  position: relative;
   transition: all 5s ease-in-out;
 }
 
-
+.subscribe_box{
+	position: absolute;
+	right: 20px;
+	bottom: 25px;
+	border-radius: 5px;
+	background-color:#fff;
+	width: 30%;
+	
+}
 .popup .close {
   position: absolute;
   top: 20px;
@@ -124,9 +109,6 @@
   color: #333;
 }
 
-.popup .close:hover {
-  color: #06D85F;
-}
 
 .popup .content {
   max-height: 30%;
