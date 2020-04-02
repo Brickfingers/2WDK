@@ -22,6 +22,7 @@
                           		                  	  
                     	  <!-- Begin Mailchimp Signup Form -->
                             
+                           
                             <div id="mc_embed_signup">
                             <form action="https://algonquinlive.us19.list-manage.com/subscribe/post?u=af5fac3ff4d76b39f763dbb7b&amp;id=7c52c75b83" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                                 <div id="mc_embed_signup_scroll">
