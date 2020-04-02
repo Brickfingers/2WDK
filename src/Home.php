@@ -10,23 +10,7 @@
 </head>
 
 <body>
-
-<<<<<<< HEAD:src/home.php
 	<?php include "header.php"; ?>
-=======
-	<?php include "Header.php"; ?>
-
-	<!-- Header Section -->
-	<!-- 
-		<div class="mainview container-fluid">
-		<div class="row">
-			<div class="header col-md-12" id="header">SAX 'N SIP
-			</div>
-		</div>
-	</div>
-	-->
-	<!-- End Header Section -->
->>>>>>> master:src/Home.php
 	
 	<div class="container-fluid">
 		<div class="row">
