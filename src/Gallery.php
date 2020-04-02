@@ -32,7 +32,7 @@ include_once "Header.php";
 
 		<div class="card bg-dark text-white">
 			<div class="card-header">
-				<h1 style="text-align: center; color: white;">GALLARY</h1>
+				<h1 style="text-align: center; color: white;">GALLERY</h1>
 			</div>
 
 		</div>
