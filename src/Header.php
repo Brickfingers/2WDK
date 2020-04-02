@@ -33,10 +33,10 @@
                                 <a class="nav-link" href="Home.php"> HOME </a> 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="About2.php"> ABOUT </a>
+                                <a class="nav-link" href="About.php"> ABOUT </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Gallery2.php"> GALLERY </a>
+                                <a class="nav-link" href="Gallery.php"> GALLERY </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="Events.php"> EVENT </a>
