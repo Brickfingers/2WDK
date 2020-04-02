@@ -29,8 +29,8 @@
 	themeSystem: 'bootstrap',
     header: {
         left: 'prev,next today',
-        center: 'title',
-        right: ''
+        center: '',
+        right: 'title'
       },
 
 
