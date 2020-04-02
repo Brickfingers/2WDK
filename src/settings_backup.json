@@ -1,0 +1,6 @@
+{
+"instagramPosts" : {"num": 10},
+"youtubePosts" : {"num": 10},
+"eventPosts" : {"num": 10},
+"aboutSection" : {"string": "All about me, I'm Great"}
+}

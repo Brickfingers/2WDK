@@ -20,10 +20,8 @@ include_once "Header.php";
 
 
 </head>
-<body style="background-color: #83677B; -webkit-background-size: cover;
- 	-moz-background-size: cover; 
- 	background-size: cover; 
- 	-o-background-size: cover;">
+<body
+	style="background-color: #83677B; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover; -o-background-size: cover;">
 
 	<div class="container">
 		<br> <br>
@@ -91,6 +89,7 @@ include_once "Header.php";
 				</div>
 
 				<br> <br> <br>
+				<!-- youtube------------------------------------------------------------------------------->
 				<!-- Grid row -->
 				<div class="row">
 
@@ -111,17 +110,17 @@ include_once "Header.php";
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
 											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/2e5zITHhVds"
-												allowfullscreen></iframe>
+												src="https://www.youtube.com/embed/2e5zITHhVds"></iframe>
 										</div>
 
 									</div>
 
 									<!--Footer-->
 									<div class="modal-footer justify-content-center">
-										<span class="mr-4"> Whatch more videos on Instagram!</span> <a
-											href="https://www.instagram.com/saxnsip/?hl=en"
-											class="fa fa-instagram" style="padding: 20px;font-size: 20px;text-align: center;border-radius: 50%; background: #125688;"></a>
+										<span class="mr-4"> Whatch more videos on YouTube!</span> <a
+											href="https://www.YouTube.com/saxnsip/?hl=en"
+											class="fa fa-youtube"
+											style="padding: 10px; font-size: 30px; text-align: center; border-radius: 50%; background: red;"></a>
 										<button type="button"
 											class="btn btn-outline-primary btn-rounded btn-md ml-4"
 											data-dismiss="modal">Close</button>
@@ -157,17 +156,17 @@ include_once "Header.php";
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
 											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/2p2hC--loq4?rel=0"
-												allowfullscreen></iframe>
+												src="https://www.youtube.com/embed/2p2hC--loq4?rel=0"></iframe>
 										</div>
 
 									</div>
 
 									<!--Footer-->
 									<div class="modal-footer justify-content-center">
-										<span class="mr-4">Whatch more videos on Instagram!</span> <a
-											href="https://www.instagram.com/saxnsip/?hl=en"
-											class="fa fa-instagram" style="padding: 20px;font-size: 20px;text-align: center;border-radius: 50%; background: #125688;"></a>
+										<span class="mr-4">Whatch more videos on YouTube!</span> <a
+											href="https://www.YouTube.com/saxnsip/?hl=en"
+											class="fa fa-youtube"
+											style="padding: 10px; font-size: 30px; text-align: center; border-radius: 50%; background: red;"></a>
 										<button type="button"
 											class="btn btn-outline-primary btn-rounded btn-md ml-4"
 											data-dismiss="modal">Close</button>
@@ -204,17 +203,17 @@ include_once "Header.php";
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
 											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/jpv2tMJJuz0?rel=0"
-												allowfullscreen></iframe>
+												src="https://www.youtube.com/embed/jpv2tMJJuz0?rel=0"></iframe>
 										</div>
 
 									</div>
 
 									<!--Footer-->
 									<div class="modal-footer justify-content-center">
-										<span class="mr-4">Whatch more videos on Instagram!</span> <a
-											href="https://www.instagram.com/saxnsip/?hl=en"
-											class="fa fa-instagram" style="padding: 20px;font-size: 20px;text-align: center;border-radius: 50%; background: #125688;"></a>
+										<span class="mr-4">Whatch more videos on YouTube!</span> <a
+											href="https://www.YouTube.com/saxnsip/?hl=en"
+											class="fa fa-youtube"
+											style="padding: 10px; font-size: 30px; text-align: center; border-radius: 50%; background: red;"></a>
 										<button type="button"
 											class="btn btn-outline-primary btn-rounded btn-md ml-4"
 											data-dismiss="modal">Close</button>
@@ -238,14 +237,176 @@ include_once "Header.php";
 				<!-- Grid row -->
 
 
+
+				<br> <br>
+
+				<!--  INSTAGRAM-------------------------------------------------------------------------- -->
+
+				<div>
+					<!-- Grid row -->
+					<div class="row">
+
+						<!-- Grid column -->
+						<div class="col-lg-4 col-md-12 mb-4">
+
+							<!--Modal: Name-->
+							<div class="modal fade" id="modal2" tabindex="-1" role="dialog"
+								aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-lg" role="document">
+
+									<!--Content-->
+									<div class="modal-content">
+
+										<!--Body-->
+										<div class="modal-body mb-0 p-0">
+
+											<div>
+												<iframe class="embed-responsive-item"
+													src="https://www.instagram.com/p/B81hkBWHcX8/embed"
+													width="500" height="550" frameborder="0" scrolling="no"
+													allowtransparency="true"></iframe>
+
+											</div>
+
+										</div>
+
+										<!--Footer-->
+										<div class="modal-footer justify-content-center">
+											<span class="mr-4"> Whatch more videos on Instagram!</span> <a
+												href="https://www.instagram.com/saxnsip/?hl=en"
+												class="fa fa-instagram"
+												style="padding: 20px; font-size: 20px; text-align: center; border-radius: 50%; background: #125688;"></a>
+											<button type="button"
+												class="btn btn-outline-primary btn-rounded btn-md ml-4"
+												data-dismiss="modal">Close</button>
+										</div>
+
+									</div>
+									<!--/.Content-->
+
+								</div>
+							</div>
+							<!--Modal: Name-->
+
+							<a><img class="img-fluid z-depth-1" src="photo/insta2.png"
+								alt="video" data-toggle="modal" data-target="#modal2"></a>
+
+						</div>
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+						<div class="col-lg-4 col-md-6 mb-4">
+
+							<!--Modal: Name-->
+							<div class="modal fade" id="modal3" tabindex="-1" role="dialog"
+								aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-lg" role="document">
+
+									<!--Content-->
+									<div class="modal-content">
+
+										<!--Body-->
+										<div class="modal-body mb-0 p-0">
+
+											<div>
+												<iframe class="embed-responsive-item"
+													src="https://www.instagram.com/p/B9Xnus_nTau/embed"
+													width="500" height="550" frameborder="0" scrolling="no"
+													allowtransparency="true"></iframe>
+
+											</div>
+
+										</div>
+
+										<!--Footer-->
+										<div class="modal-footer justify-content-center">
+											<span class="mr-4">Whatch more videos on Instagram!</span> <a
+												href="https://www.instagram.com/saxnsip/?hl=en"
+												class="fa fa-instagram"
+												style="padding: 20px; font-size: 20px; text-align: center; border-radius: 50%; background: #125688;"></a>
+											<button type="button"
+												class="btn btn-outline-primary btn-rounded btn-md ml-4"
+												data-dismiss="modal">Close</button>
+
+										</div>
+
+									</div>
+									<!--/.Content-->
+
+								</div>
+							</div>
+							<!--Modal: Name-->
+
+							<a><img class="img-fluid z-depth-1" src="photo/insta3.png"
+								alt="video" data-toggle="modal" data-target="#modal3"></a>
+
+						</div>
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+						<div class="col-lg-4 col-md-6 mb-4">
+
+							<!--Modal: Name-->
+							<div class="modal fade" id="modal5" tabindex="-1" role="dialog"
+								aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-lg" role="document">
+
+									<!--Content-->
+									<div class="modal-content">
+
+										<!--Body-->
+										<div class="modal-body mb-0 p-0">
+
+											<div>
+												<iframe class="embed-responsive-item"
+													src="https://www.instagram.com/p/B7ZElq-n4Sm/embed"
+													width="500" height="550" frameborder="0" scrolling="no"
+													allowtransparency="true"></iframe>
+											</div>
+
+										</div>
+
+										<!--Footer-->
+										<div class="modal-footer justify-content-center">
+											<span class="mr-4">Whatch more videos on Instagram!</span> <a
+												href="https://www.instagram.com/saxnsip/?hl=en"
+												class="fa fa-instagram"
+												style="padding: 20px; font-size: 20px; text-align: center; border-radius: 50%; background: #125688;"></a>
+											<button type="button"
+												class="btn btn-outline-primary btn-rounded btn-md ml-4"
+												data-dismiss="modal">Close</button>
+
+										</div>
+
+									</div>
+									<!--/.Content-->
+
+								</div>
+							</div>
+							<!--Modal: Name-->
+
+							<a><img class="img-fluid z-depth-1" src="photo/insta1.png"
+								alt="video" data-toggle="modal" data-target="#modal5"></a>
+
+						</div>
+						<!-- Grid column -->
+
+					</div>
+					<!-- Grid row -->
+
+
+				</div>
+
 			</div>
 
+
 		</div>
-		<br> <br>
+
+
 	</div>
 
-
-	
+	<br>
+	<br>
 	<script>
 
 	$('#modal1').on('hidden.bs.modal', function (e) {
@@ -262,6 +423,20 @@ include_once "Header.php";
 		  // do something...
 		  $('#modal4 iframe').attr("src", $("#modal4 iframe").attr("src"));
 		});
+
+		$('#modal2').on('hidden.bs.modal', function (e) {
+			  // do something...
+			  $('#modal2 iframe').attr("src", $("#modal2 iframe").attr("src"));
+			});
+		$('#modal3').on('hidden.bs.modal', function (e) {
+			  // do something...
+			  $('#modal3 iframe').attr("src", $("#modal3 iframe").attr("src"));
+			});
+
+		$('#modal5').on('hidden.bs.modal', function (e) {
+			  // do something...
+			  $('#modal5 iframe').attr("src", $("#modal5 iframe").attr("src"));
+			});
 	</script>
 	
 	
