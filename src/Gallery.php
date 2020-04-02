@@ -10,10 +10,6 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -21,14 +17,13 @@
 <?php
 include_once "Header.php";
 ?>
-<style>
-
-
-</style>
 
 
 </head>
-<body style="background-color: #83677B;">
+<body style="background-color: #83677B; -webkit-background-size: cover;
+ 	-moz-background-size: cover; 
+ 	background-size: cover; 
+ 	-o-background-size: cover;">
 
 	<div class="container">
 		<br> <br>
@@ -250,18 +245,7 @@ include_once "Header.php";
 	</div>
 
 
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-
-	<script
-		src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>
-
-
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/instafeed.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-	<script src="//platform.instagram.com/en_US/embeds.js"></script>
+	
 	<script>
 
 	$('#modal1').on('hidden.bs.modal', function (e) {
