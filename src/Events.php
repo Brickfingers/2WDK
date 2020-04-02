@@ -99,7 +99,18 @@
     <?php include "Header.php"; ?>
 <div style="background-color: #83677B;">
     <div class="container" style="background-color: #83677B;">
-    	<div class="page-header" style="text-align: center;"><h1>Events</h1></div>
+   
+    <br><br>
+    
+    	<div class="card bg-dark text-white">
+			<div class="card-header">
+				<h1 style="text-align: center; color: white;">EVENTS</h1>
+			</div>
+
+		</div>
+	
+	<br><br>
+
           <div id='calendar'></div>
           
     </div>
