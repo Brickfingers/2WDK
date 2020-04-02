@@ -21,7 +21,10 @@
 <?php
 include_once "Header.php";
 ?>
+<style>
 
+
+</style>
 
 
 </head>
@@ -113,7 +116,7 @@ include_once "Header.php";
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
 											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/Z6quNMT8mMM"
+												src="https://www.youtube.com/embed/2e5zITHhVds"
 												allowfullscreen></iframe>
 										</div>
 
@@ -123,7 +126,7 @@ include_once "Header.php";
 									<div class="modal-footer justify-content-center">
 										<span class="mr-4"> Whatch more videos on Instagram!</span> <a
 											href="https://www.instagram.com/saxnsip/?hl=en"
-											class="fa fa-instagram"></a>
+											class="fa fa-instagram" style="padding: 20px;font-size: 20px;text-align: center;border-radius: 50%; background: #125688;"></a>
 										<button type="button"
 											class="btn btn-outline-primary btn-rounded btn-md ml-4"
 											data-dismiss="modal">Close</button>
@@ -169,7 +172,7 @@ include_once "Header.php";
 									<div class="modal-footer justify-content-center">
 										<span class="mr-4">Whatch more videos on Instagram!</span> <a
 											href="https://www.instagram.com/saxnsip/?hl=en"
-											class="fa fa-instagram"></a>
+											class="fa fa-instagram" style="padding: 20px;font-size: 20px;text-align: center;border-radius: 50%; background: #125688;"></a>
 										<button type="button"
 											class="btn btn-outline-primary btn-rounded btn-md ml-4"
 											data-dismiss="modal">Close</button>
@@ -216,7 +219,7 @@ include_once "Header.php";
 									<div class="modal-footer justify-content-center">
 										<span class="mr-4">Whatch more videos on Instagram!</span> <a
 											href="https://www.instagram.com/saxnsip/?hl=en"
-											class="fa fa-instagram"></a>
+											class="fa fa-instagram" style="padding: 20px;font-size: 20px;text-align: center;border-radius: 50%; background: #125688;"></a>
 										<button type="button"
 											class="btn btn-outline-primary btn-rounded btn-md ml-4"
 											data-dismiss="modal">Close</button>
