@@ -14,15 +14,14 @@
             <li class="list-inline-item">
             <div class="w3-container">
         	  
-          		<button onclick="document.getElementById('id01').style.display='block'" class="open-button"><b>SUBSCRIBE</b></button>
+          		<button onclick="document.getElementById('id01').style.display='block'" class="open-button"><b>SIGN UP</b></button>
         			<div id="id01" class="w3-modal">
         
                 		<div class="subscribe_box" style="max-width:500px">
             				<div class="popup">
                           		                  	  
                     	  <!-- Begin Mailchimp Signup Form -->
-                            
-                           
+                                                  
                             <div id="mc_embed_signup">
                             <form action="https://algonquinlive.us19.list-manage.com/subscribe/post?u=af5fac3ff4d76b39f763dbb7b&amp;id=7c52c75b83" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                                 <div id="mc_embed_signup_scroll">
@@ -48,8 +47,8 @@
                             <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                             <!--End mc_embed_signup-->
                     	  
-                    	  	<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Subscribe Popup">&times;</span>
-                          		
+                    	  	<a class="close" href="#">&times;</a>
+                    	  		
         					 </div>
         					 <div class="w3-center">
              				<a class="button" href="#popup1">Privacy Policy</a>                                                                                    
@@ -89,23 +88,23 @@
            	
            	<li class="list-inline-item">
           	<br/>
-          	 	<a href="mailto:a@a.com" ><i class="fa fa-envelope mr-md-5 mr-5 fa-3x"></i></a>
+          	 	<a href="mailto:a@a.com" ><i class="social fa-envelope mr-md-5 mr-5 fa-3x"></i></a>
             </li>
           
           	<li class="list-inline-item">
-                <a href="https://www.facebook.com/Sax-N-Sip-with-Ben-Joseph-394791691247339/" target="_blank"><i class="fa fa-facebook mr-md-5 mr-5 fa-3x"> </i></a>             
+                <a href="https://www.facebook.com/Sax-N-Sip-with-Ben-Joseph-394791691247339/" target="_blank"><i class="social fa-facebook  fa-3x"> </i></a>             
           	</li>
           
       		<li class="list-inline-item">              
-                <a href="http://www.instagram.com/saxnsip" target="_blank"><i class="fa fa-instagram mr-md-5 mr-5 fa-3x"> </i></a>        
+                <a href="http://www.instagram.com/saxnsip" target="_blank"><i class="social fa-instagram  fa-3x"> </i></a>        
             </li>
          	
          	<li class="list-inline-item">          
-                <a href="http://www.instagram.com" target="_blank"><i class="fa fa-soundcloud mr-md-5 mr-5 fa-3x"> </i></a>         
+                <a href="http://www.instagram.com" target="_blank"><i class="social fa-soundcloud  fa-3x"> </i></a>         
             </li>
            
             <li class="list-inline-item">             
-                <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube mr-md-5 mr-5 fa-3x"> </i></a>            
+                <a href="https://www.youtube.com" target="_blank"><i class="social fa-youtube  fa-3x"> </i></a>            
             </li>
       	</ul>
       
