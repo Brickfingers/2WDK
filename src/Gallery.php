@@ -13,10 +13,9 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	
+
 </head>
-<body
-	style="background-color: #83677B;">
+<body style="background-color: #83677B;">
 <?php
 include_once "Header.php";
 ?>
@@ -44,14 +43,17 @@ include_once "Header.php";
 					</ul>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="photo/pic2.PNG" alt="" width="600">
+							<img class="img-fluid z-depth-1" src="photo/pic2.PNG"
+								style="width: 550px">
 							<div class="carousel-caption">
 								<h3>Ben Joseph</h3>
+								<p>Musician</p>
 
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="photo/pic9.PNG" alt="" width="600">
+							<img class="img-fluid z-depth-1" src="photo/pic9.PNG"
+								style="width: 550px">
 							<div class="carousel-caption">
 								<h3>Montreal</h3>
 								<p>Swaying Souls With Sax N Sip</p>
@@ -59,19 +61,27 @@ include_once "Header.php";
 						</div>
 
 						<div class="carousel-item">
-							<img src="photo/pic8.png" alt="" width="600">
-							<div class="carousel-caption"></div>
+							<img class="img-fluid z-depth-1" src="photo/pic8.png"
+								style="width: 550px">
+							<div class="carousel-caption">
+								<h3>Toronto</h3>
+								<p>Trying Something New</p>
+							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="photo/pic3.jpg" alt="" width="600">
+							<img class="img-fluid z-depth-1" src="photo/pic3.jpg"
+								style="width: 550px">
 							<div class="carousel-caption"></div>
+
 						</div>
 
 
 						<div class="carousel-item">
-							<img src="photo/pic1.png" alt="Ottawa" width="600">
+							<img class="img-fluid z-depth-1" src="photo/pic1.png"
+								style="width: 550px">
 							<div class="carousel-caption">
 								<h3>Ottawa</h3>
+								<p>Nothing But Love</p>
 
 
 							</div>
