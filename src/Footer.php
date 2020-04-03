@@ -81,7 +81,7 @@
         	</div>
             </li>
         </div>
- 
+ 	
     <div class= footer_no_selected>    
     <div class="footer-copyright text-center py-3">
   		<ul class="list-unstyled list-inline text-center">
@@ -107,9 +107,41 @@
                 <a href="https://www.youtube.com" target="_blank"><i class="social fa-youtube  fa-3x"> </i></a>            
             </li>
       	</ul>
-      
+      	<br/><br/>
+      <nav class="navbar navbar_footer navbar-expand-md navbar-toggleable-sm">
+            <div class="container">             	        
+                                              
+                <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar2">
+                	<div class="col-2"></div>
+  					<div class="col-8">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Home.php">HOME</a> 
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="About.php">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Gallery.php">GALLERY</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Events.php">EVENTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Booking.php">BOOKING</a>
+                            </li>                            
+                        </ul>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
+        </nav>
+        <br/>
       	<div class="copyright">
-     		<br/>&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax n Sip
+     		&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax n Sip
       	</div>
       	
   	</div>

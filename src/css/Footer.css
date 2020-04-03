@@ -9,15 +9,31 @@
 	color: #000000;
 }
 
+.menu-text{
+	font-size: 22px;
+	 color: #D4CFD1;
+	 display:inline-block;
+	 width:auto;
+	 
+}
+
+.navbar_footer {
+	background-color: none;
+	font-size: 50px;
+	
+
+}
+
+
 .copyright{
-	 font-size: 17px;
+	 font-size: 15px;
 	 color: #D4CFD1;
 	 display:inline-block;
 	 width:auto;
 }
 
 .footer{
-    background: linear-gradient(to bottom, #83677b 0%, #2e1114 74%);
+    background: linear-gradient(to bottom, #83677b 0%, #2e1114 50%);
     width: 100%;
     margin: auto;
 }
@@ -84,7 +100,7 @@
   bottom: 35px;
   right: 2px;
   width: 10%;
-  z-index: 2;
+  z-index: 10;
 }
 
 .button1{
@@ -114,7 +130,7 @@
   border-radius: 2px;
   width: 30%;
   transition: all 5s ease-in-out;
-  z-index: 10;
+  z-index: 999999;
 }
 
 .subscribe_box{
@@ -124,7 +140,7 @@
 	border-radius: 2px;
 	background-color:#fff;
 	width: 30%;
-	z-index: 10;
+	z-index: 999999;
 	
 }
 .popup .close {
