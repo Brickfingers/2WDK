@@ -1,0 +1,44 @@
+.jumbotron.jumbotron-fluid {
+	/* color: #d4d4dc;
+	font-family: 'Playfair Display'; */
+	/* font-size: 15px; */
+	/* font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold; */
+	background: linear-gradient(to bottom, #1d1e22 0%, #393f4d 74%);
+	margin-bottom: 0px;	
+}
+
+.display-2 {
+	color: #feda6a;
+	font-family: 'Sacramento';
+}
+
+.display-6, .lead {
+	color: #d4d4dc;
+	font-family: 'Playfair Display';
+}
+
+.nav-link {
+	/* color: #f2e7c5; */
+	color: #fbe5a2;
+	font-family: 'Poppins';
+	/* font-family: 'Playfair Display'; */
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.navbar {
+	background-color: #393f4d;	
+	z-index: 2;	
+}
+
+.custom-toggler .navbar-toggler-icon {
+	background-image:
+		url( 
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(212, 207, 209, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+}
