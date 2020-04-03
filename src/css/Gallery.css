@@ -56,3 +56,7 @@ iframe {
 	border-radius: 2%;
 	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
+.carousel-control-prev-icon,.carousel-control-next-icon {
+	padding: 15px;
+
+}
