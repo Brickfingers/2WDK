@@ -8,12 +8,11 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-<?php
-include_once "Header.php";
-?>
-
 </head>
 <body style="background-color: #83677B;">
+	<?php
+include_once "Header.php";
+?>
 
 	<div class="container bootstrap snippet">
 
