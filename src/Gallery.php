@@ -14,15 +14,12 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	
+</head>
+<body
+	style="background-color: #83677B;">
 <?php
 include_once "Header.php";
 ?>
-
-
-</head>
-<body
-	style="background-color: #83677B; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover; -o-background-size: cover;">
-
 	<div class="container">
 		<br> <br>
 
