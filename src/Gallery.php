@@ -44,14 +44,14 @@ include_once "Header.php";
 					</ul>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="photo/pic2.PNG" alt="" width="1100" height="500">
+							<img src="photo/pic2.PNG" alt="" width="600">
 							<div class="carousel-caption">
 								<h3>Ben Joseph</h3>
 
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="photo/pic9.PNG" alt="" width="1100" height="500">
+							<img src="photo/pic9.PNG" alt="" width="600">
 							<div class="carousel-caption">
 								<h3>Montreal</h3>
 								<p>Swaying Souls With Sax N Sip</p>
@@ -59,17 +59,17 @@ include_once "Header.php";
 						</div>
 
 						<div class="carousel-item">
-							<img src="photo/pic8.png" alt="" width="1100" height="500">
+							<img src="photo/pic8.png" alt="" width="600">
 							<div class="carousel-caption"></div>
 						</div>
 						<div class="carousel-item">
-							<img src="photo/pic3.jpg" alt="" width="1100" height="500">
+							<img src="photo/pic3.jpg" alt="" width="600">
 							<div class="carousel-caption"></div>
 						</div>
 
 
 						<div class="carousel-item">
-							<img src="photo/pic1.png" alt="Ottawa" width="1100" height="500">
+							<img src="photo/pic1.png" alt="Ottawa" width="600">
 							<div class="carousel-caption">
 								<h3>Ottawa</h3>
 
