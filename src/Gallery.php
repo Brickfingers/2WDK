@@ -43,8 +43,8 @@ include_once "Header.php";
 					</ul>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img class="img-fluid z-depth-1" src="photo/pic2.PNG"
-								style="width: 550px">
+							<img class="img-fluid z-depth-1" src="photo/pic2.png"
+								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Ben Joseph</h3>
 								<p>Musician</p>
@@ -52,8 +52,8 @@ include_once "Header.php";
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" src="photo/pic9.PNG"
-								style="width: 550px">
+							<img class="img-fluid z-depth-1" src="photo/pic9.png"
+								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Montreal</h3>
 								<p>Swaying Souls With Sax N Sip</p>
@@ -62,7 +62,7 @@ include_once "Header.php";
 
 						<div class="carousel-item">
 							<img class="img-fluid z-depth-1" src="photo/pic8.png"
-								style="width: 550px">
+								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Toronto</h3>
 								<p>Trying Something New</p>
@@ -70,7 +70,7 @@ include_once "Header.php";
 						</div>
 						<div class="carousel-item">
 							<img class="img-fluid z-depth-1" src="photo/pic3.jpg"
-								style="width: 550px">
+								style="width: 650px">
 							<div class="carousel-caption"></div>
 
 						</div>
@@ -78,7 +78,7 @@ include_once "Header.php";
 
 						<div class="carousel-item">
 							<img class="img-fluid z-depth-1" src="photo/pic1.png"
-								style="width: 550px">
+								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Ottawa</h3>
 								<p>Nothing But Love</p>
