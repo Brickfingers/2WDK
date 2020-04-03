@@ -33,7 +33,7 @@
 }
 
 .footer{
-    background: linear-gradient(to bottom, #83677b 0%, #2e1114 50%);
+    background: linear-gradient(to bottom, #393f4d 0%, #1d1e22 74%);
     width: 100%;
     margin: auto;
 }
@@ -50,35 +50,35 @@
   background: none;
   color: white;
   margin-right:3rem!important;
-  font-size:3em;
+  font-size:300%;
 }
 
 .fa-facebook {
   background: none;
   color: white;
   margin-right:3rem!important;
-  font-size:3em;
+  font-size:300%;
 }
 
 .fa-instagram {
   background: none;
   color: white;
   margin-right:3rem!important;
-  font-size:3em;
+  font-size:300%;
 }
 
 .fa-soundcloud {
   background: none;
   color: white;
   margin-right:3rem!important;
-  font-size:3em;
+  font-size:300%;
 }
 
 .fa-youtube {
   background: none;
   color: white;
   margin-right:3rem!important;
-  font-size:3em;
+  font-size:300%;
 }
 
 
@@ -90,16 +90,16 @@
 .open-button {
   font-family: Verdana, Geneva, sans-serif;
   font-weight: bold;
-  background-color: #53B856	;
+  background-color: #feda6a	;
   color: black;
-  padding: 20px 0px;
+  padding: 25px 0px;
   border: none;
   cursor: pointer;
   border-radius: 05px;
   position: fixed;
   bottom: 35px;
   right: 2px;
-  width: 10%;
+  width: 18%;
   z-index: 10;
 }
 

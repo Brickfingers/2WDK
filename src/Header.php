@@ -23,7 +23,7 @@
       </div>
     </div>
 	
-	<nav class="navbar navbar-expand-md navbar-toggleable-sm">
+	<nav class="navbar navbar1 navbar-expand-md navbar-toggleable-sm">
             <div class="container">             	        
                 <!-- <button class="navbar-toggler collapsed custom-toggler" type="button" data-toggle="collapse" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbar1">
 					<span class="navbar-toggler-icon"></span>
