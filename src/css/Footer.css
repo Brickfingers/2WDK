@@ -7,6 +7,7 @@
 
 .policy_text{
 	color: #000000;
+	font-family: 'Playfair Display';
 }
 
 .menu-text{
@@ -17,6 +18,29 @@
 	 
 }
 
+.sign_up_button {
+	clear:both; 
+	background-color: #feda6a; 
+	border: 0 none; 
+	border-radius:4px; 
+	transition: all 0.23s ease-in-out 0s; 
+	color: #000000;
+	 cursor: pointer; 
+	 display: inline-block; 
+	 font-size:15px; 
+	 font-weight: normal; 
+	 height: 40px; 
+	 line-height: 32px;
+	 position: fixed;
+	  left: 340px;
+	  bottom: 53px;
+	  padding: 0px 30px; 
+	  text-align: center; 
+	  text-decoration: none; 
+	  vertical-align: top; 
+	  white-space: nowrap; 
+	  width: auto;
+}
 .navbar_footer {
 	background-color: none;
 	font-size: 50px;
@@ -118,26 +142,34 @@
   opacity: 1;
 }
 
+.subscribe_title {
+	color: #000000;
+	font-family: 'Playfair Display';
+}
+
 .popup-privacy {
-  position: absolute;
-  bottom: 25px;	
-  right: 2px;
-  padding: 20px;
   background: #ffffff;
   border-radius: 2px;
-  width: 30%;
+  
   transition: all 5s ease-in-out;
   z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
 }
 
 .subscribe_box{
-	position: absolute;
-	right: 2px;
-	bottom: 25px;
 	border-radius: 2px;
 	background-color:#fff;
 	width: 30%;
 	z-index: 10;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
 	
 }
 .popup .close {
