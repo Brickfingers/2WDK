@@ -51,7 +51,7 @@
      
                     	  		
         					 </div>
-        					 
+        					 <div class="w3-center">
              				<a class="button subscribe_title" href="#popup1">Privacy Policy</a>                                                                                    
                                             <div id="popup1" class="overlay">
                                             	<div class="popup-privacy">
@@ -59,7 +59,7 @@
                                             		<div class="content">
                                                 		<div class="policy_text">
                                                 		<br/>
-                                                		 <h1 class="subscribe_title">Privacy Policy     </h1><br/>
+                                                		 <h1 class="subscribe_title">Privacy Policy</h1><br/>
                                                 		<hr>
                                                 			 <h2 class="subscribe_title">Subscribe</h2>
                                                 			<br/>
@@ -76,7 +76,7 @@
                                             	</div>
                                             </div>
                            	 <br/><br/>
-                                     
+                               </div>      
             			</div>
         			</div>
         			

@@ -150,14 +150,14 @@
 .popup-privacy {
   background: #ffffff;
   border-radius: 2px;
-  
   transition: all 5s ease-in-out;
   z-index: 10;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 80%;
+  
 }
 
 .subscribe_box{
