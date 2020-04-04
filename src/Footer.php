@@ -13,7 +13,7 @@
          
             <li class="list-inline-item">
             <div class="w3-container">
-        	  
+        	  <form>
           		<button onclick="document.getElementById('id01').style.display='block'" class="open-button"><b>SIGN UP</b></button>
         			<div id="id01" class="w3-modal">
         
@@ -47,7 +47,7 @@
                             <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                             <!--End mc_embed_signup-->
                     	  
-                    	  	<a class="close" href="#">&times;</a>
+                    	  	
                     	  		
         					 </div>
         					 <div class="w3-center">
@@ -74,9 +74,11 @@
                                             	</div>
                                             </div>
                            	</div>
-                            <br/>               
+                            <br/>  
+                            <button type="button" class="close_button" onclick="closeForm()">Close</button><br/>             
             			</div>
         			</div>
+        			</form>
           		</div>
         	</div>
             </li>
@@ -85,29 +87,28 @@
     <div class= footer_no_selected>    
     <div class="footer-copyright text-center py-3">
   		<ul class="list-unstyled list-inline text-center">
-           	
+           	<br/>
            	<li class="list-inline-item">
-          	<br/>
-          	 	<a href="mailto:a@a.com" ><i class="social fa-envelope mr-md-5 mr-5 fa-3x"></i></a>
+          	 	<a href="mailto:a@a.com" ><i class="social fa-envelope"></i></a>
             </li>
           
           	<li class="list-inline-item">
-                <a href="https://www.facebook.com/Sax-N-Sip-with-Ben-Joseph-394791691247339/" target="_blank"><i class="social fa-facebook  fa-3x"> </i></a>             
+                <a href="https://www.facebook.com/Sax-N-Sip-with-Ben-Joseph-394791691247339/" target="_blank"><i class="social fa-facebook "> </i></a>             
           	</li>
           
       		<li class="list-inline-item">              
-                <a href="http://www.instagram.com/saxnsip" target="_blank"><i class="social fa-instagram  fa-3x"> </i></a>        
+                <a href="http://www.instagram.com/saxnsip" target="_blank"><i class="social fa-instagram"> </i></a>        
             </li>
          	
          	<li class="list-inline-item">          
-                <a href="http://www.instagram.com" target="_blank"><i class="social fa-soundcloud  fa-3x"> </i></a>         
+                <a href="http://www.instagram.com" target="_blank"><i class="social fa-soundcloud"> </i></a>         
             </li>
            
             <li class="list-inline-item">             
-                <a href="https://www.youtube.com" target="_blank"><i class="social fa-youtube  fa-3x"> </i></a>            
+                <a href="https://www.youtube.com" target="_blank"><i class="social fa-youtube"> </i></a>            
             </li>
       	</ul>
-      	<br/><br/>
+      	<br/>
       <nav class="navbar navbar_footer navbar-expand-md navbar-toggleable-sm">
             <div class="container">             	        
                                               

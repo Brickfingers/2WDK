@@ -20,8 +20,6 @@
 .navbar_footer {
 	background-color: none;
 	font-size: 50px;
-	
-
 }
 
 
@@ -49,36 +47,35 @@
 .fa-envelope {
   background: none;
   color: white;
-  margin-right:3rem!important;
-  font-size:300%;
+  margin-right:20px;
+  font-size:240%;
 }
 
 .fa-facebook {
   background: none;
   color: white;
-  margin-right:3rem!important;
-  font-size:300%;
+  margin-right:20px;
+  font-size:240%;
 }
 
 .fa-instagram {
   background: none;
   color: white;
-  margin-right:3rem!important;
-  font-size:300%;
+  margin-right:20px;
+  font-size:240%;
 }
 
 .fa-soundcloud {
   background: none;
   color: white;
-  margin-right:3rem!important;
-  font-size:300%;
+  margin-right:20px;
+  font-size:240%;
 }
 
 .fa-youtube {
   background: none;
   color: white;
-  margin-right:3rem!important;
-  font-size:300%;
+  font-size:240%;
 }
 
 
@@ -100,7 +97,7 @@
   bottom: 35px;
   right: 2px;
   width: 18%;
-  z-index: 10;
+  z-index: 2;
 }
 
 .button1{
@@ -130,7 +127,7 @@
   border-radius: 2px;
   width: 30%;
   transition: all 5s ease-in-out;
-  z-index: 999999;
+  z-index: 10;
 }
 
 .subscribe_box{
@@ -140,10 +137,21 @@
 	border-radius: 2px;
 	background-color:#fff;
 	width: 30%;
-	z-index: 999999;
+	z-index: 10;
 	
 }
 .popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.close1 {
   position: absolute;
   top: 20px;
   right: 30px;
