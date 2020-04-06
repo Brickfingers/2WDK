@@ -6,8 +6,18 @@
 	margin-bottom: 0px;	
 }
 
+.display-2 {		
+	font-family: 'Sacramento';
+	line-height: normal;
+}
+
+.display-6, .lead {	
+	font-family: 'Playfair Display';
+}
+
 .nav-link {
 	color: #D4CFD1;
+	font-family: 'Poppins';
 	font-size: 18px;
 	font-weight: bold;
 }
