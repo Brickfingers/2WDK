@@ -1,5 +1,7 @@
 <?php 
 if (isset($_POST['submit'])){
+    //variable to pull from settings file eventually.
+    $emailaddress = "";
     $to = 'robwright445@gmail.com';
     $subject = "Booking Submission for Sax'N'Sip";
     
@@ -69,7 +71,10 @@ if (isset($_POST['submit'])){
     if ($email){
         $headers .= "\r\nReply-To: $email";
     }
-    $success = mail($to, $subject, $emailBody, $headers, '-frobwright445@gmail.com');
+    //don't try to mail if running on localhost, didn't setup email server locally.
+    if ($_SERVER['SERVER_NAME'] != "127.0.0.1"){
+        $success = mail($to, $subject, $emailBody, $headers, '-frobwright445@gmail.com');
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -81,20 +86,22 @@ if (isset($_POST['submit'])){
     
     <link rel="stylesheet" type="text/css" href="css/Booking.css" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 </head>
 <body>
 <?php include "Header.php"; ?>
-	<div class="form p-3 m-3">
-	<?php if (isset($success) && $success){ ?>
-		<h1>Thank You</h1>
-        <p>Your booking has been submitted.</p>
-	<?php } else { ?>
-        <h1>Oops!</h1>
-        <p>Sorry, there was a problem with the submission.</p>
-    <?php } ?>
-    </div>
+	<div style="background-color: #83677B">
+		<div class="form p-3 mx-3 bg-dark text-white">
+			<?php if (isset($success) && $success){ ?>
+			<h1>Thank You</h1>
+			<p>Your booking has been submitted.</p>
+			<?php } else { ?>
+        	<h1>Oops!</h1>
+			<p>Sorry, there was a problem with the submission.</p>
+    		<?php } ?>
+    	</div>
+	</div>
 </body>
 <?php include "Footer.php"; ?>

@@ -54,7 +54,7 @@
          'How many people are you expecting to be in attendance at the event? *',
          'Please list any additional information you would like to include about the event: *');
      ?>
-    <div class="form p-3 m-3 bg-dark text-white">
+    <div class="form p-3 mx-3 bg-dark text-white">
     <h1 style="text-align: center; white-space; pre-wrap;"> Booking </h1>
     <form method="post" action="acknowledge.php">
     	<?php $formCount = 0; ?>
