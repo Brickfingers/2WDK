@@ -91,43 +91,23 @@
   		<ul class="list-unstyled list-inline text-center">
            	<br/>
            	<li class="list-inline-item">
-          	 	<a href="<?php
-                            $myfile = fopen("Admin/SocialMediaLinks/EmailAddress.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/SocialMediaLinks/EmailAddress.txt"));
-                            fclose($myfile);
-                            ?>" ><i class="social fa-envelope"></i></a>
+          	 	<a href="mailto:a@a.com" ><i class="social fa-envelope"></i></a>
             </li>
           
           	<li class="list-inline-item">
-                <a href="<?php
-                            $myfile = fopen("Admin/SocialMediaLinks/FacebookLink.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
-                            fclose($myfile);
-                            ?>" target="_blank"><i class="social fa-facebook "> </i></a>             
+                <a href="https://www.facebook.com/Sax-N-Sip-with-Ben-Joseph-394791691247339/" target="_blank"><i class="social fa-facebook "> </i></a>             
           	</li>
           
       		<li class="list-inline-item">              
-                <a href="<?php
-                            $myfile = fopen("Admin/SocialMediaLinks/InstagramLink.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/SocialMediaLinks/InstagramLink.txt"));
-                            fclose($myfile);
-                            ?>" target="_blank"><i class="social fa-instagram"> </i></a>        
+                <a href="http://www.instagram.com/saxnsip" target="_blank"><i class="social fa-instagram"> </i></a>        
             </li>
          	
          	<li class="list-inline-item">          
-                <a href="<?php
-                            $myfile = fopen("Admin/SocialMediaLinks/SoundCloudLink.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/SocialMediaLinks/SoundCloudLink.txt"));
-                            fclose($myfile);
-                            ?>" target="_blank"><i class="social fa-soundcloud"> </i></a>         
+                <a href="http://www.instagram.com" target="_blank"><i class="social fa-soundcloud"> </i></a>         
             </li>
            
             <li class="list-inline-item">             
-                <a href="<?php
-                            $myfile = fopen("Admin/SocialMediaLinks/YoutubeLink.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
-                            fclose($myfile);
-                            ?>" target="_blank"><i class="social fa-youtube"> </i></a>            
+                <a href="https://www.youtube.com" target="_blank"><i class="social fa-youtube"> </i></a>            
             </li>
       	</ul>
       	<br/>

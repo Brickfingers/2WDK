@@ -9,8 +9,7 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
 </head>
-<!-- <body style="background-color: #83677B;"> -->
-<body style="background-color: #CACFD2;">
+<body style="background-color: #83677B;">
 	<?php
 include_once "Header.php";
 ?>
@@ -40,11 +39,21 @@ include_once "Header.php";
 						<div class="col-md-7">
 							<h2>Ben Joseph</h2>
 							<hr>
-							<p align="justify"><?php
-                            $myfile = fopen("Admin/About/AboutText.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/About/AboutText.txt"));
-                            fclose($myfile);
-                            ?></p>
+							<p>Ben Joseph is a Haitian American born and raised in Newark,
+								New Jersey. He is the youngest of 4 brothers who are all
+								musically gifted. At the age of 8, Ben found his passion for the
+								saxophone. He studied classical music and played in multiple
+								symphonies and bands but knew that his love for the sax came
+								from somewhere else. At the age of 12 he started studying jazz
+								and instantly knew that it was his calling. Some of his favorite
+								artists include David Sanbourn, Kenny G, Gerald Albright, and
+								Warren Hill. Since then, he has been studying music while
+								mastering multiple genres at the same time. Today he continues
+								to excel doing live performances, both for private and public
+								functions in Ottawa, ON where he currently resides. Ben is on a
+								steady rise and has managed to build a loyal following of
+								supporters who resonate with his undeniable gift and passion for
+								music.</p>
 							<br>
 						</div>
 					</div>
