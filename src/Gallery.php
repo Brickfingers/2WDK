@@ -43,8 +43,8 @@ include_once "Header.php";
 					</ul>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img class="img-fluid z-depth-1" src="photo/pic2.PNG"
-								style="width: 550px">
+							<img class="img-fluid z-depth-1" src="photo/pic2.png"
+								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Ben Joseph</h3>
 								<p>Musician</p>
@@ -52,8 +52,8 @@ include_once "Header.php";
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" src="photo/pic9.PNG"
-								style="width: 550px">
+							<img class="img-fluid z-depth-1" src="photo/pic9.png"
+								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Montreal</h3>
 								<p>Swaying Souls With Sax N Sip</p>
@@ -62,7 +62,7 @@ include_once "Header.php";
 
 						<div class="carousel-item">
 							<img class="img-fluid z-depth-1" src="photo/pic8.png"
-								style="width: 550px">
+								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Toronto</h3>
 								<p>Trying Something New</p>
@@ -70,7 +70,7 @@ include_once "Header.php";
 						</div>
 						<div class="carousel-item">
 							<img class="img-fluid z-depth-1" src="photo/pic3.jpg"
-								style="width: 550px">
+								style="width: 650px">
 							<div class="carousel-caption"></div>
 
 						</div>
@@ -78,7 +78,7 @@ include_once "Header.php";
 
 						<div class="carousel-item">
 							<img class="img-fluid z-depth-1" src="photo/pic1.png"
-								style="width: 550px">
+								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Ottawa</h3>
 								<p>Nothing But Love</p>
@@ -96,7 +96,7 @@ include_once "Header.php";
 				</div>
 
 				<br> <br> <br>
-				<!-- youtube------------------------------------------------------------------------------->
+<!-- youtube------------------------------------------------------------------------------->
 				<!-- Grid row -->
 				<div class="row">
 
@@ -247,7 +247,7 @@ include_once "Header.php";
 
 				<br> <br>
 
-				<!--  INSTAGRAM-------------------------------------------------------------------------- -->
+<!--INSTAGRAM-------------------------------------------------------------------------- -->
 
 				<div>
 					<!-- Grid row -->
@@ -259,7 +259,7 @@ include_once "Header.php";
 							<!--Modal: Name-->
 							<div class="modal fade" id="modal2" tabindex="-1" role="dialog"
 								aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-lg" role="document">
+								<div class="modal-dialog modal-md" role="document">
 
 									<!--Content-->
 									<div class="modal-content">
@@ -267,7 +267,7 @@ include_once "Header.php";
 										<!--Body-->
 										<div class="modal-body mb-0 p-0">
 
-											<div>
+											<div class="embed-responsive embed-responsive-1by1 z-depth-1-half">
 												<iframe class="embed-responsive-item"
 													src="https://www.instagram.com/p/B81hkBWHcX8/embed"
 													width="500" height="550" frameborder="0" scrolling="no"
@@ -307,7 +307,7 @@ include_once "Header.php";
 							<!--Modal: Name-->
 							<div class="modal fade" id="modal3" tabindex="-1" role="dialog"
 								aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-lg" role="document">
+								<div class="modal-dialog modal-md" role="document">
 
 									<!--Content-->
 									<div class="modal-content">
@@ -315,7 +315,7 @@ include_once "Header.php";
 										<!--Body-->
 										<div class="modal-body mb-0 p-0">
 
-											<div>
+											<div class="embed-responsive embed-responsive-1by1 z-depth-1-half">
 												<iframe class="embed-responsive-item"
 													src="https://www.instagram.com/p/B9Xnus_nTau/embed"
 													width="500" height="550" frameborder="0" scrolling="no"
@@ -356,7 +356,7 @@ include_once "Header.php";
 							<!--Modal: Name-->
 							<div class="modal fade" id="modal5" tabindex="-1" role="dialog"
 								aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-lg" role="document">
+								<div class="modal-dialog modal-md" role="document">
 
 									<!--Content-->
 									<div class="modal-content">
@@ -364,7 +364,7 @@ include_once "Header.php";
 										<!--Body-->
 										<div class="modal-body mb-0 p-0">
 
-											<div>
+											<div class="embed-responsive embed-responsive-1by1 z-depth-1-half">
 												<iframe class="embed-responsive-item"
 													src="https://www.instagram.com/p/B7ZElq-n4Sm/embed"
 													width="500" height="550" frameborder="0" scrolling="no"

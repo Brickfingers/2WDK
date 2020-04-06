@@ -7,6 +7,7 @@
 
 .policy_text{
 	color: #000000;
+	font-family: 'Playfair Display';
 }
 
 .menu-text{
@@ -17,11 +18,33 @@
 	 
 }
 
+.sign_up {
+	
+	color: #000000;
+	clear:both; 
+	background-color: #feda6a; 
+	border: 0 none; 
+	border-radius:4px; 
+	transition: all 0.23s ease-in-out 0s; 
+	cursor: pointer; 
+	display: inline-block; 
+	font-size:15px; 
+	font-weight: normal; 
+	height: 40px; 
+	line-height: 32px;  
+	padding: 0px 60px; 
+	text-align: center; 
+	text-decoration: none; 
+	vertical-align: top; 
+	white-space: nowrap; 
+	width: auto;
+	
+}
+	 
+
 .navbar_footer {
 	background-color: none;
 	font-size: 50px;
-	
-
 }
 
 
@@ -33,10 +56,11 @@
 }
 
 .footer{
-    background: linear-gradient(to bottom, #83677b 0%, #2e1114 50%);
+    background: linear-gradient(to bottom, #393f4d 0%, #1d1e22 74%);
     width: 100%;
     margin: auto;
 }
+
 
 .social{
 	display:inline-block;
@@ -49,36 +73,35 @@
 .fa-envelope {
   background: none;
   color: white;
-  margin-right:3rem!important;
-  font-size:3em;
+  margin-right:20px;
+  font-size:240%;
 }
 
 .fa-facebook {
   background: none;
   color: white;
-  margin-right:3rem!important;
-  font-size:3em;
+  margin-right:20px;
+  font-size:240%;
 }
 
 .fa-instagram {
   background: none;
   color: white;
-  margin-right:3rem!important;
-  font-size:3em;
+  margin-right:20px;
+  font-size:240%;
 }
 
 .fa-soundcloud {
   background: none;
   color: white;
-  margin-right:3rem!important;
-  font-size:3em;
+  margin-right:20px;
+  font-size:240%;
 }
 
 .fa-youtube {
   background: none;
   color: white;
-  margin-right:3rem!important;
-  font-size:3em;
+  font-size:240%;
 }
 
 
@@ -90,17 +113,17 @@
 .open-button {
   font-family: Verdana, Geneva, sans-serif;
   font-weight: bold;
-  background-color: #53B856	;
+  background-color: #feda6a	;
   color: black;
-  padding: 20px 0px;
+  padding: 25px 0px;
   border: none;
   cursor: pointer;
   border-radius: 05px;
   position: fixed;
   bottom: 35px;
   right: 2px;
-  width: 10%;
-  z-index: 10;
+  width: 18%;
+  z-index: 2;
 }
 
 .button1{
@@ -121,29 +144,48 @@
   opacity: 1;
 }
 
+.subscribe_title {
+	color: #000000;
+	font-family: 'Playfair Display';
+}
+
 .popup-privacy {
-  position: absolute;
-  bottom: 25px;	
-  right: 2px;
-  padding: 20px;
   background: #ffffff;
   border-radius: 2px;
-  width: 30%;
   transition: all 5s ease-in-out;
-  z-index: 999999;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  
 }
 
 .subscribe_box{
-	position: absolute;
-	right: 2px;
-	bottom: 25px;
 	border-radius: 2px;
 	background-color:#fff;
 	width: 30%;
-	z-index: 999999;
+	z-index: 10;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
 	
 }
 .popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.close1 {
   position: absolute;
   top: 20px;
   right: 30px;
