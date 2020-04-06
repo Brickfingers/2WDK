@@ -96,7 +96,7 @@ include_once "Header.php";
 				</div>
 
 				<br> <br> <br>
-<!-- youtube------------------------------------------------------------------------------->
+				<!-- youtube------------------------------------------------------------------------------->
 				<!-- Grid row -->
 				<div class="row">
 
@@ -247,7 +247,7 @@ include_once "Header.php";
 
 				<br> <br>
 
-<!--INSTAGRAM-------------------------------------------------------------------------- -->
+				<!--INSTAGRAM-------------------------------------------------------------------------- -->
 
 				<div>
 					<!-- Grid row -->
@@ -267,7 +267,8 @@ include_once "Header.php";
 										<!--Body-->
 										<div class="modal-body mb-0 p-0">
 
-											<div class="embed-responsive embed-responsive-1by1 z-depth-1-half">
+											<div
+												class="embed-responsive embed-responsive-1by1 z-depth-1-half">
 												<iframe class="embed-responsive-item"
 													src="https://www.instagram.com/p/B81hkBWHcX8/embed"
 													width="500" height="550" frameborder="0" scrolling="no"
@@ -315,7 +316,8 @@ include_once "Header.php";
 										<!--Body-->
 										<div class="modal-body mb-0 p-0">
 
-											<div class="embed-responsive embed-responsive-1by1 z-depth-1-half">
+											<div
+												class="embed-responsive embed-responsive-1by1 z-depth-1-half">
 												<iframe class="embed-responsive-item"
 													src="https://www.instagram.com/p/B9Xnus_nTau/embed"
 													width="500" height="550" frameborder="0" scrolling="no"
@@ -364,7 +366,8 @@ include_once "Header.php";
 										<!--Body-->
 										<div class="modal-body mb-0 p-0">
 
-											<div class="embed-responsive embed-responsive-1by1 z-depth-1-half">
+											<div
+												class="embed-responsive embed-responsive-1by1 z-depth-1-half">
 												<iframe class="embed-responsive-item"
 													src="https://www.instagram.com/p/B7ZElq-n4Sm/embed"
 													width="500" height="550" frameborder="0" scrolling="no"
@@ -400,50 +403,44 @@ include_once "Header.php";
 
 					</div>
 					<!-- Grid row -->
-
-
 				</div>
-
 			</div>
-
-
 		</div>
-
-
 	</div>
 
 	<br>
 	<br>
 	<script>
 
-	$('#modal1').on('hidden.bs.modal', function (e) {
-		  // do something...
-		  $('#modal1 iframe').attr("src", $("#modal1 iframe").attr("src"));
-		});
-
-		$('#modal6').on('hidden.bs.modal', function (e) {
-		  // do something...
-		  $('#modal6 iframe').attr("src", $("#modal6 iframe").attr("src"));
-		});
-
-		$('#modal4').on('hidden.bs.modal', function (e) {
-		  // do something...
-		  $('#modal4 iframe').attr("src", $("#modal4 iframe").attr("src"));
+		$('#modal1').on('hidden.bs.modal', function (e) {
+		    // do something...
+		    $('#modal1 iframe').attr("src", $("#modal1 iframe").attr("src"));
 		});
 
 		$('#modal2').on('hidden.bs.modal', function (e) {
-			  // do something...
-			  $('#modal2 iframe').attr("src", $("#modal2 iframe").attr("src"));
-			});
+		    // do something...
+		    $('#modal2 iframe').attr("src", $("#modal2 iframe").attr("src"));
+		});
 		$('#modal3').on('hidden.bs.modal', function (e) {
-			  // do something...
-			  $('#modal3 iframe').attr("src", $("#modal3 iframe").attr("src"));
-			});
+		 	// do something...
+		   $('#modal3 iframe').attr("src", $("#modal3 iframe").attr("src"));
+		});
+
+		$('#modal4').on('hidden.bs.modal', function (e) {
+			// do something...
+			$('#modal4 iframe').attr("src", $("#modal4 iframe").attr("src"));
+		});
 
 		$('#modal5').on('hidden.bs.modal', function (e) {
-			  // do something...
-			  $('#modal5 iframe').attr("src", $("#modal5 iframe").attr("src"));
-			});
+			// do something...
+			$('#modal5 iframe').attr("src", $("#modal5 iframe").attr("src"));
+		});
+		$('#modal6').on('hidden.bs.modal', function (e) {
+		    // do something...
+		    $('#modal6 iframe').attr("src", $("#modal6 iframe").attr("src"));
+		});
+
+
 	</script>
 	
 	
