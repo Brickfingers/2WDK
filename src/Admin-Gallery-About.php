@@ -57,7 +57,7 @@ if (isset($_POST["about"])) {
 
 		<div class="card bg-dark text-white">
 			<div class="card-header">
-				<h1 style="text-align: center; color: white;">Admin GALLERY</h1>
+				<h1 style="text-align: center; color: white;">Admin- Gallery-About</h1>
 			</div>
 
 		</div>
