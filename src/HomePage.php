@@ -4,7 +4,7 @@
 <title>Sax N Sip</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css2/HomePage2.css" />
+<link rel="stylesheet" type="text/css" href="css/HomePage.css" />
 <!-- <link rel="stylesheet" type="text/css" href="css/HomePage.css" /> -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -70,7 +70,7 @@
         <div class="column_home">
             <br/>
             <div class="w3-center">
-            <img style="height:550px;width:550px;" src="photo/home2.png" ">
+            <img src="photo/home.png" ">
             <br/><br/>	
     		</div>
         </div>

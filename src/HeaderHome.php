@@ -11,7 +11,7 @@
 <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
-<link rel="stylesheet" type="text/css" href="css2/HeaderHome2.css" />
+<link rel="stylesheet" type="text/css" href="css/HeaderHome.css" />
 <!-- <link rel="stylesheet" type="text/css" href="css/HeaderHome.css" /> -->
 
 <body>	
