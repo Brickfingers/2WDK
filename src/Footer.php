@@ -9,7 +9,8 @@
         <style type="text/css">
         	#mc_embed_signup{background:#fff; clear:left; font:17px Helvetica,Arial,sans-serif; }
         </style>
-        <link rel="stylesheet" href="css/Footer.css">
+        <link rel="stylesheet" href="css2/Footer2.css">
+        <!-- <link rel="stylesheet" href="css/Footer.css"> -->
         <div class="row">
          
             <li class="list-inline-item">
