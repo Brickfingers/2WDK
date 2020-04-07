@@ -9,44 +9,59 @@ if(isset($_POST['pass']) == true){
 
 if(isset($_POST["image1URL"]))
 {
+    $image1 = $_POST["image1URL"];
     $_SESSION["image1"] = $_POST["image1URL"];
     header("Location: Gallery.php");
+ } else{
+    $image1 = "";
+    $_SESSION["image1"] = $image1;}
     
-}
+    
+    
+    
 if(isset($_POST["image2URL"]))
 {
     $_SESSION["image2"] = $_POST["image2URL"];
     header("Location: Gallery.php");
-   
-}
+ }else{
+    $image2 = "";
+    $_SESSION["image2"] = $image2;}
+
+
 
 if(isset($_POST["youTube1URL"]))
 {
     $_SESSION["youtube1"] = $_POST["youTube1URL"];
-    header("Location: Gallery.php");
-    
-}
+    header("Location: Gallery.php");  
+}else{
+    $youtube1 = "";
+    $_SESSION["youtube1"] = $youtube1;}
 
+    
 if(isset($_POST["youTube2URL"]))
 {
     $_SESSION["youtube2"] = $_POST["youTube2URL"];
     header("Location: Gallery.php");
-   
-}
+}else{
+    $youtube2 = "";
+    $_SESSION["youtube2"] = $youtube2;}
  
 if(isset($_POST["instaVideo1URL"]))
 {
     $_SESSION["instavid1"] = $_POST["instaVideo1URL"];
-    header("Location: Gallery.php");
-    
-}
+    header("Location: Gallery.php");   
+}else{
+    $instaV1= "";
+    $_SESSION["instavid1"] = $instaV1;}
                        
 if(isset($_POST["instaVideo2URL"]))
 {
     $_SESSION["instavid2"] = $_POST["instaVideo2URL"];
     header("Location: Gallery.php");
-    exit;
-}
+}else{
+    $instaV2= "";
+    $_SESSION["instavid1"] = $instaV2;}
+  
 
 ?>
 <html>
@@ -122,6 +137,14 @@ echo
 
 
 		</form>
+<br/>
+<h3>Entered Information</h3>
+    The image1 url you entered : $image1 <br/>
+    The image2 url you entered : $image2 <br/>
+    The youTube video1 url you entered: $youtube1</br>
+    The youTube video2 url you entered: $youtube2</br>
+    The Instagram video1 url you entered : $instaV1</br>
+    The Instagram video2 url you entered : $instaV2</br>
 		<br />
 </div>";
 	}
