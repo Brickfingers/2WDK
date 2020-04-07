@@ -146,7 +146,7 @@
   					<div class="col-8">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="Home.php">HOME</a> 
+                                <a class="nav-link" href="HomePage.php">HOME</a> 
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="About.php">ABOUT</a>

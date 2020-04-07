@@ -15,11 +15,7 @@
 	<?php
 include_once "Header.php";
 ?>
-	<div class="w3-center">
-	<audio controls>
-	<source src="jazz.mp3" type="audio/mpeg">
-	</audio>
-	</div>
+	
 	<div class="container bootstrap snippet">
 
 		<br>
