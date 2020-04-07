@@ -1,67 +1,40 @@
 <?php
-
 session_start();
 
-
-if(isset($_POST['pass']) == true){
+if (isset($_POST['pass']) == true) {
     $pass = $_POST['pass'];
 }
 
-if(isset($_POST["image1URL"]))
-{
-    $image1 = $_POST["image1URL"];
+if (isset($_POST["image1URL"])) {
+
     $_SESSION["image1"] = $_POST["image1URL"];
-    header("Location: Gallery.php");
- } else{
-    $image1 = "";
-    $_SESSION["image1"] = $image1;}
-    
-    
-    
-    
-if(isset($_POST["image2URL"]))
-{
+
+}
+
+if (isset($_POST["image2URL"])) {
     $_SESSION["image2"] = $_POST["image2URL"];
-    header("Location: Gallery.php");
- }else{
-    $image2 = "";
-    $_SESSION["image2"] = $image2;}
 
+}
 
-
-if(isset($_POST["youTube1URL"]))
-{
+if (isset($_POST["youTube1URL"])) {
     $_SESSION["youtube1"] = $_POST["youTube1URL"];
-    header("Location: Gallery.php");  
-}else{
-    $youtube1 = "";
-    $_SESSION["youtube1"] = $youtube1;}
+}
 
-    
-if(isset($_POST["youTube2URL"]))
-{
+if (isset($_POST["youTube2URL"])) {
     $_SESSION["youtube2"] = $_POST["youTube2URL"];
-    header("Location: Gallery.php");
-}else{
-    $youtube2 = "";
-    $_SESSION["youtube2"] = $youtube2;}
- 
-if(isset($_POST["instaVideo1URL"]))
-{
+}
+
+if (isset($_POST["instaVideo1URL"])) {
     $_SESSION["instavid1"] = $_POST["instaVideo1URL"];
-    header("Location: Gallery.php");   
-}else{
-    $instaV1= "";
-    $_SESSION["instavid1"] = $instaV1;}
-                       
-if(isset($_POST["instaVideo2URL"]))
-{
+}
+
+if (isset($_POST["instaVideo2URL"])) {
     $_SESSION["instavid2"] = $_POST["instaVideo2URL"];
-    header("Location: Gallery.php");
-}else{
-    $instaV2= "";
-    $_SESSION["instavid1"] = $instaV2;}
-  
+}
+
+if (isset($_POST["about"])) {
+    $_SESSION["aboutme"] = $_POST["about"];
+}
 
 ?>
 <html>
@@ -76,23 +49,10 @@ if(isset($_POST["instaVideo2URL"]))
 <link rel="stylesheet" type="text/css" href="css/Gallery.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<style>
-table {
-	border: 2px solid black;
-	border-collapse: collapse;
-}
-
-td {
-    width:400px;
-	border: 2px solid black;
-    padding: 25px;
-}
-</style>
 </head>
 <body>
-        
-<div class="container">
+
+	<div class="container">
 		<br> <br>
 
 		<div class="card bg-dark text-white">
@@ -101,7 +61,7 @@ td {
 			</div>
 
 		</div>
-		<br> 
+		<br>
 		<div class="card1" style="background: rgba(0, 0, 150, 0.5);">
 
 			<div class="card-body p-5">
@@ -112,8 +72,8 @@ td {
 		if(isset($_POST['pass']) == true){
 		    if($pass == "pass"){
 		        $goodPass = true;
-echo
-		"<form method=\"post\">
+
+echo "<form method=\"post\">
 			Image1 source:<br/>
 			<input type=\"text\" name=\"image1URL\"  />
         <br/><br/>
@@ -131,34 +91,34 @@ echo
 		<br/><br/>
             Instagram video2 source:<br/> 
 			<input type=\"text\" name=\"instaVideo2URL\"  />
-
+<br/><br/>
+            About page content:<br/> 
+		    <input type=\"text\" name=\"about\"  />
 <br/><br/>
 <input type=\"submit\" value=\"Submit Information\"/>
 
 
 		</form>
-<br/>
-<h3>Entered Information</h3>
-    The image1 url you entered : $image1 <br/>
-    The image2 url you entered : $image2 <br/>
-    The youTube video1 url you entered: $youtube1</br>
-    The youTube video2 url you entered: $youtube2</br>
-    The Instagram video1 url you entered : $instaV1</br>
-    The Instagram video2 url you entered : $instaV2</br>
-		<br />
+<br/><br />
 </div>";
-	}
+		    }
 		}
 		
 		if($goodPass == false){
 		    echo "<div class=\"card-body p-3\"><form method=\"post\"><label>Password:</label><input type=\"password\" name=\"pass\">&nbsp;<button type=\"submit\" class=\"btn btn-info\">Login</button></form></div>";
 		}
-		
-        ?>
+
+$about = $_SESSION["aboutme"];
+$filename = "Admin\About\AboutText.txt";
+$filehandle = fopen($filename, 'w');
+fwrite($filehandle, $about);
+fclose($filehandle);
+?>
+
         </div>
-        </div>
-        <br/><br/>
-        </div>
+		</div>
+		<br /> <br />
+	</div>
 </body>
 </html>
 
