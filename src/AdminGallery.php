@@ -2,7 +2,7 @@
 
 session_start();
 
-//$pass = "pass";
+
 if(isset($_POST['pass']) == true){
     $pass = $_POST['pass'];
 }
