@@ -67,6 +67,7 @@
   	</div>
     </div>
     
+    
         <div class="column_home">
             <br/>
             <div class="w3-center">
