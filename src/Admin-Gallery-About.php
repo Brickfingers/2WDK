@@ -8,49 +8,32 @@ if (isset($_POST['pass']) == true) {
 if (isset($_POST["image1URL"])) {
 
     $_SESSION["image1"] = $_POST["image1URL"];
-    // header("Location: Gallery.php");
-} else {
-    $_SESSION["image1"] = "pic1";
+
 }
 
 if (isset($_POST["image2URL"])) {
     $_SESSION["image2"] = $_POST["image2URL"];
-    // header("Location: Gallery.php");
-} else {
-    $_SESSION["image2"] = "pic2";
+
 }
 
 if (isset($_POST["youTube1URL"])) {
     $_SESSION["youtube1"] = $_POST["youTube1URL"];
-    // header("Location: Gallery.php");
-} else {
-    $_SESSION["youtube1"] = "vid1";
 }
 
 if (isset($_POST["youTube2URL"])) {
     $_SESSION["youtube2"] = $_POST["youTube2URL"];
-    // header("Location: Gallery.php");
-} else {
-    $_SESSION["youtube2"] = "vid2";
 }
 
 if (isset($_POST["instaVideo1URL"])) {
     $_SESSION["instavid1"] = $_POST["instaVideo1URL"];
-    // header("Location: Gallery.php");
-} else {
-    $_SESSION["instavid1"] = "vid3";
 }
 
 if (isset($_POST["instaVideo2URL"])) {
     $_SESSION["instavid2"] = $_POST["instaVideo2URL"];
-    // header("Location: Gallery.php");
-} else {
-    $_SESSION["instavid1"] = "vid4";
 }
 
 if (isset($_POST["about"])) {
     $_SESSION["aboutme"] = $_POST["about"];
-    // header("Location: About.php");
 }
 
 ?>
