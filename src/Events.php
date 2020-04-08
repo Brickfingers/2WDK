@@ -41,8 +41,9 @@
 
            events: {
 		    googleCalendarId: 'team2wdk@gmail.com',
-		    textColor: 'black',
-		    color: '#83677B',
+		    textColor: 'white',
+		    color: 'rgba(0, 0, 0, 0.5)',
+		    className: 'gevent'
 		  },
 		  
 
@@ -51,7 +52,17 @@
           window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');
 
           arg.jsEvent.preventDefault() // don't navigate in main tab
-        }
+        },
+	        
+		  eventRender: function(info)
+		  {
+		    $(info.el).tooltip({ 
+			    title: info.event.title,
+			    placement: 'top',
+			    trigger: 'hover',
+			    container: 'body'
+			});
+		  }
 
     });
 
@@ -66,7 +77,7 @@
 
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 14px;
-   background-color:#83677B !important;
+   background-color:#CACFD2 !important;
        overflow: auto;
    
   }
@@ -97,8 +108,8 @@
 </head>
 <body>
     <?php include "Header.php"; ?>
-<div style="background-color: #83677B;">
-    <div class="container" style="background-color: #83677B;">
+<div style="background-color: #CACFD2;">
+    <div class="container" style="background-color: #CACFD2;">
    
     <br><br>
     
@@ -106,6 +117,7 @@
 			<div class="card-header">
 				<h1 style="text-align: center; color: white;">EVENTS</h1>
 			</div>
+			
 
 		</div>
 	
