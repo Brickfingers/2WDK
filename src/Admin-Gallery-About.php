@@ -1,41 +1,82 @@
 <?php
-session_start();
 
+session_start();
+$image1src = "photo/pic2.png";
+$image2src = "photo/pic9.png";
+$youtube1src = "https://www.youtube.com/embed/2e5zITHhVds?rel=0";
+$youtube2src = "https://www.youtube.com/embed/2p2hC--loq4?rel=0";
+$insta1src = "https://www.instagram.com/p/B81hkBWHcX8/embed";
+$insta2src = "https://www.instagram.com/p/B9Xnus_nTau/embed";
+
+//password:2wdk
 if (isset($_POST['pass']) == true) {
     $pass = $_POST['pass'];
 }
 
+
 if (isset($_POST["image1URL"])) {
-
-    $_SESSION["image1"] = $_POST["image1URL"];
-
+    $image1src=$_POST["image1URL"];
 }
 
 if (isset($_POST["image2URL"])) {
-    $_SESSION["image2"] = $_POST["image2URL"];
-
+    $image2src=$_POST["image2URL"];
 }
 
 if (isset($_POST["youTube1URL"])) {
-    $_SESSION["youtube1"] = $_POST["youTube1URL"];
+
+    $youtube1src= $_POST["youTube1URL"];
 }
 
 if (isset($_POST["youTube2URL"])) {
-    $_SESSION["youtube2"] = $_POST["youTube2URL"];
+   
+    $youtube2src= $_POST["youTube2URL"];
 }
 
 if (isset($_POST["instaVideo1URL"])) {
-    $_SESSION["instavid1"] = $_POST["instaVideo1URL"];
+
+    $insta1src = $_POST["instaVideo1URL"];
 }
 
 if (isset($_POST["instaVideo2URL"])) {
-    $_SESSION["instavid2"] = $_POST["instaVideo2URL"];
+  
+    $insta2src = $_POST["instaVideo1URL"];
 }
 
 if (isset($_POST["about"])) {
-    $_SESSION["aboutme"] = $_POST["about"];
+    $aboutme = $_POST["about"];
+    $aboutflag=true;
 }
 
+    $array =  Array (
+        "image1src" => "$image1src",
+        "image2src" => "$image2src",
+        "youtube1src"=> "$youtube1src",
+        "youtube2src"=> "$youtube2src",
+        "insta1src"=> "$insta1src",
+        "insta2src"=> "$insta2src",
+    );
+    
+    // encode array to json
+    $json = json_encode( $array);
+    
+    //write json to file
+    if (file_put_contents("test.json", $json)){
+        echo "JSON file created successfully...";
+        
+        
+    } else{
+        echo "Oops! Error creating json file...";}
+
+        
+        $file = "test.json";
+        $data = json_decode(file_get_contents($file), true);
+        $Image1src = $data['image1src'];
+        $Image2src = $data['image2src'];
+        $Youtube1src = $data['youtube1src'];
+        $Youtube2src = $data['youtube2src'];
+        $Insta1src = $data['insta1src'];
+        $Insta2src = $data['insta2src'];
+        
 ?>
 <html>
 <head>
@@ -72,25 +113,32 @@ if (isset($_POST["about"])) {
 		if(isset($_POST['pass']) == true){
 		    if($pass == "pass"){
 		        $goodPass = true;
+		        
 
 echo "<form method=\"post\">
 			Image1 source:<br/>
-			<input type=\"text\" name=\"image1URL\"  />
+			<input type=\"text\" name=\"image1URL\" value=\"". $Image1src .
+		        "\">
         <br/><br/>
             Image2 source:<br/>
-			<input type=\"text\" name=\"image2URL\"  />
+			<input type=\"text\" name=\"image2URL\"  value=\"". $Image2src .
+		        "\">
 		<br/><br/>	
             YouTube video1 source:<br/>
-			<input type=\"text\" name=\"youTube1URL\"  />
+			<input type=\"text\" name=\"youTube1URL\"  value=\"". $Youtube1src .
+		        "\">
         <br/><br/>
             YouTube video2 source:<br/> 
-			<input type=\"text\" name=\"youTube2URL\"  />
+			<input type=\"text\" name=\"youTube2URL\"  value=\"". $Youtube2src .
+		        "\">
 			<br/><br/>
             Instagram video1 source:<br/> 
-			<input type=\"text\" name=\"instaVideo1URL\"  />
+			<input type=\"text\" name=\"instaVideo1URL\"  value=\"". $Insta1src .
+		        "\">
 		<br/><br/>
             Instagram video2 source:<br/> 
-			<input type=\"text\" name=\"instaVideo2URL\"  />
+			<input type=\"text\" name=\"instaVideo2URL\"  value=\"". $Insta2src .
+		        "\">
 <br/><br/>
             About page content:<br/> 
 		    <input type=\"text\" name=\"about\"  />
@@ -108,11 +156,13 @@ echo "<form method=\"post\">
 		    echo "<div class=\"card-body p-3\"><form method=\"post\"><label>Password:</label><input type=\"password\" name=\"pass\">&nbsp;<button type=\"submit\" class=\"btn btn-info\">Login</button></form></div>";
 		}
 
-$about = $_SESSION["aboutme"];
+		
+		
+if($aboutflag==true){
 $filename = "Admin\About\AboutText.txt";
 $filehandle = fopen($filename, 'w');
-fwrite($filehandle, $about);
-fclose($filehandle);
+fwrite($filehandle, $aboutme);
+fclose($filehandle);}
 ?>
 
         </div>
