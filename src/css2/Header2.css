@@ -1,33 +1,28 @@
 .jumbotron.jumbotron-fluid {
-	/* color: #d4d4dc;
-	font-family: 'Playfair Display'; */
-	/* font-size: 15px; */
-	/* font-family: Verdana, Geneva, sans-serif;
-	font-weight: bold; */
-	background: linear-gradient(to bottom, #1d1e22 0%, #393f4d 74%);
+	background: linear-gradient(to bottom, #1d1e22 0%, #393f4d 60%);
 	margin-bottom: 0px;	
+	line-height: normal;
 }
 
-.display-2 {
+#logo {
 	color: #feda6a;		
-	/* color: #D5AD6D; */
 	background: -webkit-linear-gradient(#ae8625, #f7ef8a, #d2ac47);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-family: 'Sacramento';
 	line-height: normal;
+	padding-bottom: 0px;
 }
 
 .display-6, .lead {
 	color: #d4d4dc;
 	font-family: 'Playfair Display';
+	line-height: normal;
 }
 
-.nav-link {
-	/* color: #f2e7c5; */
+.nav-link {	
 	color: #fbe5a2;
-	font-family: 'Poppins';
-	/* font-family: 'Playfair Display'; */
+	font-family: 'Poppins';	
 	font-size: 18px;
 	font-weight: bold;
 	background: -webkit-linear-gradient(#ae8625, #f7ef8a, #d2ac47);
@@ -36,8 +31,8 @@
 }
 
 .navbar1 {
-	background-color: #393f4d;	
-	z-index: 2;	
+	background-color: #393f4d;
+	z-index: 2;		
 }
 
 .custom-toggler .navbar-toggler-icon {

@@ -1,0 +1,30 @@
+  body {
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;  
+   /*  overflow: auto;  */  
+  }
+
+.fc table {
+    border-color: black !important;
+  font-size: 1em; 
+  }
+.fc-left .fc-prev-button, .fc-left .fc-next-button, .fc-left .fc-today-button{
+    background-color: #333845 !important;
+    border-color: #333845 !important;
+}
+.fc-day-grid-event .fc-content {
+	white-space: normal;
+	font-size: 11pt;
+	font-weight: 700;
+	font-family: Verdana, sans-serif !important;
+}
+
+.fc-day-grid-event {
+	background: rgba(0, 0, 0, 0.0);
+	color: #000;
+	 font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.fc-toolbar.fc-header-toolbar, .fc-head, .fc-day-grid {
+	color: #d4d4dc;
+}
