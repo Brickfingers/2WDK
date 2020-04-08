@@ -1,0 +1,27 @@
+.body{
+	background-color: #83677B;
+}
+
+.display{
+	
+	font-family: 'Playfair Display';
+	color: #2E1114;
+	font-size: 110px;
+}
+
+.display1{
+	
+	font-family: 'Playfair Display';
+	color: #83677B;
+	font-size: 50px;
+}
+
+.container1{
+	background-color: #2E1114;
+	left: 30px;
+}
+
+.column_home {
+    float: left;
+    width: 50%;
+    }

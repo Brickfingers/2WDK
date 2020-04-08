@@ -1,3 +1,36 @@
+<?php
+session_start();
+
+$image1src = "photo/pic2.png";
+$image2src = "photo/pic9.png";
+$youtube1src = "https://www.youtube.com/embed/2e5zITHhVds?rel=0";
+$youtube2src = "https://www.youtube.com/embed/2p2hC--loq4?rel=0";
+$insta1src = "https://www.instagram.com/p/B81hkBWHcX8/embed";
+$insta2src = "https://www.instagram.com/p/B9Xnus_nTau/embed";
+
+if (isset($_SESSION["image1"])) {
+    $image1src = $_SESSION["image1"];
+}
+if (isset($_SESSION["image2"])) {
+    $image2src = $_SESSION["image2"];
+}
+
+if (isset($_SESSION["youtube1"])) {
+    $youtube1src = $_SESSION["youtube1"];
+}
+if (isset($_SESSION["youtube2"])) {
+    $youtube2src = $_SESSION["youtube2"];
+}
+
+if (isset($_SESSION["instavid1"])) {
+    $insta1src = $_SESSION["instavid1"];
+}
+if (isset($_SESSION["instavid2"])) {
+    $insta2src = $_SESSION["instavid2"];
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +76,7 @@ include_once "Header.php";
 					</ul>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img class="img-fluid z-depth-1" src="photo/pic2.png"
+							<img class="img-fluid z-depth-1" <?php echo "src=\"$image1src\""?>
 								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Ben Joseph</h3>
@@ -52,7 +85,7 @@ include_once "Header.php";
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" src="photo/pic9.png"
+							<img class="img-fluid z-depth-1" <?php echo "src=\"$image2src\""?>
 								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Montreal</h3>
@@ -116,8 +149,8 @@ include_once "Header.php";
 
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/2e5zITHhVds"></iframe>
+											<?php echo "<iframe class=\"embed-responsive-item\"
+												src=\"$youtube1src\"></iframe>"?>
 										</div>
 
 									</div>
@@ -162,8 +195,8 @@ include_once "Header.php";
 
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/2p2hC--loq4?rel=0"></iframe>
+											<?php echo "<iframe class=\"embed-responsive-item\"
+												src=\"$youtube2src\"></iframe>"?>
 										</div>
 
 									</div>
@@ -270,9 +303,8 @@ include_once "Header.php";
 											<div
 												class="embed-responsive embed-responsive-1by1 z-depth-1-half">
 												<iframe class="embed-responsive-item"
-													src="https://www.instagram.com/p/B81hkBWHcX8/embed"
-													width="500" height="550" frameborder="0" scrolling="no"
-													allowtransparency="true"></iframe>
+													<?php echo "src=\"$insta1src\""?> width="500" height="550"
+													frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 
 											</div>
 
@@ -319,9 +351,8 @@ include_once "Header.php";
 											<div
 												class="embed-responsive embed-responsive-1by1 z-depth-1-half">
 												<iframe class="embed-responsive-item"
-													src="https://www.instagram.com/p/B9Xnus_nTau/embed"
-													width="500" height="550" frameborder="0" scrolling="no"
-													allowtransparency="true"></iframe>
+													<?php echo "src=\"$insta2src\""?> width="500" height="550"
+													frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 
 											</div>
 

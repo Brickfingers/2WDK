@@ -1,0 +1,29 @@
+
+.display-2 {		
+	font-family: 'Sacramento';
+	line-height: normal;
+	font-size: 70px;
+	color: #feda6a;
+}
+
+.display-6, .lead {	
+	font-family: 'Playfair Display';
+}
+
+.nav-link {
+	color: #feda6a;
+	font-family: 'Poppins';
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.navbar1 {
+	background-color: #424949;
+/* 	height: 100px; */
+	z-index: 2;	
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+}

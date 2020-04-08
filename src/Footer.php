@@ -9,7 +9,10 @@
         <style type="text/css">
         	#mc_embed_signup{background:#fff; clear:left; font:17px Helvetica,Arial,sans-serif; }
         </style>
+        
         <link rel="stylesheet" href="css/Footer.css">
+        <!-- <link rel="stylesheet" href="css2/Footer2.css"> -->
+        
         <div class="row">
          
             <li class="list-inline-item">
@@ -143,7 +146,7 @@
   					<div class="col-8">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="Home.php">HOME</a> 
+                                <a class="nav-link" href="HomePage.php">HOME</a> 
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="About.php">ABOUT</a>
