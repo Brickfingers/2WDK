@@ -1,16 +1,37 @@
 <?php
-
+/*Created by: Fahimed*/
 session_start();
 $image1src = "photo/pic2.png";
-$image2src = "photo/pic9.png";
+$image2src = "photo/pic2.png";
 $youtube1src = "https://www.youtube.com/embed/2e5zITHhVds?rel=0";
 $youtube2src = "https://www.youtube.com/embed/2p2hC--loq4?rel=0";
+$youtube3src = "https://www.youtube.com/embed/2p2hC--loq4?rel=0";
 $insta1src = "https://www.instagram.com/p/B81hkBWHcX8/embed";
 $insta2src = "https://www.instagram.com/p/B9Xnus_nTau/embed";
+$insta3src = "https://www.instagram.com/p/B9Xnus_nTau/embed";
 
-$facebooklink = "http://www.facebook.com";
+/*Created by: David*/
+$facebooklink = "https://www.facebook.com/Sax-N-Sip-with-Ben-Joseph-394791691247339/";
+$instagramlink = "http://www.instagram.com/saxnsip";
+$soundcloudlink = "http://www.soundcloud.com";
+$youtubelink = "http://www.youtube.com";
+$aboutme = "Ben Joseph is a Haitian American born and raised in Newark,
+New Jersey. He is the youngest of 4 brothers who are all
+musically gifted. At the age of 8, Ben found his passion for the
+saxophone. He studied classical music and played in multiple
+symphonies and bands but knew that his love for the sax came
+from somewhere else. At the age of 12 he started studying jazz
+and instantly knew that it was his calling. Some of his favorite
+artists include David Sanbourn, Kenny G, Gerald Albright, and
+Warren Hill. Since then, he has been studying music while
+mastering multiple genres at the same time. Today he continues
+to excel doing live performances, both for private and public
+functions in Ottawa, ON where he currently resides. Ben is on a
+steady rise and has managed to build a loyal following of
+supporters who resonate with his undeniable gift and passion for
+music.";
 
-//password:2wdk
+/*Created by: Fahimed*/
 if (isset($_POST['pass']) == true) {
     $pass = $_POST['pass'];
 }
@@ -23,6 +44,7 @@ if (isset($_POST["image1URL"])) {
 if (isset($_POST["image2URL"])) {
     $image2src=$_POST["image2URL"];
 }
+
 
 if (isset($_POST["youTube1URL"])) {
 
@@ -52,6 +74,7 @@ if (isset($_POST["about"])) {
 }
 
 
+/*Created by: David*/
 if (isset($_POST["facebooklink"])) {
     $facebooklink = $_POST["facebooklink"];
     $facebookflag=true;
@@ -72,7 +95,7 @@ if (isset($_POST["youtubelink"])) {
     $youtubeflag=true;
 }
 
-
+/*Created by: Fahimed*/
     $array =  Array (
         "image1src" => "$image1src",
         "image2src" => "$image2src",
@@ -87,11 +110,11 @@ if (isset($_POST["youtubelink"])) {
     
     //write json to file
     if (file_put_contents("test.json", $json)){
-        echo "JSON file created successfully...";
+        /* echo "JSON file created successfully..."; */
         
         
     } else{
-        echo "Oops! Error creating json file...";}
+        echo "<br/><h1>Oops! Error creating json file...</h1>";}
 
         
         $file = "test.json";
@@ -119,21 +142,21 @@ if (isset($_POST["youtubelink"])) {
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
 	<div class="container">
 		<br> <br>
 
 		<div class="card bg-dark text-white">
 			<div class="card-header">
-				<h1 style="text-align: center; color: white;">Admin- Gallery-About</h1>
+				<h1 style="text-align: center; color: white;">Sax 'n' Sip <br/>Admin Page</h1><br/>
 			</div>
 
 		</div>
 		<br>
-		<div class="card1" style="background: rgba(0, 0, 150, 0.5);">
-
+		<div class="card1" style="background: #A6ACAF;" >
+			
+			<br/><center><h4>In this page you can edit the content of the website by entering your own information.</h4></center>
 			<div class="card-body p-5">
-
+			
 <?php 
 		$goodPass = false;
 		
@@ -143,49 +166,43 @@ if (isset($_POST["youtubelink"])) {
 		        
 
 echo "<form method=\"post\">
-			Image1 source:<br/>
-			<input type=\"text\" name=\"image1URL\" value=\"". $Image1src .
-		        "\">
+			<h6>Gallery Image #1:</h6>
+			<textarea rows=\"1\" cols=\"30\" type=\"text\" name=\"image1URL\" >$Image1src</textarea>
         <br/><br/>
-            Image2 source:<br/>
-			<input type=\"text\" name=\"image2URL\"  value=\"". $Image2src .
-		        "\">
-		<br/><br/>	
-            YouTube video1 source:<br/>
-			<input type=\"text\" name=\"youTube1URL\"  value=\"". $Youtube1src .
-		        "\">
+            <h6>Gallery Image #2:</h6>
+			<textarea rows=\"1\" cols=\"30\" type=\"text\" name=\"image2URL\" >$Image2src</textarea>
+		<br/><br/>		
+            <h6>Youtube Video Link #1:</h6>
+			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"youTube1URL\" >$Youtube1src</textarea>
         <br/><br/>
-            YouTube video2 source:<br/> 
-			<input type=\"text\" name=\"youTube2URL\"  value=\"". $Youtube2src .
-		        "\">
+            <h6>Youtube Video Link #2:</h6>
+			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"youTube2URL\" >$Youtube2src</textarea>
 			<br/><br/>
-            Instagram video1 source:<br/> 
-			<input type=\"text\" name=\"instaVideo1URL\"  value=\"". $Insta1src .
-		        "\">
+            <h6>Instagram Video Link #1:</h6>
+			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"instaVideo1URL\" >$Insta1src</textarea>
 		<br/><br/>
-            Instagram video2 source:<br/> 
-			<input type=\"text\" name=\"instaVideo2URL\"  value=\"". $Insta2src .
-		        "\">
+            <h6>Instagram Video Link #2:</h6>
+			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"instaVideo2URL\" >$Insta2src</textarea>
         <br/><br/>
-            About page content:<br/> 
-		    <input type=\"text\" name=\"about\"  />
-        <br/><br/>
-
-            Facebook page link:<br/> 
-		    <input type=\"text\" name=\"facebooklink\"  />
+            <h6>About page content:</h6>
+		    <textarea rows=\"16\" cols=\"70\" type=\"text\" name=\"about\" >$aboutme</textarea>
         <br/><br/>
 
-            Instagram page link:<br/> 
-		    <input type=\"text\" name=\"instagramlink\"  />
+            <h6>Facebook Page Link:</h6>
+		    <textarea rows=\"1\" cols=\"80\" type=\"text\" name=\"facebooklink\" >$facebooklink</textarea>
         <br/><br/>
 
-            SoundCloud page link:<br/> 
-		    <input type=\"text\" name=\"soundcloudlink\"  />
+            <h6>Instagram Page Link:</h6> 
+		    <textarea rows=\"1\" cols=\"80\" type=\"text\" name=\"instagramlink\" >$instagramlink</textarea>
         <br/><br/>
 
-            Youtube page link:<br/> 
-		    <input type=\"text\" name=\"youtubelink\"  />
+            <h6>SoundCloud Page Link:</h6>
+		    <textarea rows=\"1\" cols=\"80\" type=\"text\" name=\"soundcloudlink\" >$soundcloudlink</textarea>
         <br/><br/>
+
+           <h6>Youtube Page Link:</h6>
+		    <textarea rows=\"1\" cols=\"80\" type=\"text\" name=\"youtubelink\" >$youtubelink</textarea>
+        <br/><br/><br/>
 
 
 <input type=\"submit\" value=\"Submit Information\"/>
@@ -209,6 +226,7 @@ if($aboutflag==true){
     fwrite($filehandle, $aboutme);
     fclose($filehandle);}
 
+/*Created by: David*/
 if($facebookflag==true){
     $filename = "Admin\SocialMediaLinks\FacebookLink.txt";
     $filehandle = fopen($filename, 'w');
@@ -236,8 +254,13 @@ if($youtubeflag==true){
 
         </div>
 		</div>
-		<br /> <br />
+		
 	</div>
+	<br/>
+      	<center>
+     		&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax n Sip
+      	</center>
+      	<br/>
 </body>
 </html>
 
