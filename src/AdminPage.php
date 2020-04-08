@@ -1,4 +1,8 @@
 <?php
+/************************************
+ * PASSWORD FOR ADMIN PAGE: PASS    *
+ *                                  *
+ ***********************************/
 /*Created by: Fahimed*/
 session_start();
 $image1src = "photo/pic2.png";
