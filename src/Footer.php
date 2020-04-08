@@ -73,7 +73,7 @@
                                                 			<br/><br/>
                                                 			 <h2 class="subscribe_title">Booking an event</h2>
                                                 			<br/>
-                                                			You are given the opportunity to book an event with Ben Joseph on our Website. Booking an event requires you to enter your email address, first and last name, 
+                                                			You are given the opportunity to book an event with Ben Joseph on our Website. Booking an event requires you to enter your email address, first and last name and 
                                                 			telephone number.
                                                 			<br/><br/><br/>
                                                 		</div>
