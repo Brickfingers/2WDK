@@ -15,8 +15,10 @@
 	<?php
         include_once "HeaderHome.php";
     ?>
+	<div class="row">
+    <div class="column_home">
            
-     <br/>    
+     <br/><br/><br/><br/><br/><br/>     
  	<div class="text-center">
     	 <h1 class="display">Ben Joseph</h1>
         	 <div class="container1">
@@ -26,7 +28,7 @@
     	<div class= footer_no_selected>    
         <div class="footer-copyright text-center py-3">
       		<ul class="list-unstyled list-inline text-center">
-               	
+               	<br/>
                	
               	<li class="list-inline-item">
                     <a href="<?php
@@ -63,16 +65,21 @@
 		</div>	
   	</div>
   	</div>
+    </div>
     
-        <div class="w3-center">
-        <img class="img-fluid z-depth-1" src="photo/home2.png" ">
-        <br/><br/>	
-		</div>
-       
+    
+        <div class="column_home">
+            <br/>
+            <div class="w3-center">
+            <img class="img-fluid z-depth-1" src="photo/home.png" ">
+            <br/><br/>	
+    		</div>
+        </div>
+    </div>
          <div class="w3-center">
-            <audio controls>
-            	<source src="jazz.mp3" type="audio/mpeg">
-        	</audio>
+                <audio controls>
+                	<source src="jazz.mp3" type="audio/mpeg">
+            	</audio>
     	</div>
     
 	<?php

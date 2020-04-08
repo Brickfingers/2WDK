@@ -11,12 +11,12 @@
 <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
-<link rel="stylesheet" type="text/css" href="css/Header.css" />
-<!-- <link rel="stylesheet" type="text/css" href="css2/Header2.css" /> -->
+<link rel="stylesheet" type="text/css" href="css2/Header2.css" />
 <body>	
 	<div class="jumbotron jumbotron-fluid">
       <div class="container text-center">
-        <h1 class="display-2">&#119070ax n'&#119070ip</h1>             
+        <h1 class="display-2" id="logo">&#119070ax n'&#119070ip</h1>             
+        
       </div>
     </div>
 	
@@ -29,28 +29,28 @@
                 <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbar1">
+                <div class="collapse navbar-collapse" id="navbar1" style="border-bottom: 1.5px solid #f7ef8a;">
                 	<div class="col-2"></div>
   					<div class="col-8">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="Home.php"> HOME </a> 
+                                <a class="nav-link" href="HomePage.php"> HOME </a> 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="About.php"> ABOUT </a>
+                                <a class="nav-link" href="About2.php"> ABOUT </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Gallery.php"> GALLERY </a>
+                                <a class="nav-link" href="Gallery2.php"> GALLERY </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Events.php"> EVENTS </a>
+                                <a class="nav-link" href="Events2.php"> EVENTS </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Booking.php"> BOOKING </a>
+                                <a class="nav-link" href="Booking2.php"> BOOKING </a>
                             </li>                            
                         </ul>
                     </div>
-                    <div class="col-2"></div>
+                    <div class="col-2"></div>                    
                 </div>
             </div>
         </nav>

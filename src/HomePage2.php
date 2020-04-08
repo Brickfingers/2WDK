@@ -4,7 +4,7 @@
 <title>Sax N Sip</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/HomePage.css" />
+<link rel="stylesheet" type="text/css" href="css2/HomePage2.css" />
 <!-- <link rel="stylesheet" type="text/css" href="css/HomePage.css" /> -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
 
 <div class="body">
 	<?php
-        include_once "HeaderHome.php";
+        include_once "HeaderHome2.php";
     ?>
            
      <br/>    
@@ -65,7 +65,7 @@
   	</div>
     
         <div class="w3-center">
-        <img class="img-fluid z-depth-1" src="photo/home2.png" ">
+        <img class="img-fluid z-depth-1" src="photo/home.png" ">
         <br/><br/>	
 		</div>
        
@@ -76,7 +76,7 @@
     	</div>
     
 	<?php
-    include_once "FooterHome.php";
+    include_once "FooterHome2.php";
     ?>
 </div>
 </html>
