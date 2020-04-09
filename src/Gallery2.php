@@ -13,7 +13,6 @@
 
 
 <?php
-session_start();
 $image1src = "photo/pic2.png";
 $image2src = "photo/pic9.png";
 $youtube1src = "https://www.youtube.com/embed/2e5zITHhVds?rel=0";
