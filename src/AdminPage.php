@@ -1,3 +1,17 @@
+<!----------------------------------------------------------------------------- 
+* Filename:					About.php
+* Version:					3.0
+* Team Name:                2WDK
+* Student Names:		    Fahimeh Karimi - David Salazar
+* Course Name:				CST 8353 - Software design and testing
+* Professor:			    Leanne Seaward
+* Purpose:                  This page let the admin to enter a password and edit
+                            the content of gallery and about page.
+-------------------------------------------------------------------------------->
+
+
+
+
 <?php
 /************************************
  * PASSWORD FOR ADMIN PAGE: PASS    *
@@ -125,6 +139,10 @@ if (isset($_POST["youtubelink"])) {
         $Insta1src = $data['insta1src'];
         $Insta2src = $data['insta2src'];
         
+        $myfile = fopen("Admin/About/AboutText.txt", "r") or die("Unable to open file!");
+        $Aboutme= fread($myfile,filesize("Admin/About/AboutText.txt"));
+        fclose($myfile);
+        
         
 ?>
 <html>
@@ -184,7 +202,7 @@ echo "<form method=\"post\">
 			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"instaVideo2URL\" >$Insta2src</textarea>
         <br/><br/>
             <h6>About page content:</h6>
-		    <textarea rows=\"16\" cols=\"70\" type=\"text\" name=\"about\" >$aboutme</textarea>
+		    <textarea rows=\"16\" cols=\"70\" type=\"text\" name=\"about\" >$Aboutme</textarea>
         <br/><br/>
 
             <h6>Facebook Page Link:</h6>
