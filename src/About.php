@@ -47,7 +47,7 @@ include_once "Header.php";
 					<div class="row">
 						<div class="col-md-5 text-center">
 							<br> <img class="img-thumbnail md-margin-bottom-10"
-								src="photo/pic4.jpg" alt="">
+								src="photo/pic8.png" alt="">
 						</div>
 						<div class="col-md-7">
 							<h2>Ben Joseph</h2>
