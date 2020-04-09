@@ -30,7 +30,7 @@ $image2src = $data['image2src'];
 $youtube1src = $data['youtube1src'];
 $youtube2src = $data['youtube2src'];
 $insta1src = $data['insta1src'];
-$insta1src = $data['insta1src'];
+$insta2src = $data['insta2src'];
 
 ?>
 
