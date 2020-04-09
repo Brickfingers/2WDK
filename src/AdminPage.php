@@ -3,8 +3,6 @@
  * PASSWORD FOR ADMIN PAGE: PASS    *
  *                                  *
  ***********************************/
-
-
 $file = "test.json";
 $data = json_decode(file_get_contents($file), true);
 $image1src = $data['image1src'];
@@ -15,30 +13,29 @@ $insta1src = $data['insta1src'];
 $insta2src = $data['insta2src'];
 
 $myfile = fopen("Admin/About/AboutText.txt", "r") or die("Unable to open file!");
-$aboutme= fread($myfile,filesize("Admin/About/AboutText.txt"));
+$aboutme = fread($myfile, filesize("Admin/About/AboutText.txt"));
+
 session_start();
 if (isset($_POST['pass']) == true) {
     $pass = $_POST['pass'];
 }
 
-
 if (isset($_POST["image1URL"])) {
-    $image1src=$_POST["image1URL"];
+    $image1src = $_POST["image1URL"];
 }
 
 if (isset($_POST["image2URL"])) {
-    $image2src=$_POST["image2URL"];
+    $image2src = $_POST["image2URL"];
 }
-
 
 if (isset($_POST["youTube1URL"])) {
 
-    $youtube1src= $_POST["youTube1URL"];
+    $youtube1src = $_POST["youTube1URL"];
 }
 
 if (isset($_POST["youTube2URL"])) {
-   
-    $youtube2src= $_POST["youTube2URL"];
+
+    $youtube2src = $_POST["youTube2URL"];
 }
 
 if (isset($_POST["instaVideo1URL"])) {
@@ -47,60 +44,54 @@ if (isset($_POST["instaVideo1URL"])) {
 }
 
 if (isset($_POST["instaVideo2URL"])) {
-  
+
     $insta2src = $_POST["instaVideo1URL"];
 }
 
-
-
 if (isset($_POST["about"])) {
     $aboutme = $_POST["about"];
-    $aboutflag=true;
+    $aboutflag = true;
 }
-
 
 if (isset($_POST["facebooklink"])) {
     $facebooklink = $_POST["facebooklink"];
-    $facebookflag=true;
+    $facebookflag = true;
 }
 
 if (isset($_POST["instagramlink"])) {
     $instagramlink = $_POST["instagramlink"];
-    $instagramflag=true;
+    $instagramflag = true;
 }
 
 if (isset($_POST["soundcloudlink"])) {
     $soundcloudlink = $_POST["soundcloudlink"];
-    $soundcloudflag=true;
+    $soundcloudflag = true;
 }
 
 if (isset($_POST["youtubelink"])) {
     $youtubelink = $_POST["youtubelink"];
-    $youtubeflag=true;
+    $youtubeflag = true;
 }
 
-    $array =  Array (
-        "image1src" => "$image1src",
-        "image2src" => "$image2src",
-        "youtube1src"=> "$youtube1src",
-        "youtube2src"=> "$youtube2src",
-        "insta1src"=> "$insta1src",
-        "insta2src"=> "$insta2src",
-    );
-    
-    // encode array to json
-    $json = json_encode( $array);
-    
-    //write json to file
-    if (file_put_contents("test.json", $json)){
-        /* echo "JSON file created successfully..."; */
-        fclose($json);
-        
-    } else{
-        echo "<br/><h1>Oops! Error creating json file...</h1>";}
+$array = Array(
+    "image1src" => "$image1src",
+    "image2src" => "$image2src",
+    "youtube1src" => "$youtube1src",
+    "youtube2src" => "$youtube2src",
+    "insta1src" => "$insta1src",
+    "insta2src" => "$insta2src"
+);
 
-       
-        
+// encode array to json
+$json = json_encode($array);
+
+// write json to file
+if (file_put_contents("test.json", $json)) {
+    /* echo "JSON file created successfully..."; */
+} else {
+    echo "<br/><h1>Oops! Error creating json file...</h1>";
+}
+
 ?>
 <html>
 <head>
@@ -121,25 +112,31 @@ if (isset($_POST["youtubelink"])) {
 
 		<div class="card bg-dark text-white">
 			<div class="card-header">
-				<h1 style="text-align: center; color: white;">Sax 'n' Sip <br/>Admin Page</h1><br/>
+				<h1 style="text-align: center; color: white;">
+					Sax 'n' Sip <br />Admin Page
+				</h1>
+				<br />
 			</div>
 
 		</div>
 		<br>
-		<div class="card1" style="background: #A6ACAF;" >
-			
-			<br/><center><h4>In this page you can edit the content of the website by entering your own information.</h4></center>
+		<div class="card1" style="background: #A6ACAF;">
+
+			<br />
+			<center>
+				<h4>In this page you can edit the content of the website by entering
+					your own information.</h4>
+			</center>
 			<div class="card-body p-5">
 			
-<?php 
-		$goodPass = false;
-		
-		if(isset($_POST['pass']) == true){
-		    if($pass == "pass"){
-		        $goodPass = true;
-		        
+<?php
+$goodPass = false;
 
-echo "<form method=\"post\">
+if (isset($_POST['pass']) == true) {
+    if ($pass == "pass") {
+        $goodPass = true;
+
+        echo "<form method=\"post\">
 			<h6>Gallery Image #1:</h6>
 			<textarea rows=\"1\" cols=\"30\" type=\"text\" name=\"image1URL\" >$image1src</textarea>
         <br/><br/>
@@ -185,55 +182,60 @@ echo "<form method=\"post\">
 		</form>
 <br/><br />
 </div>";
-		    }
-		}
-		
-		if($goodPass == false){
-		    echo "<div class=\"card-body p-3\"><form method=\"post\"><label>Password:</label><input type=\"password\" name=\"pass\">&nbsp;<button type=\"submit\" class=\"btn btn-info\">Login</button></form></div>";
-		}
+    }
+}
 
-		
-		
-if($aboutflag==true){
+if ($goodPass == false) {
+    echo "<div class=\"card-body p-3\"><form method=\"post\"><label>Password:</label><input type=\"password\" name=\"pass\">&nbsp;<button type=\"submit\" class=\"btn btn-info\">Login</button></form></div>";
+}
+
+if ($aboutflag == true) {
     $filename = "Admin\About\AboutText.txt";
     $filehandle = fopen($filename, 'w');
     fwrite($filehandle, $aboutme);
-    fclose($filehandle);}
+    fclose($filehandle);
+}
 
-if($facebookflag==true){
+if ($facebookflag == true) {
     $filename = "Admin\SocialMediaLinks\FacebookLink.txt";
     $filehandle = fopen($filename, 'w');
     fwrite($filehandle, $facebooklink);
-    fclose($filehandle);}
-    
-if($instagramflag==true){
+    fclose($filehandle);
+}
+
+if ($instagramflag == true) {
     $filename = "Admin\SocialMediaLinks\InstagramLink.txt";
     $filehandle = fopen($filename, 'w');
     fwrite($filehandle, $instagramlink);
-    fclose($filehandle);}
-    
-if($soundcloudflag==true){
+    fclose($filehandle);
+}
+
+if ($soundcloudflag == true) {
     $filename = "Admin\SocialMediaLinks\SoundCloudLink.txt";
     $filehandle = fopen($filename, 'w');
     fwrite($filehandle, $soundcloudlink);
-    fclose($filehandle);}
-    
-if($youtubeflag==true){
+    fclose($filehandle);
+}
+
+if ($youtubeflag == true) {
     $filename = "Admin\SocialMediaLinks\YoutubeLink.txt";
     $filehandle = fopen($filename, 'w');
     fwrite($filehandle, $youtubelink);
-    fclose($filehandle);}
+    fclose($filehandle);
+}
 ?>
 
         </div>
 		</div>
-		
+
 	</div>
-	<br/>
-      	<center>
-     		&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax n Sip
-      	</center>
-      	<br/>
+	<br />
+	<center>
+		&copy;
+		<script>document.write(new Date().getFullYear());</script>
+		Copyright - Sax n Sip
+	</center>
+	<br />
 </body>
 </html>
 

@@ -1,18 +1,5 @@
-<!---------------------------------------------------------------------------  
-* Filename:					Gallery.php
-* Version:					3.0
-* Team Name:                2WDK
-* Student Name:				Fahimeh Karimi - 40900086
-* Course Name:				CST 8353 - Software design and testing
-* Professor:			    Leanne Seaward
-* Purpose:                  This page includes photos and video links to
-                            instagram and youtube of Ben Joseph.
-                            Two pictures ,2 youtube videos and 2 Instagram 
-                            video can be updated by admin using Admin Page.
----------------------------------------------------------------------------->
-
-
 <?php
+
 $image1src = "photo/pic2.png";
 $image2src = "photo/pic9.png";
 $youtube1src = "https://www.youtube.com/embed/2e5zITHhVds?rel=0";
@@ -21,7 +8,7 @@ $insta1src = "https://www.instagram.com/p/B81hkBWHcX8/embed";
 $insta2src = "https://www.instagram.com/p/B9Xnus_nTau/embed";
 
 
-//read json file
+//read json file to get the sources of pics and vids
 $file = "test.json";
 $data = json_decode(file_get_contents($file), true);
 $image1src = $data['image1src'];
