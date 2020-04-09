@@ -1,3 +1,15 @@
+<!----------------------------------------------------------------------------- 
+* Filename:					About.php
+* Version:					3.0
+* Team Name:                2WDK
+* Student Name:				Fahimeh Karimi - 40900086
+* Course Name:				CST 8353 - Software design and testing
+* Professor:			    Leanne Seaward
+* Purpose:                  This page let the admin to enter a password and edit
+                            the content of gallery and about page.
+-------------------------------------------------------------------------------->
+
+
 <?php
 
 session_start();

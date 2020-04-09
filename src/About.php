@@ -1,3 +1,14 @@
+<!----------------------------------------------------------------------------- 
+* Filename:					About.php
+* Version:					3.0
+* Team Name:                2WDK
+* Student Name:				Fahimeh Karimi - 40900086
+* Course Name:				CST 8353 - Software design and testing
+* Professor:			    Leanne Seaward
+* Purpose:                  This page includes a Photo and Biography of Ben Joseph
+                            the Bio can be updated by admin using Admin page.
+-------------------------------------------------------------------------------->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

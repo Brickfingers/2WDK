@@ -1,30 +1,72 @@
+<!---------------------------------------------------------------------------  
+* Filename:					Gallery.php
+* Version:					3.0
+* Team Name:                2WDK
+* Student Name:				Fahimeh Karimi - 40900086
+* Course Name:				CST 8353 - Software design and testing
+* Professor:			    Leanne Seaward
+* Purpose:                  This page includes photos and video links to
+                            instagram and youtube of Ben Joseph.
+                            Two pictures ,2 youtube videos and 2 Instagram 
+                            video can be updated by admin using Admin Page.
+---------------------------------------------------------------------------->
+
+
+<?php
+session_start();
+$image1src = "photo/pic2.png";
+$image2src = "photo/pic9.png";
+$youtube1src = "https://www.youtube.com/embed/2e5zITHhVds?rel=0";
+$youtube2src = "https://www.youtube.com/embed/2p2hC--loq4?rel=0";
+$insta1src = "https://www.instagram.com/p/B81hkBWHcX8/embed";
+$insta2src = "https://www.instagram.com/p/B9Xnus_nTau/embed";
+
+
+//read json file
+$file = "test.json";
+$data = json_decode(file_get_contents($file), true);
+$image1src = $data['image1src'];
+$image2src = $data['image2src'];
+$youtube1src = $data['youtube1src'];
+$youtube2src = $data['youtube2src'];
+$insta1src = $data['insta1src'];
+$insta1src = $data['insta1src'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Sax N Sip</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-<link rel="stylesheet" type="text/css" href="css2/Gallery2.css" />
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/Gallery.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
-<body style="background-color: #393f4d;">
+<body style="background-color: #83677B;">
 <?php
 include_once "Header2.php";
 ?>
 	<div class="container">
 		<br> <br>
-		<div class="container" id="card">
-			<h1 style="text-align: center; color: #d4d4dc; font-family: 'Poppins';">GALLERY</h1>
+
+		<div class="card bg-dark text-white">
+			<div class="card-header">
+				<h1 style="text-align: center; color: white;">GALLERY</h1>
+			</div>
+
 		</div>
 		<br> <br>
-		<div class="card1">
+		<div class="card1" style="background: rgba(0, 0, 0, 0.5);">
 
 			<div class="card-body p-5">
 
@@ -38,7 +80,7 @@ include_once "Header2.php";
 					</ul>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img class="img-fluid z-depth-1" src="photo/pic2.png"
+							<img class="img-fluid z-depth-1" <?php echo "src=$image1src"?>
 								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Ben Joseph</h3>
@@ -47,7 +89,7 @@ include_once "Header2.php";
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" src="photo/pic9.png"
+							<img class="img-fluid z-depth-1" <?php echo "src=$image2src"?>
 								style="width: 650px">
 							<div class="carousel-caption">
 								<h3>Montreal</h3>
@@ -111,8 +153,8 @@ include_once "Header2.php";
 
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/2e5zITHhVds"></iframe>
+											<?php echo "<iframe class=\"embed-responsive-item\"
+												src=$youtube1src></iframe>"?>
 										</div>
 
 									</div>
@@ -157,8 +199,8 @@ include_once "Header2.php";
 
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/2p2hC--loq4?rel=0"></iframe>
+											<?php echo "<iframe class=\"embed-responsive-item\"
+												src=$youtube2src></iframe>"?>
 										</div>
 
 									</div>
@@ -265,9 +307,8 @@ include_once "Header2.php";
 											<div
 												class="embed-responsive embed-responsive-1by1 z-depth-1-half">
 												<iframe class="embed-responsive-item"
-													src="https://www.instagram.com/p/B81hkBWHcX8/embed"
-													width="500" height="550" frameborder="0" scrolling="no"
-													allowtransparency="true"></iframe>
+													<?php echo "src=$insta1src"?> width="500" height="550"
+													frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 
 											</div>
 
@@ -314,9 +355,8 @@ include_once "Header2.php";
 											<div
 												class="embed-responsive embed-responsive-1by1 z-depth-1-half">
 												<iframe class="embed-responsive-item"
-													src="https://www.instagram.com/p/B9Xnus_nTau/embed"
-													width="500" height="550" frameborder="0" scrolling="no"
-													allowtransparency="true"></iframe>
+													<?php echo "src=$insta2src"?> width="500" height="550"
+													frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 
 											</div>
 
