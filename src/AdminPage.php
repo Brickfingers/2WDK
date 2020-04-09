@@ -1,22 +1,10 @@
-<!----------------------------------------------------------------------------- 
-* Filename:					About.php
-* Version:					3.0
-* Team Name:                2WDK
-* Student Names:		    Fahimeh Karimi - David Salazar
-* Course Name:				CST 8353 - Software design and testing
-* Professor:			    Leanne Seaward
-* Purpose:                  This page let the admin to enter a password and edit
-                            the content of gallery and about page.
--------------------------------------------------------------------------------->
-
-
 <?php
 /************************************
  * PASSWORD FOR ADMIN PAGE: PASS    *
  *                                  *
  ***********************************/
 
-session_start();
+
 $file = "test.json";
 $data = json_decode(file_get_contents($file), true);
 $image1src = $data['image1src'];
@@ -27,8 +15,8 @@ $insta1src = $data['insta1src'];
 $insta2src = $data['insta2src'];
 
 $myfile = fopen("Admin/About/AboutText.txt", "r") or die("Unable to open file!");
-$Aboutme= fread($myfile,filesize("Admin/About/AboutText.txt"));
-
+$aboutme= fread($myfile,filesize("Admin/About/AboutText.txt"));
+session_start();
 if (isset($_POST['pass']) == true) {
     $pass = $_POST['pass'];
 }
@@ -171,7 +159,7 @@ echo "<form method=\"post\">
 			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"instaVideo2URL\" >$insta2src</textarea>
         <br/><br/>
             <h6>About page content:</h6>
-		    <textarea rows=\"16\" cols=\"70\" type=\"text\" name=\"about\" >$Aboutme</textarea>
+		    <textarea rows=\"16\" cols=\"70\" type=\"text\" name=\"about\" >$aboutme</textarea>
         <br/><br/>
 
             <h6>Facebook Page Link:</h6>
