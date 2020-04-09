@@ -19,33 +19,17 @@
  ***********************************/
 
 session_start();
-$image1src = "photo/pic2.png";
-$image2src = "photo/pic2.png";
-$youtube1src = "https://www.youtube.com/embed/2e5zITHhVds?rel=0";
-$youtube2src = "https://www.youtube.com/embed/2p2hC--loq4?rel=0";
-$youtube3src = "https://www.youtube.com/embed/2p2hC--loq4?rel=0";
-$insta1src = "https://www.instagram.com/p/B81hkBWHcX8/embed";
-$insta2src = "https://www.instagram.com/p/B9Xnus_nTau/embed";
-$insta3src = "https://www.instagram.com/p/B9Xnus_nTau/embed";
-$facebooklink = "https://www.facebook.com/Sax-N-Sip-with-Ben-Joseph-394791691247339/";
-$instagramlink = "http://www.instagram.com/saxnsip";
-$soundcloudlink = "http://www.soundcloud.com";
-$youtubelink = "http://www.youtube.com";
-$aboutme = "Ben Joseph is a Haitian American born and raised in Newark,
-New Jersey. He is the youngest of 4 brothers who are all
-musically gifted. At the age of 8, Ben found his passion for the
-saxophone. He studied classical music and played in multiple
-symphonies and bands but knew that his love for the sax came
-from somewhere else. At the age of 12 he started studying jazz
-and instantly knew that it was his calling. Some of his favorite
-artists include David Sanbourn, Kenny G, Gerald Albright, and
-Warren Hill. Since then, he has been studying music while
-mastering multiple genres at the same time. Today he continues
-to excel doing live performances, both for private and public
-functions in Ottawa, ON where he currently resides. Ben is on a
-steady rise and has managed to build a loyal following of
-supporters who resonate with his undeniable gift and passion for
-music.";
+$file = "test.json";
+$data = json_decode(file_get_contents($file), true);
+$image1src = $data['image1src'];
+$image2src = $data['image2src'];
+$youtube1src = $data['youtube1src'];
+$youtube2src = $data['youtube2src'];
+$insta1src = $data['insta1src'];
+$insta2src = $data['insta2src'];
+
+$myfile = fopen("Admin/About/AboutText.txt", "r") or die("Unable to open file!");
+$Aboutme= fread($myfile,filesize("Admin/About/AboutText.txt"));
 
 if (isset($_POST['pass']) == true) {
     $pass = $_POST['pass'];
@@ -124,25 +108,12 @@ if (isset($_POST["youtubelink"])) {
     //write json to file
     if (file_put_contents("test.json", $json)){
         /* echo "JSON file created successfully..."; */
-        
+        fclose($json);
         
     } else{
         echo "<br/><h1>Oops! Error creating json file...</h1>";}
 
-        
-        $file = "test.json";
-        $data = json_decode(file_get_contents($file), true);
-        $Image1src = $data['image1src'];
-        $Image2src = $data['image2src'];
-        $Youtube1src = $data['youtube1src'];
-        $Youtube2src = $data['youtube2src'];
-        $Insta1src = $data['insta1src'];
-        $Insta2src = $data['insta2src'];
-        
-        $myfile = fopen("Admin/About/AboutText.txt", "r") or die("Unable to open file!");
-        $Aboutme= fread($myfile,filesize("Admin/About/AboutText.txt"));
-        fclose($myfile);
-        
+       
         
 ?>
 <html>
@@ -184,22 +155,22 @@ if (isset($_POST["youtubelink"])) {
 
 echo "<form method=\"post\">
 			<h6>Gallery Image #1:</h6>
-			<textarea rows=\"1\" cols=\"30\" type=\"text\" name=\"image1URL\" >$Image1src</textarea>
+			<textarea rows=\"1\" cols=\"30\" type=\"text\" name=\"image1URL\" >$image1src</textarea>
         <br/><br/>
             <h6>Gallery Image #2:</h6>
-			<textarea rows=\"1\" cols=\"30\" type=\"text\" name=\"image2URL\" >$Image2src</textarea>
+			<textarea rows=\"1\" cols=\"30\" type=\"text\" name=\"image2URL\" >$image2src</textarea>
 		<br/><br/>		
             <h6>Youtube Video Link #1:</h6>
-			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"youTube1URL\" >$Youtube1src</textarea>
+			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"youTube1URL\" >$youtube1src</textarea>
         <br/><br/>
             <h6>Youtube Video Link #2:</h6>
-			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"youTube2URL\" >$Youtube2src</textarea>
+			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"youTube2URL\" >$youtube2src</textarea>
 			<br/><br/>
             <h6>Instagram Video Link #1:</h6>
-			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"instaVideo1URL\" >$Insta1src</textarea>
+			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"instaVideo1URL\" >$insta1src</textarea>
 		<br/><br/>
             <h6>Instagram Video Link #2:</h6>
-			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"instaVideo2URL\" >$Insta2src</textarea>
+			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"instaVideo2URL\" >$insta2src</textarea>
         <br/><br/>
             <h6>About page content:</h6>
 		    <textarea rows=\"16\" cols=\"70\" type=\"text\" name=\"about\" >$Aboutme</textarea>
