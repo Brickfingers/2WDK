@@ -53,7 +53,17 @@
           window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');
 
           arg.jsEvent.preventDefault() // don't navigate in main tab
-        }
+        },
+	    
+  	  eventRender: function(info)
+	  {
+	    $(info.el).tooltip({ 
+		    title: info.event.title,
+		    placement: 'top',
+		    trigger: 'hover',
+		    container: 'body'
+		});
+	  }
 
     });
 
