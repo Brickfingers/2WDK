@@ -130,7 +130,7 @@ if (file_put_contents("test.json", $json)) {
 			<center>
 				<h4>In this page you can edit the following content of the website by entering
 					your own information.</h4>
-					<a href="Admin\AdminHelp.txt">Help!</a>
+					<a href="Admin\AdminHelp.txt" target="_blank"><h3>Help!</h3></a>
 			</center>
 			<div class="card-body p-5">
 			
