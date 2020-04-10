@@ -58,82 +58,100 @@
     <br>
     <div class="form p-3 mx-3">
     <h1  style="text-align: center; color: #d4d4dc; font-family: 'Poppins';"> BOOKING </h1>
-    <form method="post" action="acknowledge.php">
-    	<?php $formCount = 0; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="email" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="number" maxlength="9" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <label>Your event is: *</label><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="checkbox" value ="private" ></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="checkbox" value ="public" ></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true"></input><br>
-        
-        <?php $formCount++; ?>
-        <label><?php echo $formQuestions[$formCount]?></label><br>
-        <textarea name="<?php echo $formNames[$formCount]?>" aria-required="true"></textarea><br>
-        
-        <input name="submit" type="submit" value="Submit">
+    <form method="post" action="acknowledge.php" class="mx-5">
+    	<div class="form-group">
+    		<?php $formCount = 0; ?>
+        	<label><?php echo $formQuestions[$formCount]?></label><br>
+        	<input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>
+        <div class="form-group">
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>
+        <div class="form-group">
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="email" aria-required="true" class="form-control"></input><br>
+        </div>
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="number" maxlength="9" aria-required="true" class="form-control"></input><br>
+        </div>    
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>    
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>    
+        <div class="form-check text-left">    
+            <label>Your event is: *</label><br>
+            <?php $formCount++; ?>
+            <input name="<?php echo $formNames[$formCount]?>" type="checkbox" value ="private" class="form-check-input"></input>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            
+            <?php $formCount++; ?>
+            <input name="<?php echo $formNames[$formCount]?>" type="checkbox" value ="public" class="form-check-input"></input>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+        </div>    
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>    
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>    
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>    
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>    
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>    
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>    
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        </div>    
+        <div class="form-group">    
+            <?php $formCount++; ?>
+            <label><?php echo $formQuestions[$formCount]?></label><br>
+            <textarea name="<?php echo $formNames[$formCount]?>" aria-required="true" class="form-control" rows="4"></textarea><br>
+        </div>
+        <div class="form-group">    
+            <button name="submit" class="btn btn-secondary" type="submit">Submit</button>
+    	</div>
     </form>
     </div>
     </div>

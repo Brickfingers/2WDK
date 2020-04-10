@@ -1,5 +1,5 @@
 
-<footer class="page-footer font-small stylish-color-dark pt-4">
+<footer class="page-footer font-small stylish-color-dark">
     <div class= footer>
     
         <div class="container text-center text-md-left">	
