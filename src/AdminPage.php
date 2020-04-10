@@ -11,6 +11,10 @@ $youtube1src = $data['youtube1src'];
 $youtube2src = $data['youtube2src'];
 $insta1src = $data['insta1src'];
 $insta2src = $data['insta2src'];
+$facebooklink = "https://www.facebook.com/Sax-N-Sip-with-Ben-Joseph-394791691247339/";
+$instagramlink = "http://www.instagram.com/saxnsip";
+$soundcloudlink = "http://www.soundcloud.com";
+$youtubelink = "http://www.youtube.com";
 
 $myfile = fopen("Admin/About/AboutText.txt", "r") or die("Unable to open file!");
 $aboutme = fread($myfile, filesize("Admin/About/AboutText.txt"));
@@ -124,7 +128,7 @@ if (file_put_contents("test.json", $json)) {
 
 			<br />
 			<center>
-				<h4>In this page you can edit the content of the website by entering
+				<h4>In this page you can edit the following content of the website by entering
 					your own information.</h4>
 			</center>
 			<div class="card-body p-5">
@@ -144,35 +148,35 @@ if (isset($_POST['pass']) == true) {
 			<textarea rows=\"1\" cols=\"30\" type=\"text\" name=\"image2URL\" >$image2src</textarea>
 		<br/><br/>		
             <h6>Youtube Video Link #1:</h6>
-			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"youTube1URL\" >$youtube1src</textarea>
+			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"youTube1URL\" >$youtube1src</textarea>
         <br/><br/>
             <h6>Youtube Video Link #2:</h6>
-			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"youTube2URL\" >$youtube2src</textarea>
+			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"youTube2URL\" >$youtube2src</textarea>
 			<br/><br/>
             <h6>Instagram Video Link #1:</h6>
-			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"instaVideo1URL\" >$insta1src</textarea>
+			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"instaVideo1URL\" >$insta1src</textarea>
 		<br/><br/>
             <h6>Instagram Video Link #2:</h6>
-			<textarea rows=\"1\" cols=\"70\" type=\"text\" name=\"instaVideo2URL\" >$insta2src</textarea>
+			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"instaVideo2URL\" >$insta2src</textarea>
         <br/><br/>
             <h6>About page content:</h6>
-		    <textarea rows=\"16\" cols=\"70\" type=\"text\" name=\"about\" >$aboutme</textarea>
+		    <textarea rows=\"22\" cols=\"50\" type=\"text\" name=\"about\" >$aboutme</textarea>
         <br/><br/>
 
             <h6>Facebook Page Link:</h6>
-		    <textarea rows=\"1\" cols=\"80\" type=\"text\" name=\"facebooklink\" >$facebooklink</textarea>
+		    <textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"facebooklink\" >$facebooklink</textarea>
         <br/><br/>
 
             <h6>Instagram Page Link:</h6> 
-		    <textarea rows=\"1\" cols=\"80\" type=\"text\" name=\"instagramlink\" >$instagramlink</textarea>
+		    <textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"instagramlink\" >$instagramlink</textarea>
         <br/><br/>
 
             <h6>SoundCloud Page Link:</h6>
-		    <textarea rows=\"1\" cols=\"80\" type=\"text\" name=\"soundcloudlink\" >$soundcloudlink</textarea>
+		    <textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"soundcloudlink\" >$soundcloudlink</textarea>
         <br/><br/>
 
            <h6>Youtube Page Link:</h6>
-		    <textarea rows=\"1\" cols=\"80\" type=\"text\" name=\"youtubelink\" >$youtubelink</textarea>
+		    <textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"youtubelink\" >$youtubelink</textarea>
         <br/><br/><br/>
 
 
