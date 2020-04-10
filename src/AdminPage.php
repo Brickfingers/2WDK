@@ -143,10 +143,10 @@ if (isset($_POST['pass']) == true) {
 
         echo "<form method=\"post\">
 			<h6>Gallery Image #1:</h6>
-			<textarea rows=\"1\" cols=\"30\" type=\"text\" name=\"image1URL\" >$image1src</textarea>
+			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image1URL\" >$image1src</textarea>
         <br/><br/>
             <h6>Gallery Image #2:</h6>
-			<textarea rows=\"1\" cols=\"30\" type=\"text\" name=\"image2URL\" >$image2src</textarea>
+			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image2URL\" >$image2src</textarea>
 		<br/><br/>		
             <h6>Youtube Video Link #1:</h6>
 			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"youTube1URL\" >$youtube1src</textarea>
