@@ -36,11 +36,11 @@
 
       displayEventTime: false, // don't show the time column in list view
 
-      googleCalendarApiKey: 'AIzaSyDc0lVZ9BmPgodpioi4Lneom05oRWB1yTA',
+      googleCalendarApiKey: 'AIzaSyDYCTtQL94JwOS_9Hkp4f0ypSBw6Ua30zA',
 
 
            events: {
-		    googleCalendarId: 'team2wdk@gmail.com',
+		    googleCalendarId: 'saxnsip@gmail.com',
 		    textColor: 'white',
 		    color: 'rgba(0, 0, 0, 0.5)',
 		    className: 'gevent'
