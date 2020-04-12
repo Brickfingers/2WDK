@@ -165,7 +165,7 @@
         </nav>
         <br/>
       	<div class="copyright">
-     		&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax'n'Sip
+     		&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax'n'Sip | Designed by 2WDK
       	</div>
       	
   	</div>
