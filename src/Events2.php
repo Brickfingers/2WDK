@@ -44,7 +44,7 @@
            events: {
 		    googleCalendarId: 'team2wdk@gmail.com',
 		    textColor: 'black',
-		    color: '#d4d4dc',
+		    color: '#feda6a',
 		  },
 		  
 
