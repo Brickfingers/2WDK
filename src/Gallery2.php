@@ -38,21 +38,17 @@ $insta2src = $data['insta2src'];
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
-<body style="background-color: #83677B;">
+<body style="background-color: #393f4d;">
 <?php
 include_once "Header2.php";
 ?>
 	<div class="container">
 		<br> <br>
-
-		<div class="card bg-dark text-white">
-			<div class="card-header">
-				<h1 style="text-align: center; color: white;">GALLERY</h1>
-			</div>
-
+		<div class="container" id="card">
+			<h1 style="text-align: center; color: #d4d4dc; font-family: 'Poppins';">GALLERY</h1>
 		</div>
 		<br> <br>
-		<div class="card1" style="background: rgba(0, 0, 0, 0.5);">
+		<div class="card1" style="background: #393f4d;">
 
 			<div class="card-body p-5">
 
