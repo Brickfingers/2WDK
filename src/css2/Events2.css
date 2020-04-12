@@ -28,3 +28,10 @@
 .fc-toolbar.fc-header-toolbar, .fc-head, .fc-day-grid {
 	color: #d4d4dc;
 }
+
+.fc-today {
+    background: #feda6a !important;
+    border: none !important;
+    border-top: 1px solid #ddd !important;
+    font-weight: bold;
+} 
