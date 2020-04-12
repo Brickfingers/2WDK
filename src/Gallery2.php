@@ -33,7 +33,7 @@ $insta1src = "https://www.instagram.com/p/B81hkBWHcX8/embed";
 $insta1picsrc = "photo/insta2.png";
 
 $insta2src = "https://www.instagram.com/p/B9Xnus_nTau/embed";
-$insta2picsrc ="photo/insta3.png" ;
+$insta2picsrc = "photo/insta3.png" ;
 
 $insta3src = "https://www.instagram.com/p/B7ZElq-n4Sm/embed";
 $insta3picsrc ="photo/insta1.png" ;
