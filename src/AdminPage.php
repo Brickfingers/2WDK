@@ -3,6 +3,7 @@
  * PASSWORD FOR ADMIN PAGE: PASS    *
  *                                  *
  ***********************************/
+
 $file = "test.json";
 $data = json_decode(file_get_contents($file), true);
 $image1src = $data['image1src'];
