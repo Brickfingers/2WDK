@@ -12,6 +12,7 @@ uploading instruction on imgbb.com:
 4-Embed codes: select HTML full link 
 (e.g. <a href="https://ibb.co/1TLKmsN"><img src="https://i.ibb.co/XtbpCyP/pic10.png" alt="pic10" border="0"></a>)
 5-Get src for img from html link and enter in image box (e.g. https://i.ibb.co/XtbpCyP/pic10.png)
+
 ----------------------------------------------------------------------------------------------------------------
 How to upload videos:
 ----------------------------------------------------------------------------------------------------------------
@@ -19,9 +20,13 @@ How to upload videos:
 (e.g. https://www.instagram.com/p/B9Xnus_nTau/)
 you should add word "embed" at the end of the URL(e.g. https://www.instagram.com/p/B9Xnus_nTau/embed)
 its ready to enter in the admin page.
+*You can add a screenshot of your video from instagram including the paly buttun using the thumbnail input area for 
+each Instagram video. (same instrauction as adding an image URL)
 
 2-YouTube: open your video on youtube,click on "SHARE" link, choose "embed"
 you see a long code, you need just the src part:
 src="https://www.youtube.com/embed/2p2hC--loq4"
 enter the address below in the admin page:
 https://www.youtube.com/embed/2p2hC--loq4
+*You can add a screenshot of your video from youtube including the paly buttun using the thumbnail input area for 
+each Instagram video. (same instrauction as adding an image URL)

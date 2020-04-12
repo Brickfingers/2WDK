@@ -1,23 +1,83 @@
 <?php
 
 $image1src = "photo/pic2.png";
+$image1title = "Ben Joseph";
+$image1caption = "Saxophonist";
+
 $image2src = "photo/pic9.png";
+$image2title = "Montreal";
+$image2caption = "Swaying Souls With Sax N Sip";
+
+$image3src = "photo/pic8.png";
+$image3title ="Toronto" ;
+$image3caption ="Trying Something New" ;
+
+$image4src = "photo/pic3.png";
+$image4title = "";
+$image4caption ="" ;
+
+$image5src = "photo/pic1.png";
+$image5title = "Ottawa";
+$image5caption = "Nothing But Love";
+
 $youtube1src = "https://www.youtube.com/embed/2e5zITHhVds?rel=0";
+$youtube1picsrc ="photo/pic12.png" ;
+
 $youtube2src = "https://www.youtube.com/embed/2p2hC--loq4?rel=0";
+$youtube2picsrc ="photo/pic10.png" ;
+
+$youtube3src = "https://www.youtube.com/embed/jpv2tMJJuz0?rel=0";
+$youtube3picsrc = "photo/pic11.png";
+
 $insta1src = "https://www.instagram.com/p/B81hkBWHcX8/embed";
+$insta1picsrc = "photo/insta2.png";
+
 $insta2src = "https://www.instagram.com/p/B9Xnus_nTau/embed";
+$insta2picsrc ="photo/insta3.png" ;
 
+$insta3src = "https://www.instagram.com/p/B7ZElq-n4Sm/embed";
+$insta3picsrc ="photo/insta1.png" ;
 
-//read json file to get the sources of pics and vids
+// read json file to get the sources of pics and vids
 $file = "test.json";
 $data = json_decode(file_get_contents($file), true);
 $image1src = $data['image1src'];
-$image2src = $data['image2src'];
-$youtube1src = $data['youtube1src'];
-$youtube2src = $data['youtube2src'];
-$insta1src = $data['insta1src'];
-$insta2src = $data['insta2src'];
+$image1title = $data['image1title'];
+$image1caption = $data['image1caption'];
 
+$image2src = $data['image2src'];
+$image2title = $data['image2title'];
+$image2caption = $data['image2caption'];
+
+$image3src = $data['image3src'];
+$image3title = $data['image3title'];
+$image3caption = $data['image3caption'];
+
+$image4src = $data['image4src'];
+$image4title = $data['image4title'];
+$image4caption = $data['image4caption'];
+
+$image5src = $data['image5src'];
+$image5title = $data['image5title'];
+$image5caption = $data['image5caption'];
+
+$youtube1src = $data['youtube1src'];
+$youtube1picsrc = $data['youtube1picsrc'];
+
+$youtube2src = $data['youtube2src'];
+$youtube2picsrc = $data['youtube2picsrc'];
+
+$youtube3src = $data['youtube3src'];
+$youtube3picsrc = $data['youtube3picsrc'];
+
+$insta1src = $data['insta1src'];
+$insta1picsrc = $data['insta1picsrc'];
+
+$insta2src = $data['insta2src'];
+$insta2picsrc = $data['insta2picsrc'];
+
+$insta3src = $data['insta3src'];
+$insta3picsrc = $data['insta3picsrc'];
 ?>
 
 
@@ -45,7 +105,8 @@ include_once "Header2.php";
 	<div class="container">
 		<br> <br>
 		<div class="container" id="card">
-			<h1 style="text-align: center; color: #d4d4dc; font-family: 'Poppins';">GALLERY</h1>
+			<h1
+				style="text-align: center; color: #d4d4dc; font-family: 'Poppins';">GALLERY</h1>
 		</div>
 		<br> <br>
 		<div class="card1" style="background: #393f4d;">
@@ -65,8 +126,8 @@ include_once "Header2.php";
 							<img class="img-fluid z-depth-1" <?php echo "src=$image1src"?>
 								style="width: 650px">
 							<div class="carousel-caption">
-								<h3>Ben Joseph</h3>
-								<p>Musician</p>
+								<h3><?php echo $image1title?></h3>
+								<p><?php echo $image1caption?></p>
 
 							</div>
 						</div>
@@ -74,33 +135,35 @@ include_once "Header2.php";
 							<img class="img-fluid z-depth-1" <?php echo "src=$image2src"?>
 								style="width: 650px">
 							<div class="carousel-caption">
-								<h3>Montreal</h3>
-								<p>Swaying Souls With Sax N Sip</p>
+								<h3><?php echo $image2title?></h3>
+								<p><?php echo $image2caption?></p>
 							</div>
 						</div>
 
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" src="photo/pic8.png"
+							<img class="img-fluid z-depth-1" <?php echo "src=$image3src"?>
 								style="width: 650px">
 							<div class="carousel-caption">
-								<h3>Toronto</h3>
-								<p>Trying Something New</p>
+								<h3><?php echo $image3title?></h3>
+								<p><?php echo $image3caption?></p>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" src="photo/pic3.jpg"
+							<img class="img-fluid z-depth-1" <?php echo "src=$image4src"?>
 								style="width: 650px">
-							<div class="carousel-caption"></div>
-
+							<div class="carousel-caption">
+							<h3><?php echo $image4title?></h3>
+							<p><?php echo $image4caption?></p>
+							</div>
 						</div>
 
 
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" src="photo/pic1.png"
+							<img class="img-fluid z-depth-1" <?php echo "src=$image5src"?>
 								style="width: 650px">
 							<div class="carousel-caption">
-								<h3>Ottawa</h3>
-								<p>Nothing But Love</p>
+								<h3><?php echo $image5title?></h3>
+								<p><?php echo $image5caption?></p>
 
 
 							</div>
@@ -135,7 +198,8 @@ include_once "Header2.php";
 
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-											<?php echo "<iframe class=\"embed-responsive-item\"
+											<?php
+        echo "<iframe class=\"embed-responsive-item\"
 												src=$youtube1src></iframe>"?>
 										</div>
 
@@ -144,7 +208,11 @@ include_once "Header2.php";
 									<!--Footer-->
 									<div class="modal-footer justify-content-center">
 										<span class="mr-4"> Whatch more videos on YouTube!</span> <a
-											href="https://www.YouTube.com/saxnsip/?hl=en"
+											href="<?php
+        $myfile = fopen("Admin/SocialMediaLinks/YoutubeLink.txt", "r") or die("Unable to open file!");
+        echo fread($myfile, filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
+        fclose($myfile);
+        ?>"
 											class="fa fa-youtube"
 											style="padding: 10px; font-size: 30px; text-align: center; border-radius: 50%; background: red;"></a>
 										<button type="button"
@@ -159,8 +227,9 @@ include_once "Header2.php";
 						</div>
 						<!--Modal: Name-->
 
-						<a><img class="img-fluid z-depth-1" src="photo/pic12.png"
-							alt="video" data-toggle="modal" data-target="#modal1"></a>
+						<a><img class="img-fluid z-depth-1"
+							<?php echo "src=$youtube1picsrc"?> alt="video"
+							data-toggle="modal" data-target="#modal1"></a>
 
 					</div>
 					<!-- Grid column -->
@@ -181,7 +250,8 @@ include_once "Header2.php";
 
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-											<?php echo "<iframe class=\"embed-responsive-item\"
+											<?php
+        echo "<iframe class=\"embed-responsive-item\"
 												src=$youtube2src></iframe>"?>
 										</div>
 
@@ -190,7 +260,11 @@ include_once "Header2.php";
 									<!--Footer-->
 									<div class="modal-footer justify-content-center">
 										<span class="mr-4">Whatch more videos on YouTube!</span> <a
-											href="https://www.YouTube.com/saxnsip/?hl=en"
+											href="<?php
+        $myfile = fopen("Admin/SocialMediaLinks/YoutubeLink.txt", "r") or die("Unable to open file!");
+        echo fread($myfile, filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
+        fclose($myfile);
+        ?>"
 											class="fa fa-youtube"
 											style="padding: 10px; font-size: 30px; text-align: center; border-radius: 50%; background: red;"></a>
 										<button type="button"
@@ -206,8 +280,9 @@ include_once "Header2.php";
 						</div>
 						<!--Modal: Name-->
 
-						<a><img class="img-fluid z-depth-1" src="photo/pic10.png"
-							alt="video" data-toggle="modal" data-target="#modal6"></a>
+						<a><img class="img-fluid z-depth-1"
+							<?php echo "src=$youtube2picsrc"?> alt="video"
+							data-toggle="modal" data-target="#modal6"></a>
 
 					</div>
 					<!-- Grid column -->
@@ -228,8 +303,9 @@ include_once "Header2.php";
 
 										<div
 											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-											<iframe class="embed-responsive-item"
-												src="https://www.youtube.com/embed/jpv2tMJJuz0?rel=0"></iframe>
+											<?php
+        echo "<iframe class=\"embed-responsive-item\"
+												src=$youtube3src></iframe>"?>
 										</div>
 
 									</div>
@@ -237,7 +313,11 @@ include_once "Header2.php";
 									<!--Footer-->
 									<div class="modal-footer justify-content-center">
 										<span class="mr-4">Whatch more videos on YouTube!</span> <a
-											href="https://www.YouTube.com/saxnsip/?hl=en"
+											href="<?php
+        $myfile = fopen("Admin/SocialMediaLinks/YoutubeLink.txt", "r") or die("Unable to open file!");
+        echo fread($myfile, filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
+        fclose($myfile);
+        ?>"
 											class="fa fa-youtube"
 											style="padding: 10px; font-size: 30px; text-align: center; border-radius: 50%; background: red;"></a>
 										<button type="button"
@@ -253,8 +333,9 @@ include_once "Header2.php";
 						</div>
 						<!--Modal: Name-->
 
-						<a><img class="img-fluid z-depth-1" src="photo/pic11.png"
-							alt="video" data-toggle="modal" data-target="#modal4"></a>
+						<a><img class="img-fluid z-depth-1"
+							<?php echo "src=$youtube3picsrc"?> alt="video"
+							data-toggle="modal" data-target="#modal4"></a>
 
 					</div>
 					<!-- Grid column -->
@@ -299,7 +380,11 @@ include_once "Header2.php";
 										<!--Footer-->
 										<div class="modal-footer justify-content-center">
 											<span class="mr-4"> Whatch more videos on Instagram!</span> <a
-												href="https://www.instagram.com/saxnsip/?hl=en"
+												href="<?php
+            $myfile = fopen("Admin/SocialMediaLinks/InstagramLink.txt", "r") or die("Unable to open file!");
+            echo fread($myfile, filesize("Admin/SocialMediaLinks/InstagramLink.txt"));
+            fclose($myfile);
+            ?>"
 												class="fa fa-instagram"
 												style="padding: 20px; font-size: 20px; text-align: center; border-radius: 50%; background: #125688;"></a>
 											<button type="button"
@@ -314,8 +399,9 @@ include_once "Header2.php";
 							</div>
 							<!--Modal: Name-->
 
-							<a><img class="img-fluid z-depth-1" src="photo/insta2.png"
-								alt="video" data-toggle="modal" data-target="#modal2"></a>
+							<a><img class="img-fluid z-depth-1"
+								<?php echo "src=$insta1picsrc"?> alt="video" data-toggle="modal"
+								data-target="#modal2"></a>
 
 						</div>
 						<!-- Grid column -->
@@ -347,7 +433,11 @@ include_once "Header2.php";
 										<!--Footer-->
 										<div class="modal-footer justify-content-center">
 											<span class="mr-4">Whatch more videos on Instagram!</span> <a
-												href="https://www.instagram.com/saxnsip/?hl=en"
+												href="<?php
+            $myfile = fopen("Admin/SocialMediaLinks/InstagramLink.txt", "r") or die("Unable to open file!");
+            echo fread($myfile, filesize("Admin/SocialMediaLinks/InstagramLink.txt"));
+            fclose($myfile);
+            ?>"
 												class="fa fa-instagram"
 												style="padding: 20px; font-size: 20px; text-align: center; border-radius: 50%; background: #125688;"></a>
 											<button type="button"
@@ -363,8 +453,9 @@ include_once "Header2.php";
 							</div>
 							<!--Modal: Name-->
 
-							<a><img class="img-fluid z-depth-1" src="photo/insta3.png"
-								alt="video" data-toggle="modal" data-target="#modal3"></a>
+							<a><img class="img-fluid z-depth-1"
+								<?php echo "src=$insta2picsrc"?> alt="video"
+								data-toggle="modal" data-target="#modal3"></a>
 
 						</div>
 						<!-- Grid column -->
@@ -386,9 +477,8 @@ include_once "Header2.php";
 											<div
 												class="embed-responsive embed-responsive-1by1 z-depth-1-half">
 												<iframe class="embed-responsive-item"
-													src="https://www.instagram.com/p/B7ZElq-n4Sm/embed"
-													width="500" height="550" frameborder="0" scrolling="no"
-													allowtransparency="true"></iframe>
+													<?php echo "src=$insta3src"?> width="500" height="550"
+													frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 											</div>
 
 										</div>
@@ -396,7 +486,11 @@ include_once "Header2.php";
 										<!--Footer-->
 										<div class="modal-footer justify-content-center">
 											<span class="mr-4">Whatch more videos on Instagram!</span> <a
-												href="https://www.instagram.com/saxnsip/?hl=en"
+												href="<?php
+            $myfile = fopen("Admin/SocialMediaLinks/InstagramLink.txt", "r") or die("Unable to open file!");
+            echo fread($myfile, filesize("Admin/SocialMediaLinks/InstagramLink.txt"));
+            fclose($myfile);
+            ?>"
 												class="fa fa-instagram"
 												style="padding: 20px; font-size: 20px; text-align: center; border-radius: 50%; background: #125688;"></a>
 											<button type="button"
@@ -412,8 +506,9 @@ include_once "Header2.php";
 							</div>
 							<!--Modal: Name-->
 
-							<a><img class="img-fluid z-depth-1" src="photo/insta1.png"
-								alt="video" data-toggle="modal" data-target="#modal5"></a>
+							<a><img class="img-fluid z-depth-1"
+								<?php echo "src=$insta3picsrc"?> alt="video" data-toggle="modal"
+								data-target="#modal5"></a>
 
 						</div>
 						<!-- Grid column -->
