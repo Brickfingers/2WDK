@@ -133,7 +133,6 @@ if (isset($_POST["youTube3PIC"])) {
     $youtube3picsrc = $_POST["youTube3PIC"];
 }
 
-
 if (isset($_POST["instaVideo1URL"])) {
 
     $insta1src = $_POST["instaVideo1URL"];
@@ -143,10 +142,9 @@ if (isset($_POST["instaVideo1PIC"])) {
     $insta1picsrc = $_POST["instaVideo1PIC"];
 }
 
-
 if (isset($_POST["instaVideo2URL"])) {
 
-    $insta2src = $_POST["instaVideo1URL"];
+    $insta2src = $_POST["instaVideo2URL"];
 }
 if (isset($_POST["instaVideo2PIC"])) {
     
