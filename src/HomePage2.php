@@ -38,13 +38,6 @@
         <div class="footer-copyright text-center py-3">
       		<ul class="list-unstyled list-inline text-center">
                	
-               	<li class="list-inline-item">
-          	 	<a href="<?php
-                            $myfile = fopen("Admin/SocialMediaLinks/EmailAddress.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/SocialMediaLinks/EmailAddress.txt"));
-                            fclose($myfile);
-                            ?>" ><i class="social fa-envelope"></i></a>
-            </li>
               	<li class="list-inline-item">
                     <a href="<?php
                                 $myfile = fopen("Admin/SocialMediaLinks/FacebookLink.txt", "r") or die("Unable to open file!");
