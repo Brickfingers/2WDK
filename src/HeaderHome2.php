@@ -1,3 +1,13 @@
+<!----------------------------------------------------------------------------- 
+* Filename:					HeaderHome2.php
+* Version:					1.5
+* Team Name:                2WDK
+* Student Name:				David Salazar - 040889786
+* Course Name:				CST 8353 - Software design and testing
+* Professor:			    Leanne Seaward
+* Purpose:                  Header of the Home page
+-------------------------------------------------------------------------------->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +23,9 @@
 <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="css2/Header2.css" />
 <body>	
-	<div class="jumbotron jumbotron-fluid">
+	<div class="jumbotron1 jumbotron-fluid">
       <div class="container text-center">
-        <h1 class="display-2" id="logo">&#119070ax n'&#119070ip</h1>             
+        <h1 class="display-2" id="logo">&#119070ax 'N &#119070ip</h1>             
         
       </div>
     </div>

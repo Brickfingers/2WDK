@@ -1,4 +1,12 @@
-
+<!----------------------------------------------------------------------------- 
+* Filename:					Footer.php
+* Version:					1.8
+* Team Name:                2WDK
+* Student Name:				David Salazar - 040889786
+* Course Name:				CST 8353 - Software design and testing
+* Professor:			    Leanne Seaward
+* Purpose:                  Footer of the website
+-------------------------------------------------------------------------------->
 <footer class="page-footer font-small stylish-color-dark ">
     <div class= footer>
     
@@ -84,13 +92,13 @@
         			
           		</div>
         	</div>
-            </li>
+            
         </div>
  	
     <div class= footer_no_selected>    
     <div class="footer-copyright text-center py-3">
   		<ul class="list-unstyled list-inline text-center">
-           	<br/>
+           	</br>
            	<li class="list-inline-item">
           	 	<a href="<?php
                             $myfile = fopen("Admin/SocialMediaLinks/EmailAddress.txt", "r") or die("Unable to open file!");
@@ -114,14 +122,6 @@
                             fclose($myfile);
                             ?>" target="_blank"><i class="social fa-instagram"> </i></a>        
             </li>
-         	
-         	<li class="list-inline-item">          
-                <a href="<?php
-                            $myfile = fopen("Admin/SocialMediaLinks/SoundCloudLink.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/SocialMediaLinks/SoundCloudLink.txt"));
-                            fclose($myfile);
-                            ?>" target="_blank"><i class="social fa-soundcloud"> </i></a>         
-            </li>
            
             <li class="list-inline-item">             
                 <a href="<?php
@@ -132,37 +132,6 @@
             </li>
       	</ul>
       	<br/>
-      <nav class="navbar navbar_footer navbar-expand-md navbar-toggleable-sm">
-            <div class="container">             	        
-                                              
-                <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar2">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar2">
-                	<div class="col-2"></div>
-  					<div class="col-8">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="HomePage2.php">HOME</a> 
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="About2.php">ABOUT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Gallery2.php">GALLERY</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Events2.php">EVENTS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Booking2.php">BOOKING</a>
-                            </li>                            
-                        </ul>
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-            </div>
-        </nav>
         <br/>
       	<div class="copyright">
      		&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax'n'Sip | Designed by 2WDK

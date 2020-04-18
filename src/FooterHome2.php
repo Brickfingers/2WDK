@@ -1,3 +1,12 @@
+<!----------------------------------------------------------------------------- 
+* Filename:					FooterHome2.php
+* Version:					1.3
+* Team Name:                2WDK
+* Student Name:				David Salazar - 040889786
+* Course Name:				CST 8353 - Software design and testing
+* Professor:			    Leanne Seaward
+* Purpose:                  Footer of the Home page
+-------------------------------------------------------------------------------->
 
 <footer class="page-footer font-small stylish-color-dark">
     <div class= footer>
@@ -97,7 +106,7 @@
       
         <br/>
       	<div class="copyright">
-     		&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax n Sip
+     		&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax n Sip | Designed by 2WDK
       	</div>
       	
   	</div>
