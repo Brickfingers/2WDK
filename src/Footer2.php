@@ -115,13 +115,13 @@
                             ?>" target="_blank"><i class="social fa-instagram"> </i></a>        
             </li>
          	
-         	<li class="list-inline-item">          
-                <a href="<?php
+         	<!-- <li class="list-inline-item">          
+                <a href="<?php/*
                             $myfile = fopen("Admin/SocialMediaLinks/SoundCloudLink.txt", "r") or die("Unable to open file!");
                             echo fread($myfile,filesize("Admin/SocialMediaLinks/SoundCloudLink.txt"));
-                            fclose($myfile);
+                            fclose($myfile);*/
                             ?>" target="_blank"><i class="social fa-soundcloud"> </i></a>         
-            </li>
+            </li> -->
            
             <li class="list-inline-item">             
                 <a href="<?php
@@ -132,7 +132,7 @@
             </li>
       	</ul>
       	<br/>
-      <nav class="navbar navbar_footer navbar-expand-md navbar-toggleable-sm">
+      <!-- <nav class="navbar navbar_footer navbar-expand-md navbar-toggleable-sm">
             <div class="container">             	        
                                               
                 <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar2">
@@ -163,7 +163,7 @@
                 </div>
             </div>
         </nav>
-        <br/>
+        <br/> -->
       	<div class="copyright">
      		&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax'n'Sip | Designed by 2WDK
       	</div>

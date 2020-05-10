@@ -22,7 +22,6 @@
          'last_name',
          'email',
          'phone',
-         'website',
          'type',
          'private',
          'public',
@@ -30,7 +29,6 @@
          'location',
          'duration',
          'genre',
-         'performance_type',
          'pa_system',
          'sound_technician',
          'num_guests',
@@ -41,7 +39,6 @@
          'Last Name *',
          'Email Address *',
          'Phone Number *',
-         'Website *',
          'Type of Event *',
          'Private',
          'Public',
@@ -49,7 +46,6 @@
          'Where is your event located? *',
          'How long would you like Ben Joseph to perform? *',
          'What genre of music would you like to be played? *',
-         'What musical performance type are you seeking? *',
          'Does the venue have a P.A. system or in-house sound/audio? *',
          'Will there be a sound technician/dj? *',
          'How many people are you expecting to be in attendance at the event? *',
@@ -68,16 +64,6 @@
             <?php $formCount++; ?>
             <label><?php echo $formQuestions[$formCount]?></label><br>
             <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>
-        <div class="form-group">
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="email" aria-required="true" class="form-control"></input><br>
         </div>
         <div class="form-group">    
             <?php $formCount++; ?>

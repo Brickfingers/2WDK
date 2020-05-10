@@ -65,7 +65,7 @@
   	</div>
     
         <div class="w3-center">
-        <img class="img-fluid z-depth-1" src="photo/home.png" ">
+        <img class="img-fluid z-depth-1" src="photo/pic2.png">
         <br/><br/>	
 		</div>
        
