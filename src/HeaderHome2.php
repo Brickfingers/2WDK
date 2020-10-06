@@ -25,7 +25,7 @@
 <body>	
 	<div class="jumbotron1 jumbotron-fluid">
       <div class="container text-center">
-        <h1 class="display-2" id="logo">Sax 'n Sip</h1>             
+        <h1 class="display-2" id="logo">&#119070ax N &#119070ip</h1>             
         
       </div>
     </div>

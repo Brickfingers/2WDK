@@ -1,6 +1,6 @@
 <?php
 
-$image1src = "photo/pic2.png";
+$image1src = "photo/pic8.jpg";
 $image1title = "Ben Joseph";
 $image1caption = "Saxophonist";
 
@@ -8,26 +8,30 @@ $image2src = "photo/pic9.png";
 $image2title = "Montreal";
 $image2caption = "Swaying Souls With Sax N Sip";
 
-$image3src = "photo/pic8.png";
+$image3src = "photo/pic9.jpg";
 $image3title ="Toronto" ;
 $image3caption ="Trying Something New" ;
 
-$image4src = "photo/pic3.png";
-$image4title = "";
-$image4caption ="" ;
+$image4src = "photo/pic3.jpg";
+$image4title = "title";
+$image4caption ="caption" ;
 
 $image5src = "photo/pic1.png";
 $image5title = "Ottawa";
 $image5caption = "Nothing But Love";
 
-$youtube1src = "https://www.youtube.com/embed/2e5zITHhVds?rel=0";
+$image6src = "photo/pic10.jpg";
+$image6title = "title";
+$image6caption = "caption";
+
+/*$youtube1src = "https://www.youtube.com/embed/2e5zITHhVds?rel=0";
 $youtube1picsrc ="photo/pic12.png" ;
 
 $youtube2src = "https://www.youtube.com/embed/2p2hC--loq4?rel=0";
 $youtube2picsrc ="photo/pic10.png" ;
 
 $youtube3src = "https://www.youtube.com/embed/jpv2tMJJuz0?rel=0";
-$youtube3picsrc = "photo/pic11.png";
+$youtube3picsrc = "photo/pic11.png";*/
 
 $insta1src = "https://www.instagram.com/p/B81hkBWHcX8/embed";
 $insta1picsrc = "photo/insta2.png";
@@ -61,14 +65,18 @@ $image5src = $data['image5src'];
 $image5title = $data['image5title'];
 $image5caption = $data['image5caption'];
 
-$youtube1src = $data['youtube1src'];
+$image6src = $data['image6src'];
+$image6title = $data['image6title'];
+$image6caption = $data['image6caption'];
+
+/*$youtube1src = $data['youtube1src'];
 $youtube1picsrc = $data['youtube1picsrc'];
 
 $youtube2src = $data['youtube2src'];
 $youtube2picsrc = $data['youtube2picsrc'];
 
 $youtube3src = $data['youtube3src'];
-$youtube3picsrc = $data['youtube3picsrc'];
+$youtube3picsrc = $data['youtube3picsrc'];*/
 
 $insta1src = $data['insta1src'];
 $insta1picsrc = $data['insta1picsrc'];
@@ -120,6 +128,7 @@ include_once "Header2.php";
 						<li data-target="#demo" data-slide-to="2"></li>
 						<li data-target="#demo" data-slide-to="3"></li>
 						<li data-target="#demo" data-slide-to="4"></li>
+						<li data-target="#demo" data-slide-to="5"></li>
 					</ul>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
@@ -157,15 +166,20 @@ include_once "Header2.php";
 							</div>
 						</div>
 
-
 						<div class="carousel-item">
 							<img class="img-fluid z-depth-1" <?php echo "src=$image5src"?>
 								style="width: 650px">
 							<div class="carousel-caption">
 								<h3><?php echo $image5title?></h3>
 								<p><?php echo $image5caption?></p>
-
-
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="img-fluid z-depth-1" <?php echo "src=$image6src"?>
+								style="width: 650px">
+							<div class="carousel-caption">
+								<h3><?php echo $image6title?></h3>
+								<p><?php echo $image6caption?></p>
 							</div>
 						</div>
 
@@ -176,176 +190,9 @@ include_once "Header2.php";
 						data-slide="next"> <span class="carousel-control-next-icon"></span>
 					</a>
 				</div>
+				
 
-				<br> <br> <br>
-				<!-- youtube------------------------------------------------------------------------------->
-				<!-- Grid row -->
-				<div class="row">
-
-					<!-- Grid column -->
-					<div class="col-lg-4 col-md-12 mb-4">
-
-						<!--Modal: Name-->
-						<div class="modal fade" id="modal1" tabindex="-1" role="dialog"
-							aria-labelledby="myModalLabel" aria-hidden="true">
-							<div class="modal-dialog modal-lg" role="document">
-
-								<!--Content-->
-								<div class="modal-content">
-
-									<!--Body-->
-									<div class="modal-body mb-0 p-0">
-
-										<div
-											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-											<?php
-        echo "<iframe class=\"embed-responsive-item\"
-												src=$youtube1src></iframe>"?>
-										</div>
-
-									</div>
-
-									<!--Footer-->
-									<div class="modal-footer justify-content-center">
-										<span class="mr-4"> Whatch more videos on YouTube!</span> <a
-											href="<?php
-        $myfile = fopen("Admin/SocialMediaLinks/YoutubeLink.txt", "r") or die("Unable to open file!");
-        echo fread($myfile, filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
-        fclose($myfile);
-        ?>"
-											class="fa fa-youtube"
-											style="padding: 10px; font-size: 30px; text-align: center; border-radius: 50%; background: red;"></a>
-										<button type="button"
-											class="btn btn-outline-primary btn-rounded btn-md ml-4"
-											data-dismiss="modal">Close</button>
-									</div>
-
-								</div>
-								<!--/.Content-->
-
-							</div>
-						</div>
-						<!--Modal: Name-->
-
-						<a><img class="img-fluid z-depth-1"
-							<?php echo "src=$youtube1picsrc"?> alt="video"
-							data-toggle="modal" data-target="#modal1"></a>
-
-					</div>
-					<!-- Grid column -->
-
-					<!-- Grid column -->
-					<div class="col-lg-4 col-md-6 mb-4">
-
-						<!--Modal: Name-->
-						<div class="modal fade" id="modal6" tabindex="-1" role="dialog"
-							aria-labelledby="myModalLabel" aria-hidden="true">
-							<div class="modal-dialog modal-lg" role="document">
-
-								<!--Content-->
-								<div class="modal-content">
-
-									<!--Body-->
-									<div class="modal-body mb-0 p-0">
-
-										<div
-											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-											<?php
-        echo "<iframe class=\"embed-responsive-item\"
-												src=$youtube2src></iframe>"?>
-										</div>
-
-									</div>
-
-									<!--Footer-->
-									<div class="modal-footer justify-content-center">
-										<span class="mr-4">Whatch more videos on YouTube!</span> <a
-											href="<?php
-        $myfile = fopen("Admin/SocialMediaLinks/YoutubeLink.txt", "r") or die("Unable to open file!");
-        echo fread($myfile, filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
-        fclose($myfile);
-        ?>"
-											class="fa fa-youtube"
-											style="padding: 10px; font-size: 30px; text-align: center; border-radius: 50%; background: red;"></a>
-										<button type="button"
-											class="btn btn-outline-primary btn-rounded btn-md ml-4"
-											data-dismiss="modal">Close</button>
-
-									</div>
-
-								</div>
-								<!--/.Content-->
-
-							</div>
-						</div>
-						<!--Modal: Name-->
-
-						<a><img class="img-fluid z-depth-1"
-							<?php echo "src=$youtube2picsrc"?> alt="video"
-							data-toggle="modal" data-target="#modal6"></a>
-
-					</div>
-					<!-- Grid column -->
-
-					<!-- Grid column -->
-					<div class="col-lg-4 col-md-6 mb-4">
-
-						<!--Modal: Name-->
-						<div class="modal fade" id="modal4" tabindex="-1" role="dialog"
-							aria-labelledby="myModalLabel" aria-hidden="true">
-							<div class="modal-dialog modal-lg" role="document">
-
-								<!--Content-->
-								<div class="modal-content">
-
-									<!--Body-->
-									<div class="modal-body mb-0 p-0">
-
-										<div
-											class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-											<?php
-        echo "<iframe class=\"embed-responsive-item\"
-												src=$youtube3src></iframe>"?>
-										</div>
-
-									</div>
-
-									<!--Footer-->
-									<div class="modal-footer justify-content-center">
-										<span class="mr-4">Whatch more videos on YouTube!</span> <a
-											href="<?php
-        $myfile = fopen("Admin/SocialMediaLinks/YoutubeLink.txt", "r") or die("Unable to open file!");
-        echo fread($myfile, filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
-        fclose($myfile);
-        ?>"
-											class="fa fa-youtube"
-											style="padding: 10px; font-size: 30px; text-align: center; border-radius: 50%; background: red;"></a>
-										<button type="button"
-											class="btn btn-outline-primary btn-rounded btn-md ml-4"
-											data-dismiss="modal">Close</button>
-
-									</div>
-
-								</div>
-								<!--/.Content-->
-
-							</div>
-						</div>
-						<!--Modal: Name-->
-
-						<a><img class="img-fluid z-depth-1"
-							<?php echo "src=$youtube3picsrc"?> alt="video"
-							data-toggle="modal" data-target="#modal4"></a>
-
-					</div>
-					<!-- Grid column -->
-
-				</div>
-				<!-- Grid row -->
-
-
-
-				<br> <br>
+				<br/><br/><br/>
 
 				<!--INSTAGRAM-------------------------------------------------------------------------- -->
 
