@@ -239,29 +239,35 @@ if (file_put_contents("test.json", $json)) {
 <link rel="stylesheet" type="text/css" href="css/Gallery.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/Admin.css" />
 </head>
+<div class="body">
 <body>
 	<div class="container">
 		<br> <br>
 
-		<div class="card bg-dark text-white">
-			<div class="card-header">
-				<h1 style="text-align: center; color: white;">
-					Sax 'n' Sip <br />Admin Page
+		
+		<center>
+		<img src="photo/logo.png" alt="logo" >
+			<br /><br/>
+				<h1 style="text-align: center; color: #71db77;">
+					Log into the Website Platform 
 				</h1>
-				<br />
-			</div>
+				
+		</center>	
 
-		</div>
-		<br>
-		<div class="card1" style="background: #A6ACAF;">
+		<div class="  text-white">
+		
+		<div class="card1" style="background: #222222;">
 
-			<br />
+			
+			<!-- 
 			<center>
 				<h4>In this page you can edit the following content of the website by entering
 					your own information.</h4>
 					<a href="Admin\AdminHelp.txt" target="_blank"><h3>Help!</h3></a>
 			</center>
+			 -->
 			<div class="card-body p-5">
 			
 <?php
@@ -395,7 +401,18 @@ if (isset($_POST['pass']) == true) {
 }
 
 if ($goodPass == false) {
-    echo "<div class=\"card-body p-3\"><form method=\"post\"><label>Password:</label><input type=\"password\" name=\"pass\">&nbsp;<button type=\"submit\" class=\"btn btn-info\">Login</button></form></div>";
+    echo "<center>
+        <form method=\"post\">
+            <input type=\"text\" name=\"username\" placeholder=\"Username\">
+             <br/><br/>
+            
+            <input type=\"password\" name=\"pass\" placeholder=\"Password\">
+             <br/><br/>";
+    echo '
+            <a href="RecoverPassword.php">Recover Password</a>';
+    echo "        <br/><br/>
+            <button type=\"submit\" class=\"button\">Log in</button><br/><br/>
+            <button type=\"submit\" class=\"button1\" formaction=\"/WebApp/src/CreateAccount.php\">Create Account</button></form><center\>";
 }
 
 if ($aboutflag == true) {
@@ -436,15 +453,16 @@ if ($youtubeflag == true) {
 
         </div>
 		</div>
-
-	</div>
-	<br />
+	
+	<br/>
 	<center>
 		&copy;
 		<script>document.write(new Date().getFullYear());</script>
-		Copyright - Sax n Sip
+		Copyright - 2WDK Team
 	</center>
 	<br />
+	<div/>
+	</div>
 </body>
 </html>
 
