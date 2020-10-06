@@ -47,8 +47,10 @@ if ($goodPass == false) {
             <input type=\"password\" name=\"pass\" placeholder=\"Type again password\">
              <br/><br/>
     <br/>
-            <button type=\"submit\" class=\"button2\">Create Account</button><br/><br/>
-            ";
+            <button type=\"submit\" class=\"button2\">Create Account</button><br/><br/>";
+    echo '
+            <a href="AdminPage.php">Already have an account? Login.</a>';
+            
 }
 
 
