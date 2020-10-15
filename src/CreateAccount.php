@@ -109,16 +109,15 @@ if ($goodPass == false) {
         if (array_filter($errors)) {
             // echo 'Errors in form';
         } else {
-         
+            
             $username = $_POST['Username'];
             $email = $_POST['EmailAddress'];
             $password = $_POST['Password'];
 
             // create sql
-            $sql = "INSERT INTO Users1(UserId, Role, Username, Password, EmailAddress) VALUES(?,?,?,?,? )";
+            $sql = "INSERT INTO Users(Role, Username, Password, EmailAddress) VALUES(?,?,?,? )";
             // $params = array(mysqli_insert_id(1),'Admin',$username, $password , $email);
             $params = array(
-                '1',
                 'Admin',
                 $username,
                 $password,
@@ -129,7 +128,7 @@ if ($goodPass == false) {
             if ($stmt === false) {
                 die(print_r(sqlsrv_errors(), true));
             } else {
-
+                
                 header("Location:AccountCreated.php");
                 exit();
             }
