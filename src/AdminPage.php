@@ -1,6 +1,6 @@
 <?php
 /************************************
- * PASSWORD FOR ADMIN PAGE: PASS    *
+ * Fall 2020 Admin Page             *
  *                                  *
  ***********************************/
 
@@ -272,6 +272,8 @@ if (file_put_contents("test.json", $json)) {
 			<div class="card-body p-5">
 			
 <?php
+
+include ('DB_Connect.php');
 $goodPass = false;
 
 if (isset($_POST['pass']) == true) {

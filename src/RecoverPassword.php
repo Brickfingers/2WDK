@@ -32,24 +32,42 @@
 		<div class="card1" style="background: #222222;">
 
 			<div class="card-body p-5">
-			
-<?php
-$goodPass = false;
+		
+		
 
-if ($goodPass == false) {
-    echo "<center>
-        <form method=\"post\">
-            <input type=\"email\" name=\"email\" placeholder=\"Type your email address\">
-             
-             <br/><br/>
-    <br/><br/>
-            <button type=\"submit\" class=\"button2\">Recover Password</button><br/><br/>
-            ";
-}
+	<center>
+        <form action="" method="post">
+            <input type="text" name="email" placeholder="Type your email address">            
+             <br/><br/><br/><br/>
+   			 <button type="submit" name="submit" value="Submit" class="button2">Recover Password</button><br/><br/>
+          </form>  
 
+            
+<?php 
 
+include ('DB_Connect.php');
+if(isset($_POST['submit'])){
+    
+    
+    $to = $_POST['email'];
+    $subject = "Password Recovery";
+    $message = " Please enter to the following URL to recover your password \n\n";
+        
+    mail($to,$subject,$message);
+    
+    if(!$mail->Send())
+    {
+        $error ="Please try Later, Error Occured while Processing...";
+        return $error;
+    }
+    else
+    {
+        $error = "Thanks You !! Your email is sent.";
+        return $error;
+    }
+    
+    }
 ?>
-
         </div>
 		</div>
 	
