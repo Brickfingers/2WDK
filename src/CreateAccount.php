@@ -60,7 +60,6 @@ if ($goodPass == false) {
     if (isset($_POST['submit'])) {
 
         /*
-         * // check email
          * if(empty($_POST['UserId'])){
          * $errors['UserId'] = 'An User Id is required';
          * } else{
@@ -70,7 +69,6 @@ if ($goodPass == false) {
          * }
          * }
          *
-         * // check title
          * if(empty($_POST['Role'])){
          * $errors['Role'] = 'A Role is required';
          * } else{
@@ -80,7 +78,6 @@ if ($goodPass == false) {
          * }
          * }
          *
-         * // check title
          * if(empty($_POST['Username'])){
          * $errors['Username'] = 'A Username is required';
          * } else{
@@ -90,7 +87,6 @@ if ($goodPass == false) {
          * }
          * }
          *
-         * // check email
          * if(empty($_POST['EmailAddress'])){
          * $errors['EmailAddress'] = 'An email is required';
          * } else{
@@ -100,7 +96,6 @@ if ($goodPass == false) {
          * }
          * }
          *
-         * // check title
          * if(empty($_POST['Password'])){
          * $errors['Password'] = 'A Password is required';
          * } else{
@@ -114,8 +109,7 @@ if ($goodPass == false) {
         if (array_filter($errors)) {
             // echo 'Errors in form';
         } else {
-            // escape sql chars
-
+         
             $username = $_POST['Username'];
             $email = $_POST['EmailAddress'];
             $password = $_POST['Password'];
@@ -124,7 +118,7 @@ if ($goodPass == false) {
             $sql = "INSERT INTO Users1(UserId, Role, Username, Password, EmailAddress) VALUES(?,?,?,?,? )";
             // $params = array(mysqli_insert_id(1),'Admin',$username, $password , $email);
             $params = array(
-                '',
+                '1',
                 'Admin',
                 $username,
                 $password,
@@ -140,24 +134,6 @@ if ($goodPass == false) {
                 exit();
             }
 
-            // save to db and check
-            /*
-             * if(sqlsrv_query($conn, $sql)){
-             * echo '\ngood--------------------------------------------------------------------------------';
-             * } else {
-             * echo '---------------------------------- query error: -------------------------------'. sqlsrv_errors(1);
-             * }
-             */
-
-            /*
-             * $sql = "INSERT INTO Table_1 (id, data) VALUES (?, ?)";
-             * $params = array(1, "some data");
-             *
-             * $stmt = sqlsrv_query( $conn, $sql, $params);
-             * if( $stmt === false ) {
-             * die( print_r( sqlsrv_errors(), true));
-             * }
-             */
         }
     }
 
