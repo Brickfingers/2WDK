@@ -10,36 +10,36 @@
 <link rel="stylesheet" type="text/css" href="css/Gallery.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/Admin.css" />
+<link rel="stylesheet" type="text/css" href="css/Admin.css" />
 </head>
 <div class="body">
-<body>
-	<div class="container">
-		<br> 
+	<body>
+		<div class="container">
+			<br>
+			<center>
+				<img src="photo/logo.png" alt="logo"> <br />
+				<br />
+				<h1 style="text-align: center; color: #71db77;">Create an Account</h1>
 
-		
-		<center>
-		<img src="photo/logo.png" alt="logo" >
-			<br /><br/>
-				<h1 style="text-align: center; color: #71db77;">
-					Create an Account 
-				</h1>
-				
-		</center>	
+			</center>
+			<div class="  text-white">
 
-		<div class="  text-white">
-		
-		<div style="background: #222222;">
+				<div style="background: #222222;">
 
-			<div class="card-body p-5">
+					<div class="card-body p-5">
 			
 <?php
-
 include ('DB_Connect.php');
 $goodPass = false;
 
 $userid = $role = $username = $email = $password = '';
-$errors = array('UserId' => '', 'Role' => '', 'Username' => '', 'EmailAddress' => '', 'Password' => '');
+$errors = array(
+    'UserId' => '',
+    'Role' => '',
+    'Username' => '',
+    'EmailAddress' => '',
+    'Password' => ''
+);
 
 if ($goodPass == false) {
     echo "<center>
@@ -56,124 +56,129 @@ if ($goodPass == false) {
             <button type=\"submit\" name=\"submit\" class=\"button2\">Create Account</button><br/><br/>";
     echo '
             <a href="AdminPage.php">Already have an account? Login.<br/><br/></a>';
-      
-    
-    if(isset($_POST['submit'])){
-        
-       /* // check email
-        if(empty($_POST['UserId'])){
-            $errors['UserId'] = 'An User Id is required';
-        } else{
-            $userid = $_POST['UserId'];
-            if(!preg_match('/^[a-zA-Z\s]+$/', $userid)){
-                $errors['UserId'] = 'User Id must be valid';
-            }
-        }
-        
-        // check title
-        if(empty($_POST['Role'])){
-            $errors['Role'] = 'A Role is required';
-        } else{
-            $role = $_POST['Role'];
-            if(!preg_match('/^[a-zA-Z\s]+$/', $role)){
-                $errors['Role'] = 'Role must be letters only';
-            }
-        }
-        
-        // check title
-        if(empty($_POST['Username'])){
-            $errors['Username'] = 'A Username is required';
-        } else{
-            $username = $_POST['Username'];
-            if(!preg_match('/^[a-zA-Z\s]+$/', $username)){
-                $errors['Username'] = 'Username must be letters and spaces only';
-            }
-        }
-        
-        // check email
-        if(empty($_POST['EmailAddress'])){
-            $errors['EmailAddress'] = 'An email is required';
-        } else{
-            $email = $_POST['EmailAddress'];
-            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                $errors['EmailAddress'] = 'Email must be a valid email address';
-            }
-        }
-        
-        // check title
-        if(empty($_POST['Password'])){
-            $errors['Password'] = 'A Password is required';
-        } else{
-            $password = $_POST['Password'];
-            if(!preg_match('/^[a-zA-Z\s]+$/', $password)){
-                $errors['Password'] = 'Password must be letters and spaces only';
-            }
-        }*/
-        
-        if(array_filter($errors)){
-            //echo 'Errors in form';
+
+    if (isset($_POST['submit'])) {
+
+        /*
+         * // check email
+         * if(empty($_POST['UserId'])){
+         * $errors['UserId'] = 'An User Id is required';
+         * } else{
+         * $userid = $_POST['UserId'];
+         * if(!preg_match('/^[a-zA-Z\s]+$/', $userid)){
+         * $errors['UserId'] = 'User Id must be valid';
+         * }
+         * }
+         *
+         * // check title
+         * if(empty($_POST['Role'])){
+         * $errors['Role'] = 'A Role is required';
+         * } else{
+         * $role = $_POST['Role'];
+         * if(!preg_match('/^[a-zA-Z\s]+$/', $role)){
+         * $errors['Role'] = 'Role must be letters only';
+         * }
+         * }
+         *
+         * // check title
+         * if(empty($_POST['Username'])){
+         * $errors['Username'] = 'A Username is required';
+         * } else{
+         * $username = $_POST['Username'];
+         * if(!preg_match('/^[a-zA-Z\s]+$/', $username)){
+         * $errors['Username'] = 'Username must be letters and spaces only';
+         * }
+         * }
+         *
+         * // check email
+         * if(empty($_POST['EmailAddress'])){
+         * $errors['EmailAddress'] = 'An email is required';
+         * } else{
+         * $email = $_POST['EmailAddress'];
+         * if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+         * $errors['EmailAddress'] = 'Email must be a valid email address';
+         * }
+         * }
+         *
+         * // check title
+         * if(empty($_POST['Password'])){
+         * $errors['Password'] = 'A Password is required';
+         * } else{
+         * $password = $_POST['Password'];
+         * if(!preg_match('/^[a-zA-Z\s]+$/', $password)){
+         * $errors['Password'] = 'Password must be letters and spaces only';
+         * }
+         * }
+         */
+
+        if (array_filter($errors)) {
+            // echo 'Errors in form';
         } else {
             // escape sql chars
-            
-           
+
             $username = $_POST['Username'];
             $email = $_POST['EmailAddress'];
             $password = $_POST['Password'];
-            
-            
+
             // create sql
             $sql = "INSERT INTO Users1(UserId, Role, Username, Password, EmailAddress) VALUES(?,?,?,?,? )";
-            //$params = array(mysqli_insert_id(1),'Admin',$username, $password , $email);
-            $params = array('','Admin',$username, $password , $email);
-            
-            $stmt = sqlsrv_query( $conn, $sql, $params);
-            if( $stmt === false ) {
-                die( print_r( sqlsrv_errors(), true));
-            }else{
-                
-                    header("Location:AccountCreated.php");
-                    exit();
-                
-            }
-            
-            // save to db and check
-           /* if(sqlsrv_query($conn, $sql)){
-                echo '\ngood--------------------------------------------------------------------------------';
+            // $params = array(mysqli_insert_id(1),'Admin',$username, $password , $email);
+            $params = array(
+                '',
+                'Admin',
+                $username,
+                $password,
+                $email
+            );
+
+            $stmt = sqlsrv_query($conn, $sql, $params);
+            if ($stmt === false) {
+                die(print_r(sqlsrv_errors(), true));
             } else {
-                echo '---------------------------------- query error: -------------------------------'. sqlsrv_errors(1);
-            }*/
-            
-            /*$sql = "INSERT INTO Table_1 (id, data) VALUES (?, ?)";
-            $params = array(1, "some data");
-            
-            $stmt = sqlsrv_query( $conn, $sql, $params);
-            if( $stmt === false ) {
-                die( print_r( sqlsrv_errors(), true));
+
+                header("Location:AccountCreated.php");
+                exit();
             }
-            */
+
+            // save to db and check
+            /*
+             * if(sqlsrv_query($conn, $sql)){
+             * echo '\ngood--------------------------------------------------------------------------------';
+             * } else {
+             * echo '---------------------------------- query error: -------------------------------'. sqlsrv_errors(1);
+             * }
+             */
+
+            /*
+             * $sql = "INSERT INTO Table_1 (id, data) VALUES (?, ?)";
+             * $params = array(1, "some data");
+             *
+             * $stmt = sqlsrv_query( $conn, $sql, $params);
+             * if( $stmt === false ) {
+             * die( print_r( sqlsrv_errors(), true));
+             * }
+             */
         }
-        
-        
     }
-   
-        
+
     sqlsrv_close($conn);
-    
 }
 
 ?>
         </div>
-		</div>
+				</div>
 
-	<center>
-		&copy;
-		<script>document.write(new Date().getFullYear());</script>
-		Copyright - 2WDK Team
-	</center>
-	<br />
-	<div/>
-	</div>
-</body>
+				<center>
+					&copy;
+					<script>document.write(new Date().getFullYear());</script>
+					Copyright - 2WDK Team
+				</center>
+				<br />
+				<div />
+			</div>
+	
+	</body>
+
 </html>
 
 
