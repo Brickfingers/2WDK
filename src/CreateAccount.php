@@ -113,14 +113,15 @@ if ($goodPass == false) {
             $username = $_POST['Username'];
             $email = $_POST['EmailAddress'];
             $password = $_POST['Password'];
-
+            $hash = password_hash( $password , PASSWORD_DEFAULT );
+           
             // create sql
-            $sql = "INSERT INTO Users(Role, Username, Password, EmailAddress) VALUES(?,?,?,? )";
-            // $params = array(mysqli_insert_id(1),'Admin',$username, $password , $email);
+            $sql = "INSERT INTO Users1(Role, Username, Password, EmailAddress) VALUES(?,?,?,? )";
+            
             $params = array(
                 'Admin',
                 $username,
-                $password,
+                $hash,
                 $email
             );
 
