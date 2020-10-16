@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Admin Page</title>
+<title>Recover Credentials</title>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,6 +32,7 @@
 									placeholder="Type your email address"> <br />
 								<br />
 								<br />
+								<a href="AdminPage2.php">Already have an account? Login.<br/><br/></a>
 								<br />
 								<button type="submit" name="submit" value="Submit"
 									class="button2">Recover Password</button>

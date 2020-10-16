@@ -34,7 +34,7 @@
 				</h1>
 				<br />
 				<br />
-				<form action="/WebApp/src/AdminPage.php">
+				<form action="/WebApp/src/AdminPage2.php">
 					<button type="submit" class="button1">Login</button>
 				</form>
 

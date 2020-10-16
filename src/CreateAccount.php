@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Admin Page</title>
+<title>Create Account</title>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,10 +32,8 @@
 include ('DB_Connect.php');
 $goodPass = false;
 
-$userid = $role = $username = $email = $password = '';
+$username = $email = $password = '';
 $errors = array(
-    'UserId' => '',
-    'Role' => '',
     'Username' => '',
     'EmailAddress' => '',
     'Password' => ''
@@ -55,7 +53,7 @@ if ($goodPass == false) {
     <br/>
             <button type=\"submit\" name=\"submit\" class=\"button2\">Create Account</button><br/><br/>";
     echo '
-            <a href="AdminPage.php">Already have an account? Login.<br/><br/></a>';
+            <a href="AdminPage2.php">Already have an account? Login.<br/><br/></a>';
 
     if (isset($_POST['submit'])) {
 
@@ -115,24 +113,38 @@ if ($goodPass == false) {
             $password = $_POST['Password'];
             $hash = password_hash( $password , PASSWORD_DEFAULT );
            
-            // create sql
-            $sql = "INSERT INTO Users1(Role, Username, Password, EmailAddress) VALUES(?,?,?,? )";
+            // check if account exists and create account
+            $query = "SELECT * FROM Users1 WHERE Username='$username' OR EmailAddress='$email'";
             
-            $params = array(
-                'Admin',
-                $username,
-                $hash,
-                $email
-            );
-
-            $stmt = sqlsrv_query($conn, $sql, $params);
-            if ($stmt === false) {
-                die(print_r(sqlsrv_errors(), true));
-            } else {
-                
-                header("Location:AccountCreated.php");
-                exit();
-            }
+            $params = array();
+            $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+            $stmt = sqlsrv_query( $conn, $query , $params, $options );
+           
+            $row_count = sqlsrv_num_rows( $stmt );
+            
+            if ($row_count != 0)
+                echo "<h1>Username or Email Addres already exist. Please try again.</h1>";
+                else{
+                    $sql = "INSERT INTO Users1(Role, Username, Password, EmailAddress) VALUES(?,?,?,? )";
+                    
+                    $params2 = array(
+                        'Admin',
+                        $username,
+                        $hash,
+                        $email
+                    );
+                    
+                    $stmt2 = sqlsrv_query($conn, $sql, $params2);
+                    if ($stmt2 === false) {
+                        die(print_r(sqlsrv_errors(), true));
+                    } else {
+                        header("Location:AccountCreated.php");
+                        exit();
+                    }
+                    
+                }
+               
+            
 
         }
     }
