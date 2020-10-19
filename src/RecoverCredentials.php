@@ -31,16 +31,17 @@
 								<input type="text" name="email"
 									placeholder="Type your email address"> <br />
 								<br />
-								<br />
 								<a href="AdminPage2.php">Already have an account? Login.<br/><br/></a>
 								<br />
 								<button type="submit" name="submit" value="Submit"
-									class="button2">Recover Password</button>
-								<br />
-								<br />
-							</form>          
+									class="button2">Recover Password</button></br></br>
+									<button type="submit" name="submit2" value="Submit"
+									class="button2">Recover Username</button>
+								</form>          
 <?php
 include ('DB_Connect.php');
+
+//recover password
 if (isset($_POST['submit'])) {
 
     $to = $_POST['email'];
@@ -57,17 +58,31 @@ if (isset($_POST['submit'])) {
         return $error;
     }
 }
+
+//recover username
+if (isset($_POST['submit2'])) {
+    
+    $email = $_POST['email'];
+    $query = "SELECT * FROM Users1 WHERE EmailAddress='$email'";
+    
+    $params = array();
+    $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+    $stmt = sqlsrv_query( $conn, $query , $params, $options );
+    //echo $stmt;
+    $row_count = sqlsrv_num_rows( $stmt );
+    //echo $row_count;
+    //echo $verifyhash;
+    if ($row_count == 0){
+        echo "<h1>Email Address not found.</br> Try again or <a href='CreateAccount.php'>Create an Account</a></h1>";
+    }
+    else{
+        echo "<h1>Your username is: </h1>";
+}
+}
 ?>
-    	
+
 					</div>
-				</div>
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
+				</div>	</br>		
 				<center>
 					&copy;
 					<script>document.write(new Date().getFullYear());</script>

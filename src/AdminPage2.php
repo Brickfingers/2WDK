@@ -322,7 +322,7 @@ if ($goodPass == false) {
     echo '
             <a href="RecoverCredentials.php">Recover Password or Username</a>';
     echo "        <br/><br/>
-            <button type=\"submit\" class=\"button\">Log in</button><br/><br/>
+            <button type=\"submit\" name=\"submit\" class=\"button\">Log in</button><br/><br/>
             <button type=\"submit\" class=\"button1\" formaction=\"/WebApp/src/CreateAccount.php\">Create Account</button></form><center\>";
     
     
@@ -336,21 +336,150 @@ if ($goodPass == false) {
             $password = $_POST['Password'];
         }
         
-        $hash = password_hash($password, PASSWORD_DEFAULT);
-        
-        $query = "SELECT * FROM Users1 WHERE Username='$username' AND Password='$hash'";
+        //$verifyhash = password_verify($password, $hash); //Needs improvement
+         
+        $query = "SELECT * FROM Users1 WHERE Username='$username' AND Password='$password'";
         
         $params = array();
         $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
         $stmt = sqlsrv_query( $conn, $query , $params, $options );
-        echo $stmt;
+        //echo $stmt;
         $row_count = sqlsrv_num_rows( $stmt );
-        echo $row_count;
+        //echo $row_count;
+        //echo $verifyhash;
         if ($row_count == 0){
             echo "<h1>Username and/or Email Addres incorrect. Please verify and try again.</h1>";
         }
         else{
-            echo "good";
+            echo "<h1> Successfully Login</h1>";
+            
+            if (isset($_POST['pass']) == true) {
+                if ($pass == "pass") {
+                    $goodPass = true;
+                    
+                    echo "<form method=\"post\">
+                        <h6>Gallery Image #1:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image1URL\" >$image1src</textarea>
+                        <br/><br/>
+                        
+                        <h6>Gallery Image #1 Title:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image1TITLE\" >$image1title</textarea>
+                        <br/><br/>
+                        <h6>Gallery Image #1 Caption:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image1Caption\" >$image1caption</textarea>
+                        <br/><br/>
+                        
+                        <h6>Gallery Image #2:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image2URL\" >$image2src</textarea>
+            		    <br/><br/>
+                        <h6>Gallery Image #2 Title:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image2TITLE\" >$image2title</textarea>
+                        <br/><br/>
+                        <h6>Gallery Image #2 Caption:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image2Caption\" >$image2caption</textarea>
+                        <br/><br/>
+                        
+                        <h6>Gallery Image #3:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image3URL\" >$image3src</textarea>
+                        <br/><br/>
+                        <h6>Gallery Image #3 Title:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image3TITLE\" >$image3title</textarea>
+                        <br/><br/>
+                        <h6>Gallery Image #3 Caption:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image3Caption\" >$image3caption</textarea>
+                        <br/><br/>
+                        
+                        
+                        <h6>Gallery Image #4:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image4URL\" >$image4src</textarea>
+            		    <br/><br/>
+                        <h6>Gallery Image #4 Title:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image4TITLE\" >$image4title</textarea>
+                        <br/><br/>
+                        <h6>Gallery Image #4 Caption:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image4Caption\" >$image4caption</textarea>
+                        <br/><br/>
+                        
+                        <h6>Gallery Image #5:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image5URL\" >$image5src</textarea>
+            		    <br/><br/>
+                        <h6>Gallery Image #5 Title:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image5TITLE\" >$image5title</textarea>
+                        <br/><br/>
+                        <h6>Gallery Image #5 Caption:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"image5Caption\" >$image5caption</textarea>
+                        <br/><br/>
+                        
+                        <h6>Youtube Video Link #1:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"youTube1URL\" >$youtube1src</textarea>
+                        <br/><br/>
+                        <h6>Youtube Video Thumbnail Picture #1:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"youTube1PIC\" >$youtube1picsrc</textarea>
+            			<br/><br/>
+            			
+                        <h6>Youtube Video Link #2:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"youTube2URL\" >$youtube2src</textarea>
+            			<br/><br/>
+                        <h6>Youtube Video Thumbnail Picture #2:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"youTube2PIC\" >$youtube2picsrc</textarea>
+            			<br/><br/>
+            			
+                        <h6>Youtube Video Link #3:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"youTube3URL\" >$youtube3src</textarea>
+            			<br/><br/>
+                        <h6>Youtube Video Thumbnail Picture #3:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"youTube3PIC\" >$youtube3picsrc</textarea>
+            			<br/><br/>
+            			
+                        <h6>Instagram Video Link #1:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"instaVideo1URL\" >$insta1src</textarea>
+            		    <br/><br/>
+                        <h6>Instagram Video Thumbnail Picture #1:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"instaVideo1PIC\" >$insta1picsrc</textarea>
+                        <br/><br/>
+                        <h6>Instagram Video Link #2:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"instaVideo2URL\" >$insta2src</textarea>
+                        <br/><br/>
+                        <h6>Instagram Video Thumbnail Picture #2:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"instaVideo2PIC\" >$insta2picsrc</textarea>
+                        <br/><br/>
+                        <h6>Instagram Video Link #3:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"instaVideo3URL\" >$insta3src</textarea>
+                        <br/><br/>
+                        <h6>Instagram Video Thumbnail Picture #3:</h6>
+            			<textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"instaVideo3PIC\" >$insta3picsrc</textarea>
+                        <br/><br/>
+                        
+                        <h6>About page content:</h6>
+            		    <textarea rows=\"22\" cols=\"50\" type=\"text\" name=\"about\" >$aboutme</textarea>
+                        <br/><br/>
+                        
+                        <h6>Facebook Page Link:</h6>
+            		    <textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"facebooklink\" >$facebooklink</textarea>
+                    <br/><br/>
+                    
+                        <h6>Instagram Page Link:</h6>
+            		    <textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"instagramlink\" >$instagramlink</textarea>
+                    <br/><br/>
+                    
+                        <h6>SoundCloud Page Link:</h6>
+            		    <textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"soundcloudlink\" >$soundcloudlink</textarea>
+                    <br/><br/>
+                    
+                       <h6>Youtube Page Link:</h6>
+            		    <textarea rows=\"2\" cols=\"50\" type=\"text\" name=\"youtubelink\" >$youtubelink</textarea>
+                    <br/><br/><br/>
+                    
+                    
+                        <input type=\"submit\" value=\"Submit Information\"/>
+                        
+                        
+            		</form>
+            <br/><br />
+            </div>";
+                }
+            }
+            
             
         }
     }
