@@ -1,23 +1,23 @@
 .body{
-	background-color: #2E1114;
+	background-color: #393f4d;
 }
 
 .display{
 	
 	font-family: 'Playfair Display';
-	color: white;
+	color: #feda6a;
 	font-size: 110px;
 }
 
 .display1{
 	
 	font-family: 'Playfair Display';
-	color: #2E1114;
+	color: #393f4d;
 	font-size: 50px;
 }
 
 .container1{
-	background-color: white;
+	background-color: #feda6a;
 	left: 30px;
 }
 

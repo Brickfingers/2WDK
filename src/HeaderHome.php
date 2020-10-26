@@ -1,3 +1,13 @@
+<!----------------------------------------------------------------------------- 
+* Filename:					HeaderHome2.php
+* Version:					1.5
+* Team Name:                2WDK
+* Student Name:				David Salazar - 040889786
+* Course Name:				CST 8353 - Software design and testing
+* Professor:			    Leanne Seaward
+* Purpose:                  Header of the Home page
+-------------------------------------------------------------------------------->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +22,12 @@
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="css/Header.css" />
-<!-- <link rel="stylesheet" type="text/css" href="css2/Header2.css" /> -->
 <body>	
-	<div class="jumbotron jumbotron-fluid">
+	<div class="jumbotron1 jumbotron-fluid">
       <div class="container text-center">
-        <h1 class="display-2">&#119070ax n'&#119070ip</h1>             
+        <!-- <h1 class="display-2" id="logo">&#119070ax N &#119070ip</h1> -->
+        <h1 class="display-2" id="logo">Sax n'Sip</h1>             
+        
       </div>
     </div>
 	
@@ -29,12 +40,12 @@
                 <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbar1">
+                <div class="collapse navbar-collapse" id="navbar1" style="border-bottom: 1.5px solid #f7ef8a;">
                 	<div class="col-2"></div>
   					<div class="col-8">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="Home.php"> HOME </a> 
+                                <a class="nav-link" href="HomePage.php"> HOME </a> 
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="About.php"> ABOUT </a>
@@ -50,7 +61,7 @@
                             </li>                            
                         </ul>
                     </div>
-                    <div class="col-2"></div>
+                    <div class="col-2"></div>                    
                 </div>
             </div>
         </nav>

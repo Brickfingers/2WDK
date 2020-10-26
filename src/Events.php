@@ -4,6 +4,8 @@
 <title>Events</title>
 <meta charset='utf-8' />
 
+<link rel="stylesheet" type="text/css" href="css/Events.css" />
+
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
 <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet' />
@@ -36,14 +38,13 @@
 
       displayEventTime: false, // don't show the time column in list view
 
-      googleCalendarApiKey: 'AIzaSyDYCTtQL94JwOS_9Hkp4f0ypSBw6Ua30zA',
+      googleCalendarApiKey: 'AIzaSyDc0lVZ9BmPgodpioi4Lneom05oRWB1yTA',
 
 
            events: {
-		    googleCalendarId: 'saxnsip@gmail.com',
-		    textColor: 'white',
-		    color: 'rgba(0, 0, 0, 0.5)',
-		    className: 'gevent'
+		    googleCalendarId: 'team2wdk@gmail.com',
+		    textColor: 'black',
+		    color: '#feda6a',
 		  },
 		  
 
@@ -53,16 +54,16 @@
 
           arg.jsEvent.preventDefault() // don't navigate in main tab
         },
-	        
-		  eventRender: function(info)
-		  {
-		    $(info.el).tooltip({ 
-			    title: info.event.title,
-			    placement: 'top',
-			    trigger: 'hover',
-			    container: 'body'
-			});
-		  }
+	    
+  	  eventRender: function(info)
+	  {
+	    $(info.el).tooltip({ 
+		    title: info.event.title,
+		    placement: 'top',
+		    trigger: 'hover',
+		    container: 'body'
+		});
+	  }
 
     });
 
@@ -70,61 +71,22 @@
   });
   
 </script>
-
-<style>
-
-  body {
-
-    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 14px;
-   background-color:#CACFD2 !important;
-       overflow: auto;
-   
-  }
-
-.fc table {
-    border-color: black !important;
-  font-size: 1em; 
-  }
-.fc-left .fc-prev-button, .fc-left .fc-next-button, .fc-left .fc-today-button{
-    background-color: black !important;
-    border-color: black !important;
-}
-.fc-day-grid-event .fc-content {
-	white-space: normal;
-	font-size: 11pt;
-	font-weight: 700;
-	font-family: Verdana, sans-serif !important;
-}
-
-.fc-day-grid-event {
-	background: rgba(0, 0, 0, 0.0);
-	color: #000;
-	 font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-}
-
-
-</style>
 </head>
 <body>
     <?php include "Header.php"; ?>
-<div style="background-color: #CACFD2;">
-    <div class="container" style="background-color: #CACFD2;">
+<div style="background-color: #393f4d;">
+    <div class="container" style="background-color: #393f4d;">
    
     <br><br>
     
-    	<div class="card bg-dark text-white">
-			<div class="card-header">
-				<h1 style="text-align: center; color: white;">EVENTS</h1>
-			</div>
-			
-
+    	<div class="container" id="card">
+			<h1 style="text-align: center; color: #d4d4dc; font-family: 'Poppins';">EVENTS</h1>
 		</div>
 	
 	<br><br>
 
           <div id='calendar'></div>
-          
+          <br>
     </div>
 </div>
 <?php include_once "Footer.php";?>

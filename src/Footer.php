@@ -1,5 +1,13 @@
-
-<footer class="page-footer font-small stylish-color-dark">
+<!----------------------------------------------------------------------------- 
+* Filename:					Footer.php
+* Version:					1.8
+* Team Name:                2WDK
+* Student Name:				David Salazar - 040889786
+* Course Name:				CST 8353 - Software design and testing
+* Professor:			    Leanne Seaward
+* Purpose:                  Footer of the website
+-------------------------------------------------------------------------------->
+<footer class="page-footer font-small stylish-color-dark ">
     <div class= footer>
     
         <div class="container text-center text-md-left">	
@@ -9,10 +17,7 @@
         <style type="text/css">
         	#mc_embed_signup{background:#fff; clear:left; font:17px Helvetica,Arial,sans-serif; }
         </style>
-        
         <link rel="stylesheet" href="css/Footer.css">
-        <!-- <link rel="stylesheet" href="css2/Footer2.css"> -->
-        
         <div class="row">
          
             <li class="list-inline-item">
@@ -87,13 +92,13 @@
         			
           		</div>
         	</div>
-            </li>
+            
         </div>
  	
     <div class= footer_no_selected>    
     <div class="footer-copyright text-center py-3">
   		<ul class="list-unstyled list-inline text-center">
-           	<br/>
+           	</br>
            	<li class="list-inline-item">
           	 	<a href="<?php
                             $myfile = fopen("Admin/SocialMediaLinks/EmailAddress.txt", "r") or die("Unable to open file!");
@@ -117,14 +122,6 @@
                             fclose($myfile);
                             ?>" target="_blank"><i class="social fa-instagram"> </i></a>        
             </li>
-         	
-         	<li class="list-inline-item">          
-                <a href="<?php
-                            $myfile = fopen("Admin/SocialMediaLinks/SoundCloudLink.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/SocialMediaLinks/SoundCloudLink.txt"));
-                            fclose($myfile);
-                            ?>" target="_blank"><i class="social fa-soundcloud"> </i></a>         
-            </li>
            
             <li class="list-inline-item">             
                 <a href="<?php
@@ -135,40 +132,9 @@
             </li>
       	</ul>
       	<br/>
-      <nav class="navbar navbar_footer navbar-expand-md navbar-toggleable-sm">
-            <div class="container">             	        
-                                              
-                <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar2">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar2">
-                	<div class="col-2"></div>
-  					<div class="col-8">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="HomePage.php">HOME</a> 
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="About.php">ABOUT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Gallery.php">GALLERY</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Events.php">EVENTS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Booking.php">BOOKING</a>
-                            </li>                            
-                        </ul>
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-            </div>
-        </nav>
         <br/>
       	<div class="copyright">
-     		&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax n Sip
+     		&copy; <script>document.write(new Date().getFullYear());</script> Copyright - Sax'n'Sip | Designed by 2WDK
       	</div>
       	
   	</div>

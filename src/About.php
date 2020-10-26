@@ -15,33 +15,30 @@
 <title>Sax N Sip</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="css/About.css" />
-<!-- <link rel="stylesheet" type="text/css" href="css2/About2.css" /> -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
 </head>
 
-<div class="body">
-	<?php
-include_once "Header.php";
-?>
-	
+<body style="background-color: #393f4d;">
+<?php include_once "Header.php"; ?>
+
+
 	<div class="container bootstrap snippet">
 
 		<br>
 		<br>
-		<div class="card bg-dark text-white">
-			<div class="card-header">
-				<h1 style="text-align: center; color: white;">ABOUT</h1>
-			</div>
-
+		<div class="container" id="card">
+			<h1 style="text-align: center; color: #d4d4dc; font-family: 'Poppins';">ABOUT</h1>
 		</div>
-		<br> <br>
+		<br> 
+		<br>		
 		<div class="profile card">
 
 			<div class="profile-body">
-				<div class="profile-bio" style="background-color: #E3E2DF;">
+				<div class="profile-bio" style="background-color: #d4d4dc; color: #1d1e22; font-family: 'Poppins';">
 
 
 					<div class="row">
@@ -49,10 +46,10 @@ include_once "Header.php";
 							<br> <img class="img-thumbnail md-margin-bottom-10"
 								src="photo/pic8.png" alt="">
 						</div>
-						<div class="col-md-7">
-							<h2>Ben Joseph</h2>
+						<div class="col-md-7"">
+							<h2 style="text-align: center;">Ben Joseph</h2>
 							<hr>
-							<p align="justify"><?php
+							<p align="justify"  style="padding-right: 10px;"><?php
                             $myfile = fopen("Admin/About/AboutText.txt", "r") or die("Unable to open file!");
                             echo fread($myfile,filesize("Admin/About/AboutText.txt"));
                             fclose($myfile);
@@ -67,8 +64,6 @@ include_once "Header.php";
 	<br>
 	<br>
 	<br>
-	<?php
-include_once "Footer.php";
-?>
-</div>
+	<?php include_once "Footer.php"; ?>
+</body>
 </html>
