@@ -12,10 +12,11 @@ $myImage = sqlsrv_get_field($result, 2);
 echo "image name is:  $myImage \n";
 
 /* photo folder that used to store images*/
+
 echo "<img src='photo/" . $myImage . "' height='280' width='220'> ";
+
 sqlsrv_free_stmt($result);
 sqlsrv_close($conn);
 
 ?>
 
-"photo/"
