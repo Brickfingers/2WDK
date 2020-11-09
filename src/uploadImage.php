@@ -45,7 +45,7 @@ if (isset($_POST['upload'])) {
         $uploadOk = 0;
     }
 	
-    //validate file name inclusing single qoute
+    //validate file name including single qoute
     if (preg_match("/'/u", $filename)) { 
        echo "file name is not valid.";
        $uploadOk = 0;
