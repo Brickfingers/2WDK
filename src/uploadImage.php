@@ -44,6 +44,12 @@ if (isset($_POST['upload'])) {
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         $uploadOk = 0;
     }
+	
+    //validate file name inclusing single qoute
+    if (preg_match("/'/u", $filename)) { 
+       echo "file name is not valid.";
+       $uploadOk = 0;
+    }
 
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
