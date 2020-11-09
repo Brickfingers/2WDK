@@ -5,6 +5,7 @@ text-align: center;
 
 .img-fluid {
 	cursor: pointer;
+	width: 650px;
 }
 
 .fa {
@@ -21,6 +22,7 @@ text-align: center;
 .fa-instagram {
 	background: #125688;
 	color: white;
+/* 	padding: 20px; font-size: 20px; text-align: center; border-radius: 50%;  */
 }
 
 
@@ -57,3 +59,6 @@ iframe {
 	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
+.card1 {
+	background: #393f4d;
+}

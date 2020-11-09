@@ -16,13 +16,13 @@
 	
 }
 
-.body{
-	background-color:#83677B;
-}
+/* .body{
+	background-color:#393f4d;
+} */
 
 .profile .profile-body {
-	padding: 20px;
-	background: #f7f7f7;
+	padding: 10px;
+	background: #d4d4dc;
 	
 }
 
@@ -30,6 +30,9 @@
 	background: #fff;
 	position: relative;
 	padding: 15px 10px 5px 15px;
+	background-color: #d4d4dc; 
+	color: #1d1e22; 
+	font-family: 'Poppins';
 }
 
 .profile .profile-bio a {
@@ -40,13 +43,26 @@
 	position: absolute;
 }
 
-.profile .profile-bio h2 {
+.profile .profile-bio {
 	margin-top: 0;
 	font-weight: 200;
 }
 
-h2 {
-	font-size: 24px;
+.header2 {
+	font-size: 26px;
 	line-height: 33px;
+	text-align: center;
+	font-weight: bold;
+	color: #393f4d;
+	font-family: 'Poppins';
 }
-
+/* .header1 {
+	text-align: center; 
+	color: #d4d4dc; 
+	font-family: 'Poppins';
+}	
+ */
+.aboutText {
+	text-align: justify;
+	padding-right: 10px;
+}

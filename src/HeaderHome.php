@@ -40,7 +40,7 @@
                 <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbar1" style="border-bottom: 1.5px solid #f7ef8a;">
+                <div class="collapse navbar-collapse" id="navbar1">
                 	<div class="col-2"></div>
   					<div class="col-8">
                         <ul class="navbar-nav mr-auto">
