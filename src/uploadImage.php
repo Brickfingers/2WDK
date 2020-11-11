@@ -5,11 +5,12 @@
 <head>
 <?php
 include "DB_Connect.php";
-if (isset($_POST['upload'])) {
-
+if (isset($_POST['upload']) && isset($_POST["about"]) && isset($_POST["title"])) {
+    $aboutme = $_POST["about"];
+    $aboutTitle = $_POST["title"];
     $filename = $_FILES["fileToUpload"]["name"];
     $tempname = $_FILES["fileToUpload"]["tmp_name"];
-    
+
     $target_dir = "photo/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
@@ -58,16 +59,16 @@ if (isset($_POST['upload'])) {
     } else {
         if (move_uploaded_file($tempname, $target_file)) {
 
-            // save file name to database
-            // $sql = "INSERT INTO image (Filename) SELECT('$filename')";
-            // sqlsrv_query($conn, $sql);
-
+            $aboutme = str_replace("'", "''", $aboutme);
+            $aboutTitle = str_replace("'", "''", $aboutTitle);
+            $filename = str_replace("'", "''", $filename);
             $sql = "INSERT INTO [dbo].[About]
            ([Title]
 		   ,[Content]
            ,[AboutImage])
                 
-            SELECT 'Ben Joseph' ,'This is me...','$filename'";
+            SELECT '$aboutTitle' ,'$aboutme','$filename'";
+
             sqlsrv_query($conn, $sql);
 
             echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
@@ -82,13 +83,20 @@ if (isset($_POST['upload'])) {
 </head>
 <body>
 	<form method="POST" action="" enctype="multipart/form-data">
+		<h4>Upload an image for About page:</h4>
 		<input type="file" name="fileToUpload" value="" />
+		<h4>About page title:</h4>
+		<textarea rows="2" cols="50" type="text" name="title"></textarea>
+		<br />
+		<br />
 
+		<h4>About page content:</h4>
+		<textarea rows="22" cols="50" type="text" name="about"> </textarea>
+		<br /> <br />
 		<div>
-			<button type="submit" name="upload">UPLOAD</button>
+			<button type="submit" name="upload">Submit</button>
 		</div>
 	</form>
-
 
 </body>
 </html>
