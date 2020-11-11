@@ -4,6 +4,7 @@
 <title>Events</title>
 <meta charset='utf-8' />
 
+<link rel='stylesheet' media='screen' type='text/css' href='css/common.css' />
 <link rel="stylesheet" type="text/css" href="css/Events.css" />
 
 <script src="https://unpkg.com/@popperjs/core@2"></script>
@@ -72,15 +73,15 @@
   
 </script>
 </head>
-<body>
+<body  class="body">
     <?php include "Header.php"; ?>
-<div style="background-color: #393f4d;">
-    <div class="container" style="background-color: #393f4d;">
+<div>
+    <div class="container" >
    
     <br><br>
     
     	<div class="container" id="card">
-			<h1 style="text-align: center; color: #d4d4dc; font-family: 'Poppins';">EVENTS</h1>
+			<h1  class="header1">EVENTS</h1>
 		</div>
 	
 	<br><br>

@@ -31,8 +31,12 @@
 }
 
 .navbar1 {
-	background-color: #393f4d;
+	background-color: #393f4d;	
 	z-index: 2;		
+}
+
+.collapse {
+	border-bottom: 1.5px solid #f7ef8a;
 }
 
 .custom-toggler .navbar-toggler-icon {

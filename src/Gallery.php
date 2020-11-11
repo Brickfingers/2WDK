@@ -97,6 +97,7 @@ $insta3picsrc = $data['insta3picsrc'];
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel='stylesheet' media='screen' type='text/css' href='css/common.css' />
 <link rel="stylesheet" type="text/css" href="css/Gallery.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -106,18 +107,17 @@ $insta3picsrc = $data['insta3picsrc'];
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
-<body style="background-color: #393f4d;">
+<body class="body">
 <?php
 include_once "Header.php";
 ?>
 	<div class="container">
 		<br> <br>
 		<div class="container" id="card">
-			<h1
-				style="text-align: center; color: #d4d4dc; font-family: 'Poppins';">GALLERY</h1>
+			<h1 class="header1">GALLERY</h1>
 		</div>
 		<br> <br>
-		<div class="card1" style="background: #393f4d;">
+		<div class="card1">
 
 			<div class="card-body p-5">
 
@@ -132,8 +132,7 @@ include_once "Header.php";
 					</ul>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img class="img-fluid z-depth-1" <?php echo "src=$image1src"?>
-								style="width: 650px">
+							<img class="img-fluid z-depth-1" <?php echo "src=$image1src"?>>
 							<div class="carousel-caption">
 								<h3><?php echo $image1title?></h3>
 								<p><?php echo $image1caption?></p>
@@ -141,8 +140,7 @@ include_once "Header.php";
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" <?php echo "src=$image2src"?>
-								style="width: 650px">
+							<img class="img-fluid z-depth-1" <?php echo "src=$image2src"?>>
 							<div class="carousel-caption">
 								<h3><?php echo $image2title?></h3>
 								<p><?php echo $image2caption?></p>
@@ -150,16 +148,14 @@ include_once "Header.php";
 						</div>
 
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" <?php echo "src=$image3src"?>
-								style="width: 650px">
+							<img class="img-fluid z-depth-1" <?php echo "src=$image3src"?>>
 							<div class="carousel-caption">
 								<h3><?php echo $image3title?></h3>
 								<p><?php echo $image3caption?></p>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" <?php echo "src=$image4src"?>
-								style="width: 650px">
+							<img class="img-fluid z-depth-1" <?php echo "src=$image4src"?>>
 							<div class="carousel-caption">
 							<h3><?php echo $image4title?></h3>
 							<p><?php echo $image4caption?></p>
@@ -167,16 +163,14 @@ include_once "Header.php";
 						</div>
 
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" <?php echo "src=$image5src"?>
-								style="width: 650px">
+							<img class="img-fluid z-depth-1" <?php echo "src=$image5src"?>>
 							<div class="carousel-caption">
 								<h3><?php echo $image5title?></h3>
 								<p><?php echo $image5caption?></p>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img class="img-fluid z-depth-1" <?php echo "src=$image6src"?>
-								style="width: 650px">
+							<img class="img-fluid z-depth-1" <?php echo "src=$image6src"?>>
 							<div class="carousel-caption">
 								<h3><?php echo $image6title?></h3>
 								<p><?php echo $image6caption?></p>
@@ -338,8 +332,7 @@ include_once "Header.php";
             echo fread($myfile, filesize("Admin/SocialMediaLinks/InstagramLink.txt"));
             fclose($myfile);
             ?>"
-												class="fa fa-instagram"
-												style="padding: 20px; font-size: 20px; text-align: center; border-radius: 50%; background: #125688;"></a>
+												class="fa fa-instagram"></a>
 											<button type="button"
 												class="btn btn-outline-primary btn-rounded btn-md ml-4"
 												data-dismiss="modal">Close</button>

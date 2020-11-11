@@ -19,8 +19,7 @@
         	#mc_embed_signup{background:#fff; clear:left; font:17px Helvetica,Arial,sans-serif; }
         </style>
         
-        <link rel="stylesheet" href="css/Footer.css">
-        <!-- <link rel="stylesheet" href="css2/Footer2.css"> -->
+        <link rel="stylesheet" href="css/Footer.css">       
         
         <div class="row">
          
@@ -30,7 +29,7 @@
           		<button onclick="document.getElementById('id01').style.display='block'" class="open-button"><b>SIGN UP</b></button>
         			<div id="id01" class="w3-modal">
         
-                		<div class="subscribe_box" style="max-width:500px">
+                		<div class="subscribe_box">
             				<div class="popup">
                           		                  	  
                     	  <!-- Begin Mailchimp Signup Form -->

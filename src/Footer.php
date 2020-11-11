@@ -26,7 +26,7 @@
           		<button onclick="document.getElementById('id01').style.display='block'" class="open-button"><b>SIGN UP</b></button>
         			<div id="id01" class="w3-modal">
         
-                		<div class="subscribe_box" style="max-width:500px">
+                		<div class="subscribe_box">
             				<div class="popup">
                           		                  	  
                     	  <!-- Begin Mailchimp Signup Form -->
