@@ -14,9 +14,15 @@ a {
 	display: inline-block;
 	padding: 8px 16px;
 }
+.myclass{
+background-color: #B3EEF5;
+padding: 8px 16px;
+}
 </style>
 </head>
+<body class="myclass">
 <?php
+echo "<h2> AboutPage Wizard </h2>";
 include "DB_Connect.php";
 if (isset($_POST['submit'])) {
     $aboutme = $_POST["about"];
@@ -47,7 +53,7 @@ if (isset($_POST['submit'])) {
      * }
      */
     // Check file size
-    if ($_FILES["fileToUpload"]["size"] > 500000) {
+    if ($_FILES["fileToUpload"]["size"] > 5000000) {
         $errorMsg = "Sorry, your file is too large.";
         $uploadOk = 0;
     }
@@ -87,9 +93,6 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-
-<body>
-
 	<form name="myForm" method="POST" enctype="multipart/form-data"
 		onchange="return filepreview()" onsubmit="return validateForm()">
 		<h4>Upload an image for About page:</h4>
