@@ -90,26 +90,51 @@ if (isset($_POST['submit'])) {
 <body>
 
 	<form name="myForm" method="POST" enctype="multipart/form-data"
-		onchange="return filepreview()">
+		onchange="return filepreview()" onsubmit="return validateForm()">
 		<h4>Upload an image for About page:</h4>
-		<input type="file" id="file" name="fileToUpload" value="  " />
+		<span style="color: red" id="error-file"></span> <input type="file"
+			id="file" name="fileToUpload" value="  " />
 		<!-- Image preview -->
 		<br /> <br />
 		<div id="imagePreview"></div>
 
 		<h4>About page title:</h4>
+		<span style="color: red" id="error-title"></span>
 		<textarea rows="2" cols="50" type="text" name="title"></textarea>
 		<br /> <br />
 
 		<h4>About page content:</h4>
+		<span style="color: red" id="error-content"></span>
 		<textarea rows="22" cols="50" type="text" name="about"> </textarea>
 		<br /> <br />
 		<div>
 			<button type="submit" name="submit">Submit</button>
+
 		</div>
 		<br /> <br />
 	</form>
+	<script>
+function validateForm(){
+	var file = document.forms["myForm"]["fileToUpload"].value;
+	var title = document.forms["myForm"]["title"].value;
+	var content = document.forms["myForm"]["about"].value;
 
+
+	if (file.length<1) {
+        document.getElementById('error-file').innerHTML = " Please select a file to upload *"
+    }
+    if (title.length<1) {
+        document.getElementById('error-title').innerHTML = " Please Enter a title *";
+    }
+    if (content.length<1) {
+        document.getElementById('error-content').innerHTML = " Please Enter your bio *";      
+    }
+      
+    if(file.length<1 || title.length<1 || content.length<1){
+       	return false;
+    }            
+}
+</script>
 	<script> 
 	function filepreview() {
 	var fileInput = document.getElementById('file');
