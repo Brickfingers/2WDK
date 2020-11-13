@@ -1,4 +1,4 @@
-<!-- this file uploads an image for AboutImage and stores data in About page table -->
+<!-- this file uploads an image for AboutImage and stores all data in About page table -->
 
 <!DOCTYPE html>
 <html>
@@ -149,7 +149,7 @@ function validateForm(){
 					}; 
 					
 					reader.readAsDataURL(fileInput.files[0]); 
-				} 
+		} 
 	}
 	</script>
 
