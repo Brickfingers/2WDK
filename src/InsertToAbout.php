@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     $filename = $_FILES["fileToUpload"]["name"];
     $tempname = $_FILES["fileToUpload"]["tmp_name"];
     $errorMsg = "";
-    $target_dir = "D:/myphoto/";
+    $target_dir = "photo/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -38,13 +38,13 @@ if (isset($_POST['submit'])) {
         $errorMsg = "This file is not an image.";
         $uploadOk = 0;
     }
-
+/* the file can store in database even its exirts on server
     // Check if file already exists
     if (file_exists($target_file)) {
         $errorMsg = "Sorry, this file already exists.";
         $uploadOk = 0;
     }
-
+*/
     // Check file size
     if ($_FILES["fileToUpload"]["size"] > 500000) {
         $errorMsg = "Sorry, your file is too large.";
