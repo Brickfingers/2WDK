@@ -144,7 +144,7 @@ function validateForm(){
 					reader.onload = function(e) { 
 						document.getElementById( 
 							'imagePreview').innerHTML = 
-							'<img src="' + e.target.result 
+							'<img style="width: 200px" src="' + e.target.result 
 							+ '"/>'; 
 					}; 
 					
