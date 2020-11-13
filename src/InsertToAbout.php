@@ -38,13 +38,14 @@ if (isset($_POST['submit'])) {
         $errorMsg = "This file is not an image.";
         $uploadOk = 0;
     }
-/* the file can store in database even its exirts on server
-    // Check if file already exists
-    if (file_exists($target_file)) {
-        $errorMsg = "Sorry, this file already exists.";
-        $uploadOk = 0;
-    }
-*/
+    /*
+     * the file can store in database even its exists on server
+     * // Check if file already exists
+     * if (file_exists($target_file)) {
+     * $errorMsg = "Sorry, this file already exists.";
+     * $uploadOk = 0;
+     * }
+     */
     // Check file size
     if ($_FILES["fileToUpload"]["size"] > 500000) {
         $errorMsg = "Sorry, your file is too large.";
@@ -122,17 +123,29 @@ function validateForm(){
 
 	if (file.length<1) {
         document.getElementById('error-file').innerHTML = " Please select a file to upload *"
-    }
+        return false;
+         }
+	if (file.length>100) {
+        document.getElementById('error-file').innerHTML = " Please rename your file to less than 100 characters *"
+        return false;
+         } 
     if (title.length<1) {
         document.getElementById('error-title').innerHTML = " Please Enter a title *";
-    }
+        return false;
+         }
+    if (title.length>50) {
+        document.getElementById('error-title').innerHTML = " Title length should be less than 50 characters *";
+        return false;
+        }
     if (content.length<1) {
         document.getElementById('error-content').innerHTML = " Please Enter your bio *";      
-    }
-      
-    if(file.length<1 || title.length<1 || content.length<1){
-       	return false;
-    }            
+        return false;
+        }
+    if (content.length>4000) {
+        document.getElementById('error-content').innerHTML = " The Maximum number of characters for content is 4000 *";      
+        return false;
+        }
+          
 }
 </script>
 	<script> 
