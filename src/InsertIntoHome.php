@@ -146,7 +146,7 @@ function validateForm(){
 
 
 	if ((imagefile.length<1) ) {
-        document.getElementById('error-imagefile').innerHTML = " Please select a image file to upload *"
+        document.getElementById('error-imagefile').innerHTML = " Please select an image file to upload *"
         return false;
          }
 	if ((imagefile.length>100)) {
@@ -155,7 +155,7 @@ function validateForm(){
          } 
 
 	if ((audiofile.length<1)) {
-        document.getElementById('error-audiofile').innerHTML = " Please select a audio file to upload *"
+        document.getElementById('error-audiofile').innerHTML = " Please select an audio file to upload *"
         return false;
          }
 	if ((audiofile.length>100)) {
