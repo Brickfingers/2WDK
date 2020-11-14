@@ -116,7 +116,7 @@ function validateForm(){
           
 }
 </script>
-	<script type="text/javascript">
+<script type="text/javascript">
 function file_validate()
 {
 	var valid = true;
