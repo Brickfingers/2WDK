@@ -14,9 +14,10 @@ a {
 	display: inline-block;
 	padding: 8px 16px;
 }
-.myclass{
-background-color: #B3EEF5;
-padding: 8px 16px;
+
+.myclass {
+	background-color: #B3EEF5;
+	padding: 8px 16px;
 }
 </style>
 </head>
@@ -32,91 +33,50 @@ if (isset($_POST['submit'])) {
     $audiofilename = $_FILES["audioToUpload"]["name"];
     $audiotempname = $_FILES["audioToUpload"]["tmp_name"];
 
-    $errorMsg = "";
     $target_dir_img = "photo/";
     $target_dir_au = "audio/";
     $target_file_img = $target_dir_img . basename($_FILES["imageToUpload"]["name"]);
     $target_file_au = $target_dir_au . basename($_FILES["audioToUpload"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file_img, PATHINFO_EXTENSION));
-    $audioFileType = strtolower(pathinfo($target_file_au, PATHINFO_EXTENSION));
 
-    // Check if image file is a actual image or fake image
-    $checkimage = getimagesize($_FILES["imageToUpload"]["tmp_name"]);
-    if ($checkimage !== false) {
-        // echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        $errorMsg = "This file is not an image.";
-        $uploadOk = 0;
-    }
+    if ((move_uploaded_file($imagetempname, $target_file_img)) && (move_uploaded_file($audiotempname, $target_file_au))) {
 
-    // Check image file size
-    if ($_FILES["imageToUpload"]["size"] > 5000000) {
-        $errorMsg = "Sorry, your Image file is too large.";
-        $uploadOk = 0;
-    }
-    // Check audio file size
-    if ($_FILES["audioToUpload"]["size"] > 5000000) {
-        $errorMsg = "Sorry, your Audio file is too large.";
-        $uploadOk = 0;
-    }
-
-    // Allow certain file formats for image
-    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
-        $errorMsg = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-        $uploadOk = 0;
-    }
-    // Allow certain file formats for iaudio
-    if ($audioFileType != "mp3" && $audioFileType != "m4p" && $audioFileType != "wma" && $audioFileType != "m4a" && $audioFileType != "3gp") {
-        $errorMsg = "Sorry, only mp3, m4p, wma , m4a & 3gp files are allowed.";
-        $uploadOk = 0;
-    }
-
-    // Check if $uploadOk is set to 0 by an error
-    if ($uploadOk == 0) {
-
-        echo "<font color='red'>" . $errorMsg . "</font>";
-        // if everything is ok, try to upload file
-    } else {
-        if ((move_uploaded_file($imagetempname, $target_file_img)) && (move_uploaded_file($audiotempname, $target_file_au))) {
-
-            $myTitle = str_replace("'", "''", $myTitle);
-            $mySubtitle = str_replace("'", "''", $mySubtitle);
-            $imagefilename = str_replace("'", "''", $imagefilename);
-            $audiofilename = str_replace("'", "''", $audiofilename);
-            $sql = "INSERT INTO [dbo].[HomePage]
+        $myTitle = str_replace("'", "''", $myTitle);
+        $mySubtitle = str_replace("'", "''", $mySubtitle);
+        $imagefilename = str_replace("'", "''", $imagefilename);
+        $audiofilename = str_replace("'", "''", $audiofilename);
+        $sql = "INSERT INTO [dbo].[HomePage]
            ([Title]
 		   ,[Subtitle1]
            ,[HomePageImage], [AudioName])
                 
             SELECT '$myTitle','$mySubtitle','$imagefilename','$audiofilename'";
 
-            sqlsrv_query($conn, $sql);
+        sqlsrv_query($conn, $sql);
 
-            echo "<font color='green'>" . "The files  " . htmlspecialchars(basename($_FILES["imageToUpload"]["name"])) . " and " .htmlspecialchars(basename($_FILES["audioToUpload"]["name"])) . "  has been uploaded." . "</font>";
+        echo "<font color='green'>" . "Home page is set." . "</font>";
 
-            echo " <br /> <br />";
-            echo "<a href=\"InsertIntoHome.php\" id=\"myBtn\" class=\"next\">Next &raquo;</a>";
-        } else {
-            $errorMsg = "Sorry, there was an error uploading your files.";
-        }
+        echo " <br /> <br />";
+        echo "<a href=\"InsertIntoHome.php\" id=\"myBtn\" class=\"next\">Next &raquo;</a>";
+    } else {
+        echo "Sorry, there was an error uploading your files.";
     }
 }
+
 ?>
 
 	<form name="myForm" method="POST" enctype="multipart/form-data"
-		onchange="return filepreview()" onsubmit="return validateForm()">
+		onsubmit="return validateForm()">
 		<h4>Upload an image for Home page:</h4>
-		<span style="color: red" id="error-imagefile"></span> <input
-			type="file" id="imagefile" name="imageToUpload" value="  " />
+		<input type="file" id="imagefile" onchange="return image_validate()"
+			name="imageToUpload" accept="image/*" value="  " /> <span
+			style="color: red" id="error-imagefile"></span>
 		<!-- Image preview -->
 		<br /> <br />
 		<div id="imagePreview"></div>
-
 		<h4>Upload an Audio for Home page:</h4>
-		<span style="color: red" id="error-audiofile"></span> <input
-			type="file" id="audiofile" name="audioToUpload" value="  " />
+		<input type="file" id="audiofile" onchange="return audio_validate()"
+			name="audioToUpload" accept="audio/*" value="  " /> <span
+			style="color: red" id="error-audiofile"></span>
 		<!-- Audio preview -->
 		<br /> <br />
 		<div id="audioPreview"></div>
@@ -145,21 +105,12 @@ function validateForm(){
 	var subtitle = document.forms["myForm"]["subtitle"].value;
 
 
-	if ((imagefile.length<1) ) {
-        document.getElementById('error-imagefile').innerHTML = " Please select an image file to upload *"
+	if ((imagefile.length<1) || (audiofile.length<1)) {
+        document.getElementById('error-imagefile').innerHTML = " Please select a file to upload *"
         return false;
          }
-	if ((imagefile.length>100)) {
+	if ((imagefile.length>100)|| (audiofile.length>100)) {
         document.getElementById('error-imagefile').innerHTML = " Please rename your file to less than 100 characters *"
-        return false;
-         } 
-
-	if ((audiofile.length<1)) {
-        document.getElementById('error-audiofile').innerHTML = " Please select an audio file to upload *"
-        return false;
-         }
-	if ((audiofile.length>100)) {
-        document.getElementById('error-audiofile').innerHTML = " Please rename your file to less than 100 characters *"
         return false;
          } 
     if (title.length<1) {
@@ -181,23 +132,113 @@ function validateForm(){
           
 }
 </script>
-	<script> 
-	function filepreview() {
-	var fileInput = document.getElementById('imagefile');
-				// Image preview 
-				if (fileInput.files && fileInput.files[0]) { 
-					var reader = new FileReader(); 
-					reader.onload = function(e) { 
-						document.getElementById( 
-							'imagePreview').innerHTML = 
-							'<img style="width: 200px" src="' + e.target.result 
-							+ '"/>'; 
-					}; 
-					
-					reader.readAsDataURL(fileInput.files[0]); 
-		} 
+	<script type="text/javascript">
+function image_validate()
+{
+	var valid = true;
+	var file_name = "";
+	var file_type = "";
+	var file_size = "";
+	var valid_size = 3*1000*1000;
+	var file = document.getElementById("imagefile");
+	if(file.files.length != 0)
+	{
+		file_name = file.files[0].name;
+		file_size = file.files[0].size;
+		file_type = file.files[0].type;
+		
+		if(file_type!="image/png" && file_type!="image/jpeg" && file_type!="image/gif")
+		{
+			valid = false;
+			document.getElementById('error-imagefile').innerHTML = "* Only 'PNG', 'JPG/JPEG' and 'GIF' file type supported."
+				file.value="";
+				}
+		if(file_size > valid_size)
+		{
+			valid = false;
+			document.getElementById('error-imagefile').innerHTML = "* File size should be upto 3MB.";
+		}
 	}
-	</script>
+	else
+	{
+		valid = false;
+			// No Image preview  
+	                document.getElementById('imagePreview').innerHTML = ""; 
+	}
+	if(valid==true)
+	{
+		// Image preview 
+            if (file.files && file.files[0]) { 
+                var reader = new FileReader(); 
+                reader.onload = function(e) { 
+                    document.getElementById( 
+                        'imagePreview').innerHTML =  
+                        	'<img style="width: 200px" src="' + e.target.result  
+                        + '"/>'; 
+                }; 
+                  
+                reader.readAsDataURL(file.files[0]); 
+            } 
+            document.getElementById('error-imagefile').innerHTML = "";
+		return true;
+	}
+}</script>
+
+	<script type="text/javascript">
+function audio_validate()
+{
+	var valid = true;
+	var file_name = "";
+	var file_type = "";
+	var file_size = "";
+	var valid_size = 3*1000*1000;
+	var file = document.getElementById("audiofile");
+	var filePath = file.value; 
+	var allowedExtensions =  
+        /(\.mp3|\.m4a|\.wma|\.mpeg|\.m4p|\.3gp|\.au)$/i;
+    
+	if(file.files.length != 0)
+	{
+		file_name = file.files[0].name;
+		file_size = file.files[0].size;
+		file_type = file.files[0].type;
+		
+		//if(file_type!="audio/mp3" && file_type!="audio/m4a" && file_type!="audio/wma")
+		if (!allowedExtensions.exec(filePath)) {
+			valid = false;
+			document.getElementById('error-audiofile').innerHTML = "* Only 'mp3', 'm4a' and 'wma' file type supported."
+				file.value="";
+				}
+		if(file_size > valid_size)
+		{
+			valid = false;
+			document.getElementById('error-audiofile').innerHTML = "* File size should be upto 3MB.";
+		}
+	}
+	else
+	{
+		valid = false;
+			// No audio preview  
+	                document.getElementById('audioPreview').innerHTML = ""; 
+	}
+	if(valid==true)
+	{
+		// Audio preview 
+            if (file.files && file.files[0]) { 
+                var reader = new FileReader(); 
+                reader.onload = function(e) { 
+                    document.getElementById( 
+                        'audioPreview').innerHTML =  
+                        	'<audio style="width: 50%" controls src="' + e.target.result  
+                        + '"/>'; 
+                }; 
+                  
+                reader.readAsDataURL(file.files[0]); 
+            } 
+            document.getElementById('error-audiofile').innerHTML = "";
+		return true;
+	}
+}</script>
 
 </body>
 </html>
