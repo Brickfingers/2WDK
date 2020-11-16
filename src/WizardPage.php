@@ -27,8 +27,7 @@
 			echo  $_SESSION['name'];
 			echo "!</h2><br><center><h1> Here you will find a wizard to help you edit and customize your website.<br><br> Start now by clicking the button below.<br><br><br></h1>";
 			echo "<a
-            href=\"InsertIntoHome.php\"><h2>Start!</h2></a>";
-						
+            href=\"InsertIntoHome.php\"><h2>Start!</h2></a>";						
         ?>
     		
 	<button type="submit" class="button1"
