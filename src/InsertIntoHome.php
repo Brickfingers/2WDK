@@ -105,12 +105,21 @@ function validateForm(){
 	var subtitle = document.forms["myForm"]["subtitle"].value;
 
 
-	if ((imagefile.length<1) || (audiofile.length<1)) {
-        document.getElementById('error-imagefile').innerHTML = " Please select a file to upload *"
+	
+	if ((imagefile.length<1)) {
+        document.getElementById('error-imagefile').innerHTML = " Please select an image file to upload *"
         return false;
          }
-	if ((imagefile.length>100)|| (audiofile.length>100)) {
+	if ((imagefile.length>100)) {
         document.getElementById('error-imagefile').innerHTML = " Please rename your file to less than 100 characters *"
+        return false;
+         } 
+	if ((audiofile.length<1)) {
+        document.getElementById('error-audiofile').innerHTML = " Please select an audio file to upload *"
+        return false;
+         }
+	if ((audiofile.length>100)) {
+        document.getElementById('error-audiofile').innerHTML = " Please rename your file to less than 100 characters *"
         return false;
          } 
     if (title.length<1) {
