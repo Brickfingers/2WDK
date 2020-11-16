@@ -29,12 +29,12 @@
 				<br />
 				<br />
 				<h1 style="text-align: center; color: #71db77;">
-					Congratulations!!<br />
+					All ready!!<br />
 					<br />Account created Successfully.
 				</h1>
 				<br />
 				<br />
-				<form action="/WebApp/src/AdminPage2.php">
+				<form action="/WebApp/src/AdminPage.php">
 					<button type="submit" class="button1">Login</button>
 				</form>
 

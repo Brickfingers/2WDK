@@ -25,7 +25,6 @@
 			<div class="  text-white">
 
 				<div style="background: #222222;">
-
 					<div class="card-body p-5">
 			
 <?php
@@ -53,7 +52,7 @@ if ($goodPass == false) {
     <br/>
             <button type=\"submit\" name=\"submit\" class=\"button2\">Create Account</button><br/><br/>";
     echo '
-            <a href="AdminPage2.php">Already have an account? Login.<br/><br/></a>';
+            <a href="AdminPage.php">Already have an account? Login.<br/><br/></a>';
 
     if (isset($_POST['submit'])) {
 
@@ -111,7 +110,7 @@ if ($goodPass == false) {
             $username = $_POST['Username'];
             $email = $_POST['EmailAddress'];
             $password = $_POST['Password'];
-            $hash = password_hash( $password , PASSWORD_DEFAULT );
+            //$hash = password_hash( $password , PASSWORD_DEFAULT );
            
             // check if account exists and create account
             $query = "SELECT * FROM Users1 WHERE Username='$username' OR EmailAddress='$email'";
@@ -130,7 +129,8 @@ if ($goodPass == false) {
                     $params2 = array(
                         'Admin',
                         $username,
-                        $hash,
+                        //$hash,
+                        $password,
                         $email
                     );
                     
