@@ -1,12 +1,8 @@
 <!----------------------------------------------------------------------------- 
 * Filename:					About.php
-* Version:					3.0
+* Version:					4.0
 * Team Name:                2WDK
-* Student Name:				Fahimeh Karimi - 40900086
-* Course Name:				CST 8353 - Software design and testing
-* Professor:			    Leanne Seaward
-* Purpose:                  This page includes a Photo and Biography of Ben Joseph
-                            the Bio can be updated by admin using Admin page.
+* Student Name:				Fahimeh Karimi 
 -------------------------------------------------------------------------------->
 <?php include_once "setStyle.php"; ?>
 <!DOCTYPE html>
@@ -26,7 +22,27 @@
 
 <body class="body">
 <?php include_once "Header.php"; ?>
+<?php
+include "DB_Connect.php";
 
+$imagesource= "photo/";
+
+$sql="SELECT [About].[Title],[About].[AboutImage],[About].[Content]
+            FROM [dbo].[Layouts]
+            INNER JOIN [dbo].[About]
+            ON [About].[AboutId] = [Layouts].[AboutId]
+            WHERE [Layouts].[isSet] = 1";
+
+$result = sqlsrv_query($conn, $sql);
+if (sqlsrv_fetch($result) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+$aboutTitle = sqlsrv_get_field($result, 0);
+$aboutImage = $imagesource.sqlsrv_get_field($result, 1);
+$aboutContent = sqlsrv_get_field($result, 2);
+
+
+?>
 
 	<div class="container bootstrap snippet">
 
@@ -44,17 +60,12 @@
 
 					<div class="row">
 						<div class="col-md-5 text-center">
-							<br> <img class="img-thumbnail md-margin-bottom-10"
-								src="photo/pic8.png" alt="">
+						<br><br> <img class="img-thumbnail md-margin-bottom-10" <?php echo "src= $aboutImage" ?> alt="">
 						</div>
 						<div class="col-md-7">
-							<h2 class="header2">Ben Joseph</h2>
+							<h2 class="header2"><?php echo $aboutTitle ?></h2>
 							<hr>
-							<p class="aboutText"><?php
-                            $myfile = fopen("Admin/About/AboutText.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/About/AboutText.txt"));
-                            fclose($myfile);
-                            ?></p>
+							<p class="aboutText"><?php echo $aboutContent ?></p>
 							<br>
 						</div>
 					</div>
@@ -62,7 +73,6 @@
 			</div>
 		</div>
 	</div>
-	<br>
 	<br>
 	<br>
 	<?php include_once "Footer.php"; ?>

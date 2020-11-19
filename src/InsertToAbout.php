@@ -22,6 +22,7 @@ a {
 </style>
 </head>
 <body class="myclass">
+
 <?php
 echo "<h2> AboutPage Wizard </h2>";
 include "DB_Connect.php";
@@ -30,6 +31,7 @@ if (isset($_POST['submit'])) {
     $aboutTitle = $_POST["title"];
     $filename = $_FILES["fileToUpload"]["name"];
     $tempname = $_FILES["fileToUpload"]["tmp_name"];
+    
     $target_dir = "photo/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
@@ -46,6 +48,8 @@ if (isset($_POST['submit'])) {
             SELECT '$aboutTitle' ,'$aboutme','$filename'";
 
         sqlsrv_query($conn, $sql);
+        
+        
 
         echo "<font color='green'>" . "About page is set." . "</font>";
         echo " <br /> <br />";
@@ -56,7 +60,6 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
-
 	<form name="myForm" method="POST" enctype="multipart/form-data"
 		onchange="return file_validate()" onsubmit="return validateForm()">
 		<h4>Upload an image for About page:</h4>
