@@ -1,4 +1,4 @@
-<!-- this file stores all data in Header and Footer tables -->
+<!-- this file stores all data in layouts table -->
 
 <!DOCTYPE html>
 <html>
