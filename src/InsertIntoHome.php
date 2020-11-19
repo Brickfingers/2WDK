@@ -83,12 +83,12 @@ if (isset($_POST['submit'])) {
 
 		<h4>Home page title:</h4>
 		<span style="color: red" id="error-title"></span>
-		<textarea rows="2" cols="50" type="text" name="title">Enter your title here</textarea>
+		<textarea rows="2" cols="50" type="text" name="title"></textarea>
 		<br /> <br />
 
 		<h4>Home page subtitle:</h4>
 		<span style="color: red" id="error-subtitle"></span>
-		<textarea rows="2" cols="50" type="text" name="subtitle">Enter your subtitle here</textarea>
+		<textarea rows="2" cols="50" type="text" name="subtitle"></textarea>
 		<br /> <br />
 
 		<div>
