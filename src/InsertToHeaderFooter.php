@@ -76,23 +76,25 @@ if (isset($_POST['submit'])) {
 		<br /> <br />
 
 		<!-- Get Footer data-->
-		<label for="youtubeLink">YouTube Link:</label><br> <span
-			style="color: red" id="error-youtubeLink"></span> <input type="url"
-			id="youtubeLink" name="youtubeLink"></input> <br /> <br /> <label
-			for="instaLink">Instagram Link:</label><br> <span style="color: red"
-			id="error-instaLink"></span> <input type="url" id="instaLink"
-			name="instaLink"></input> <br /> <br /> <label for="facebookLink">Facebook
-			Link:</label><br> <span style="color: red" id="error-facebookLink"></span>
-		<input type="url" id="FacebookLink" name="facebookLink"></input> <br />
-		<br />
+		<label for="youtubeLink">YouTube Link:</label><br> 
+		<span style="color: red" id="error-youtubeLink"></span> 
+		<input type="url" id="youtubeLink" name="youtubeLink"></input> 
+		<br /> <br /> 
+		<label for="instaLink">Instagram Link:</label><br> 
+		<span style="color: red" id="error-instaLink">
+		</span> <input type="url" id="instaLink" name="instaLink"></input> 
+		<br /> <br /> 
+		<label for="facebookLink">Facebook Link:</label><br> 
+		<span style="color: red" id="error-facebookLink"></span>
+		<input type="url" id="FacebookLink" name="facebookLink"></input> 
+		<br /><br />
 		<div>
 			<button type="submit" name="submit">Submit</button>
-
 		</div>
 		<br /> <br />
 	</form>
 
-	<script>
+<script>
 function validateForm(){
 
 	var title = document.forms["myForm"]["title"].value;
