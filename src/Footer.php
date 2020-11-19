@@ -7,6 +7,7 @@
 * Professor:			    Leanne Seaward
 * Purpose:                  Footer of the website
 -------------------------------------------------------------------------------->
+<?php include_once "setStyle.php"; ?>
 <footer class="page-footer font-small stylish-color-dark ">
     <div class= footer>
     
@@ -17,7 +18,8 @@
         <style type="text/css">
         	#mc_embed_signup{background:#fff; clear:left; font:17px Helvetica,Arial,sans-serif; }
         </style>
-        <link rel="stylesheet" href="css/Footer.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $cssFolder;?>/common.css" />
+        <link rel="stylesheet" type="text/css" href="pagesCSS/Footer.css">
         <div class="row">
          
             <li class="list-inline-item">

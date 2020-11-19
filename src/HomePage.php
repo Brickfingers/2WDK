@@ -7,15 +7,17 @@
 * Professor:			    Leanne Seaward
 * Purpose:                  Home page
 -------------------------------------------------------------------------------->
-
+<?php include_once "setStyle.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Sax N Sip</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/HomePage.css" />
-<!-- <link rel="stylesheet" type="text/css" href="css/HomePage.css" /> -->
+
+<link rel='stylesheet' media='screen' type='text/css' href='<?php echo $cssFolder;?>/common.css' />
+<link rel="stylesheet" media='screen' type="text/css" href="pagesCSS/HomePage.css" />
+
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">

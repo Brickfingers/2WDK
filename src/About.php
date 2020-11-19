@@ -8,7 +8,7 @@
 * Purpose:                  This page includes a Photo and Biography of Ben Joseph
                             the Bio can be updated by admin using Admin page.
 -------------------------------------------------------------------------------->
-
+<?php include_once "setStyle.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +19,8 @@
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel='stylesheet' media='screen' type='text/css' href='css/common.css' />
-<link rel='stylesheet' media='screen' type='text/css' href='css/About.css' />
+<link rel='stylesheet' media='screen' type='text/css' href='<?php echo $cssFolder;?>/common.css' />
+<link rel='stylesheet' media='screen' type='text/css' href='pagesCSS/About.css' />
 
 </head>
 

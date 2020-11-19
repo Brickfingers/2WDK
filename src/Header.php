@@ -1,3 +1,4 @@
+<?php include_once "setStyle.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,10 @@
 <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
-<link rel="stylesheet" type="text/css" href="css/Header.css" />
+
+<link rel="stylesheet" type="text/css" href="<?php echo $cssFolder;?>/common.css" />
+<link rel="stylesheet" type="text/css" href="pagesCSS/Header.css" />
+</head>
 <body>	
 	<div class="jumbotron jumbotron-fluid">
       <div class="container text-center">

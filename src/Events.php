@@ -1,11 +1,9 @@
+<?php include_once "setStyle.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Events</title>
 <meta charset='utf-8' />
-
-<link rel='stylesheet' media='screen' type='text/css' href='css/common.css' />
-<link rel="stylesheet" type="text/css" href="css/Events.css" />
 
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
@@ -20,6 +18,8 @@
 <script src='../packages/bootstrap/main.js'></script>
 <script src='../packages/google-calendar/main.js'></script>
 
+<link rel='stylesheet' media='screen' type='text/css' href='<?php echo $cssFolder;?>/common.css' />
+<link rel='stylesheet' media='screen' type='text/css' href='pagesCSS/Events.css' />
 
 <script>
 //creates the calendar

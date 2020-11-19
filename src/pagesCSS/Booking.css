@@ -1,0 +1,15 @@
+.body {
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+
+.form {
+	color: var(--nameColor);
+}
+
+.submitButton {
+	background-color:  var(--contrastColor);
+}
