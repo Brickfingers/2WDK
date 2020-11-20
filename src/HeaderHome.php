@@ -7,8 +7,10 @@
 <?php
 include "DB_Connect.php";
 
-$sql="SELECT [Layouts].[ThemeCode]
+$sql="SELECT [Layouts].[ThemeCode],[HomePage].[Title]
             FROM [dbo].[Layouts]
+            INNER JOIN [dbo].[HomePage]
+            ON  [Layouts].[HomePageId] =[HomePage].[HomePageId] 
             WHERE [Layouts].[isSet] = 1";
 
 $result = sqlsrv_query($conn, $sql);
@@ -16,7 +18,8 @@ if (sqlsrv_fetch($result) === false) {
     die(print_r(sqlsrv_errors(), true));
 }
 
-$cssFolder=sqlsrv_get_field($result, 0);
+$cssFolder = sqlsrv_get_field($result, 0);
+$homeTitle = sqlsrv_get_field($result, 1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +41,7 @@ $cssFolder=sqlsrv_get_field($result, 0);
 	<div class="jumbotron1 jumbotron-fluid">
       <div class="container text-center">
         <!-- <h1 class="display-2" id="logo">&#119070ax N &#119070ip</h1> -->
-        <h1 class="display-2" id="logo">Sax n'Sip</h1>             
+        <h1 class="display-2" id="logo"><?php echo $homeTitle?></h1>             
         
       </div>
     </div>

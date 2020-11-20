@@ -55,9 +55,9 @@ $youtubeLink = sqlsrv_get_field($result, 7);
            
      <br/><br/>    
  	<div class="text-center">
-    	 <h1 class="display"><?php echo $homeTitle ?></h1>
+    	 <h1 class="display"><?php echo $homeSubtitle1 ?></h1>
         	 <div class="container1">
-        	 <h1 class="display1"><?php echo $homeSubtitle1 ?></h1>
+        	 <h1 class="display1"><?php echo $homeSubtitle2 ?></h1>
     	</div> 
     	
     	<div class= footer_no_selected>    
