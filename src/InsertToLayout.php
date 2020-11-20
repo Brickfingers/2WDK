@@ -21,7 +21,10 @@ include "DB_Connect.php";
 if (isset($_POST['submit'])) {
     $LayoutName = $_POST["layoutName"];
     $LayoutName = str_replace("'", "''", $LayoutName);
+    //Theme code would be set to 1 or 2 or 3
     
+    
+    $themeCode = $_POST["theme"];
     //Unset the current layout (set 'isSet' column of the current set layout to 0)
     $layoutSql="UPDATE Layouts
                 SET isSet = 0
@@ -69,14 +72,7 @@ if (isset($_POST['submit'])) {
         die(print_r(sqlsrv_errors(), true));
     }
     $footerId = sqlsrv_get_field($footerResult, 0);
-    
-    $colorSql = "SELECT Max(ColorSchemeId) FROM ColorScheme";
-    $colorResult = sqlsrv_query($conn, $colorSql);
-    if (sqlsrv_fetch($colorResult) === false) {
-        die(print_r(sqlsrv_errors(), true));
-    }
-    $colorId = sqlsrv_get_field($colorResult, 0);
-    
+      
     $todayDate = date("Y-m-d");
        
     $sql = "INSERT INTO [dbo].[Layouts]
@@ -87,11 +83,11 @@ if (isset($_POST['submit'])) {
            ,[BookingId]
            ,[HeaderId]
            ,[FooterId]
-           ,[ColorSchemeId]
            ,[Created_at]
-           ,[IsSet])    
+           ,[IsSet]
+           ,[ThemeCode])    
             SELECT '$LayoutName','$homePageId ' ,'$aboutId','$galleryId','$bookingId','$headerId','$footerId'
-                    ,'$colorId ','$todayDate','1'
+                    ,'$todayDate','1',$themeCode
             ";
 
     sqlsrv_query($conn, $sql);
@@ -101,12 +97,26 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-	<form name="myForm" method="POST" onsubmit="return validateForm()">
+		<form name="myForm" method="POST" onsubmit="return validateForm()">
 
 		<!-- Get Layout's name-->
 		<label for="layoutName">Layout Name:</label><br> 
 		<span style="color: red" id="error-layoutName"></span> 
 		<input type="text" id="layoutName" name="layoutName"></input> 
+		<br /> <br />
+		<p>Please select your preferred Theme:</p>
+		<div>
+		
+  		<input type="radio" id="dark" name="theme" value=1>
+  		<label for="dark"> Dark Theme </label><br /> 
+  		<img src="photo/darkTheme.PNG" width="200"></img>
+		</div>
+		<br /> 
+		<div>
+ 		 <input type="radio" id="light" name="theme" value=2>
+ 		 <label for="light">Light Theme</label><br /> 
+ 		 <img src="photo/lightTheme.PNG" width="200"></img>
+		</div>
 		<br /> <br />
 		<div>
 			<button type="submit" name="submit">Submit</button>
