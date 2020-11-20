@@ -2,12 +2,22 @@
 * Filename:					FooterHome2.php
 * Version:					1.3
 * Team Name:                2WDK
-* Student Name:				David Salazar - 040889786
-* Course Name:				CST 8353 - Software design and testing
-* Professor:			    Leanne Seaward
-* Purpose:                  Footer of the Home page
--------------------------------------------------------------------------------->
-<?php include_once "setStyle.php"; ?>
+----------------------------------------------------------------------------->
+<?php
+include "DB_Connect.php";
+
+$sql="SELECT [Layouts].[ThemeCode]
+            FROM [dbo].[Layouts]
+            WHERE [Layouts].[isSet] = 1";
+
+$result = sqlsrv_query($conn, $sql);
+if (sqlsrv_fetch($result) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$cssFolder=sqlsrv_get_field($result, 0);
+?>
+
 <footer class="page-footer font-small stylish-color-dark">
     <div class= footer>
     

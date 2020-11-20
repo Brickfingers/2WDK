@@ -2,12 +2,25 @@
 * Filename:					Footer.php
 * Version:					1.8
 * Team Name:                2WDK
-* Student Name:				David Salazar - 040889786
-* Course Name:				CST 8353 - Software design and testing
-* Professor:			    Leanne Seaward
-* Purpose:                  Footer of the website
 -------------------------------------------------------------------------------->
-<?php include_once "setStyle.php"; ?>
+<?php include "DB_Connect.php";
+
+$sql="SELECT [Footer].[FacebookLink],[Footer].[InstagramLink],[Footer].[YoutubeLink],[Layouts].[ThemeCode]
+            FROM [dbo].[Layouts]
+            INNER JOIN [dbo].[Footer]
+            ON [Footer].[FooterId] = [Layouts].[FooterId]
+            WHERE [Layouts].[isSet] = 1";
+
+$result = sqlsrv_query($conn, $sql);
+if (sqlsrv_fetch($result) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+$facebookLink = sqlsrv_get_field($result, 0);
+$instaLink = sqlsrv_get_field($result, 1);
+$youtubeLink = sqlsrv_get_field($result, 2);
+$cssFolder=sqlsrv_get_field($result, 3);
+?>
+
 <footer class="page-footer font-small stylish-color-dark ">
     <div class= footer>
     
@@ -18,7 +31,7 @@
         <style type="text/css">
         	#mc_embed_signup{background:#fff; clear:left; font:17px Helvetica,Arial,sans-serif; }
         </style>
-        <link rel="stylesheet" type="text/css" href="<?php echo $cssFolder;?>/common.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo $cssFolder?>/common.css" />
         <link rel="stylesheet" type="text/css" href="pagesCSS/Footer.css">
         <div class="row">
          
@@ -110,27 +123,15 @@
             </li>
           
           	<li class="list-inline-item">
-                <a href="<?php
-                            $myfile = fopen("Admin/SocialMediaLinks/FacebookLink.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
-                            fclose($myfile);
-                            ?>" target="_blank"><i class="social fa-facebook "> </i></a>             
+                <a href="<?php echo $facebookLink ?>" target="_blank"><i class="social fa-facebook "> </i></a>             
           	</li>
           
       		<li class="list-inline-item">              
-                <a href="<?php
-                            $myfile = fopen("Admin/SocialMediaLinks/InstagramLink.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/SocialMediaLinks/InstagramLink.txt"));
-                            fclose($myfile);
-                            ?>" target="_blank"><i class="social fa-instagram"> </i></a>        
+                <a href="<?php echo $instaLink ?>" target="_blank"><i class="social fa-instagram"> </i></a>        
             </li>
            
             <li class="list-inline-item">             
-                <a href="<?php
-                            $myfile = fopen("Admin/SocialMediaLinks/YoutubeLink.txt", "r") or die("Unable to open file!");
-                            echo fread($myfile,filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
-                            fclose($myfile);
-                            ?>" target="_blank"><i class="social fa-youtube"> </i></a>            
+                <a href="<?php echo $youtubeLink ?>" target="_blank"><i class="social fa-youtube"> </i></a>            
             </li>
       	</ul>
       	<br/>

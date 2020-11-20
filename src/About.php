@@ -4,24 +4,6 @@
 * Team Name:                2WDK
 * Student Name:				Fahimeh Karimi 
 -------------------------------------------------------------------------------->
-<?php include_once "setStyle.php"; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Sax N Sip</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel='stylesheet' media='screen' type='text/css' href='<?php echo $cssFolder;?>/common.css' />
-<link rel='stylesheet' media='screen' type='text/css' href='pagesCSS/About.css' />
-
-</head>
-
-<body class="body">
-<?php include_once "Header.php"; ?>
 <?php
 include "DB_Connect.php";
 
@@ -40,9 +22,23 @@ if (sqlsrv_fetch($result) === false) {
 $aboutTitle = sqlsrv_get_field($result, 0);
 $aboutImage = $imagesource.sqlsrv_get_field($result, 1);
 $aboutContent = sqlsrv_get_field($result, 2);
-
-
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sax N Sip</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel='stylesheet' media='screen' type='text/css' href='pagesCSS/About.css' />
+
+</head>
+
+<body class="body">
+<?php include_once "Header.php"; ?>
 
 	<div class="container bootstrap snippet">
 

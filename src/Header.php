@@ -1,4 +1,21 @@
-<?php include_once "setStyle.php"; ?>
+<?php
+include "DB_Connect.php";
+
+$sql="SELECT [Header].[Title],[Header].[Subtitle1],[Header].[Subtitle2],[Layouts].[ThemeCode]
+            FROM [dbo].[Layouts]
+            INNER JOIN [dbo].[Header]
+            ON [Header].[HeaderId] = [Layouts].[HeaderId]
+            WHERE [Layouts].[isSet] = 1";
+
+$result = sqlsrv_query($conn, $sql);
+if (sqlsrv_fetch($result) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+$headerTitle = sqlsrv_get_field($result, 0);
+$subtitle1 = sqlsrv_get_field($result, 1);
+$subtitle2 = sqlsrv_get_field($result, 2);
+$cssFolder=sqlsrv_get_field($result, 3);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +30,15 @@
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
 
-<link rel="stylesheet" type="text/css" href="<?php echo $cssFolder;?>/common.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $cssFolder?>/common.css" />
 <link rel="stylesheet" type="text/css" href="pagesCSS/Header.css" />
 </head>
 <body>	
 	<div class="jumbotron jumbotron-fluid">
       <div class="container text-center">
-        <h1 class="display-2" id="logo">Sax n'Sip</h1>             
-        <h1 class="display-6">BEN JOSEPH</h1>        
-        <p class="lead">SAXOPHONIST</p>
+        <h1 class="display-2" id="logo"><?php echo $headerTitle ?></h1>             
+        <h1 class="display-6"><?php echo $subtitle1 ?></h1>        
+        <p class="lead"><?php echo $subtitle2 ?></p>
       </div>
     </div>
 	
