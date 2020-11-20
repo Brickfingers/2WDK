@@ -2,12 +2,37 @@
 * Filename:					HomePage2.php
 * Version:					1.4
 * Team Name:                2WDK
-* Student Name:				David Salazar - 040889786
-* Course Name:				CST 8353 - Software design and testing
-* Professor:			    Leanne Seaward
-* Purpose:                  Home page
 -------------------------------------------------------------------------------->
-<?php include_once "setStyle.php"; ?>
+<?php
+include "DB_Connect.php";
+
+$imagesource= "photo/";
+$audiosource= "audio/";
+
+$sql="SELECT [HomePage].[Title],[HomePage].[Subtitle1],[HomePage].[Subtitle2],[HomePage].[HomePageImage],[HomePage].[AudioName]
+            ,[Footer].[FacebookLink],[Footer].[InstagramLink],[Footer].[YoutubeLink]
+            FROM [dbo].[Layouts]
+            INNER JOIN [dbo].[HomePage]
+            ON  [Layouts].[HomePageId] =[HomePage].[HomePageId] 
+            INNER JOIN [dbo].[Footer]
+            ON  [Layouts].[FooterId] =[Footer].[FooterId]
+            WHERE [Layouts].[isSet] = 1";
+
+$result = sqlsrv_query($conn, $sql);
+if (sqlsrv_fetch($result) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+$homeTitle = sqlsrv_get_field($result, 0);
+$homeSubtitle1 = sqlsrv_get_field($result, 1);
+$homeSubtitle2 = sqlsrv_get_field($result, 2);
+$homeImage = $imagesource.sqlsrv_get_field($result, 3);
+$homeAudio = $audiosource.sqlsrv_get_field($result, 4);
+$facebookLink = sqlsrv_get_field($result, 5);
+$instaLink = sqlsrv_get_field($result, 6);
+$youtubeLink = sqlsrv_get_field($result, 7);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +40,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel='stylesheet' media='screen' type='text/css' href='<?php echo $cssFolder;?>/common.css' />
 <link rel="stylesheet" media='screen' type="text/css" href="pagesCSS/HomePage.css" />
 
 <link rel="stylesheet"
@@ -31,9 +55,9 @@
            
      <br/><br/>    
  	<div class="text-center">
-    	 <h1 class="display">Ben Joseph</h1>
+    	 <h1 class="display"><?php echo $homeTitle ?></h1>
         	 <div class="container1">
-        	 <h1 class="display1">Saxophonist</h1>
+        	 <h1 class="display1"><?php echo $homeSubtitle1 ?></h1>
     	</div> 
     	
     	<div class= footer_no_selected>    
@@ -41,27 +65,15 @@
       		<ul class="list-unstyled list-inline text-center">
                	
               	<li class="list-inline-item">
-                    <a href="<?php
-                                $myfile = fopen("Admin/SocialMediaLinks/FacebookLink.txt", "r") or die("Unable to open file!");
-                                echo fread($myfile,filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
-                                fclose($myfile);
-                                ?>" target="_blank"><i class="social fa-facebook "> </i></a>             
+                    <a href="<?php echo $facebookLink ?>" target="_blank"><i class="social fa-facebook "> </i></a>             
               	</li>
               
           		<li class="list-inline-item">              
-                    <a href="<?php
-                                $myfile = fopen("Admin/SocialMediaLinks/InstagramLink.txt", "r") or die("Unable to open file!");
-                                echo fread($myfile,filesize("Admin/SocialMediaLinks/InstagramLink.txt"));
-                                fclose($myfile);
-                                ?>" target="_blank"><i class="social fa-instagram"> </i></a>        
+                    <a href="<?php echo $instaLink ?>" target="_blank"><i class="social fa-instagram"> </i></a>        
                 </li>
                
                 <li class="list-inline-item">             
-                    <a href="<?php
-                                $myfile = fopen("Admin/SocialMediaLinks/YoutubeLink.txt", "r") or die("Unable to open file!");
-                                echo fread($myfile,filesize("Admin/SocialMediaLinks/FacebookLink.txt"));
-                                fclose($myfile);
-                                ?>" target="_blank"><i class="social fa-youtube"> </i></a>            
+                    <a href="<?php echo $youtubeLink ?>" target="_blank"><i class="social fa-youtube"> </i></a>            
                 </li>
           	</ul>
 		</div>	
@@ -69,7 +81,7 @@
   	</div>
     
         <div class="w3-center">
-        <img class="img-fluid z-depth-1" src="photo/pic2.png">
+        <img class="img-fluid z-depth-1" src="<?php echo $homeImage ?>" width ="500">
         <br/><br/>	
 		</div>
          <div class="w3-center">
@@ -78,11 +90,7 @@
                                 echo fread($myfile,filesize("Admin/MusicMode.txt"));
                                 fclose($myfile);
                                 ?>>
-            	<source src="<?php
-                                $myfile = fopen("Admin/MusicLink.txt", "r") or die("Unable to open file!");
-                                echo fread($myfile,filesize("Admin/MusicLink.txt"));
-                                fclose($myfile);
-                                ?>" type="audio/mpeg" >
+            	<source src="<?php echo $homeAudio ?>" >
         	</audio>
     	</div>
     
