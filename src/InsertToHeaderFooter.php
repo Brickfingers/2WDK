@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
            ([FacebookLink]
            ,[InstagramLink]
            ,[YoutubeLink])
-            SELECT '$youTube' ,'$instagram','$facebook'
+            SELECT '$facebook' ,'$instagram','$youTube'
             ";
 
     sqlsrv_query($conn, $sql);
