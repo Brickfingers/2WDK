@@ -4,6 +4,17 @@
 <html>
 <head>
 <style type="text/css">
+.next {
+	background-color: #4CAF50;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 16px;
+}
+
 .myclass {
 	background-color: #B3EEF5;
 	padding: 8px 16px;
@@ -90,7 +101,7 @@ if (isset($_POST['submit'])) {
             ";
 
     sqlsrv_query($conn, $sql);
-    echo "<font color='green'>" . "Layout is set." . "</font>";
+    echo "<a href=\"Homepage.php\" id=\"myBtn\" class=\"next\">Try your website!</a>";
     echo " <br /> <br />";
 }
 ?>
