@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
         echo "<font color='green'>" . "Home page is set." . "</font>";
 
         echo " <br /> <br />";
-        echo "<a href=\"InsertIntoHome.php\" id=\"myBtn\" class=\"next\">Next &raquo;</a>";
+        echo "<a href=\"InsertToLayout.php\" id=\"myBtn\" class=\"next\">Next &raquo;</a>";
     } else {
         echo "Sorry, there was an error uploading your files.";
     }

@@ -22,16 +22,16 @@
 		<div class="text">
 		<br/><br/>
 			<?php  
-			session_start();
+			//session_start();
 			echo "<h2><center>Welcome, ";
-			echo  $_SESSION['name'];
+			//echo  $_SESSION['name'];
 			echo "!</h2><br><center><h1> Here you will find a wizard to help you edit and customize your website.<br><br> Start now by clicking the button below.<br><br><br></h1>";
 			echo "<a
-            href=\"InsertIntoHome.php\"><h2>Start!</h2></a>";						
+            href=\"InsertToHeaderFooter.php\"><h2>Start!</h2></a>";						
         ?>
     		
 	<button type="submit" class="button1"
-					formaction="/WebApp/src/InsertIntoHome.php">Start!</button><br><br>
+					formaction="/WebApp/src/InsertToHeaderFooter.php">Start!</button><br><br>
 	<button type="submit" class="button1"
 					formaction="/WebApp/src/InsertIntoHome.php">Log Out</button>
 	<div class="  text-white">
