@@ -85,12 +85,11 @@ if (isset($_POST['submit'])) {
            ,[Created_at]
            ,[IsSet]
            ,[ThemeCode])    
-            SELECT '$LayoutName','$homePageId ' ,'$aboutId','$galleryId','$bookingId','$headerId','$footerId'
-                    ,'$todayDate','1',$themeCode
+            SELECT '$LayoutName',$homePageId ,$aboutId,$galleryId,$bookingId,$headerId,$footerId
+                    ,'$todayDate', 1 ,'$themeCode'
             ";
 
     sqlsrv_query($conn, $sql);
-    
     echo "<font color='green'>" . "Layout is set." . "</font>";
     echo " <br /> <br />";
 }
@@ -106,13 +105,13 @@ if (isset($_POST['submit'])) {
 		<p>Please select your preferred Theme:</p>
 		<div>
 		
-  		<input type="radio" id="dark" name="theme" value=1 checked>
+  		<input type="radio" id="dark" name="theme" value="darkTheme" checked>
   		<label for="dark"> Dark Theme </label><br /> 
   		<img src="photo/darkTheme.PNG" width="200"></img>
 		</div>
 		<br /> 
 		<div>
- 		 <input type="radio" id="light" name="theme" value=2>
+ 		 <input type="radio" id="light" name="theme" value="lightTheme">
  		 <label for="light">Light Theme</label><br /> 
  		 <img src="photo/lightTheme.PNG" width="200"></img>
 		</div>
