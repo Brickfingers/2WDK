@@ -1,3 +1,0 @@
-<?php
-    $cssFolder = "darkTheme";
-?>

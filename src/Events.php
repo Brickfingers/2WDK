@@ -1,4 +1,3 @@
-<?php include_once "setStyle.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +17,6 @@
 <script src='../packages/bootstrap/main.js'></script>
 <script src='../packages/google-calendar/main.js'></script>
 
-<link rel='stylesheet' media='screen' type='text/css' href='<?php echo $cssFolder;?>/common.css' />
 <link rel='stylesheet' media='screen' type='text/css' href='pagesCSS/Events.css' />
 
 <script>

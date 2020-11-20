@@ -88,7 +88,6 @@ $insta3src = $data['insta3src'];
 $insta3picsrc = $data['insta3picsrc'];
 ?>
 
-<?php include_once "setStyle.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,7 +97,6 @@ $insta3picsrc = $data['insta3picsrc'];
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	
-<link rel='stylesheet' media='screen' type='text/css' href='<?php echo $cssFolder;?>/common.css' />
 <link rel='stylesheet' media='screen' type='text/css' href='pagesCSS/Gallery.css' />
 
 <link rel="stylesheet"
