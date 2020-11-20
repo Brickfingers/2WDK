@@ -21,9 +21,8 @@ include "DB_Connect.php";
 if (isset($_POST['submit'])) {
     $LayoutName = $_POST["layoutName"];
     $LayoutName = str_replace("'", "''", $LayoutName);
+    
     //Theme code would be set to 1 or 2 or 3
-    
-    
     $themeCode = $_POST["theme"];
     //Unset the current layout (set 'isSet' column of the current set layout to 0)
     $layoutSql="UPDATE Layouts
@@ -107,7 +106,7 @@ if (isset($_POST['submit'])) {
 		<p>Please select your preferred Theme:</p>
 		<div>
 		
-  		<input type="radio" id="dark" name="theme" value=1>
+  		<input type="radio" id="dark" name="theme" value=1 checked>
   		<label for="dark"> Dark Theme </label><br /> 
   		<img src="photo/darkTheme.PNG" width="200"></img>
 		</div>
