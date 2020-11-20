@@ -148,7 +148,7 @@ function image_validate()
 	var file_name = "";
 	var file_type = "";
 	var file_size = "";
-	var valid_size = 3*1000*1000;
+	var valid_size = 5*1000*1000;
 	var file = document.getElementById("imagefile");
 	if(file.files.length != 0)
 	{
@@ -166,7 +166,8 @@ function image_validate()
 		{
 			valid = false;
 			document.getElementById('error-imagefile').innerHTML = "* File size should be upto 3MB.";
-		}
+			file.value="";
+			}
 	}
 	else
 	{
@@ -200,7 +201,7 @@ function audio_validate()
 	var file_name = "";
 	var file_type = "";
 	var file_size = "";
-	var valid_size = 3*1000*1000;
+	var valid_size = 5*1000*1000;
 	var file = document.getElementById("audiofile");
 	var filePath = file.value; 
 	var allowedExtensions =  
@@ -222,7 +223,8 @@ function audio_validate()
 		{
 			valid = false;
 			document.getElementById('error-audiofile').innerHTML = "* File size should be upto 3MB.";
-		}
+			file.value="";
+			}
 	}
 	else
 	{
