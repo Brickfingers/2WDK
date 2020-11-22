@@ -35,7 +35,8 @@ echo "<h2> HomePage Wizard </h2>";
 include "DB_Connect.php";
 if (isset($_POST['submit'])) {
     $myTitle = $_POST["title"];
-    $mySubtitle = $_POST["subtitle"];
+    $mySubtitle1 = $_POST["subtitle1"];
+    $mySubtitle2 = $_POST["subtitle2"];
     $imagefilename = $_FILES["imageToUpload"]["name"];
     $imagetempname = $_FILES["imageToUpload"]["tmp_name"];
     $audiofilename = $_FILES["audioToUpload"]["name"];
@@ -49,15 +50,17 @@ if (isset($_POST['submit'])) {
     if ((move_uploaded_file($imagetempname, $target_file_img)) && (move_uploaded_file($audiotempname, $target_file_au))) {
 
         $myTitle = str_replace("'", "''", $myTitle);
-        $mySubtitle = str_replace("'", "''", $mySubtitle);
+        $mySubtitle1 = str_replace("'", "''", $mySubtitle1);
+        $mySubtitle2 = str_replace("'", "''", $mySubtitle2);
         $imagefilename = str_replace("'", "''", $imagefilename);
         $audiofilename = str_replace("'", "''", $audiofilename);
         $sql = "INSERT INTO [dbo].[HomePage]
            ([Title]
 		   ,[Subtitle1]
+           ,[Subtitle2]
            ,[HomePageImage], [AudioName])
                 
-            SELECT '$myTitle','$mySubtitle','$imagefilename','$audiofilename'";
+            SELECT '$myTitle','$mySubtitle1','$mySubtitle2','$imagefilename','$audiofilename'";
 
         sqlsrv_query($conn, $sql);
 
@@ -91,14 +94,19 @@ if (isset($_POST['submit'])) {
 
 		<h4>Home page title:</h4>
 		<span style="color: red" id="error-title"></span>
-		<textarea rows="2" cols="50" type="text" name="title"></textarea>
+		<textarea rows="2" cols="50"  name="title"></textarea>
 		<br /> <br />
 
-		<h4>Home page subtitle:</h4>
-		<span style="color: red" id="error-subtitle"></span>
-		<textarea rows="2" cols="50" type="text" name="subtitle"></textarea>
+		<h4>Home page subtitle1:</h4>
+		<span style="color: red" id="error-subtitle1"></span>
+		<textarea rows="2" cols="50" name="subtitle1"></textarea>
 		<br /> <br />
 
+		<h4>Home page subtitle2:</h4>
+		<span style="color: red" id="error-subtitle2"></span>
+		<textarea rows="2" cols="50"  name="subtitle2"></textarea>
+		<br /> <br />
+		
 		<div>
 			<button class="next" type="submit" name="submit">Next &raquo;</button>
 
@@ -110,8 +118,8 @@ function validateForm(){
 	var imagefile = document.forms["myForm"]["imageToUpload"].value;
 	var audiofile = document.forms["myForm"]["audioToUpload"].value;
 	var title = document.forms["myForm"]["title"].value;
-	var subtitle = document.forms["myForm"]["subtitle"].value;
-
+	var subtitle1 = document.forms["myForm"]["subtitle1"].value;
+	var subtitle2 = document.forms["myForm"]["subtitle2"].value;
 
 	
 	if ((imagefile.length<1)) {
@@ -138,12 +146,21 @@ function validateForm(){
         document.getElementById('error-title').innerHTML = " Title length should be less than 50 characters *";
         return false;
         }
-    if (subtitle.length<1) {
-        document.getElementById('error-subtitle').innerHTML = " Please Enter your bio *";      
+    if (subtitle1.length<1) {
+        document.getElementById('error-subtitle1').innerHTML = " Please Enter a subtitle *";      
         return false;
         }
-    if (subtitle.length>50) {
-        document.getElementById('error-subtitle').innerHTML = " The Maximum number of characters for content is 4000 *";      
+    if (subtitle1.length>50) {
+        document.getElementById('error-subtitle1').innerHTML = " subtitle length should be less than 50 characters *";      
+        return false;
+        }
+
+    if (subtitle2.length<1) {
+        document.getElementById('error-subtitle2').innerHTML = " Please Enter a subtitle *";      
+        return false;
+        }
+    if (subtitle2.length>50) {
+        document.getElementById('error-subtitle2').innerHTML = " subtitle length should be less than 50 characters *";      
         return false;
         }
           
