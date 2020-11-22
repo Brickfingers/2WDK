@@ -1,0 +1,21 @@
+:root {
+	--mainBackgroungColor: #32A7A4;
+	--contrastColor: #1e6462;
+	--nameColor: #def2f1;
+	--pageTitleColor: #def2f1;
+	--additionalFontColor: #2b7a78;
+	--signupColor: #2b7a78;
+	--bioTextColor: #7c9b9b;
+	--fc-border-color: black;
+}
+
+.body{
+	background-color: var(--mainBackgroungColor);
+}
+
+.header1 {
+	text-align: center; 
+	color: var(--pageTitleColor); 
+	font-family: 'Poppins';
+}	
+

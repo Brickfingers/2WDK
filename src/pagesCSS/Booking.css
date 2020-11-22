@@ -12,4 +12,6 @@
 
 .submitButton {
 	background-color:  var(--contrastColor);
+	border-radius: 5px;
+	color: var(--nameColor);
 }

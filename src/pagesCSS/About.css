@@ -19,7 +19,7 @@
 	position: relative;
 	padding: 15px 10px 5px 15px;
 	background-color: #fff; 
-	color: var(--nameColor); 
+	color: var(--bioTextColor); 
 	font-family: 'Poppins';
 }
 
@@ -41,7 +41,7 @@
 	line-height: 33px;
 	text-align: center;
 	font-weight: bold;
-	color:var(--nameColor);
+	color:var(--bioTextColor);
 	font-family: 'Poppins';
 }
 

@@ -3,7 +3,8 @@
 * Version:					1.8
 * Team Name:                2WDK
 -------------------------------------------------------------------------------->
-<?php include "DB_Connect.php";
+<?php 
+include "DB_Connect.php";
 
 $sql="SELECT [Footer].[FacebookLink],[Footer].[InstagramLink],[Footer].[YoutubeLink],[Layouts].[ThemeCode]
             FROM [dbo].[Layouts]
