@@ -81,7 +81,7 @@ $youtubeLink = sqlsrv_get_field($result, 7);
   	</div>
     
         <div class="w3-center">
-        <img class="img-fluid z-depth-1" src="<?php echo $homeImage ?>" width ="900">
+        <img class="img-fluid z-depth-1" src="<?php echo $homeImage ?>" width ="700">
         <br/><br/>	
 		</div>
          <div class="w3-center">
