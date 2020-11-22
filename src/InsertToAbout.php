@@ -4,9 +4,18 @@
 <html>
 <head>
 <style type="text/css">
+
 .next {
-	background-color: #4CAF50;
-	color: white;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 a {
@@ -49,11 +58,9 @@ if (isset($_POST['submit'])) {
 
         sqlsrv_query($conn, $sql);
         
-        
-
         echo "<font color='green'>" . "About page is set." . "</font>";
         echo " <br /> <br />";
-        echo "<a href=\"InsertIntoHome.php\" id=\"myBtn\" class=\"next\">Next &raquo;</a>";
+        header("Location: InsertIntoHome.php");
     } else {
         echo "Sorry, there was an error uploading your file, try again!";
     }
@@ -71,21 +78,20 @@ if (isset($_POST['submit'])) {
 
 		<h4>About page title:</h4>
 		<span style="color: red" id="error-title"></span>
-		<textarea rows="2" cols="50" type="text" name="title"></textarea>
+		<textarea rows="2" cols="50"  name="title"></textarea>
 		<br /> <br />
 
 		<h4>About page content:</h4>
 		<span style="color: red" id="error-content"></span>
-		<textarea rows="20" cols="50" type="text" name="about"></textarea>
+		<textarea rows="20" cols="50"  name="about"></textarea>
 		<br /> <br />
 		<div>
-			<button type="submit" name="submit">Submit</button>
-
+			<button class="next" type="submit" name="submit">Next &raquo;</button>
 		</div>
 		<br /> <br />
 	</form>
 
-	<script>
+<script>
 function validateForm(){
 	var file = document.forms["myForm"]["fileToUpload"].value;
 	var title = document.forms["myForm"]["title"].value;

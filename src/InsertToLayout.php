@@ -5,8 +5,16 @@
 <head>
 <style type="text/css">
 .next {
-	background-color: #4CAF50;
-	color: white;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 a {
@@ -101,7 +109,8 @@ if (isset($_POST['submit'])) {
             ";
 
     sqlsrv_query($conn, $sql);
-    echo "<a href=\"Homepage.php\" id=\"myBtn\" class=\"next\">Try your website!</a>";
+    echo "<font color='green'>" . "Layout is set." . "</font>";
+    header("Location: Homepage.php");
     echo " <br /> <br />";
 }
 ?>
@@ -118,17 +127,23 @@ if (isset($_POST['submit'])) {
 		
   		<input type="radio" id="dark" name="theme" value="darkTheme" checked>
   		<label for="dark"> Dark Theme </label><br /> 
-  		<img src="photo/darkTheme.PNG" width="200"></img>
+  		<img src="photo/darkTheme.PNG" width="300"></img>
 		</div>
 		<br /> 
 		<div>
  		 <input type="radio" id="light" name="theme" value="lightTheme">
  		 <label for="light">Light Theme</label><br /> 
- 		 <img src="photo/lightTheme.PNG" width="200"></img>
+ 		 <img src="photo/lightTheme.PNG" width="300"></img>
+		</div>
+		<br /> 
+		<div>
+ 		 <input type="radio" id="blue" name="theme" value="blueTheme">
+ 		 <label for="light">Blue Theme</label><br /> 
+ 		 <img src="photo/BlueTheme.PNG" width="300"></img>
 		</div>
 		<br /> <br />
 		<div>
-			<button type="submit" name="submit">Submit</button>
+			<button class="next" type="submit" name="submit">Try your website!</button>
 
 		</div>
 		<br /> <br />

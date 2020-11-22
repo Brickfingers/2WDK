@@ -5,8 +5,16 @@
 <head>
 <style type="text/css">
 .next {
-	background-color: #4CAF50;
-	color: white;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 a {
@@ -57,7 +65,7 @@ if (isset($_POST['submit'])) {
 
     echo "<font color='green'>" . "Header and Footer is set." . "</font>";
     echo " <br /> <br />";
-    echo "<a href=\"InsertToAbout.php\" id=\"myBtn\" class=\"next\">Next &raquo;</a>";
+    header("Location: InsertToAbout.php");
 }
 ?>
 
@@ -89,7 +97,7 @@ if (isset($_POST['submit'])) {
 		<input type="url" id="FacebookLink" name="facebookLink"></input> 
 		<br /><br />
 		<div>
-			<button type="submit" name="submit">Submit</button>
+			<button class="next" type="submit" name="submit">Next &raquo;</button>
 		</div>
 		<br /> <br />
 	</form>

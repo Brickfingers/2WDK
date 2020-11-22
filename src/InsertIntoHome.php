@@ -5,8 +5,16 @@
 <head>
 <style type="text/css">
 .next {
-	background-color: #4CAF50;
-	color: white;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 a {
@@ -55,8 +63,8 @@ if (isset($_POST['submit'])) {
 
         echo "<font color='green'>" . "Home page is set." . "</font>";
 
-        echo " <br /> <br />";
-        echo "<a href=\"InsertToLayout.php\" id=\"myBtn\" class=\"next\">Next &raquo;</a>";
+        echo " <br /> <br />"; 
+        header("Location: InsertToLayout.php");
     } else {
         echo "Sorry, there was an error uploading your files.";
     }
@@ -92,7 +100,7 @@ if (isset($_POST['submit'])) {
 		<br /> <br />
 
 		<div>
-			<button type="submit" name="submit">Submit</button>
+			<button class="next" type="submit" name="submit">Next &raquo;</button>
 
 		</div>
 		<br /> <br />
