@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="css/Gallery.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/Admin.css" />
+<link rel="stylesheet" type="text/css" href="pagesCSS/Admin.css" />
 </head>
 <div class="body">
 	<body>
@@ -24,10 +24,7 @@
 			<center>
 				<img src="photo/logo.png" alt="logo"> <br />
 				<br />
-				<br />
-				<br />
-				<br />
-				<br />
+				<br /><br/><br/><br/>
 				<h1 style="text-align: center; color: #71db77;">
 					All ready!!<br />
 					<br />Account created Successfully.
@@ -40,13 +37,6 @@
 
 				<div class="  text-white">
 					<div class="card1" style="background: #222222;">
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
 						<br />
 						<br />
 						<br />
