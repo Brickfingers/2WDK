@@ -12,6 +12,15 @@
 
 h1{
 	font-size: 25px; 
+	color: #4CAF50;
+}
+
+h2{
+	color: #4CAF50;
+}
+
+input{
+	color: white;
 }
 
 .button {

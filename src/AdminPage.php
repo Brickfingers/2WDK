@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Create Account</title>
+<title>Admin Page</title>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,7 +33,6 @@
 
 				<div style="background: #222222;">
 					<div class="card-body p-5">
-
 
 						<center>
 							<form method="post">
@@ -100,12 +99,8 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
-
-
-
         </div>
 			</div>
-
 			<center>
 				&copy;
 				<script>document.write(new Date().getFullYear());</script>
@@ -114,9 +109,7 @@ if (isset($_POST['submit'])) {
 			<br />
 			<div />
 		</div>
-
 	</body>
-
 </html>
 
 

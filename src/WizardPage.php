@@ -1,7 +1,7 @@
 <html>
-<head> 
+<head>
 <meta charset="ISO-8859-1">
-<title>Main Wizard Page</title>
+<title>Wizard Main Page</title>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +10,17 @@
 <link rel="stylesheet" type="text/css" href="css/Gallery.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/Admin.css" />
+<link rel="stylesheet" type="text/css" href="pagesCSS/Admin.css" />
 </head>
 <div class="body">
 	<body>
-	<div class="container">
-	</br></br>
+		<div class="container">
+			</center>
+			<div class="  text-white">
+
+				<div style="background: #222222;">
+					<div class="card-body p-5">
+
 	<center>
 		<img src="photo/logo.png" alt="logo"> <br />
 		<br />
@@ -32,7 +37,6 @@
 			echo "<a
             href=\"AdminPage.php\"><h2>Log Out</h2></a>";
         ?>
-    		
     		
 	<!-- Implementation in Sprint 3 
 	<button type="submit" class="button1"
@@ -52,12 +56,12 @@
 						<script>document.write(new Date().getFullYear());</script>
 						Copyright - Sax n Sip
 					</center>
-				</div>
-			
-
-		
+				</div>		
 	</div>
 	<br />
 </div>
 </body>
 </html>
+
+
+
