@@ -1,5 +1,5 @@
 <html>
-<head>
+<head> 
 <meta charset="ISO-8859-1">
 <title>Main Wizard Page</title>
 <link rel="stylesheet"
@@ -22,18 +22,23 @@
 		<div class="text">
 		<br/><br/>
 			<?php  
-			//session_start();
+			session_start();
 			echo "<h2><center>Welcome, ";
-			//echo  $_SESSION['name'];
+			echo  $_SESSION['name'];
 			echo "!</h2><br><center><h1> Here you will find a wizard to help you edit and customize your website.<br><br> Start now by clicking the button below.<br><br><br></h1>";
+			// Use od this links is provitional and will be swithched to button in Sprint 3
 			echo "<a
-            href=\"InsertToHeaderFooter.php\"><h2>Start!</h2></a>";						
+            href=\"InsertIntoHome.php\"><h2>Start!</h2></a>";
+			echo "<a
+            href=\"AdminPage.php\"><h2>Log Out</h2></a>";
         ?>
     		
+    		
+	<!-- Implementation in Sprint 3 
 	<button type="submit" class="button1"
-					formaction="/WebApp/src/InsertToHeaderFooter.php">Start!</button><br><br>
+					formaction="/WebApp/src/InsertIntoHome.php">Start!</button><br><br>
 	<button type="submit" class="button1"
-					formaction="/WebApp/src/InsertIntoHome.php">Log Out</button>
+					formaction="/WebApp/src/InsertIntoHome.php">Log Out</button>-->
 	<div class="  text-white">
 
 	<div class="card1" style="background: #222222;">
@@ -41,7 +46,7 @@
 	<div class="card-body p-5">
 
 		</div>
-				</div><br><br/><br/><br/><br/>
+				</div><br>
 					<center>
 						&copy;
 						<script>document.write(new Date().getFullYear());</script>
@@ -56,6 +61,3 @@
 </div>
 </body>
 </html>
-
-
-
