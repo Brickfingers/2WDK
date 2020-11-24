@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/Gallery.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/Admin.css" />
+<link rel="stylesheet" type="text/css" href="pagesCSS/Admin.css" />
 </head>
 <div class="body">
 	<body>
@@ -82,13 +82,13 @@ if (isset($_POST['submit2'])) {
 ?>
 
 					</div>
-				</div>	</br>		
+				</div>	</br><br><br>		
 				<center>
 					&copy;
 					<script>document.write(new Date().getFullYear());</script>
 					Copyright - 2WDK Team
 				</center>
-				<br />
+				<br /><br>
 				<div />
 			</div>
 	</body>

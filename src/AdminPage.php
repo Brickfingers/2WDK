@@ -99,7 +99,7 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
-        </div>
+        </div><br><br>
 			</div>
 			<center>
 				&copy;

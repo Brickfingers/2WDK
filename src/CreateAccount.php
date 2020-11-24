@@ -31,11 +31,12 @@
 include ('DB_Connect.php');
 $goodPass = false;
 
-$username = $email = $password = '';
+$username = $email = $password = $confirm_password = '';
 $errors = array(
     'Username' => '',
     'EmailAddress' => '',
-    'Password' => ''
+    'Password' => '',
+    'Password2' => '',
 );
 
 if ($goodPass == false) {
@@ -56,55 +57,47 @@ if ($goodPass == false) {
 
     if (isset($_POST['submit'])) {
 
-        /*
-         * if(empty($_POST['UserId'])){
-         * $errors['UserId'] = 'An User Id is required';
-         * } else{
-         * $userid = $_POST['UserId'];
-         * if(!preg_match('/^[a-zA-Z\s]+$/', $userid)){
-         * $errors['UserId'] = 'User Id must be valid';
-         * }
-         * }
-         *
-         * if(empty($_POST['Role'])){
-         * $errors['Role'] = 'A Role is required';
-         * } else{
-         * $role = $_POST['Role'];
-         * if(!preg_match('/^[a-zA-Z\s]+$/', $role)){
-         * $errors['Role'] = 'Role must be letters only';
-         * }
-         * }
-         *
-         * if(empty($_POST['Username'])){
-         * $errors['Username'] = 'A Username is required';
-         * } else{
-         * $username = $_POST['Username'];
-         * if(!preg_match('/^[a-zA-Z\s]+$/', $username)){
-         * $errors['Username'] = 'Username must be letters and spaces only';
-         * }
-         * }
-         *
-         * if(empty($_POST['EmailAddress'])){
-         * $errors['EmailAddress'] = 'An email is required';
-         * } else{
-         * $email = $_POST['EmailAddress'];
-         * if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-         * $errors['EmailAddress'] = 'Email must be a valid email address';
-         * }
-         * }
-         *
-         * if(empty($_POST['Password'])){
-         * $errors['Password'] = 'A Password is required';
-         * } else{
-         * $password = $_POST['Password'];
-         * if(!preg_match('/^[a-zA-Z\s]+$/', $password)){
-         * $errors['Password'] = 'Password must be letters and spaces only';
-         * }
-         * }
-         */
+        
+          if (empty($_POST['Username'])) {
+            $errors['Username'] = 'A Username is required ';
+        } else {
+            $username = $_POST['Username'];
+        }
+
+        if (empty($_POST['EmailAddress'])) {
+            $errors['EmailAddress'] = 'An email is required ';
+        } else {
+            $email = $_POST['EmailAddress'];
+            if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $errors['EmailAddress'] = 'Email must be a valid email address ';
+            }
+        }
+
+        if (empty($_POST['Password'])) {
+            $errors['Password'] = 'A Password is required ';
+        } else {
+            $password = $_POST['Password'];    
+        }
+          
+          if(empty($_POST['Password2'])){
+              $errors['Password2'] = 'Please confirm your password ';
+          } else{
+              $confirm_password = $_POST['Password2'];
+              if($password != $confirm_password){
+                  $errors['Password2'] = 'Password did not match ';
+              }
+          }
+        
 
         if (array_filter($errors)) {
-            // echo 'Errors in form';
+             echo '<h3>Errors in form (see below) </h3><h4>';
+             echo $errors['Username'];
+             echo '<br>';
+             echo $errors['EmailAddress'];
+             echo '<br>';
+             echo $errors['Password'];
+             echo '<br>';
+             echo $errors['Password2'];
         } else {
             
             $username = $_POST['Username'];
@@ -155,7 +148,6 @@ if ($goodPass == false) {
 ?>
         </div>
 				</div>
-
 				<center>
 					&copy;
 					<script>document.write(new Date().getFullYear());</script>
