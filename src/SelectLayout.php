@@ -1,4 +1,4 @@
-<!-- this file stores all data in layouts table -->
+<!-- this file lets user to select an exisisting layout and set or navigate to first page of the wizard to start creating a new layout -->
 
 <!DOCTYPE html>
 <html>
