@@ -4,7 +4,7 @@
 <html>
 <head>
 <style type="text/css">
-.next {
+.next ,a:link, a:visited {
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -15,12 +15,7 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-}
-
-a {
-	text-decoration: none;
-	display: inline-block;
-	padding: 8px 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .myclass {
@@ -116,7 +111,7 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-		<form name="myForm" method="POST" onsubmit="return validateForm()">
+		<form name="myForm" method="POST">
 
 		<!-- Get Layout's name-->
 		<label for="layoutName">Layout Name:</label><br> 
@@ -144,8 +139,9 @@ if (isset($_POST['submit'])) {
 		</div>
 		<br /> <br />
 		<div>
-			<button class="next" type="submit" name="submit">Finish!</button>
-
+			<a href="InsertToAbout.php">&laquo; Previous</a>
+			<button class="next" type="submit" name="submit" onclick="return validateForm()">Finish!</button>
+		
 		</div>
 		<br /> <br />
 	</form>

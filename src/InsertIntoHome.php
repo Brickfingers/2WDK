@@ -4,7 +4,7 @@
 <html>
 <head>
 <style type="text/css">
-.next {
+.next ,a:link, a:visited {
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -15,12 +15,7 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-}
-
-a {
-	text-decoration: none;
-	display: inline-block;
-	padding: 8px 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .myclass {
@@ -67,7 +62,7 @@ if (isset($_POST['submit'])) {
         echo "<font color='green'>" . "Home page is set." . "</font>";
 
         echo " <br /> <br />"; 
-        header("Location: InsertToLayout.php");
+        header("Location: InsertToHeaderFooter.php");
     } else {
         echo "Sorry, there was an error uploading your files.";
     }
@@ -75,8 +70,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-	<form name="myForm" method="POST" enctype="multipart/form-data"
-		onsubmit="return validateForm()">
+	<form name="myForm" method="POST" enctype="multipart/form-data">
 		<h4>Upload an image for Home page:</h4>
 		<input type="file" id="imagefile" onchange="return image_validate()"
 			name="imageToUpload" accept="image/*" value="  " /> <span
@@ -108,8 +102,8 @@ if (isset($_POST['submit'])) {
 		<br /> <br />
 		
 		<div>
-			<button class="next" type="submit" name="submit">Next &raquo;</button>
-
+		<a href="SelectLayout.php">&laquo; Previous</a>
+		<button class="next" type="submit" name="submit" onclick="return validateForm()">Next &raquo;</button>
 		</div>
 		<br /> <br />
 	</form>
@@ -141,27 +135,39 @@ function validateForm(){
     if (title.length<1) {
         document.getElementById('error-title').innerHTML = " Please Enter a title *";
         return false;
+         }else{
+        	 document.getElementById('error-title').innerHTML ="";
          }
     if (title.length>50) {
         document.getElementById('error-title').innerHTML = " Title length should be less than 50 characters *";
         return false;
+        }else{
+       	 document.getElementById('error-title').innerHTML ="";
         }
     if (subtitle1.length<1) {
         document.getElementById('error-subtitle1').innerHTML = " Please Enter a subtitle *";      
         return false;
+        }else{
+       	 document.getElementById('error-subtitle1').innerHTML ="";
         }
     if (subtitle1.length>50) {
         document.getElementById('error-subtitle1').innerHTML = " subtitle length should be less than 50 characters *";      
         return false;
+        }else{
+       	 document.getElementById('error-subtitle1').innerHTML ="";
         }
 
     if (subtitle2.length<1) {
         document.getElementById('error-subtitle2').innerHTML = " Please Enter a subtitle *";      
         return false;
+        }else{
+       	 document.getElementById('error-subtitle2').innerHTML ="";
         }
     if (subtitle2.length>50) {
         document.getElementById('error-subtitle2').innerHTML = " subtitle length should be less than 50 characters *";      
         return false;
+        }else{
+       	 document.getElementById('error-subtitle2').innerHTML ="";
         }
           
 }

@@ -5,7 +5,7 @@
 <head>
 <style type="text/css">
 
-.next {
+.next ,a:link, a:visited {
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -16,12 +16,7 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-}
-
-a {
-	text-decoration: none;
-	display: inline-block;
-	padding: 8px 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .myclass {
@@ -60,7 +55,7 @@ if (isset($_POST['submit'])) {
         
         echo "<font color='green'>" . "About page is set." . "</font>";
         echo " <br /> <br />";
-        header("Location: InsertIntoHome.php");
+        header("Location: InsertToLayout.php");
     } else {
         echo "Sorry, there was an error uploading your file, try again!";
     }
@@ -68,7 +63,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 	<form name="myForm" method="POST" enctype="multipart/form-data"
-		onchange="return file_validate()" onsubmit="return validateForm()">
+		onchange="return file_validate()" >
 		<h4>Upload an image for About page:</h4>
 		<input type="file" id="file" name="fileToUpload" accept="image/*" value="  " /> <span
 			style="color: red" id="error-file"></span>
@@ -86,7 +81,8 @@ if (isset($_POST['submit'])) {
 		<textarea rows="20" cols="50"  name="about"></textarea>
 		<br /> <br />
 		<div>
-			<button class="next" type="submit" name="submit">Next &raquo;</button>
+		<a href="InsertToHeaderFooter.php">&laquo; Previous</a>
+		<button class="next" type="submit" name="submit" onclick="return validateForm()">Next &raquo;</button>
 		</div>
 		<br /> <br />
 	</form>
@@ -108,18 +104,26 @@ function validateForm(){
     if (title.length<1) {
         document.getElementById('error-title').innerHTML = " Please Enter a title *";
         return false;
+         }else{
+        	 document.getElementById('error-title').innerHTML ="";
          }
     if (title.length>50) {
         document.getElementById('error-title').innerHTML = " Title length should be less than 50 characters *";
         return false;
+        }else{
+       	 document.getElementById('error-title').innerHTML ="";
         }
     if (content.length<1) {
         document.getElementById('error-content').innerHTML = " Please Enter your bio *";      
         return false;
+        }else{
+       	 document.getElementById('error-content').innerHTML ="";
         }
     if (content.length>4000) {
         document.getElementById('error-content').innerHTML = " The Maximum number of characters for content is 4000 *";      
         return false;
+        }else{
+       	 document.getElementById('error-content').innerHTML ="";
         }
           
 }

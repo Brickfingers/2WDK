@@ -33,7 +33,7 @@
 			echo "!</h2><br><center><h1> Here you will find a wizard to help you edit and customize your website.<br><br> Start now by clicking the button below.<br><br><br></h1>";
 			// Use od this links is provitional and will be swithched to button in Sprint 3
 			echo "<a
-            href=\"InsertIntoHome.php\"><h2>Start!</h2></a>";
+            href=\"SelectLayout.php\"><h2>Start!</h2></a>";
 			echo "<a
             href=\"AdminPage.php\"><h2>Log Out</h2></a>";
         ?>

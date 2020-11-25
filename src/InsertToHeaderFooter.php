@@ -4,7 +4,7 @@
 <html>
 <head>
 <style type="text/css">
-.next {
+.next ,a:link, a:visited {
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -15,12 +15,7 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-}
-
-a {
-	text-decoration: none;
-	display: inline-block;
-	padding: 8px 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .myclass {
@@ -69,7 +64,7 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-	<form name="myForm" method="POST" onsubmit="return validateForm()">
+	<form name="myForm" method="POST">
 
 		<!-- Get Header data-->
 		<label for="title">Header's title:</label><br> <span
@@ -97,7 +92,8 @@ if (isset($_POST['submit'])) {
 		<input type="url" id="FacebookLink" name="facebookLink"></input> 
 		<br /><br />
 		<div>
-			<button class="next" type="submit" name="submit">Next &raquo;</button>
+		<a href="InsertIntoHome.php">&laquo; Previous</a>
+		<button class="next" type="submit" name="submit" onclick="return validateForm()">Next &raquo;</button>
 		</div>
 		<br /> <br />
 	</form>
@@ -115,40 +111,58 @@ function validateForm(){
     if (title.length<1) {
         document.getElementById('error-title').innerHTML = " Please Enter a title *";
         return false;
-         }
+         }else{
+        	 document.getElementById('error-title').innerHTML ="";
+             }
     if (title.length>100) {
         document.getElementById('error-title').innerHTML = " Title length should be less than 100 characters *";
         return false;
+        }else{
+       	 document.getElementById('error-title').innerHTML ="";
         }
     if (subtitle1.length<1) {
         document.getElementById('error-subtitle1').innerHTML = " Please Enter Header's first subtitle*";      
         return false;
+        }else{
+       	 document.getElementById('error-subtitle1').innerHTML ="";
         }
     if (subtitle1.length>100) {
         document.getElementById('error-subtitle1').innerHTML = " The Maximum number of characters for subtitle is 100 *";      
         return false;
+        }else{
+       	 document.getElementById('error-subtitle1').innerHTML ="";
         }
 
     if (subtitle2.length<1) {
         document.getElementById('error-subtitle2').innerHTML = " Please Enter Header's second subtitle*";      
         return false;
+        }else{
+       	 document.getElementById('error-subtitle2').innerHTML ="";
         }
     if (subtitle2.length>100) {
         document.getElementById('error-subtitle2').innerHTML = " The Maximum number of characters for subtitle is 100 *";      
         return false;
+        }else{
+       	 document.getElementById('error-subtitle2').innerHTML ="";
         }
 
     if (youtubelink.length<1) {
         document.getElementById('error-youtubeLink').innerHTML = " Please Enter a YouTube link *";
         return false;
+         }else{
+           	 document.getElementById('error-youtubeLink').innerHTML ="";
          }
     if (instalink.length<1) {
         document.getElementById('error-instaLink').innerHTML = " Please Enter an Instagram link *";
         return false;
+         }else{
+           	 document.getElementById('error-instaLink').innerHTML ="";
          }
     if (facebooklink.length<1) {
         document.getElementById('error-facebookLink').innerHTML = " Please Enter a Facebook link *";
         return false;
+         }else{
+           	 document.getElementById('error-facebookLink').innerHTML ="";
          }
           
 }
