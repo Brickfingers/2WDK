@@ -265,7 +265,7 @@ function audio_validate()
                 reader.onload = function(e) { 
                     document.getElementById( 
                         'audioPreview').innerHTML =  
-                        	'<audio style="width: 50%" controls src="' + e.target.result  
+                        	'<audio style="width: 20%" controls src="' + e.target.result  
                         + '"/>'; 
                 }; 
                   

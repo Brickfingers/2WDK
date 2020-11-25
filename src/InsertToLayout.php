@@ -109,8 +109,9 @@ if (isset($_POST['submit'])) {
             ";
 
     sqlsrv_query($conn, $sql);
-    echo "<font color='green'>" . "Layout is set." . "</font>";
-    header("Location: Homepage.php");
+    echo "<font color='green'>" . "Layout is set.  " . "</font>";
+    echo "<a href=\"HomePage.php\" id=\"myBtn\" class=\"next\">Try your website! </a>";
+    //header("Location: NewLayout.php");
     echo " <br /> <br />";
 }
 ?>
@@ -143,7 +144,7 @@ if (isset($_POST['submit'])) {
 		</div>
 		<br /> <br />
 		<div>
-			<button class="next" type="submit" name="submit">Try your website!</button>
+			<button class="next" type="submit" name="submit">Finish!</button>
 
 		</div>
 		<br /> <br />
