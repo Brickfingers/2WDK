@@ -1,0 +1,66 @@
+.body, .myclass {
+	background-color: #222222;
+	text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  text-align: center;
+}
+
+.next ,a:link, a:visited {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.next {
+	border-radius: 5px;
+	width: 140px;
+}
+
+.footerLink {
+	width: 500px;
+}
+
+.layoutName {
+	width: 300px;
+}
+h1{
+	font-size: 25px; 
+	color: #4CAF50;
+}
+
+h2{
+	color: #4CAF50;
+}
+
+h3{
+	font-size: 25px; 
+	color: #4CAF50;
+	position: absolute;
+  	top: 370px;
+  	left: 680px;
+}
+
+h4{
+	font-size: 20px; 
+	color: #4CAF50;
+}
+
+h5{
+	font-size: 15px; 
+	color: #80c883;
+	font-style: italic;
+}

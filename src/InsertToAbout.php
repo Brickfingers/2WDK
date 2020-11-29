@@ -3,32 +3,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-
-.next ,a:link, a:visited {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.myclass {
-	background-color: #B3EEF5;
-	padding: 8px 16px;
-}
-</style>
+<meta charset="ISO-8859-1">
+<title>Wizard Home Page</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/Gallery.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="wizardCSS/wizard.css" />
 </head>
-<body class="myclass">
+
+<div class="body">
+	<body>
+		<div class="container">
+			<br>
+			<center>
+				<img src="photo/logo.png" alt="logo"> <br />
+				<br />
+				<h1 style="text-align: center; color: #71db77;"> AboutPage Wizard </h1>
+
+			</center>
+			<div class="  text-white">
+
+				<div style="background: #222222;">
+					<div class="card-body p-5">
 
 <?php
-echo "<h2> AboutPage Wizard </h2>";
 include "DB_Connect.php";
 if (isset($_POST['submit'])) {
     $aboutme = $_POST["about"];
@@ -70,6 +73,7 @@ if (isset($_POST['submit'])) {
 		<!-- Image preview -->
 		<br /> <br />
 		<div id="imagePreview"></div>
+		<br />
 
 		<h4>About page title:</h4>
 		<span style="color: red" id="error-title"></span>
@@ -78,11 +82,14 @@ if (isset($_POST['submit'])) {
 
 		<h4>About page content:</h4>
 		<span style="color: red" id="error-content"></span>
-		<textarea rows="20" cols="50"  name="about"></textarea>
-		<br /> <br />
+		<textarea rows="15" cols="80"  name="about"></textarea>		
+		<br /> <br /><br />
+		
 		<div>
-		<a href="InsertToHeaderFooter.php">&laquo; Previous</a>
+		<center>
+		<a class="next" href="InsertToHeaderFooter.php">&laquo; Previous</a>		
 		<button class="next" type="submit" name="submit" onclick="return validateForm()">Next &raquo;</button>
+		</center>
 		</div>
 		<br /> <br />
 	</form>
@@ -180,6 +187,16 @@ function file_validate()
 		return true;
 	}
 }</script>
-
+ </div>
+				</div>
+				<center>
+					&copy;
+					<script>document.write(new Date().getFullYear());</script>
+					Copyright - 2WDK Team
+				</center>
+				<br />
+				<div />
+			</div>
+	
 </body>
 </html>

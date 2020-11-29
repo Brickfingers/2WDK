@@ -3,30 +3,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-.next ,a:link, a:visited {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.myclass {
-	background-color: #B3EEF5;
-	padding: 8px 16px;
-}
-</style>
+<meta charset="ISO-8859-1">
+<title>Wizard Home Page</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/Gallery.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="wizardCSS/wizard.css" />
 </head>
-<body class="myclass">
+
+<div class="body">
+	<body>
+		<div class="container">
+			<br>
+			<center>
+				<img src="photo/logo.png" alt="logo"> <br /> <br />
+				<h1 style="text-align: center; color: #71db77;">HomePage Wizard</h1>
+
+			</center>
+			<div class="  text-white">
+
+				<div style="background: #222222;">
+					<div class="card-body p-5">
+
+
+
 <?php
-echo "<h2> HomePage Wizard </h2>";
+//echo "<h2> HomePage Wizard </h2>";
 include "DB_Connect.php";
 if (isset($_POST['submit'])) {
     $myTitle = $_POST["title"];
@@ -71,43 +78,50 @@ if (isset($_POST['submit'])) {
 ?>
 
 	<form name="myForm" method="POST" enctype="multipart/form-data">
-		<h4>Upload an image for Home page:</h4>
-		<input type="file" id="imagefile" onchange="return image_validate()"
-			name="imageToUpload" accept="image/*" value="  " /> <span
-			style="color: red" id="error-imagefile"></span>
-		<!-- Image preview -->
-		<br /> <br />
-		<div id="imagePreview"></div>
-		<h4>Upload an Audio for Home page:</h4>
-		<input type="file" id="audiofile" onchange="return audio_validate()"
-			name="audioToUpload" accept="audio/*" value="  " /> <span
-			style="color: red" id="error-audiofile"></span>
-		<!-- Audio preview -->
-		<br /> <br />
-		<div id="audioPreview"></div>
+							<h4>Upload an image for Home page:</h4>
+							<input type="file" id="imagefile"
+								onchange="return image_validate()" name="imageToUpload"
+								accept="image/*" value="  " /> <span style="color: red"
+								id="error-imagefile"></span>
+							<!-- Image preview -->
+							<br /> <br />
+							<div id="imagePreview"></div>
+							<br />
+							<h4>Upload an Audio for Home page:</h4>
+							<input type="file" id="audiofile"
+								onchange="return audio_validate()" name="audioToUpload"
+								accept="audio/*" value="  " /> <span style="color: red"
+								id="error-audiofile"></span>
+							<!-- Audio preview -->
+							<br /> <br />
+							<div id="audioPreview"></div>
+							<br />
+							<h4>Home page title:</h4>
+							<span style="color: red" id="error-title"></span>
+							<textarea rows="2" cols="50" name="title"></textarea>
+							<br /> <br />
 
-		<h4>Home page title:</h4>
-		<span style="color: red" id="error-title"></span>
-		<textarea rows="2" cols="50"  name="title"></textarea>
-		<br /> <br />
+							<h4>Home page subtitle1:</h4>
+							<span style="color: red" id="error-subtitle1"></span>
+							<textarea rows="2" cols="50" name="subtitle1"></textarea>
+							<br /> <br />
 
-		<h4>Home page subtitle1:</h4>
-		<span style="color: red" id="error-subtitle1"></span>
-		<textarea rows="2" cols="50" name="subtitle1"></textarea>
-		<br /> <br />
+							<h4>Home page subtitle2:</h4>
+							<span style="color: red" id="error-subtitle2"></span>
+							<textarea rows="2" cols="50" name="subtitle2"></textarea>
+							<br /> <br />
+							<br />
 
-		<h4>Home page subtitle2:</h4>
-		<span style="color: red" id="error-subtitle2"></span>
-		<textarea rows="2" cols="50"  name="subtitle2"></textarea>
-		<br /> <br />
-		
-		<div>
-		<a href="SelectLayout.php">&laquo; Previous</a>
-		<button class="next" type="submit" name="submit" onclick="return validateForm()">Next &raquo;</button>
-		</div>
-		<br /> <br />
-	</form>
-	<script>
+							<div>
+								<center>
+									<a class="next" href="SelectLayout.php">&laquo; Previous</a>
+									<button class="next" type="submit" name="submit"
+										onclick="return validateForm()">Next &raquo;</button>
+								</center>
+							</div>
+							<br />
+						</form>
+						<script>
 function validateForm(){
 	var imagefile = document.forms["myForm"]["imageToUpload"].value;
 	var audiofile = document.forms["myForm"]["audioToUpload"].value;
@@ -172,7 +186,7 @@ function validateForm(){
           
 }
 </script>
-	<script type="text/javascript">
+						<script type="text/javascript">
 function image_validate()
 {
 	var valid = true;
@@ -225,7 +239,7 @@ function image_validate()
 	}
 }</script>
 
-	<script type="text/javascript">
+						<script type="text/javascript">
 function audio_validate()
 {
 	var valid = true;
@@ -280,7 +294,17 @@ function audio_validate()
             document.getElementById('error-audiofile').innerHTML = "";
 		return true;
 	}
-}</script>
-
-</body>
+}
+</script>
+					</div>
+				</div>
+				<center>
+					&copy;
+					<script>document.write(new Date().getFullYear());</script>
+					Copyright - 2WDK Team
+				</center>
+				<br />
+				<div />
+			</div>	
+	</body>
 </html>
