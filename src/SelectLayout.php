@@ -3,6 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="ISO-8859-1">
+<title>Wizard Set layout Page</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/Gallery.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="wizardCSS/wizard.css" />
+
 <style type="text/css">
 .next, .link {
 	background-color: #4CAF50;
@@ -15,6 +27,7 @@
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
+	border-radius: 5px;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -22,6 +35,7 @@
 	background-color: #26B8F6;
 	text-decoration: none;
 	border: none;
+	border-radius: 5px;
 	color: white;
 	padding: 9px 58px;
 	text-align: center;
@@ -39,10 +53,22 @@
 </style>
 </head>
 
-<body class="myclass">
+<div class="body">
+	<body>
+		<div class="container">
+			<br>
+			<center>
+				<img src="photo/logo.png" alt="logo"> <br /> <br />
+				<h1 style="text-align: center; color: #71db77;"> Set or create a layout</h1>
+
+			</center>
+			<div class="  text-white">
+
+				<div style="background: #222222;">
+					<div class="card-body p-5">
 <?php
 date_default_timezone_set("America/Toronto");
-echo "<h2> Select or create a layout </h2>";
+
 include "DB_Connect.php";
 /* Execute the query with sqlsrv_fetch_array(). */
 $sql = "SELECT * FROM Layouts ORDER BY Created_at DESC";
@@ -64,7 +90,7 @@ echo "</select>
 
 echo "<div>
 
-<button class=\"set\" type=\"submit\" name=\"submit\" onclick=\"return validateForm()\">Set</button>
+<button class=\"next\" type=\"submit\" name=\"submit\" onclick=\"return validateForm()\">Set</button>
 <a class=\"set\" href=\"HomePage.php\"> Try your website!</a>
 </div>
 </form>";
@@ -91,6 +117,7 @@ if (isset($_POST['submit'])) {
         die(print_r(sqlsrv_errors(), true));
     }
     $layoutName = sqlsrv_get_field($result, 0);
+    echo" <br>";
     
     echo "<p> Website layout is set to ".$layoutName."</p>";
 }
@@ -101,10 +128,21 @@ sqlsrv_close($conn);
 ?>
 
 <div>
+<center>
 		<br> <br> <br> <br> <a class="link" href="WizardPage.php">&laquo; Previous</a> 
 			<a class="link" href="InsertIntoHome.php">Create New Layout &raquo;</a>
 
 	</div>
-
-</body>
+</center>
+	</div>
+				</div>
+				<center>
+					&copy;
+					<script>document.write(new Date().getFullYear());</script>
+					Copyright - 2WDK Team
+				</center>
+				<br />
+				<div />
+			</div>	
+	</body>
 </html>
