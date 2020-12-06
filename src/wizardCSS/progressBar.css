@@ -1,0 +1,72 @@
+#progressbar {
+	margin: 50px;
+	overflow: hidden;
+	color: lightgrey
+}
+
+#progressbar .active {
+	color: #4CAF50
+}
+
+#progressbar li {
+	list-style-type: none;
+	font-size: 16px;
+	width: 25%;
+	float: left;
+	position: relative
+}
+
+#progressbar #home:before {
+	font-family: FontAwesome;
+	content: "\f015";
+	position: relative;
+	z-index: 1
+}
+
+#progressbar #headerFooter:before {
+	font-family: FontAwesome;
+	content: "\f1ea";
+	position: relative;
+	z-index: 1
+}
+
+#progressbar #about:before {
+	font-family: FontAwesome;
+	content: "\f2bb";
+    position: relative;
+	z-index: 1
+}
+
+#progressbar #layout:before {
+	font-family: FontAwesome;
+	content: "\f1fc";
+	position: relative;
+	z-index: 1
+}
+
+#progressbar li:before {
+	width: 75px;
+	height: 75px;
+	line-height: 75px;
+	display: block;
+	font-size: 34px;
+	color: #ffffff;
+	background: #c0c0c0;
+	border-radius: 50%;
+	margin: 0 auto 10px auto;
+	padding: 2px;
+}
+
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 3px;
+	background: lightgray;
+	position: absolute;
+	left: 0;
+	top: 35px;
+}
+
+#progressbar li.active:before, #progressbar li.active:after {
+	background: #4CAF50
+}

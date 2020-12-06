@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="css/Gallery.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="wizardCSS/progressBar.css" />
 <link rel="stylesheet" type="text/css" href="wizardCSS/wizard.css" />
 </head>
 
@@ -24,10 +25,19 @@
 				<img src="photo/logo.png" alt="logo"> <br />
 				<br />
 				<h1 style="text-align: center; color: #71db77;"> AboutPage Wizard </h1>
-
 			</center>
+			<div class="row" >
+				<div class="col-md-12 mx-0">
+					<!-- progressbar -->
+					<ul id="progressbar" style="text-align: center">
+						<li class="active" id="home"><strong>Home Page</strong></li>
+						<li class="active" id="headerFooter"><strong>Header and Footer</strong></li>
+						<li class="active" id="about"><strong>About Page</strong></li>
+						<li id="layout"><strong>Layout</strong></li>
+					</ul>
+				</div>
+			</div>
 			<div class="  text-white">
-
 				<div style="background: #222222;">
 					<div class="card-body p-5">
 

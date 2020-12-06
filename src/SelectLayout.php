@@ -59,7 +59,8 @@
 			<br>
 			<center>
 				<img src="photo/logo.png" alt="logo"> <br /> <br />
-				<h1 style="text-align: center; color: #71db77;"> Set or create a layout</h1>
+				<h1 style="text-align: center; color: #71db77;">Set or create a
+					layout</h1>
 
 			</center>
 			<div class="  text-white">
@@ -78,7 +79,7 @@ if ($stmt === false) {
 }
 
 echo "<form method=\"post\">
-<label for=\"Layouts\">Select a Layout:</label>
+<label for=\"Layouts\">Select a Layout: </label>
 <select name=\"Layouts\" id=\"Layouts\">";
 
 while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
@@ -109,7 +110,7 @@ if (isset($_POST['submit'])) {
                 SET isSet = 1
                 WHERE LayoutId = $selectedId";
     sqlsrv_query($conn, $sqlSet);
-    //name of layout
+    // name of layout
     $sql = "SELECT LayoutName FROM Layouts
                 WHERE LayoutId = $selectedId";
     $result = sqlsrv_query($conn, $sql);
@@ -117,9 +118,9 @@ if (isset($_POST['submit'])) {
         die(print_r(sqlsrv_errors(), true));
     }
     $layoutName = sqlsrv_get_field($result, 0);
-    echo" <br>";
-    
-    echo "<p> Website layout is set to ".$layoutName."</p>";
+    echo " <br>";
+
+    echo "<p> Website layout is set to " . $layoutName . "</p>";
 }
 
 sqlsrv_free_stmt($stmt);
@@ -128,13 +129,14 @@ sqlsrv_close($conn);
 ?>
 
 <div>
-<center>
-		<br> <br> <br> <br> <a class="link" href="WizardPage.php">&laquo; Previous</a> 
-			<a class="link" href="InsertIntoHome.php">Create New Layout &raquo;</a>
-
-	</div>
-</center>
-	</div>
+							<center>
+								<br> <br> <br> <br> <a class="link" href="WizardPage.php">&laquo;
+									Previous</a> <a class="link" href="InsertIntoHome.php">Create
+									New Layout &raquo;</a>
+						
+						</div>
+						</center>
+					</div>
 				</div>
 				<center>
 					&copy;
@@ -143,6 +145,8 @@ sqlsrv_close($conn);
 				</center>
 				<br />
 				<div />
-			</div>	
+			</div>
+	
 	</body>
+
 </html>
