@@ -61,16 +61,30 @@ if (isset($_POST['submit'])) {
         $password = $_POST['Password'];
     }
 
-    // $verifyhash = password_verify($password, $hash); //Needs improvement
-
-    $query = "SELECT * FROM Users1 WHERE Username='$username' AND Password='$password'";
-
+    $query = "SELECT * FROM Users1 WHERE Username='$username'";
+    
     $params = array();
     $options = array(
         "Scrollable" => SQLSRV_CURSOR_KEYSET
     );
     $stmt = sqlsrv_query($conn, $query, $params, $options);
-
+    
+    /* *********TO GET PASSWORD FROM DATABASE*************************/
+    $sql = "SELECT Password FROM Users1 WHERE Username='$username'";
+    $stmt1 = sqlsrv_query($conn, $sql);
+    if ($stmt1 === false) {
+        die(print_r(sqlsrv_errors(), true));
+    }
+    
+    if (sqlsrv_fetch($stmt1) === false) {
+        die(print_r(sqlsrv_errors(), true));
+    }
+    
+    $pass = sqlsrv_get_field($stmt1, 0);
+    
+    $verify_pass = $pass; 
+     
+    /* *********TO DISPLAY THE USERNAME IN THE WIZARD PAGE************/
     $sql = "SELECT Username FROM Users1 WHERE Username='$username'";
     $stmt1 = sqlsrv_query($conn, $sql);
     if ($stmt1 === false) {
@@ -82,36 +96,25 @@ if (isset($_POST['submit'])) {
     }
 
     $name = sqlsrv_get_field($stmt1, 0);
-
-    session_start();
-    $_SESSION['name'] = $name;
-
-    // echo $stmt;
-    $row_count = sqlsrv_num_rows($stmt);
-    // echo $row_count;
-    // echo $verifyhash;
-
-    if ($row_count == 0) {
-        echo "<h1>Username and/or Email Addres incorrect. Please verify and try again.</h1>";
-    } else {
+     
+    if(password_verify($password, $verify_pass)){
         header('Location:WizardPage.php');
+    }else{
+        echo "<h1><center>Username and/or Email Addres incorrect. Please verify and try again.<center></h1>";
     }
 }
 
 ?>
-        </div><br><br>
-			</div>
+        </div>	</br></br>
 			<center>
 				&copy;
 				<script>document.write(new Date().getFullYear());</script>
 				Copyright - 2WDK Team
 			</center>
-			<br />
-			<div />
-		</div>
+			</br>
+		</div></div></div>
 	</body>
 </html>
-
 
 
 

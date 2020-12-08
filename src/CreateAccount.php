@@ -17,8 +17,7 @@
 		<div class="container">
 			<br>
 			<center>
-				<img src="photo/logo.png" alt="logo"> <br />
-				<br />
+				<img src="photo/logo.png" alt="logo"> <br /> <br />
 				<h1 style="text-align: center; color: #71db77;">Create an Account</h1>
 
 			</center>
@@ -36,7 +35,7 @@ $errors = array(
     'Username' => '',
     'EmailAddress' => '',
     'Password' => '',
-    'Password2' => '',
+    'Password2' => ''
 );
 
 if ($goodPass == false) {
@@ -57,8 +56,7 @@ if ($goodPass == false) {
 
     if (isset($_POST['submit'])) {
 
-        
-          if (empty($_POST['Username'])) {
+        if (empty($_POST['Username'])) {
             $errors['Username'] = 'A Username is required ';
         } else {
             $username = $_POST['Username'];
@@ -76,69 +74,67 @@ if ($goodPass == false) {
         if (empty($_POST['Password'])) {
             $errors['Password'] = 'A Password is required ';
         } else {
-            $password = $_POST['Password'];    
+            $password = $_POST['Password'];
         }
-          
-          if(empty($_POST['Password2'])){
-              $errors['Password2'] = 'Please confirm your password ';
-          } else{
-              $confirm_password = $_POST['Password2'];
-              if($password != $confirm_password){
-                  $errors['Password2'] = 'Password did not match ';
-              }
-          }
-        
+
+        if (empty($_POST['Password2'])) {
+            $errors['Password2'] = 'Please confirm your password ';
+        } else {
+            $confirm_password = $_POST['Password2'];
+            if ($password != $confirm_password) {
+                $errors['Password2'] = 'Password did not match ';
+            }
+        }
 
         if (array_filter($errors)) {
-             echo '<h3>Errors in form (see below) </h3><h4>';
-             echo $errors['Username'];
-             echo '<br>';
-             echo $errors['EmailAddress'];
-             echo '<br>';
-             echo $errors['Password'];
-             echo '<br>';
-             echo $errors['Password2'];
+            echo '<h3>Errors in form (see below) </h3><h4>';
+            echo $errors['Username'];
+            echo '<br>';
+            echo $errors['EmailAddress'];
+            echo '<br>';
+            echo $errors['Password'];
+            echo '<br>';
+            echo $errors['Password2'];
         } else {
-            
+
             $username = $_POST['Username'];
             $email = $_POST['EmailAddress'];
             $password = $_POST['Password'];
-            //$hash = password_hash( $password , PASSWORD_DEFAULT );
-           
-            // check if account exists and create account
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+
+            session_start();
+            $_SESSION['passwordhashed'] = $hash;
+
             $query = "SELECT * FROM Users1 WHERE Username='$username' OR EmailAddress='$email'";
-            
+
             $params = array();
-            $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
-            $stmt = sqlsrv_query( $conn, $query , $params, $options );
-           
-            $row_count = sqlsrv_num_rows( $stmt );
-            
+            $options = array(
+                "Scrollable" => SQLSRV_CURSOR_KEYSET
+            );
+            $stmt = sqlsrv_query($conn, $query, $params, $options);
+
+            $row_count = sqlsrv_num_rows($stmt);
+
             if ($row_count != 0)
                 echo "<h1>Username or Email Addres already exist. Please try again.</h1>";
-                else{
-                    $sql = "INSERT INTO Users1(Role, Username, Password, EmailAddress) VALUES(?,?,?,? )";
-                    
-                    $params2 = array(
-                        'Admin',
-                        $username,
-                        //$hash,
-                        $password,
-                        $email
-                    );
-                    
-                    $stmt2 = sqlsrv_query($conn, $sql, $params2);
-                    if ($stmt2 === false) {
-                        die(print_r(sqlsrv_errors(), true));
-                    } else {
-                        header("Location:AccountCreated.php");
-                        exit();
-                    }
-                    
-                }
-               
-            
+            else {
+                $sql = "INSERT INTO Users1(Role, Username, Password, EmailAddress) VALUES(?,?,?,? )";
 
+                $params2 = array(
+                    'Admin',
+                    $username,
+                    $hash,
+                    $email
+                );
+
+                $stmt2 = sqlsrv_query($conn, $sql, $params2);
+                if ($stmt2 === false) {
+                    die(print_r(sqlsrv_errors(), true));
+                } else {
+                    header("Location:AccountCreated.php");
+                    exit();
+                }
+            }
         }
     }
 
