@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
 
     if (array_filter($errors)) {
 
-        echo '<h3>Errors in form (see below) </h3><h4>';
+        echo '<center><h3>Errors in form (see below) </h3><h4>';
         echo $errors['Username'];
         echo '<br>';
         echo $errors['Password'];
