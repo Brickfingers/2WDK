@@ -169,7 +169,7 @@ if (isset($_POST['submit'])) {
 		<div>
 		<center>
 		<a class="next" href="InsertToAbout.php">&laquo; Previous</a>		
-		<button class="next" type="submit" name="submit" onclick="return validateForm()">Next &raquo;</button>
+		<button class="next" type="submit" name="submit" onclick="return validateForm()">Finish</button>
 		</center>
 		</div>
 		
