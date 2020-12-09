@@ -34,6 +34,7 @@
 						<li class="active" id="headerFooter"><strong>Header and Footer</strong></li>
 						<li class="active" id="about"><strong>About Page</strong></li>
 						<li class="active" id="layout"><strong>Layout</strong></li>
+						<li id="finish"><strong>Finish</strong></li>
 					</ul>
 				</div>
 			</div>
@@ -116,13 +117,10 @@ if (isset($_POST['submit'])) {
            ,[IsSet]
            ,[ThemeCode])    
             SELECT '$LayoutName',$homePageId ,$aboutId,$galleryId,$bookingId,$headerId,$footerId
-                    ,'$todayDate', 1 ,'$themeCode'
-            ";
+                    ,'$todayDate', 1 ,'$themeCode'";
 
     sqlsrv_query($conn, $sql);
-    echo "<font color='green'>" . "Layout is set.  " . "</font>";
-    echo "<a href=\"HomePage.php\" id=\"myBtn\" class=\"next\">Try your website! </a>";
-    echo " <br /> <br />";
+    header("Location: EndWizard.php");
 }
 ?>
 

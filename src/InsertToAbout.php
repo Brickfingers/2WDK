@@ -34,6 +34,7 @@
 						<li class="active" id="headerFooter"><strong>Header and Footer</strong></li>
 						<li class="active" id="about"><strong>About Page</strong></li>
 						<li id="layout"><strong>Layout</strong></li>
+						<li id="finish"><strong>Finish</strong></li>
 					</ul>
 				</div>
 			</div>
@@ -65,9 +66,6 @@ if (isset($_POST['submit'])) {
             SELECT '$aboutTitle' ,'$aboutme','$filename'";
 
         sqlsrv_query($conn, $sql);
-        
-        echo "<font color='green'>" . "About page is set." . "</font>";
-        echo " <br /> <br />";
         header("Location: InsertToLayout.php");
     } else {
         echo "Sorry, there was an error uploading your file, try again!";
@@ -187,7 +185,7 @@ function file_validate()
                 reader.onload = function(e) { 
                     document.getElementById( 
                         'imagePreview').innerHTML =  
-                        	'<img style="width: 200px" src="' + e.target.result  
+                        	'<img style="width: 400px" src="' + e.target.result  
                         + '"/>'; 
                 }; 
                   

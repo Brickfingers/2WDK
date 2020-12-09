@@ -33,6 +33,7 @@
 						<li class="active" id="headerFooter"><strong>Header and Footer</strong></li>
 						<li id="about"><strong>About Page</strong></li>
 						<li id="layout"><strong>Layout</strong></li>
+						<li id="finish"><strong>Finish</strong></li>
 					</ul>
 				</div>
 			</div>
@@ -72,9 +73,6 @@ if (isset($_POST['submit'])) {
             ";
 
     sqlsrv_query($conn, $sql);
-
-    echo "<font color='green'>" . "Header and Footer is set." . "</font>";
-    echo " <br /> <br />";
     header("Location: InsertToAbout.php");
 }
 ?>
