@@ -129,14 +129,13 @@ sqlsrv_close($conn);
 ?>
 
 <div>
-							<center>
-								<br> <br> <br> <br> <a class="link" href="WizardPage.php">&laquo;
-									Previous</a> <a class="link" href="InsertIntoHome.php">Create
-									New Layout &raquo;</a>
+		<center>
+		<br> <br> <br> <br> <a class="link" href="WizardPage.php">&laquo;Previous</a> 
+		<a class="link" href="InsertIntoHome.php">Create New Layout &raquo;</a>
+		</center>				
+</div>
 						
-						</div>
-						</center>
-					</div>
+	</div>
 				</div>
 				<center>
 					&copy;
@@ -144,7 +143,7 @@ sqlsrv_close($conn);
 					Copyright - 2WDK Team
 				</center>
 				<br />
-				<div />
+				</div>
 			</div>
 	
 	</body>

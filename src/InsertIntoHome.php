@@ -34,6 +34,7 @@
 						<li id="headerFooter"><strong>Header and Footer</strong></li>
 						<li id="about"><strong>About Page</strong></li>
 						<li id="layout"><strong>Layout</strong></li>
+						<li id="finish"><strong>Finish</strong></li>
 					</ul>
 				</div>
 			</div>
@@ -77,10 +78,6 @@ if (isset($_POST['submit'])) {
             SELECT '$myTitle','$mySubtitle1','$mySubtitle2','$imagefilename','$audiofilename'";
 
         sqlsrv_query($conn, $sql);
-
-        echo "<font color='green'>" . "Home page is set." . "</font>";
-
-        echo " <br /> <br />"; 
         header("Location: InsertToHeaderFooter.php");
     } else {
         echo "Sorry, there was an error uploading your files.";
@@ -240,7 +237,7 @@ function image_validate()
                 reader.onload = function(e) { 
                     document.getElementById( 
                         'imagePreview').innerHTML =  
-                        	'<img style="width: 200px" src="' + e.target.result  
+                        	'<img style="width: 400px" src="' + e.target.result  
                         + '"/>'; 
                 }; 
                   
@@ -297,7 +294,7 @@ function audio_validate()
                 reader.onload = function(e) { 
                     document.getElementById( 
                         'audioPreview').innerHTML =  
-                        	'<audio style="width: 20%" controls src="' + e.target.result  
+                        	'<audio style="width: 30%" controls src="' + e.target.result  
                         + '"/>'; 
                 }; 
                   
