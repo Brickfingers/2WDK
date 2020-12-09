@@ -51,6 +51,11 @@
 
 <?php
 include ('DB_Connect.php');
+session_start();
+$errors = array(
+    'Username' => '',
+    'Password' => ''
+);
 
 if (isset($_POST['submit'])) {
 
@@ -60,7 +65,29 @@ if (isset($_POST['submit'])) {
     if (isset($_POST['Password'])) {
         $password = $_POST['Password'];
     }
+    
+        
+    if (empty($_POST['Username'])) {
+        $errors['Username'] = 'A Username is required ';
+    } else {
+        $username = $_POST['Username'];
+    }
+       
+    if (empty($_POST['Password'])) {
+        $errors['Password'] = 'A Password is required ';
+    } else {
+        $password = $_POST['Password'];
+    }
 
+    if (array_filter($errors)) {
+        
+        echo '<h3>Errors in form (see below) </h3><h4>';
+        echo $errors['Username'];
+        echo '<br>';
+        echo $errors['Password'];
+    } else {
+        
+   
     $query = "SELECT * FROM Users1 WHERE Username='$username'";
     
     $params = array();
@@ -102,6 +129,7 @@ if (isset($_POST['submit'])) {
     }else{
         echo "<h1><center>Username and/or Email Addres incorrect. Please verify and try again.<center></h1>";
     }
+    }
 }
 
 ?>
@@ -115,5 +143,6 @@ if (isset($_POST['submit'])) {
 		</div></div></div>
 	</body>
 </html>
+
 
 
