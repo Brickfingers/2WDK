@@ -65,14 +65,13 @@ if (isset($_POST['submit'])) {
     if (isset($_POST['Password'])) {
         $password = $_POST['Password'];
     }
-    
-        
+
     if (empty($_POST['Username'])) {
         $errors['Username'] = 'A Username is required ';
     } else {
         $username = $_POST['Username'];
     }
-       
+
     if (empty($_POST['Password'])) {
         $errors['Password'] = 'A Password is required ';
     } else {
@@ -80,68 +79,72 @@ if (isset($_POST['submit'])) {
     }
 
     if (array_filter($errors)) {
-        
+
         echo '<h3>Errors in form (see below) </h3><h4>';
         echo $errors['Username'];
         echo '<br>';
         echo $errors['Password'];
     } else {
-        
-   
-    $query = "SELECT * FROM Users1 WHERE Username='$username'";
-    
-    $params = array();
-    $options = array(
-        "Scrollable" => SQLSRV_CURSOR_KEYSET
-    );
-    $stmt = sqlsrv_query($conn, $query, $params, $options);
-    
-    /* *********TO GET PASSWORD FROM DATABASE*************************/
-    $sql = "SELECT Password FROM Users1 WHERE Username='$username'";
-    $stmt1 = sqlsrv_query($conn, $sql);
-    if ($stmt1 === false) {
-        die(print_r(sqlsrv_errors(), true));
-    }
-    
-    if (sqlsrv_fetch($stmt1) === false) {
-        die(print_r(sqlsrv_errors(), true));
-    }
-    
-    $pass = sqlsrv_get_field($stmt1, 0);
-    
-    $verify_pass = $pass; 
-     
-    /* *********TO DISPLAY THE USERNAME IN THE WIZARD PAGE************/
-    $sql = "SELECT Username FROM Users1 WHERE Username='$username'";
-    $stmt1 = sqlsrv_query($conn, $sql);
-    if ($stmt1 === false) {
-        die(print_r(sqlsrv_errors(), true));
-    }
 
-    if (sqlsrv_fetch($stmt1) === false) {
-        die(print_r(sqlsrv_errors(), true));
-    }
+        $query = "SELECT * FROM Users1 WHERE Username='$username'";
 
-    $name = sqlsrv_get_field($stmt1, 0);
-     
-    if(password_verify($password, $verify_pass)){
-        header('Location:WizardPage.php');
-    }else{
-        echo "<h1><center>Username and/or Email Addres incorrect. Please verify and try again.<center></h1>";
-    }
+        $params = array();
+        $options = array(
+            "Scrollable" => SQLSRV_CURSOR_KEYSET
+        );
+        $stmt = sqlsrv_query($conn, $query, $params, $options);
+
+        /* *********TO GET PASSWORD FROM DATABASE************************ */
+        $sql = "SELECT Password FROM Users1 WHERE Username='$username'";
+        $stmt1 = sqlsrv_query($conn, $sql);
+        if ($stmt1 === false) {
+            die(print_r(sqlsrv_errors(), true));
+        }
+
+        if (sqlsrv_fetch($stmt1) === false) {
+            die(print_r(sqlsrv_errors(), true));
+        }
+
+        $pass = sqlsrv_get_field($stmt1, 0);
+
+        $verify_pass = $pass;
+
+        /* *********TO DISPLAY THE USERNAME IN THE WIZARD PAGE*********** */
+        $sql1 = "SELECT Username FROM Users1 WHERE Username='$username'";
+        $stmt2 = sqlsrv_query($conn, $sql1);
+        if ($stmt2 === false) {
+            die(print_r(sqlsrv_errors(), true));
+        }
+
+        if (sqlsrv_fetch($stmt2) === false) {
+            die(print_r(sqlsrv_errors(), true));
+        }
+
+        $name1 = sqlsrv_get_field($stmt2, 0);
+
+        if (password_verify($password, $verify_pass)) {
+            header('Location:WizardPage.php');
+        } else {
+            echo "<h1><center>Username and/or Email Addres incorrect. Please verify and try again.<center></h1>";
+        }
     }
 }
 
 ?>
-        </div>	</br></br>
-			<center>
-				&copy;
-				<script>document.write(new Date().getFullYear());</script>
-				Copyright - 2WDK Team
-			</center>
-			</br>
-		</div></div></div>
-	</body>
+        </div>
+				</br>
+				</br>
+				<center>
+					&copy;
+					<script>document.write(new Date().getFullYear());</script>
+					Copyright - 2WDK Team
+				</center>
+				</br>
+			</div>
+		</div>
+
+</div>
+</body>
 </html>
 
 

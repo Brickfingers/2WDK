@@ -39,22 +39,21 @@
 								<?php
         session_start();
         echo "<h2><center>Welcome, ";
-        echo $_SESSION['name'];
+        //echo $_SESSION['name'];
         echo "!</h2><br><center><h1> Here you will find a wizard to help you edit and customize your website.<br><br> Start now by clicking the button below.<br><br><br></h1>";
         ?>
         <!-- Implementation in Sprint 3 -->
 								<button type="submit" class="button1"
 									formaction="/WebApp/src/SelectLayout.php">Start Here!</button>
-								<br>
-								<br>
+								<br> <br>
 								<button type="submit" class="button1"
-									formaction="/WebApp/src/AdminPage.php">&nbsp;&nbsp;Log Out&nbsp;&nbsp;</button>
+									formaction="/WebApp/src/AdminPage.php">&nbsp;&nbsp;Log
+									Out&nbsp;&nbsp;</button>
 							</form>
 						</center>
 					</div>
 				</div>
-				</br>
-				</br>
+				</br> </br>
 				<center>
 					&copy;
 					<script>document.write(new Date().getFullYear());</script>
