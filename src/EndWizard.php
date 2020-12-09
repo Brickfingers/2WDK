@@ -15,11 +15,6 @@
 <link rel="stylesheet" type="text/css" href="wizardCSS/wizard.css" />
 </head>
 
-
-
-</head>
-
-
 <body>
 <div class="body">
 	
@@ -43,11 +38,12 @@
 
 					<div class="card-body p-5">
 						<div class="card">
-							<h2 class="fs-title text-center">Success !</h2>
-							<br> <br>
+						<br>
+							<h2  class="fs-title text-center">Success !</h2>
+							<br> 
 							<div class="row justify-content-center">
 								<div class="col-3">
-									<img src="https://img.icons8.com/color/96/000000/ok--v2.png"
+									<img src="https://img.icons8.com/fluent-systems-filled/128/000000/instagram-check-mark.png"
 										class="fit-image">
 								</div>
 							</div>
