@@ -105,7 +105,7 @@ if ($goodPass == false) {
             session_start();
             $_SESSION['passwordhashed'] = $hash;
 
-            $query = "SELECT * FROM Users1 WHERE Username='$username' OR EmailAddress='$email'";
+            $query = "SELECT * FROM Users WHERE Username='$username' OR EmailAddress='$email'";
 
             $params = array();
             $options = array(
@@ -118,7 +118,7 @@ if ($goodPass == false) {
             if ($row_count != 0)
                 echo "<h1>Username or Email Addres already exist. Please try again.</h1>";
             else {
-                $sql = "INSERT INTO Users1(Role, Username, Password, EmailAddress) VALUES(?,?,?,? )";
+                $sql = "INSERT INTO Users(Role, Username, Password, EmailAddress) VALUES(?,?,?,? )";
 
                 $params2 = array(
                     'Admin',

@@ -26,7 +26,7 @@
 			<br>
 			<center>
 				<img src="photo/logo.png" alt="logo"> <br /> <br />
-				<h1 style="text-align: center; color: #71db77;">Create an Account</h1>
+				<h1 style="text-align: center; color: #71db77;">Login into an Account</h1>
 
 			</center>
 			<div class="  text-white">
@@ -86,7 +86,7 @@ if (isset($_POST['submit'])) {
         echo $errors['Password'];
     } else {
 
-        $query = "SELECT * FROM Users1 WHERE Username='$username'";
+        $query = "SELECT * FROM Users WHERE Username='$username'";
 
         $params = array();
         $options = array(
@@ -95,7 +95,7 @@ if (isset($_POST['submit'])) {
         $stmt = sqlsrv_query($conn, $query, $params, $options);
 
         /* *********TO GET PASSWORD FROM DATABASE************************ */
-        $sql = "SELECT Password FROM Users1 WHERE Username='$username'";
+        $sql = "SELECT Password FROM Users WHERE Username='$username'";
         $stmt1 = sqlsrv_query($conn, $sql);
         if ($stmt1 === false) {
             die(print_r(sqlsrv_errors(), true));
@@ -110,7 +110,7 @@ if (isset($_POST['submit'])) {
         $verify_pass = $pass;
 
         /* *********TO DISPLAY THE USERNAME IN THE WIZARD PAGE*********** */
-        $sql1 = "SELECT Username FROM Users1 WHERE Username='$username'";
+        $sql1 = "SELECT Username FROM Users WHERE Username='$username'";
         $stmt2 = sqlsrv_query($conn, $sql1);
         if ($stmt2 === false) {
             die(print_r(sqlsrv_errors(), true));
