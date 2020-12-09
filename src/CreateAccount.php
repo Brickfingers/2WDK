@@ -96,7 +96,7 @@ if ($goodPass == false) {
             echo '<br>';
             echo $errors['Password2'];
         } else {
-
+ 
             $username = $_POST['Username'];
             $email = $_POST['EmailAddress'];
             $password = $_POST['Password'];
