@@ -10,7 +10,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/Gallery.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="wizardCSS/progressBar.css" />
@@ -23,7 +22,7 @@
 			<br>
 			<center>
 				<img src="photo/logo.png" alt="logo"> <br /> <br />
-				<h1 style="text-align: center; color: #71db77;">Header and Footer Wizard</h1>
+				<h1>Header and Footer Wizard</h1>
 			</center>
 			<div class="row">
 				<div class="col-md-12 mx-0">
@@ -37,9 +36,8 @@
 					</ul>
 				</div>
 			</div>
-			<div class="  text-white">
-
-				<div style="background: #222222;">
+			<div>
+				<div>
 					<div class="card-body p-5">
 
 <?php

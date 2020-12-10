@@ -1,6 +1,7 @@
 .body, .myclass {
 	background-color: #222222;
 	text-align: center;
+	color: white;
 }
 
 .center {
@@ -15,7 +16,7 @@
   background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -66,9 +67,9 @@ h5{
 }
 
 .card {
-    background: white;
+    background: #4CAF50;
     border: 0 none;
-    border-radius: 0px;
+    border-radius: 5px;
     box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
     padding: 20px 40px 30px 40px;
     box-sizing: border-box;

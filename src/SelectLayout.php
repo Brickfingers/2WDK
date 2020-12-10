@@ -10,47 +10,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/Gallery.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="wizardCSS/wizard.css" />
 
-<style type="text/css">
-.next, .link {
-	background-color: #4CAF50;
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	border-radius: 5px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.set {
-	background-color: #26B8F6;
-	text-decoration: none;
-	border: none;
-	border-radius: 5px;
-	color: white;
-	padding: 9px 58px;
-	text-align: center;
-	display: inline-block;
-	font-size: 14px;
-	margin: 4px 2px;
-	cursor: pointer;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.myclass {
-	background-color: #B3EEF5;
-	padding: 8px 16px;
-}
-</style>
 </head>
 
 <div class="body">
@@ -59,13 +22,11 @@
 			<br>
 			<center>
 				<img src="photo/logo.png" alt="logo"> <br /> <br />
-				<h1 style="text-align: center; color: #71db77;">Set or create a
-					layout</h1>
+				<h1>Set or create a	layout</h1>
 
 			</center>
-			<div class="  text-white">
-
-				<div style="background: #222222;">
+			<div>
+				<div>
 					<div class="card-body p-5">
 <?php
 date_default_timezone_set("America/Toronto");
@@ -79,7 +40,7 @@ if ($stmt === false) {
 }
 
 echo "<form method=\"post\">
-<label for=\"Layouts\">Select a Layout: </label>
+<label for=\"Layouts\"><h4>Select a Layout:</h4></label>&nbsp;
 <select name=\"Layouts\" id=\"Layouts\">";
 
 while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
@@ -90,9 +51,8 @@ echo "</select>
 <br><br>";
 
 echo "<div>
-
 <button class=\"next\" type=\"submit\" name=\"submit\" onclick=\"return validateForm()\">Set</button>
-<a class=\"set\" href=\"HomePage.php\"> Try your website!</a>
+<a class=\"next\" href=\"HomePage.php\"> Try your website!</a>
 </div>
 </form>";
 
@@ -127,11 +87,10 @@ sqlsrv_free_stmt($stmt);
 sqlsrv_close($conn);
 
 ?>
-
 <div>
 		<center>
-		<br> <br> <br> <br> <a class="link" href="WizardPage.php">&laquo;Previous</a> 
-		<a class="link" href="InsertIntoHome.php">Create New Layout &raquo;</a>
+		<br> <br> <br> <br> <a class="next" href="WizardPage.php">&laquo;Previous</a> 
+		<a class="next" href="InsertIntoHome.php">Create New Layout &raquo;</a>
 		</center>				
 </div>
 						

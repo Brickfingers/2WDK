@@ -24,7 +24,7 @@
 			<center>
 				<img src="photo/logo.png" alt="logo"> <br />
 				<br />
-				<h1 style="text-align: center; color: #71db77;"> Layout Wizard </h1>
+				<h1> Layout Wizard </h1>
 			</center>
 						<div class="row" >
 				<div class="col-md-12 mx-0">
@@ -38,12 +38,11 @@
 					</ul>
 				</div>
 			</div>
-			<div class="  text-white">
+			<div>
 
-				<div style="background: #222222;">
+				<div>
 					<div class="card-body p-5">
-
-
+					
 <?php
 
 date_default_timezone_set("America/Toronto");

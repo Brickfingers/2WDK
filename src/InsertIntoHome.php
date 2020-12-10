@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/Gallery.css" />
+
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="wizardCSS/progressBar.css" />
@@ -23,7 +23,7 @@
 			<br>
 			<center>
 				<img src="photo/logo.png" alt="logo"> <br /> <br />
-				<h1 style="text-align: center; color: #71db77;">HomePage Wizard</h1>
+				<h1>HomePage Wizard</h1>
 
 			</center>
 			<div class="row" >
@@ -38,15 +38,13 @@
 					</ul>
 				</div>
 			</div>
-			<div class="text-white">
-
-				<div style="background: #222222;">
+			<div>
+				<div >
 					<div class="card-body p-5">
 
 
 
 <?php
-//echo "<h2> HomePage Wizard </h2>";
 include "DB_Connect.php";
 if (isset($_POST['submit'])) {
     $myTitle = $_POST["title"];
