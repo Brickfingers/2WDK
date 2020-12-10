@@ -108,17 +108,17 @@ if (isset($_POST['submit'])) {
     	<form name="myForm" method="POST" enctype="multipart/form-data">
     		<h4>Upload the first image:</h4>
     		<input type="file" id="referenceImage1"
-    			onchange="return image_validate(0)" name="referenceImage1"
+    			onchange="return image_validate(1)" name="referenceImage1"
     			accept="image/*" value="  " /> <span style="color: red"
     			id="error-imagefile1"></span>
     		<!-- Image preview -->
     		<br /> <br />
-    		<div id="imagePrevie1"></div>
+    		<div id="imagePreview1"></div>
     		<br />
     		
     		<h4>Upload the second image:</h4>
-    		<input type="file" id="imagefile"
-    			onchange="return image_validate(1)" name="referenceImage2"
+    		<input type="file" id="referenceImage2"
+    			onchange="return image_validate(2)" name="referenceImage2"
     			accept="image/*" value="  " /> <span style="color: red"
     			id="error-imagefile2"></span>
     		<!-- Image preview -->
@@ -127,8 +127,8 @@ if (isset($_POST['submit'])) {
     		<br />
     		
     		<h4>Upload the third image:</h4>
-    		<input type="file" id="imagefile"
-    			onchange="return image_validate(2)" name="referenceImage3"
+    		<input type="file" id="referenceImage3"
+    			onchange="return image_validate(3)" name="referenceImage3"
     			accept="image/*" value="  " /> <span style="color: red"
     			id="error-imagefile3"></span>
     		<!-- Image preview -->
@@ -137,8 +137,8 @@ if (isset($_POST['submit'])) {
     		<br />
     
     		<h4>Upload the fourth image:</h4>
-    		<input type="file" id="imagefile"
-    			onchange="return image_validate(3)" name="referenceImage4"
+    		<input type="file" id="referenceImage4"
+    			onchange="return image_validate(4)" name="referenceImage4"
     			accept="image/*" value="  " /> <span style="color: red"
     			id="error-imagefile4"></span>
     		<!-- Image preview -->
@@ -147,8 +147,8 @@ if (isset($_POST['submit'])) {
     		<br />
     
     		<h4>Upload the fifth image:</h4>
-    		<input type="file" id="imagefile"
-    			onchange="return image_validate(4)" name="referenceImage5"
+    		<input type="file" id="referenceImage5"
+    			onchange="return image_validate(5)" name="referenceImage5"
     			accept="image/*" value="  " /> <span style="color: red"
     			id="error-imagefile5"></span>
     		<!-- Image preview -->
@@ -226,22 +226,25 @@ function image_validate(index){
 	var file_size = "";
 	var valid_size = 5*1000*1000;
 	var file = document.getElementById("referenceImage"+index);
+	var photo =document.getElementById("imagePreview"+index);
+	var error=document.getElementById("error-imagefile"+index);
+	
 	if(file.files.length != 0)
 	{
-		file_name = file.files[index].name;
-		file_size = file.files[index].size;
-		file_type = file.files[index].type;
+		file_name = file.files[0].name;
+		file_size = file.files[0].size;
+		file_type = file.files[0].type;
 		
 		if(file_type!="image/png" && file_type!="image/jpeg" && file_type!="image/gif")
 		{
 			valid = false;
-			document.getElementById('error-imagefile1').innerHTML = "* Only 'PNG', 'JPG/JPEG' and 'GIF' file type supported."
+			error.innerHTML = "* Only 'PNG', 'JPG/JPEG' and 'GIF' file type supported."
 			file.value="";
 		}
 		if(file_size > valid_size)
 		{
 			valid = false;
-			document.getElementById('error-imagefile1').innerHTML = "* File size should be upto 3MB.";
+			error.innerHTML = "* File size should be upto 5MB.";
 			file.value="";
 		}
 	}
@@ -249,21 +252,20 @@ function image_validate(index){
 	{
 		valid = false;
 		// No Image preview  
-        document.getElementById('imagePreview1').innerHTML = ""; 
+        photo.innerHTML = ""; 
 	}
 	if(valid==true)
 	{
 		// Image preview 
-        if (file.files && file.files[index]) { 
+        if (file.files && file.files[0]) { 
             var reader = new FileReader(); 
             reader.onload = function(e) { 
-                document.getElementById( 
-                    'imagePreview1').innerHTML =  
+                photo.innerHTML =  
                     	'<img style="width: 200px" src="' + e.target.result  
                     + '"/>'; 
             }; 
               
-            reader.readAsDataURL(file.files[index]); 
+            reader.readAsDataURL(file.files[0]); 
         } 
         document.getElementById('error-imagefile1').innerHTML = "";
 		return true;
