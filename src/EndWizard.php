@@ -35,7 +35,7 @@
 			</div>
 
 					<div class="card-body p-5">
-						<div class="card">
+						<div class="mycard">
 						<br>
 							<h2  class="fs-title text-center">Success !</h2>
 							<br> 
@@ -49,7 +49,7 @@
 							<div>
 								<div>
 									<h4 class= "success" >You Have Successfully Created Your New Layout</h4><br>
-									<a class="end" href="HomePage.php"> Try Your Website </a>
+									<a class="end" href="HomePage.php">  Try Your Website  </a>
 								</div>
 							</div>
 						</div>

@@ -1,3 +1,7 @@
+.row{
+  margin-right: 17%;
+  margin-left:15%
+}
 #progressbar {
 	margin: 50px;
 	overflow: hidden;
