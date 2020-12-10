@@ -1,11 +1,3 @@
-<?php
-
-/************************************
- * Fall 2020 Admin Page             *
- * Fall 2020 Admin Page             *
- ***********************************/
-?>
-
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -36,9 +28,10 @@
 							<form method="post">
 								<?php
         session_start();
-        echo "<h2><center>Welcome, ";
-        //echo $_SESSION['name'];
-        echo "!</h2><br><center><h1> Here you will find a wizard to help you edit and customize your website.<br><br> Start now by clicking the button below.<br><br><br></h1>";
+        
+        echo "<h2><br><center>Welcome, ";
+        echo $_SESSION['Username'];
+        echo "!</h2><br><br><center><h1> Here you will find a wizard to help you edit and customize your website.<br><br> Start now by clicking the button below.<br><br><br></h1>";
         ?>
         <!-- Implementation in Sprint 3 -->
 								<button type="submit" class="button1"

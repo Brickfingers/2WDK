@@ -102,9 +102,6 @@ if ($goodPass == false) {
             $password = $_POST['Password'];
             $hash = password_hash($password, PASSWORD_DEFAULT);
 
-            session_start();
-            $_SESSION['passwordhashed'] = $hash;
-
             $query = "SELECT * FROM Users WHERE Username='$username' OR EmailAddress='$email'";
 
             $params = array();

@@ -39,7 +39,7 @@
 								<input type="text" name="Username" placeholder="Username"> <br />
 								<br /> <input type="password" name="Password"
 									placeholder="Password"> <br /> <br /> <a
-									href="RecoverCredentials.php">Recover Password or Username</a>
+									href="RecoverCredentials.php">Forgot Password?</a>
 								<br /> <br />
 								<button type="submit" name="submit" class="button">Log in</button>
 								<br /> <br />
@@ -51,7 +51,7 @@
 
 <?php
 include ('DB_Connect.php');
-session_start();
+
 $errors = array(
     'Username' => '',
     'Password' => ''
@@ -119,11 +119,13 @@ if (isset($_POST['submit'])) {
         if (sqlsrv_fetch($stmt2) === false) {
             die(print_r(sqlsrv_errors(), true));
         }
-
-        $name1 = sqlsrv_get_field($stmt2, 0);
+    
+        session_start();
+        //$name = sqlsrv_get_field($stmt2, 0);
+        $_SESSION['Username'] = $username; 
 
         if (password_verify($password, $verify_pass)) {
-            header('Location:WizardPage.php');
+           header('Location:WizardPage.php');
         } else {
             echo "<h1><center>Username and/or Email Addres incorrect. Please verify and try again.<center></h1>";
         }

@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Recover Credentials</title>
+<title>Reset Password</title>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,83 +15,129 @@
 <div class="body">
 	<body>
 		<div class="container">
-			<br> <br>
+			<br>
 			<center>
-				<img src="photo/logo.png" alt="logo"> <br />
-				<br />
-				<h1 style="text-align: center; color: #71db77;">Recover Password</h1>
+				<img src="photo/logo.png" alt="logo"> <br /> <br />
+				<h1 style="text-align: center; color: #71db77;">Reset Password</h1>
+
 			</center>
 			<div class="  text-white">
 
-				<div class="card1" style="background: #222222;">
-
+				<div style="background: #222222;">
 					<div class="card-body p-5">
-						<center>
-							<form action="" method="post">
-								<input type="text" name="email"
-									placeholder="Type your email address"> <br />
-								<br />
-								<a href="AdminPage2.php">Already have an account? Login.<br/><br/></a>
-								<br />
-								<button type="submit" name="submit" value="Submit"
-									class="button2">Recover Password</button></br></br>
-									<button type="submit" name="submit2" value="Submit"
-									class="button2">Recover Username</button>
-								</form>          
+			
 <?php
 include ('DB_Connect.php');
+$goodPass = false;
 
-//recover password
-if (isset($_POST['submit'])) {
+$email = $password = $confirm_password = '';
+$errors = array(
+    'EmailAddress' => '',
+    'Password' => '',
+    'Password2' => ''
+);
 
-    $to = $_POST['email'];
-    $subject = "Password Recovery";
-    $message = " Please enter to the following URL to recover your password \n\n";
+if ($goodPass == false) {
+    echo "<center>
+        <form method=\"post\">
+            
+            <input type=\"email\" name=\"EmailAddress\" placeholder=\"Type your email address\">
+             <br/><br/>
+            
+            <input type=\"password\" name=\"Password\" placeholder=\"Type new password\"><br/>
+            <input type=\"password\" name=\"Password2\" placeholder=\"Type again new password\">
+             <br/><br/>
+    <br/>
+            <button type=\"submit\" name=\"submit\" class=\"button2\">Update Account</button><br/><br/>";
+    echo '
+            <a href="AdminPage.php">Already have an account? Login.<br/><br/></a>';
 
-    mail($to, $subject, $message);
+    if (isset($_POST['submit'])) {
 
-    if (! $mail->Send()) {
-        $error = "Please try Later, Error Occured while Processing...";
-        return $error;
-    } else {
-        $error = "Thanks You !! Your email is sent.";
-        return $error;
+
+        if (empty($_POST['EmailAddress'])) {
+            $errors['EmailAddress'] = 'An email is required ';
+        } else {
+            $email = $_POST['EmailAddress'];
+            if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $errors['EmailAddress'] = 'Email must be a valid email address ';
+            }
+        }
+
+        if (empty($_POST['Password'])) {
+            $errors['Password'] = 'A Password is required ';
+        } else {
+            $password = $_POST['Password'];
+        }
+
+        if (empty($_POST['Password2'])) {
+            $errors['Password2'] = 'Please confirm your password ';
+        } else {
+            $confirm_password = $_POST['Password2'];
+            if ($password != $confirm_password) {
+                $errors['Password2'] = 'Password did not match ';
+            }
+        }
+
+        if (array_filter($errors)) {
+            echo '<h3>Errors in form (see below) </h3><h4>';
+            echo $errors['EmailAddress'];
+            echo '<br>';
+            echo $errors['Password'];
+            echo '<br>';
+            echo $errors['Password2'];
+        } else {
+ 
+            $email = $_POST['EmailAddress'];
+            $password = $_POST['Password'];
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+
+            $query = "SELECT * FROM Users WHERE EmailAddress='$email'";
+
+            $params = array();
+            $options = array(
+                "Scrollable" => SQLSRV_CURSOR_KEYSET
+            );
+            $stmt = sqlsrv_query($conn, $query, $params, $options);
+
+            $row_count = sqlsrv_num_rows($stmt);
+
+            if ($row_count == 1){
+                $sql = "UPDATE  Users set Password='$hash' WHERE EmailAddress='$email'";          
+                 
+                
+                $stmt = sqlsrv_query($conn, $sql, $params);
+                if ($stmt === false) {
+                    die(print_r(sqlsrv_errors(), true));
+                } else {
+                    header("Location:AccountCreated.php");
+                    exit();
+                }
+                
+            }
+            else {
+                echo "<h1>Email Addres not found. Please create an account.</h1>";
+            }
+        }
     }
+
+    sqlsrv_close($conn);
 }
 
-//recover username
-if (isset($_POST['submit2'])) {
-    
-    $email = $_POST['email'];
-    $query = "SELECT * FROM Users1 WHERE EmailAddress='$email'";
-    
-    $params = array();
-    $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
-    $stmt = sqlsrv_query( $conn, $query , $params, $options );
-    //echo $stmt;
-    $row_count = sqlsrv_num_rows( $stmt );
-    //echo $row_count;
-    //echo $verifyhash;
-    if ($row_count == 0){
-        echo "<h1>Email Address not found.</br> Try again or <a href='CreateAccount.php'>Create an Account</a></h1>";
-    }
-    else{
-        echo "<h1>Your username is: </h1>";
-}
-}
 ?>
-
-					</div>
-				</div>	</br><br><br>		
+        </div>
+				</div>
 				<center>
 					&copy;
 					<script>document.write(new Date().getFullYear());</script>
 					Copyright - 2WDK Team
 				</center>
-				<br /><br>
+				<br />
 				<div />
 			</div>
+	
 	</body>
+
 </html>
 
 
