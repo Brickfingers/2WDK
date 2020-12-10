@@ -1,6 +1,7 @@
-.body, .myclass {
+body, .myclass {
 	background-color: #222222;
 	text-align: center;
+	color: white;
 }
 
 .center {
@@ -78,10 +79,10 @@ h5{
 }
 
 .end {
-  background-color: #46a44a; /* Green */
+  background-color: #46a44a;
   border: none;
   color: white;
-  padding: 12px 97px;
+  padding: 12px 10px;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;

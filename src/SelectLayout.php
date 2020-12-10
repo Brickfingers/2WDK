@@ -16,14 +16,12 @@
 
 </head>
 
-<div class="body">
-	<body>
-		<div class="container">
+<body>
+		<div>
 			<br>
 			<center>
 				<img src="photo/logo.png" alt="logo"> <br /> <br />
 				<h1>Set or create a	layout</h1>
-
 			</center>
 			<div>
 				<div>

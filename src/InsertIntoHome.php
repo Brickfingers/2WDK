@@ -17,30 +17,29 @@
 <link rel="stylesheet" type="text/css" href="wizardCSS/wizard.css" />
 </head>
 
-<div class="body">
-	<body>
-		<div class="container">
-			<br>
-			<center>
-				<img src="photo/logo.png" alt="logo"> <br /> <br />
-				<h1>HomePage Wizard</h1>
+<body>
+	<div>
+		<br>
+		<center>
+			<img src="photo/logo.png" alt="logo"> <br /> <br />
+			<h1>HomePage Wizard</h1>
 
-			</center>
-			<div class="row" >
-				<div class="col-md-12 mx-0">
-					<!-- progressbar -->
-					<ul id="progressbar" style="text-align: center">
-						<li class="active" id="home"><strong>Home Page</strong></li>
-						<li id="headerFooter"><strong>Header and Footer</strong></li>
-						<li id="about"><strong>About Page</strong></li>
-						<li id="layout"><strong>Layout</strong></li>
-						<li id="finish"><strong>Finish</strong></li>
-					</ul>
-				</div>
+		</center>
+		<div class="row">
+			<div class="col-md-12 mx-0">
+				<!-- progressbar -->
+				<ul id="progressbar" style="text-align: center">
+					<li class="active" id="home"><strong>Home Page</strong></li>
+					<li id="headerFooter"><strong>Header and Footer</strong></li>
+					<li id="about"><strong>About Page</strong></li>
+					<li id="layout"><strong>Layout</strong></li>
+					<li id="finish"><strong>Finish</strong></li>
+				</ul>
 			</div>
+		</div>
+		<div>
 			<div>
-				<div >
-					<div class="card-body p-5">
+				<div class="card-body p-5">
 
 
 
@@ -85,50 +84,49 @@ if (isset($_POST['submit'])) {
 ?>
 
 	<form name="myForm" method="POST" enctype="multipart/form-data">
-							<h4>Upload an image for Home page:</h4>
-							<input type="file" id="imagefile"
-								onchange="return image_validate()" name="imageToUpload"
-								accept="image/*" value="  " /> <span style="color: red"
-								id="error-imagefile"></span>
-							<!-- Image preview -->
-							<br /> <br />
-							<div id="imagePreview"></div>
-							<br />
-							<h4>Upload an Audio for Home page:</h4>
-							<input type="file" id="audiofile"
-								onchange="return audio_validate()" name="audioToUpload"
-								accept="audio/*" value="  " /> <span style="color: red"
-								id="error-audiofile"></span>
-							<!-- Audio preview -->
-							<br /> <br />
-							<div id="audioPreview"></div>
-							<br />
-							<h4>Home page title:</h4>
-							<span style="color: red" id="error-title"></span>
-							<textarea rows="2" cols="50" name="title"></textarea>
-							<br /> <br />
+						<h4>Upload an image for Home page:</h4>
+						<input type="file" id="imagefile"
+							onchange="return image_validate()" name="imageToUpload"
+							accept="image/*" value="  " /> <span style="color: red"
+							id="error-imagefile"></span>
+						<!-- Image preview -->
+						<br /> <br />
+						<div id="imagePreview"></div>
+						<br />
+						<h4>Upload an Audio for Home page:</h4>
+						<input type="file" id="audiofile"
+							onchange="return audio_validate()" name="audioToUpload"
+							accept="audio/*" value="  " /> <span style="color: red"
+							id="error-audiofile"></span>
+						<!-- Audio preview -->
+						<br /> <br />
+						<div id="audioPreview"></div>
+						<br />
+						<h4>Home page title:</h4>
+						<span style="color: red" id="error-title"></span>
+						<textarea rows="2" cols="50" name="title"></textarea>
+						<br /> <br />
 
-							<h4>Home page subtitle1:</h4>
-							<span style="color: red" id="error-subtitle1"></span>
-							<textarea rows="2" cols="50" name="subtitle1"></textarea>
-							<br /> <br />
+						<h4>Home page subtitle1:</h4>
+						<span style="color: red" id="error-subtitle1"></span>
+						<textarea rows="2" cols="50" name="subtitle1"></textarea>
+						<br /> <br />
 
-							<h4>Home page subtitle2:</h4>
-							<span style="color: red" id="error-subtitle2"></span>
-							<textarea rows="2" cols="50" name="subtitle2"></textarea>
-							<br /> <br />
-							<br />
+						<h4>Home page subtitle2:</h4>
+						<span style="color: red" id="error-subtitle2"></span>
+						<textarea rows="2" cols="50" name="subtitle2"></textarea>
+						<br /> <br /> <br />
 
-							<div>
-								<center>
-									<a class="next" href="SelectLayout.php">&laquo; Previous</a>
-									<button class="next" type="submit" name="submit"
-										onclick="return validateForm()">Next &raquo;</button>
-								</center>
-							</div>
-							<br />
-						</form>
-						<script>
+						<div>
+							<center>
+								<a class="next" href="SelectLayout.php">&laquo; Previous</a>
+								<button class="next" type="submit" name="submit"
+									onclick="return validateForm()">Next &raquo;</button>
+							</center>
+						</div>
+						<br />
+					</form>
+					<script>
 function validateForm(){
 	var imagefile = document.forms["myForm"]["imageToUpload"].value;
 	var audiofile = document.forms["myForm"]["audioToUpload"].value;
@@ -193,7 +191,7 @@ function validateForm(){
           
 }
 </script>
-						<script type="text/javascript">
+<script type="text/javascript">
 function image_validate()
 {
 	var valid = true;
@@ -244,9 +242,10 @@ function image_validate()
             document.getElementById('error-imagefile').innerHTML = "";
 		return true;
 	}
-}</script>
+}
+</script>
 
-						<script type="text/javascript">
+<script type="text/javascript">
 function audio_validate()
 {
 	var valid = true;
@@ -303,15 +302,15 @@ function audio_validate()
 	}
 }
 </script>
-					</div>
 				</div>
-				<center>
-					&copy;
-					<script>document.write(new Date().getFullYear());</script>
-					Copyright - 2WDK Team
-				</center>
-				<br />
-				<div />
-			</div>	
-	</body>
+			</div>
+			<center>
+				&copy;
+				<script>document.write(new Date().getFullYear());</script>
+				Copyright - 2WDK Team
+			</center>
+			<br />
+		</div>
+	</div>
+</body>
 </html>
