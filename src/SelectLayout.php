@@ -76,9 +76,9 @@ if (isset($_POST['submit'])) {
         die(print_r(sqlsrv_errors(), true));
     }
     $layoutName = sqlsrv_get_field($result, 0);
-    echo " <br>";
+    echo "<br> <br>";
 
-    echo "<p> Website layout is set to " . $layoutName . "</p>";
+    echo "<h4 class= \"setLayout\" > Website layout is set to " . $layoutName . "</h4>";
 }
 
 sqlsrv_free_stmt($stmt);
