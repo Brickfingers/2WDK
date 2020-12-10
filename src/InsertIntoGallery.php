@@ -31,7 +31,7 @@
 				<h1 style="text-align: center; color: #71db77;">Gallery Wizard</h1>
 
 			</center>
-			<div class="row" >
+			<div class="row">
 				<div class="col-md-12 mx-0">
 					<!-- progressbar -->
 					<ul id="progressbar" style="text-align: center">
@@ -50,19 +50,14 @@
 
 
 <?php
-//echo "<h2> Gallery Wizard </h2>";
+// echo "<h2> Gallery Wizard </h2>";
 include "DB_Connect.php";
 if (isset($_POST['submit'])) {
     $referenceImageName1 = $_FILES["referenceImage1"]["name"];
-    $TempReferenceImageName1 = $_FILES["TempReferenceImageName1"]["tmp_name"];
     $referenceImageName2 = $_FILES["referenceImage2"]["name"];
-    $TempReferenceImageName2 = $_FILES["TempReferenceImageName2"]["tmp_name"];
     $referenceImageName3 = $_FILES["referenceImage3"]["name"];
-    $TempReferenceImageName3 = $_FILES["TempReferenceImageName3"]["tmp_name"];
     $referenceImageName4 = $_FILES["referenceImage3"]["name"];
-    $TempReferenceImageName4 = $_FILES["TempReferenceImageName4"]["tmp_name"];
     $referenceImageName5 = $_FILES["referenceImage5"]["name"];
-    $TempReferenceImageName5 = $_FILES["TempReferenceImageName5"]["tmp_name"];
 
     $target_dir_img = "photo/";
     $target_file_img1 = $target_dir_img . basename($_FILES["referenceImage1"]["name"]);
@@ -71,19 +66,18 @@ if (isset($_POST['submit'])) {
     $target_file_img4 = $target_dir_img . basename($_FILES["referenceImage4"]["name"]);
     $target_file_img5 = $target_dir_img . basename($_FILES["referenceImage5"]["name"]);
 
-
-    if ((move_uploaded_file($TempReferenceImageName1, $target_file_img1)) && 
-        (move_uploaded_file($TempReferenceImageName2, $target_file_img2)) &&
-        (move_uploaded_file($TempReferenceImageName3, $target_file_img3)) &&
-        (move_uploaded_file($TempReferenceImageName4, $target_file_img4)) &&
-        (move_uploaded_file($TempReferenceImageName5, $target_file_img5))) {
+    if ((move_uploaded_file($_FILES["referenceImage1"]["tmp_name"], $target_file_img1)) &&
+        (move_uploaded_file($_FILES["referenceImage2"]["tmp_name"], $target_file_img2)) &&
+        (move_uploaded_file($_FILES["referenceImage3"]["tmp_name"], $target_file_img3)) &&
+        (move_uploaded_file($_FILES["referenceImage4"]["tmp_name"], $target_file_img4)) &&
+        (move_uploaded_file($_FILES["referenceImage5"]["tmp_name"], $target_file_img5))) {
 
         $referenceImageName1 = str_replace("'", "''", $referenceImageName1);
         $referenceImageName2 = str_replace("'", "''", $referenceImageName2);
         $referenceImageName3 = str_replace("'", "''", $referenceImageName3);
         $referenceImageName4 = str_replace("'", "''", $referenceImageName4);
         $referenceImageName5 = str_replace("'", "''", $referenceImageName5);
-        
+
         $sql = "INSERT INTO [dbo].[Gallery]
            ([ReferenceImage1],[ReferenceImage2],
             [ReferenceImage3],[ReferenceImage4],
@@ -92,11 +86,21 @@ if (isset($_POST['submit'])) {
             SELECT '$referenceImageName1','$referenceImageName2','$referenceImageName3',
                     '$referenceImageName4','$referenceImageName5'";
 
-        sqlsrv_query($conn, $sql);
+        $result = sqlsrv_query($conn, $sql);
 
-        echo "<font color='green'>" . "Home page is set." . "</font>";
+        if ($result === false) {
+            if (($errors = sqlsrv_errors()) != null) {
+                foreach ($errors as $error) {
+                    echo "SQLSTATE: " . $error['SQLSTATE'] . "<br />";
+                    echo "code: " . $error['code'] . "<br />";
+                    echo "message: " . $error['message'] . "<br />";
+                }
+            }
+        }
 
-        echo " <br /> <br />"; 
+        echo "<font color='green'>" . "Gallery page is set." . "</font>";
+
+        echo " <br /> <br />";
         header("Location: InsertToHeaderFooter.php");
     } else {
         echo "Sorry, there was an error uploading your files.";
@@ -106,68 +110,66 @@ if (isset($_POST['submit'])) {
 ?>
 
     	<form name="myForm" method="POST" enctype="multipart/form-data">
-    		<h4>Upload the first image:</h4>
-    		<input type="file" id="referenceImage1"
-    			onchange="return image_validate(1)" name="referenceImage1"
-    			accept="image/*" value="  " /> <span style="color: red"
-    			id="error-imagefile1"></span>
-    		<!-- Image preview -->
-    		<br /> <br />
-    		<div id="imagePreview1"></div>
-    		<br />
-    		
-    		<h4>Upload the second image:</h4>
-    		<input type="file" id="referenceImage2"
-    			onchange="return image_validate(2)" name="referenceImage2"
-    			accept="image/*" value="  " /> <span style="color: red"
-    			id="error-imagefile2"></span>
-    		<!-- Image preview -->
-    		<br /> <br />
-    		<div id="imagePreview2"></div>
-    		<br />
-    		
-    		<h4>Upload the third image:</h4>
-    		<input type="file" id="referenceImage3"
-    			onchange="return image_validate(3)" name="referenceImage3"
-    			accept="image/*" value="  " /> <span style="color: red"
-    			id="error-imagefile3"></span>
-    		<!-- Image preview -->
-    		<br /> <br />
-    		<div id="imagePreview3"></div>
-    		<br />
-    
-    		<h4>Upload the fourth image:</h4>
-    		<input type="file" id="referenceImage4"
-    			onchange="return image_validate(4)" name="referenceImage4"
-    			accept="image/*" value="  " /> <span style="color: red"
-    			id="error-imagefile4"></span>
-    		<!-- Image preview -->
-    		<br /> <br />
-    		<div id="imagePreview4"></div>
-    		<br />
-    
-    		<h4>Upload the fifth image:</h4>
-    		<input type="file" id="referenceImage5"
-    			onchange="return image_validate(5)" name="referenceImage5"
-    			accept="image/*" value="  " /> <span style="color: red"
-    			id="error-imagefile5"></span>
-    		<!-- Image preview -->
-    		<br /> <br />
-    		<div id="imagePreview5"></div>
-    		<br />
-    		
-    		<br />
-    
-    		<div>
-    			<center>
-    				<a class="next" href="SelectLayout.php">&laquo; Previous</a>
-    				<button class="next" type="submit" name="submit"
-    					onclick="return validateForm()">Next &raquo;</button>
-    			</center>
-    		</div>
-    		<br />
-    	</form>
-<script>
+							<h4>Upload the first image:</h4>
+							<input type="file" id="referenceImage1"
+								onchange="return image_validate(this)" name="referenceImage1"
+								accept="image/*" value="1" /> <span style="color: red"
+								id="error-imagefile1"></span>
+							<!-- Image preview -->
+							<br /> <br />
+							<div id="imagePreview1"></div>
+							<br />
+
+							<h4>Upload the second image:</h4>
+							<input type="file" id="referenceImage2"
+								onchange="return image_validate(this)" name="referenceImage2"
+								accept="image/*" value="2" /> <span style="color: red"
+								id="error-imagefile2"></span>
+							<!-- Image preview -->
+							<br /> <br />
+							<div id="imagePreview2"></div>
+							<br />
+
+							<h4>Upload the third image:</h4>
+							<input type="file" id="referenceImage3"
+								onchange="return image_validate(this)" name="referenceImage3"
+								accept="image/*" value="3" /> <span style="color: red"
+								id="error-imagefile3"></span>
+							<!-- Image preview -->
+							<br /> <br />
+							<div id="imagePreview3"></div>
+							<br />
+
+							<h4>Upload the fourth image:</h4>
+							<input type="file" id="referenceImage4"
+								onchange="return image_validate(this)" name="referenceImage4"
+								accept="image/*" value="4" /> <span style="color: red"
+								id="error-imagefile4"></span>
+							<!-- Image preview -->
+							<br /> <br />
+							<div id="imagePreview4"></div>
+							<br />
+
+							<h4>Upload the fifth image:</h4>
+							<input type="file" id="referenceImage5"
+								onchange="return image_validate(this)" name="referenceImage5"
+								accept="image/*" value="5" /> <span style="color: red"
+								id="error-imagefile5"></span>
+							<!-- Image preview -->
+							<br /> <br />
+							<div id="imagePreview5"></div>
+							<br /> <br />
+
+							<div>
+								<center>
+									<a class="next" href="InsertToLayout.php">&laquo; Previous</a>
+									<button class="next" type="submit" name="submit"
+										onclick="return validateForm()">Next &raquo;</button>
+								</center>
+							</div>
+							<br />
+						</form>
+						<script>
 function validateForm(){
 	var imagefile1 = document.forms["myForm"]["referenceImage1"].value;
 	var imagefile2 = document.forms["myForm"]["referenceImage2"].value;
@@ -218,16 +220,16 @@ function validateForm(){
           
 }
 </script>
-<script type="text/javascript">
-function image_validate(index){
+						<script type="text/javascript">
+function image_validate(input){
 	var valid = true;
 	var file_name = "";
 	var file_type = "";
 	var file_size = "";
 	var valid_size = 5*1000*1000;
-	var file = document.getElementById("referenceImage"+index);
-	var photo =document.getElementById("imagePreview"+index);
-	var error=document.getElementById("error-imagefile"+index);
+	var file = document.getElementById("referenceImage"+input.defaultValue);
+	var photo =document.getElementById("imagePreview"+input.defaultValue);
+	var error=document.getElementById("error-imagefile"+input.defaultValue);
 	
 	if(file.files.length != 0)
 	{
@@ -281,6 +283,8 @@ function image_validate(index){
 				</center>
 				<br />
 				<div />
-			</div>	
+			</div>
+	
 	</body>
+
 </html>
