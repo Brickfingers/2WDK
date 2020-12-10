@@ -1,7 +1,7 @@
 #progressbar {
 	margin: 50px;
 	overflow: hidden;
-	color: lightgrey
+	color: lightgrey;
 }
 
 #progressbar .active {

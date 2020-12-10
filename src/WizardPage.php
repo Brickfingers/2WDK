@@ -25,9 +25,7 @@
 		<div class="container">
 			<br>
 			<center>
-				<img src="photo/logo.png" alt="logo"> <br /> <br />
-				<h1 style="text-align: center; color: #71db77;">Create an Account</h1>
-
+				<img src="photo/logo.png" alt="logo"> <br />
 			</center>
 			<div class="  text-white">
 

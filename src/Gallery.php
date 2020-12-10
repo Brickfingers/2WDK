@@ -1,97 +1,45 @@
+<!----------------------------------------------------------------------------- 
+* Filename:					Gallery.php
+* Version:					4.0
+* Team Name:                2WDK
+* Student Name:				Nick Wright & Fahimeh Karimi
+-----------------------------------------------------------------------------
+
 <?php
+include "DB_Connect.php";
 
-$image1src = "photo/pic8.jpg";
-$image1title = "Ben Joseph";
-$image1caption = "Saxophonist";
+$imagesource= "photo/";
 
-$image2src = "photo/pic9.png";
-$image2title = "Montreal";
-$image2caption = "Swaying Souls With Sax N Sip";
+$sql=
+    "SELECT 
+        [Gallery].[ReferenceImage1],[Gallery].[ReferenceImage2],
+        [Gallery].[ReferenceImage3],[Gallery].[ReferenceImage4],
+        [Gallery].[ReferenceImage5],[Gallery].[ReferenceVideo1],
+        [Gallery].[ReferenceThumbNail1],[Gallery].[ReferenceVideo2],
+        [Gallery].[ReferenceThumbNail2],[Gallery].[ReferenceVideo3],
+        [Gallery].[ReferenceThumbNail3]
+    FROM [dbo].[Layouts]
+    INNER JOIN [dbo].[Gallery]
+    ON  [Layouts].[GalleryId] =[Gallery].[GalleryId]
+    WHERE [Layouts].[isSet] = 1";
 
-$image3src = "photo/pic9.jpg";
-$image3title ="Toronto" ;
-$image3caption ="Trying Something New" ;
+$result = sqlsrv_query($conn, $sql);
+if (sqlsrv_fetch($result) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
 
-$image4src = "photo/pic3.jpg";
-$image4title = "title";
-$image4caption ="caption" ;
+$image1src = $imagesource.sqlsrv_get_field($result, 0);
+$image2src = $imagesource.sqlsrv_get_field($result, 1);
+$image3src = $imagesource.sqlsrv_get_field($result, 2);
+$image4src = $imagesource.sqlsrv_get_field($result, 3);
+$image5src = $imagesource.sqlsrv_get_field($result, 4);
 
-$image5src = "photo/pic1.png";
-$image5title = "Ottawa";
-$image5caption = "Nothing But Love";
-
-$image6src = "photo/pic10.jpg";
-$image6title = "title";
-$image6caption = "caption";
-
-/*$youtube1src = "https://www.youtube.com/embed/2e5zITHhVds?rel=0";
-$youtube1picsrc ="photo/pic12.png" ;
-
-$youtube2src = "https://www.youtube.com/embed/2p2hC--loq4?rel=0";
-$youtube2picsrc ="photo/pic10.png" ;
-
-$youtube3src = "https://www.youtube.com/embed/jpv2tMJJuz0?rel=0";
-$youtube3picsrc = "photo/pic11.png";*/
-
-$insta1src = "https://www.instagram.com/p/B81hkBWHcX8/embed";
-$insta1picsrc = "photo/insta2.png";
-
-$insta2src = "https://www.instagram.com/p/B9Xnus_nTau/embed";
-$insta2picsrc = "photo/insta3.png" ;
-
-$insta3src = "https://www.instagram.com/p/B7ZElq-n4Sm/embed";
-$insta3picsrc ="photo/insta1.png" ;
-
-// read json file to get the sources of pics and vids
-$file = "test.json";
-$data = json_decode(file_get_contents($file), true);
-$image1src = $data['image1src'];
-$image1title = $data['image1title'];
-$image1caption = $data['image1caption'];
-
-$image2src = $data['image2src'];
-$image2title = $data['image2title'];
-$image2caption = $data['image2caption'];
-
-$image3src = $data['image3src'];
-$image3title = $data['image3title'];
-$image3caption = $data['image3caption'];
-
-$image4src = $data['image4src'];
-$image4title = $data['image4title'];
-$image4caption = $data['image4caption'];
-
-$image5src = $data['image5src'];
-$image5title = $data['image5title'];
-$image5caption = $data['image5caption'];
-
-$image6src = $data['image6src'];
-$image6title = $data['image6title'];
-$image6caption = $data['image6caption'];
-
-/*$youtube1src = $data['youtube1src'];
-$youtube1picsrc = $data['youtube1picsrc'];
-
-$youtube2src = $data['youtube2src'];
-$youtube2picsrc = $data['youtube2picsrc'];
-
-$youtube3src = $data['youtube3src'];
-$youtube3picsrc = $data['youtube3picsrc'];*/
-
-$insta1src = $data['insta1src'];
-$insta1picsrc = $data['insta1picsrc'];
-
-$insta2src = $data['insta2src'];
-$insta2picsrc = $data['insta2picsrc'];
-
-$insta3src = $data['insta3src'];
-$insta3picsrc = $data['insta3picsrc'];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sax N Sip</title>
+<title>Gallery</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -134,8 +82,8 @@ include_once "Header.php";
 						<div class="carousel-item active">
 							<img class="img-fluid z-depth-1" <?php echo "src=$image1src"?>>
 							<div class="carousel-caption">
-								<h3><?php echo $image1title?></h3>
-								<p><?php echo $image1caption?></p>
+								<!-- <h3><?php echo $image1title?></h3>
+								<p><?php echo $image1caption?></p> -->
 
 							</div>
 						</div>
@@ -402,4 +350,3 @@ include_once "Footer.php";
 
 </body>
 </html>
-
