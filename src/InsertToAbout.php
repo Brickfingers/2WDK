@@ -31,6 +31,8 @@
 						<li class="active" id="home"><strong>Home Page</strong></li>
 						<li class="active" id="headerFooter"><strong>Header and Footer</strong></li>
 						<li class="active" id="about"><strong>About Page</strong></li>
+						<li id="gallery"><strong>Gallery Page</strong></li>
+						<li id="booking"><strong>Booking Page</strong></li>
 						<li id="layout"><strong>Layout</strong></li>
 						<li id="finish"><strong>Finish</strong></li>
 					</ul>
@@ -64,7 +66,7 @@ if (isset($_POST['submit'])) {
             SELECT '$aboutTitle' ,'$aboutme','$filename'";
 
         sqlsrv_query($conn, $sql);
-        header("Location: InsertToLayout.php");
+        header("Location: InsertIntoGallery.php");
     } else {
         echo "Sorry, there was an error uploading your file, try again!";
     }

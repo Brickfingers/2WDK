@@ -36,9 +36,12 @@
 					<!-- progressbar -->
 					<ul id="progressbar" style="text-align: center">
 						<li class="active" id="home"><strong>Home Page</strong></li>
-						<li id="headerFooter"><strong>Header and Footer</strong></li>
-						<li id="about"><strong>About Page</strong></li>
+						<li class="active" id="headerFooter"><strong>Header and Footer</strong></li>
+						<li class="active" id="about"><strong>About Page</strong></li>
+						<li class="active" id="gallery"><strong>Gallery Page</strong></li>
+						<li id="booking"><strong>Booking Page</strong></li>
 						<li id="layout"><strong>Layout</strong></li>
+						<li id="finish"><strong>Finish</strong></li>
 					</ul>
 				</div>
 			</div>
@@ -101,7 +104,7 @@ if (isset($_POST['submit'])) {
         echo "<font color='green'>" . "Gallery page is set." . "</font>";
 
         echo " <br /> <br />";
-        header("Location: InsertToHeaderFooter.php");
+        header("Location: InsertIntoBooking.php");
     } else {
         echo "Sorry, there was an error uploading your files.";
     }
@@ -109,67 +112,67 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-    	<form name="myForm" method="POST" enctype="multipart/form-data">
-							<h4>Upload the first image:</h4>
-							<input type="file" id="referenceImage1"
-								onchange="return image_validate(this)" name="referenceImage1"
-								accept="image/*" value="1" /> <span style="color: red"
-								id="error-imagefile1"></span>
-							<!-- Image preview -->
-							<br /> <br />
-							<div id="imagePreview1"></div>
-							<br />
+<form name="myForm" method="POST" enctype="multipart/form-data">
+	<h4>Upload the first image:</h4>
+	<input type="file" id="referenceImage1"
+		onchange="return image_validate(this)" name="referenceImage1"
+		accept="image/*" value="1" /> <span style="color: red"
+		id="error-imagefile1"></span>
+	<!-- Image preview -->
+	<br /> <br />
+	<div id="imagePreview1"></div>
+	<br />
 
-							<h4>Upload the second image:</h4>
-							<input type="file" id="referenceImage2"
-								onchange="return image_validate(this)" name="referenceImage2"
-								accept="image/*" value="2" /> <span style="color: red"
-								id="error-imagefile2"></span>
-							<!-- Image preview -->
-							<br /> <br />
-							<div id="imagePreview2"></div>
-							<br />
+	<h4>Upload the second image:</h4>
+	<input type="file" id="referenceImage2"
+		onchange="return image_validate(this)" name="referenceImage2"
+		accept="image/*" value="2" /> <span style="color: red"
+		id="error-imagefile2"></span>
+	<!-- Image preview -->
+	<br /> <br />
+	<div id="imagePreview2"></div>
+	<br />
 
-							<h4>Upload the third image:</h4>
-							<input type="file" id="referenceImage3"
-								onchange="return image_validate(this)" name="referenceImage3"
-								accept="image/*" value="3" /> <span style="color: red"
-								id="error-imagefile3"></span>
-							<!-- Image preview -->
-							<br /> <br />
-							<div id="imagePreview3"></div>
-							<br />
+	<h4>Upload the third image:</h4>
+	<input type="file" id="referenceImage3"
+		onchange="return image_validate(this)" name="referenceImage3"
+		accept="image/*" value="3" /> <span style="color: red"
+		id="error-imagefile3"></span>
+	<!-- Image preview -->
+	<br /> <br />
+	<div id="imagePreview3"></div>
+	<br />
 
-							<h4>Upload the fourth image:</h4>
-							<input type="file" id="referenceImage4"
-								onchange="return image_validate(this)" name="referenceImage4"
-								accept="image/*" value="4" /> <span style="color: red"
-								id="error-imagefile4"></span>
-							<!-- Image preview -->
-							<br /> <br />
-							<div id="imagePreview4"></div>
-							<br />
+	<h4>Upload the fourth image:</h4>
+	<input type="file" id="referenceImage4"
+		onchange="return image_validate(this)" name="referenceImage4"
+		accept="image/*" value="4" /> <span style="color: red"
+		id="error-imagefile4"></span>
+	<!-- Image preview -->
+	<br /> <br />
+	<div id="imagePreview4"></div>
+	<br />
 
-							<h4>Upload the fifth image:</h4>
-							<input type="file" id="referenceImage5"
-								onchange="return image_validate(this)" name="referenceImage5"
-								accept="image/*" value="5" /> <span style="color: red"
-								id="error-imagefile5"></span>
-							<!-- Image preview -->
-							<br /> <br />
-							<div id="imagePreview5"></div>
-							<br /> <br />
+	<h4>Upload the fifth image:</h4>
+	<input type="file" id="referenceImage5"
+		onchange="return image_validate(this)" name="referenceImage5"
+		accept="image/*" value="5" /> <span style="color: red"
+		id="error-imagefile5"></span>
+	<!-- Image preview -->
+	<br /> <br />
+	<div id="imagePreview5"></div>
+	<br /> <br />
 
-							<div>
-								<center>
-									<a class="next" href="InsertToLayout.php">&laquo; Previous</a>
-									<button class="next" type="submit" name="submit"
-										onclick="return validateForm()">Next &raquo;</button>
-								</center>
-							</div>
-							<br />
-						</form>
-						<script>
+	<div>
+		<center>
+			<a class="next" href="InsertToLayout.php">&laquo; Previous</a>
+			<button class="next" type="submit" name="submit"
+				onclick="return validateForm()">Next &raquo;</button>
+		</center>
+	</div>
+	<br />
+</form>
+<script>
 function validateForm(){
 	var imagefile1 = document.forms["myForm"]["referenceImage1"].value;
 	var imagefile2 = document.forms["myForm"]["referenceImage2"].value;

@@ -32,6 +32,8 @@
 					<li class="active" id="home"><strong>Home Page</strong></li>
 					<li id="headerFooter"><strong>Header and Footer</strong></li>
 					<li id="about"><strong>About Page</strong></li>
+					<li id="gallery"><strong>Gallery Page</strong></li>
+					<li id="booking"><strong>Booking Page</strong></li>
 					<li id="layout"><strong>Layout</strong></li>
 					<li id="finish"><strong>Finish</strong></li>
 				</ul>
