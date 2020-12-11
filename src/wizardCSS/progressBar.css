@@ -1,6 +1,6 @@
 .row{
-  margin-right: 17%;
-  margin-left:15%
+  margin-right: 10%;
+  margin-left:10%
 }
 #progressbar {
 	margin: 50px;
@@ -15,7 +15,7 @@
 #progressbar li {
 	list-style-type: none;
 	font-size: 16px;
-	width: 12%;
+	width: 14%;
 	float: left;
 	position: relative
 }

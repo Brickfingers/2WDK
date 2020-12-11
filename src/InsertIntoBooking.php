@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Wizard Home Page</title>
+<title>Wizard Booking Page</title>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +31,6 @@
 			<center>
 				<img src="photo/logo.png" alt="logo"> <br /> <br />
 				<h1 style="text-align: center; color: #71db77;">Booking Wizard</h1>
-
 			</center>
 			<div class="row" >
 				<div class="col-md-12 mx-0">
@@ -48,11 +47,8 @@
 				</div>
 			</div>
 			<div class="text-white">
-
 				<div style="background: #222222;">
 					<div class="card-body p-5">
-
-
 
 <?php
 //echo "<h2> Booking Wizard </h2>";
@@ -90,7 +86,7 @@ if (isset($_POST['submit'])) {
     $question14 = str_replace("'", "''", $question14);
     $question15 = str_replace("'", "''", $question15);
 
-    $sql = "INSERT INTO [dbo].[HomePage]
+    $sql = "INSERT INTO [dbo].[Booking]
        ([Question1],[Question2],[Question3],
         [Question4],[Question5],[Question6],
         [Question7],[Question8],[Question9],
@@ -101,7 +97,7 @@ if (isset($_POST['submit'])) {
                '$question4','$question5','$question6',
                '$question7','$question8','$question9',
                '$question10','$question11','$question12',
-               '$question13','$question14','$question15',";
+               '$question13','$question14','$question15'";
 
     $result = sqlsrv_query($conn, $sql);
     
@@ -118,7 +114,7 @@ if (isset($_POST['submit'])) {
     echo "<font color='green'>" . "Booking page is set." . "</font>";
 
     echo " <br /> <br />"; 
-    header("Location: InsertToLayout.php");
+    //header("Location: InsertToLayout.php");
 } else {
     echo "Sorry, there was an error uploading your files.";
 }

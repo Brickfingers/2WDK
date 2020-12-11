@@ -24,22 +24,12 @@ $result = sqlsrv_query($conn, $sql);
 if (sqlsrv_fetch($result) === false) {
     die(print_r(sqlsrv_errors(), true));
 }
-/*
- * [Gallery].[ReferenceThumbNail1],[Gallery].[ReferenceVideo2],
-   [Gallery].[ReferenceThumbNail2],[Gallery].[ReferenceVideo3],
-   [Gallery].[ReferenceThumbNail3]
- */
+
 $image1src = $imagesource.sqlsrv_get_field($result, 0);
 $image2src = $imagesource.sqlsrv_get_field($result, 1);
 $image3src = $imagesource.sqlsrv_get_field($result, 2);
 $image4src = $imagesource.sqlsrv_get_field($result, 3);
 $image5src = $imagesource.sqlsrv_get_field($result, 4);
-
-echo $image1src;
-echo $image2src;
-echo $image3src;
-echo $image4src;
-echo $image5src;
 
 ?>
 

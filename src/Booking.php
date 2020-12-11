@@ -1,3 +1,40 @@
+<!----------------------------------------------------------------------------- 
+* Filename:					Gallery.php
+* Version:					4.0
+* Team Name:                2WDK
+* Student Name:				Nick Wright
+----------------------------------------------------------------------------->
+
+<?php
+include "DB_Connect.php";
+
+$sql=
+    "SELECT
+        [Booking].[Question1],[Booking].[Question2],[Booking].[Question3],
+        [Booking].[Question4],[Booking].[Question5],[Booking].[Question6],
+        [Booking].[Question7],[Booking].[Question8],[Booking].[Question9],
+        [Booking].[Question10],[Booking].[Question11],[Booking].[Question12],
+        [Booking].[Question13],[Booking].[Question14],[Booking].[Question15]
+    FROM [dbo].[Layouts]
+    INNER JOIN [dbo].[Booking]
+    ON  [Layouts].[BookingId] = [Booking].[BookingId]
+    WHERE [Layouts].[isSet] = 1";
+
+$result = sqlsrv_query($conn, $sql);
+if (sqlsrv_fetch($result) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$formQuestions = array(
+    sqlsrv_get_field($result, 0),sqlsrv_get_field($result, 1),sqlsrv_get_field($result, 2),
+    sqlsrv_get_field($result, 3),sqlsrv_get_field($result, 4),sqlsrv_get_field($result, 5),
+    sqlsrv_get_field($result, 6),sqlsrv_get_field($result, 7),sqlsrv_get_field($result, 8),
+    sqlsrv_get_field($result, 9),sqlsrv_get_field($result, 10),sqlsrv_get_field($result, 11),
+    sqlsrv_get_field($result, 12),sqlsrv_get_field($result, 13),sqlsrv_get_field($result, 14)
+);
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,132 +52,21 @@
 </head>
 <body class="body">
 	<div>
-    <?php include "Header.php"; ?>
-    <?php 
-     $formNames = array(
-         'reference',
-         'first_name',
-         'last_name',
-         'email',
-         'phone',
-         'type',
-         'private',
-         'public',
-         'start_end',
-         'location',
-         'duration',
-         'genre',
-         'pa_system',
-         'sound_technician',
-         'num_guests',
-         'additional_info');
-     $formQuestions = array(
-         'How did you hear about Ben Joseph? *',
-         'First Name *',
-         'Last Name *',
-         'Email Address *',
-         'Phone Number *',
-         'Type of Event *',
-         'Private',
-         'Public',
-         'What is the start and end time of your event? *',
-         'Where is your event located? *',
-         'How long would you like Ben Joseph to perform? *',
-         'What genre of music would you like to be played? *',
-         'Does the venue have a P.A. system or in-house sound/audio? *',
-         'Will there be a sound technician/dj? *',
-         'How many people are you expecting to be in attendance at the event? *',
-         'Please list any additional information you would like to include about the event: *');
-     ?>
-    <br>
-    <div class="form p-3 mx-3">
-    <h1 class="header1"> BOOKING </h1>
-    <form method="post" action="acknowledge.php" class="mx-5">
-    	<div class="form-group">
-    		<?php $formCount = 0; ?>
-        	<label><?php echo $formQuestions[$formCount]?></label><br>
-        	<input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
+        <?php include "Header.php"; ?>
+        <br>
+        <div class="form p-3 mx-3">
+            <h1 class="header1"> BOOKING </h1>
+            <form method="post" action="acknowledge.php" class="mx-5">
+            <?php $formCount = 0;
+            for ($formCount = 0; $formCount <= 15; $formCount++) {
+                echo "<div class=\"form-group\">";
+                echo "<label>".$formQuestions[$formCount]."</label><br>";
+                echo "<input name=\""."\" type=\"text\" aria-required=\"true\" class=\"form-control\"></input><br>";
+                echo "</div>";
+            }
+            ?>
+            </form>
         </div>
-        <div class="form-group">
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="number" maxlength="9" aria-required="true" class="form-control"></input><br>
-        </div>    
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>    
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>    
-        <div class="form-check text-left">    
-            <label>Your event is: *</label><br>
-            <?php $formCount++; ?>
-            <input name="<?php echo $formNames[$formCount]?>" type="checkbox" value ="private" class="form-check-input"></input>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            
-            <?php $formCount++; ?>
-            <input name="<?php echo $formNames[$formCount]?>" type="checkbox" value ="public" class="form-check-input"></input>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-        </div>    
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>    
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>    
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>    
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>    
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>    
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>    
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <input name="<?php echo $formNames[$formCount]?>" type="text" aria-required="true" class="form-control"></input><br>
-        </div>    
-        <div class="form-group">    
-            <?php $formCount++; ?>
-            <label><?php echo $formQuestions[$formCount]?></label><br>
-            <textarea name="<?php echo $formNames[$formCount]?>" aria-required="true" class="form-control" rows="4"></textarea><br>
-        </div>
-        <div class="form-group">    
-            <button name="submit" class="submitButton" type="submit">Submit</button>
-    	</div>
-    </form>
-    </div>
     </div>
     <?php include "Footer.php"; ?>
 </body>
