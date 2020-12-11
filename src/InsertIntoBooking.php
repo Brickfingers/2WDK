@@ -114,7 +114,7 @@ if (isset($_POST['submit'])) {
     echo "<font color='green'>" . "Booking page is set." . "</font>";
 
     echo " <br /> <br />"; 
-    //header("Location: InsertToLayout.php");
+    header("Location: InsertToLayout.php");
 } else {
     echo "Sorry, there was an error uploading your files.";
 }
