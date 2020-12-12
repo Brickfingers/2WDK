@@ -115,8 +115,7 @@ if (isset($_POST['submit'])) {
 
     echo " <br /> <br />"; 
     header("Location: InsertToLayout.php");
-} else {
-    echo "Sorry, there was an error uploading your files.";
+
 }
 
 
