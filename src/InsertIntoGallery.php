@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
     $referenceImageName1 = $_FILES["referenceImage1"]["name"];
     $referenceImageName2 = $_FILES["referenceImage2"]["name"];
     $referenceImageName3 = $_FILES["referenceImage3"]["name"];
-    $referenceImageName4 = $_FILES["referenceImage3"]["name"];
+    $referenceImageName4 = $_FILES["referenceImage4"]["name"];
     $referenceImageName5 = $_FILES["referenceImage5"]["name"];
 
     $target_dir_img = "photo/";
