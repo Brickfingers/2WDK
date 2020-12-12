@@ -186,7 +186,7 @@ if (isset($_POST['submit'])) {
 
 	<div>
 		<center>
-			<a class="next" href="SelectLayout.php">&laquo; Previous</a>
+			<a class="next" href="InsertIntoGallery.php">&laquo; Previous</a>
 			<button class="next" type="submit" name="submit"
 				onclick="return validateForm()">Next &raquo;</button>
 		</center>
